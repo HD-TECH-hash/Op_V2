@@ -82,6 +82,12 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
+  /* Banner usado no lugar do card de PDFs */
+  .banner{
+    display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
+    border-radius:12px; box-shadow:var(--card-shadow); border:1px solid #e7eaf3;
+  }
+
   footer{margin:18px 0 8px;text-align:center}
   .copyright{font-size:12px;font-weight:700;color:var(--brand);padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
 </style>
@@ -182,12 +188,17 @@
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- PDFs -->
+      <!-- PDFs (DESATIVADO → BANNER) -->
       <section class="card">
         <div class="tag">PDFs</div>
         <h2>Manuais do Corretor (Sharepoint)</h2>
-        <p class="hint">Busca rápida no texto extraído dos PDFs (indexados).</p>
-        <div class="row">
+        <p class="hint">Janela desativada nesta versão minimal. Exibindo banner.</p>
+
+        <!-- Banner com drop shadow e radius -->
+        <img src="v2.jpeg" alt="HDSTEC — banner" class="banner">
+
+        <!-- Mantém elementos esperados pelo JS, porém ocultos -->
+        <div class="row" style="display:none">
           <input id="qPDF" class="input" placeholder="Ex.: Affix, Coparticipação, Carência 30 dias">
           <button id="btnPDF" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
         </div>
@@ -195,7 +206,7 @@
           <div class="busy"><div class="spinner"></div><div>Listando arquivos...</div></div>
           <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div class="out" id="pdfBox">
+        <div class="out" id="pdfBox" style="display:none">
           <div id="pdfStatus" class="hint" style="margin-top:0">—</div>
           <ul id="pdfList" class="list"></ul>
         </div>
@@ -209,7 +220,8 @@
         <div class="row">
           <input id="qCRION" class="input" placeholder="Ex.: Onboarding, Retenção, URA, Script de Cobrança, Affix">
           <button id="btnCRION" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
-          <button id="btnReIdxCRION" type="button" class="btn btn-danger btn-reindex" style="min-width:112px">Reindexar</button>
+          <!-- Reindexar: OCULTO -->
+          <button id="btnReIdxCRION" type="button" class="btn btn-danger btn-reindex" style="min-width:112px; display:none">Reindexar</button>
         </div>
         <div class="hint" id="crionBusy" style="display:none">
           <div class="busy"><div class="spinner"></div><div>Listando procedimentos...</div></div>
@@ -360,17 +372,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#sitesBusy'),false); }
   });
 
-  /* PDFs */
-  $('#btnPDF').addEventListener('click', doPDF);
-  $('#qPDF').addEventListener('keydown', e=>{ if(e.key==='Enter') doPDF(); });
+  /* PDFs (mantidos ocultos para compatibilidade) */
+  const btnPDF = $('#btnPDF'), qPDF = $('#qPDF');
+  if(btnPDF){ btnPDF.addEventListener('click', doPDF); }
+  if(qPDF){ qPDF.addEventListener('keydown', e=>{ if(e.key==='Enter') doPDF(); }); }
   async function doPDF(){
-    const q=($('#qPDF').value||'').trim();
-    if(!q){ $('#pdfStatus').textContent='Digite um termo.'; return; }
-    show($('#pdfBusy'),true); $('#pdfStatus').textContent='Listando arquivos...'; $('#pdfList').innerHTML="";
+    const q=(qPDF?.value||'').trim();
+    if(!q){ const s=$('#pdfStatus'); if(s) s.textContent='Digite um termo.'; return; }
+    show($('#pdfBusy'),true); const st=$('#pdfStatus'); if(st) st.textContent='Listando arquivos...'; const list=$('#pdfList'); if(list) list.innerHTML="";
     try{
       const res = await call('searchindexed',{q});
-      if(!res || res.ok===false){ $('#pdfStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
-      const items=res.items||[]; $('#pdfStatus').textContent=`Resultados: ${items.length}`;
+      if(!res || res.ok===false){ if(st) st.textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
+      const items=res.items||[]; if(st) st.textContent=`Resultados: ${items.length}`;
       const frag=document.createDocumentFragment();
       items.forEach((it,idx)=>{
         const li=document.createElement('li'); li.className='item'; li.id='pdf_'+idx;
@@ -379,34 +392,35 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="hint" id="snip_pdf_${idx}">Carregando prévias…</div>`;
         frag.appendChild(li);
       });
-      $('#pdfList').appendChild(frag);
+      if(list) list.appendChild(frag);
       if(items.length){
         let from=0;
         while(from < items.length){
           const r = await call('fetchindexedsnippets',{sessionId:res.sessionId, from, limit:6});
           (r.items||[]).forEach(row=>{
-            const el=$('#snip_pdf_'+row.index);
-            el.innerHTML=(row.snippets && row.snippets.length)
+            const el=document.getElementById('snip_pdf_'+row.index);
+            if(el) el.innerHTML=(row.snippets && row.snippets.length)
               ? row.snippets.map(s=>`<div class="snip">${esc(s)}</div>`).join("")
               : '<span class="hint">—</span>';
           });
           from = r.to;
         }
-        $('#pdfStatus').textContent += " • prévias completas";
+        if(st) st.textContent += " • prévias completas";
       }
-    }catch(e){ $('#pdfStatus').textContent='Erro: '+e.message;
+    }catch(e){ if(st) st.textContent='Erro: '+e.message;
     }finally{ show($('#pdfBusy'),false); }
   }
 
   /* CRION */
   $('#btnCRION').addEventListener('click', doCRION);
   $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
-  $('#btnReIdxCRION').addEventListener('click', async ()=>{
+  const btnRe = $('#btnReIdxCRION');
+  if(btnRe){ btnRe.addEventListener('click', async ()=>{
     $('#crionStatus').textContent='Reindexando CRION…'; show($('#crionBusy'),true);
     try{ const r=await call('reindexcrion',{}); $('#crionStatus').textContent="Index CRION: "+(r && r.ok ? "OK" : "Falhou"); }
     catch(e){ $('#crionStatus').textContent='Erro: '+e.message; }
     finally{ show($('#crionBusy'),false); }
-  });
+  });}
   async function doCRION(){
     const q=($('#qCRION').value||'').trim();
     if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
