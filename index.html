@@ -82,7 +82,7 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* Banner usado no lugar do card de PDFs */
+  /* Banner usado no lugar do card de PDFs (sem textos) */
   .banner{
     display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
     border-radius:12px; box-shadow:var(--card-shadow); border:1px solid #e7eaf3;
@@ -159,7 +159,7 @@
         <h2>Controle de alerta</h2>
         <div class="row">
           <button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button>
-          <button id="btnAdjust" type="button" class="btn btn-plain">Ajustar</button>
+          <!-- botão Ajustar removido nesta versão -->
         </div>
 
         <div class="hint" id="alertBusy" style="display:none">
@@ -188,11 +188,9 @@
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- PDFs (DESATIVADO → BANNER) -->
+      <!-- PDFs (DESATIVADO → somente banner, sem textos) -->
       <section class="card">
         <div class="tag">PDFs</div>
-        <h2>Manuais do Corretor (Sharepoint)</h2>
-        <p class="hint">Janela desativada nesta versão minimal. Exibindo banner.</p>
 
         <!-- Banner com drop shadow e radius -->
         <img src="v2.jpeg" alt="HDSTEC — banner" class="banner">
@@ -235,39 +233,10 @@
     </div>
 
     <!-- FOOTER -->
-    <footer><span class="copyright">© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0</span></footer>
+    <footer><span class="copyright">© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 -Operacao</span></footer>
   </div>
 
-  <!-- MODAIS ALERTA -->
-  <div id="modal1" class="modal" style="position:fixed;inset:0;background:#00000059;display:none;align-items:center;justify-content:center;z-index:1000">
-    <div class="modal-box" style="width:min(520px,92vw);border-radius:14px;padding:14px;background:#fff;border:1px solid #ffd6d6">
-      <h3 style="margin:0 0 8px;color:#991b1b">ALERTA DA OPERAÇÃO</h3>
-      <input id="m1text" class="input" placeholder="Digite o texto do alerta (vermelho)">
-      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
-        <button type="button" class="btn btn-plain" onclick="closeM(1)">Cancelar</button>
-        <button id="m1ok" type="button" class="btn btn-search" onclick="goM2()">Continuar</button>
-      </div>
-    </div>
-  </div>
-  <div id="modal2" class="modal" style="position:fixed;inset:0;background:#00000059;display:none;align-items:center;justify-content:center;z-index:1000">
-    <div class="modal-box" style="width:min(520px,92vw);border-radius:14px;padding:14px;background:#fff;border:1px solid #ffdaba">
-      <h3 style="margin:0 0 8px">Responsável</h3>
-      <input id="m2text" class="input" placeholder="Primeira letra maiúscula (ex.: Ale)">
-      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
-        <button type="button" class="btn btn-plain" onclick="backM1()">Voltar</button>
-        <button id="m2ok" type="button" class="btn btn-search" onclick="saveAlert()">Salvar</button>
-      </div>
-    </div>
-  </div>
-  <div id="modal3" class="modal" style="position:fixed;inset:0;background:#00000059;display:none;align-items:center;justify-content:center;z-index:1000">
-    <div class="modal-box" style="width:min(380px,92vw);border-radius:14px;padding:14px;background:#fff;border:1px solid #d9f7b8;text-align:center">
-      <h3 style="margin:0 0 8px">ALERTA AJUSTADO</h3>
-      <div style="margin:6px 0">✔️</div>
-      <div style="display:flex;gap:8px;justify-content:center;margin-top:4px">
-        <button type="button" class="btn btn-search" onclick="closeM(3)">OK</button>
-      </div>
-    </div>
-  </div>
+  <!-- (Modais de ajuste do alerta permanecem no código original, mas não são usados nesta versão) -->
 
 <script>
 /* ======= CONFIG: troque aqui se precisar ======= */
@@ -291,28 +260,6 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= MODAIS ======= */
-function openM(id){ $('#modal'+id).style.display='flex'; }
-function closeM(id){ $('#modal'+id).style.display='none'; }
-function backM1(){ closeM(2); openM(1); }
-
-/* ======= WIDGETS / CALC ======= */
-const calc = { buf:"0", op:null, mem:0, fresh:true };
-function refresh(){ $('#scr').textContent = calc.buf; }
-function press(k){
-  if(/\d/.test(k)){ calc.buf = (calc.fresh||calc.buf==="0")? k : calc.buf+k; calc.fresh=false; return refresh(); }
-  if(k==="00"){ press("0"); return press("0"); }
-  if(k==="."){ if(!calc.buf.includes(".")) calc.buf += "."; calc.fresh=false; return refresh(); }
-  if(k==="C"){ calc.buf="0"; calc.op=null; calc.fresh=true; return refresh(); }
-  if(k==="±"){ if(calc.buf!=="0") calc.buf = calc.buf.startsWith("-")? calc.buf.slice(1):"-"+calc.buf; return refresh(); }
-  if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
-  if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
-  if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
-    calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
-  }
-}
-
 /* ======= INICIALIZAÇÃO ======= */
 document.addEventListener('DOMContentLoaded', () => {
   /* Post-it */
@@ -324,8 +271,23 @@ document.addEventListener('DOMContentLoaded', () => {
   noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
   /* Calculadora */
-  $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); };
+  $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; };
   $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
+  const refresh = v => $('#scr').textContent = v;
+  const calc = { buf:"0", op:null, mem:0, fresh:true };
+  const press = k=>{
+    if(/\d/.test(k)){ calc.buf = (calc.fresh||calc.buf==="0")? k : calc.buf+k; calc.fresh=false; return refresh(calc.buf); }
+    if(k==="00"){ press("0"); return press("0"); }
+    if(k==="."){ if(!calc.buf.includes(".")) calc.buf += "."; calc.fresh=false; return refresh(calc.buf); }
+    if(k==="C"){ calc.buf="0"; calc.op=null; calc.fresh=true; return refresh(calc.buf); }
+    if(k==="±"){ if(calc.buf!=="0") calc.buf = calc.buf.startsWith("-")? calc.buf.slice(1):"-"+calc.buf; return refresh(calc.buf); }
+    if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(calc.buf); }
+    if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
+    if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
+      let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+      calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh(calc.buf);
+    }
+  };
   $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
 
   /* ALERTA */
@@ -342,20 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }catch(e){ msg.textContent="Erro: "+e.message; resp.textContent=""; show(box,true);
     }finally{ show($('#alertBusy'),false); }
   });
-
-  let _newAlert="", _newResp="";
-  $('#btnAdjust').addEventListener('click', ()=>{ _newAlert=""; _newResp=""; $('#m1text').value=""; $('#m2text').value=""; openM(1); });
-  window.goM2 = function(){ _newAlert = ($('#m1text').value||"").trim(); if(!_newAlert){ $('#m1text').focus(); return; } closeM(1); openM(2); }
-  $('#m2text').addEventListener('input', e=>{ const v=e.target.value; e.target.value = v? v[0].toUpperCase()+v.slice(1).toLowerCase():v; });
-  window.saveAlert = async function(){
-    _newResp = $('#m2text').value.trim();
-    try{
-      $('#m2ok').disabled=true; $('#m2ok').textContent='Salvando...';
-      await call('adjustalert',{mensagem:_newAlert, responsavel:_newResp});
-      closeM(2); openM(3);
-    }catch(e){ closeM(2); alert("Falha ao ajustar: "+e.message);
-    }finally{ $('#m2ok').disabled=false; $('#m2ok').textContent='Salvar'; }
-  }
 
   /* SITES */
   $('#btnSites').addEventListener('click', async ()=>{
