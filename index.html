@@ -6,8 +6,8 @@
 <title>RIC AI — CRION</title>
 <style>
   :root{
-    --base-font:12px;                  /* layout 15% menor p/ GH */
-    --brand:#2882bb; --brand2:#2a8fcf; /* barra azul */
+    --base-font:12px;
+    --brand:#2882bb; --brand2:#2a8fcf;
     --bg:#f7f8fc; --ink:#0f172a; --muted:#667085; --line:#E7EAF3;
     --lime:#22c55e; --lime2:#a3e635; --danger:#ef4444;
     --tag:#F2E7FF; --tag-ink:#6D28D9; --tag-shadow:0 4px 10px rgba(40,130,187,.18);
@@ -20,7 +20,6 @@
   }
   .wrap{max-width:1290px;margin:0 auto;padding:16px}
 
-  /* ====== HEADER ====== */
   .hero{
     position:relative; min-height:78px; border-radius:18px; padding:12px 16px;
     display:flex; align-items:center; justify-content:center; color:#fff;
@@ -40,7 +39,6 @@
   .icon-note{background:#ffd95e} .icon-calc{background:#60a5fa}
   .iconbtn svg{display:block}
 
-  /* ====== GRID / CARDS ====== */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} .right-img{display:none} .tools{right:14px} }
 
@@ -57,24 +55,21 @@
   .btn-search{color:#053;background:linear-gradient(135deg,var(--lime),var(--lime2));box-shadow:0 10px 22px rgba(34,197,94,.28)}
   .btn-plain{background:#f7f7fb;color:#111;border:1px solid var(--line)}
   .btn-danger{background:var(--danger);color:#fff;box-shadow:0 10px 22px rgba(239,68,68,.24)}
-  .btn-reindex{padding:6px 10px;font-size:.78rem;position:relative;top:-3px} /* ~35% menor */
+  .btn-reindex{padding:6px 10px;font-size:.78rem;position:relative;top:-3px}
 
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
-
-  /* Caixinhas ~10% mais escuras */
   .out{
     white-space:pre-wrap;min-height:90px;border:1px dashed #c9d5ea;border-radius:12px;padding:10px;margin-top:10px;
     background:#f3f6ff;color:#0f172a;box-shadow:inset 0 1px 0 #ffffffcc
   }
   .out-alert{min-height:60px;padding:12px;text-align:center}
-  #alertMsg{font-size:24px;font-weight:900;color:#991b1b;margin:0 0 6px} /* +20% */
+  #alertMsg{font-size:24px;font-weight:900;color:#991b1b;margin:0 0 6px}
   #alertResp{margin:0}
 
   .list{margin:8px 0 0;padding:0;list-style:none}
   .item{padding:10px 0;border-top:1px solid var(--line)}
   .snip{color:#374151;font-size:13px;margin:6px 0}
 
-  /* Loaders */
   .busy{display:flex;align-items:center;gap:8px}
   .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #ffffff66;border-top-color:#fff;animation:spin .9s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
@@ -82,19 +77,22 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* Banner usado no lugar do card de PDFs (sem textos) */
+  /* Banner no lugar dos PDFs */
   .banner{
     display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
     border-radius:12px; box-shadow:var(--card-shadow); border:1px solid #e7eaf3;
   }
 
-  footer{margin:18px 0 8px;text-align:center}
-  .copyright{font-size:12px;font-weight:700;color:var(--brand);padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
+  /* Esconde o "PDFs" só nesse card */
+  #pdfCard .tag{ display:none; }
+
+  footer{margin:18px 0 6px;text-align:center}
+  .copyright{font-size:12px;font-weight:700;color:#2882bb;padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
+  .credit{margin-top:4px;font-size:6px;color:#cfd6e3;display:block}
 </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HEADER -->
     <div class="hero">
       <img class="logo left" src="icon.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/icon.png';" alt="Logo esquerdo">
       <img class="center-logo" src="RICai.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/RICai.png';" alt="RIC AI CRION">
@@ -159,7 +157,6 @@
         <h2>Controle de alerta</h2>
         <div class="row">
           <button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button>
-          <!-- botão Ajustar removido nesta versão -->
         </div>
 
         <div class="hint" id="alertBusy" style="display:none">
@@ -189,13 +186,11 @@
       </section>
 
       <!-- PDFs (DESATIVADO → somente banner, sem textos) -->
-      <section class="card">
+      <section class="card" id="pdfCard">
         <div class="tag">PDFs</div>
-
-        <!-- Banner com drop shadow e radius -->
         <img src="v2.jpeg" alt="HDSTEC — banner" class="banner">
 
-        <!-- Mantém elementos esperados pelo JS, porém ocultos -->
+        <!-- elementos abaixo permanecem ocultos para compatibilidade -->
         <div class="row" style="display:none">
           <input id="qPDF" class="input" placeholder="Ex.: Affix, Coparticipação, Carência 30 dias">
           <button id="btnPDF" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
@@ -218,7 +213,6 @@
         <div class="row">
           <input id="qCRION" class="input" placeholder="Ex.: Onboarding, Retenção, URA, Script de Cobrança, Affix">
           <button id="btnCRION" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
-          <!-- Reindexar: OCULTO -->
           <button id="btnReIdxCRION" type="button" class="btn btn-danger btn-reindex" style="min-width:112px; display:none">Reindexar</button>
         </div>
         <div class="hint" id="crionBusy" style="display:none">
@@ -233,36 +227,28 @@
     </div>
 
     <!-- FOOTER -->
-    <footer><span class="copyright">© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 -Operacao</span></footer>
+    <footer>
+      <span class="copyright">© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 -Operacao</span>
+      <span class="credit">desenvolvido por Alexandre Cavalcante</span>
+    </footer>
   </div>
 
-  <!-- (Modais de ajuste do alerta permanecem no código original, mas não são usados nesta versão) -->
-
 <script>
-/* ======= CONFIG: troque aqui se precisar ======= */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
-
-/* ======= HELPERS ======= */
 const $ = s => document.querySelector(s);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 function cleanName(n){ return String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,''); }
 function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
-
-/* ======= CHAMADAS PARA GAS (/exec) ======= */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
-  return fetch(url, {
-    method:"POST",
-    headers:{ "Content-Type":"text/plain" },
-    body: JSON.stringify(payload || {})
-  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
+  return fetch(url, { method:"POST", headers:{ "Content-Type":"text/plain" }, body: JSON.stringify(payload || {}) })
+         .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= INICIALIZAÇÃO ======= */
 document.addEventListener('DOMContentLoaded', () => {
-  /* Post-it */
+  // Post-it
   const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
   $('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
   $('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
@@ -270,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   noteArea.value = localStorage.getItem('ric_note') || "";
   noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
-  /* Calculadora */
+  // Calculadora
   $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; };
   $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
   const refresh = v => $('#scr').textContent = v;
@@ -290,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
 
-  /* ALERTA */
+  // Alerta
   $('#btnAlert').addEventListener('click', async ()=>{
     const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
     show(box,false); show($('#alertBusy'),true);
@@ -305,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#alertBusy'),false); }
   });
 
-  /* SITES */
+  // Sites
   $('#btnSites').addEventListener('click', async ()=>{
     const q=($('#qSites').value||'').trim();
     if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
@@ -320,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#sitesBusy'),false); }
   });
 
-  /* PDFs (mantidos ocultos para compatibilidade) */
+  // PDFs (mantidos ocultos para compatibilidade)
   const btnPDF = $('#btnPDF'), qPDF = $('#qPDF');
   if(btnPDF){ btnPDF.addEventListener('click', doPDF); }
   if(qPDF){ qPDF.addEventListener('keydown', e=>{ if(e.key==='Enter') doPDF(); }); }
@@ -359,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#pdfBusy'),false); }
   }
 
-  /* CRION */
+  // CRION
   $('#btnCRION').addEventListener('click', doCRION);
   $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
   const btnRe = $('#btnReIdxCRION');
