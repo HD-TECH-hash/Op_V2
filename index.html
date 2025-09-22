@@ -29,7 +29,15 @@
   }
   .hero .center-logo{height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
   .hero .logo{width:120px;height:auto;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
+
+  /* novo: ícone à esquerda (apenas 1) */
+  .left-img{
+    position:absolute; left:14px; top:50%; transform:translateY(-50%);
+    height:38px; object-fit:contain; filter:drop-shadow(0 2px 4px #0002);
+  }
+  /* já existia: imagem à direita */
   .right-img{position:absolute;right:14px;top:50%;transform:translateY(-50%)}
+
   .tools{position:absolute;right:148px;top:50%;transform:translateY(-50%);display:flex;gap:10px}
   .iconbtn{
     width:36px;height:36px;border-radius:12px;border:1px solid #ffffff40; display:grid;place-items:center;
@@ -39,24 +47,13 @@
   .icon-note{background:#ffd95e} .icon-calc{background:#60a5fa}
   .iconbtn svg{display:block}
 
-  /* ====== LOGOS À ESQUERDA (maiores, sem contorno) ====== */
-  .left-logos{
-    position:absolute; left:14px; top:50%; transform:translateY(-50%);
-    display:flex; align-items:center; gap:12px;
-    padding:0; background:transparent; border:0; box-shadow:none;
-  }
-  .left-logos .logo-mini{ height:36px; object-fit:contain; filter:drop-shadow(0 1px 2px #0002) }
-  .left-logos .plus{ color:#fff; opacity:.95; font-weight:800; line-height:1; font-size:18px; text-shadow:0 1px 2px rgba(0,0,0,.2) }
-
   /* ====== GRID / CARDS ====== */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
   @media (max-width:980px){
     .grid{grid-template-columns:1fr}
     .right-img{display:none}
     .tools{right:14px}
-    .left-logos{ left:10px; gap:8px }
-    .left-logos .logo-mini{ height:20px }
-    .left-logos .plus{ font-size:14px }
+    .left-img{left:10px;height:22px}
   }
 
   .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--card-shadow)}
@@ -99,7 +96,6 @@
     display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
     border-radius:12px; box-shadow:var(--card-shadow); border:1px solid #e7eaf3;
   }
-
   /* Esconde o "PDFs" só nesse card */
   #pdfCard .tag{ display:none; }
 
@@ -112,16 +108,14 @@
   <div class="wrap">
     <!-- HEADER -->
     <div class="hero">
-      <!-- 3 logos à esquerda com "+" -->
-      <div class="left-logos" aria-label="logos parceiros">
-        <img src="Affix.png"   alt="Affix"       class="logo-mini">
-        <span class="plus">+</span>
-        <img src="Alter.png"   alt="Alter"       class="logo-mini">
-        <span class="plus">+</span>
-        <img src="conecta.png" alt="ConectaPlan" class="logo-mini">
-      </div>
+      <!-- esquerda: icon2.png -->
+      <img class="left-img" src="icon2.png"
+           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
+           alt="Logo esquerdo">
 
-      <img class="center-logo" src="RICai.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/RICai.png';" alt="RIC AI CRION">
+      <img class="center-logo" src="RICai.png"
+           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/RICai.png';"
+           alt="RIC AI CRION">
 
       <div class="tools">
         <button id="toggleNote" type="button" class="iconbtn icon-note" title="Post-it">
@@ -139,7 +133,10 @@
         </button>
       </div>
 
-      <img class="logo right-img" src="icon2.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/icon2.png';" alt="Logo direito">
+      <!-- direita: HDS.png -->
+      <img class="logo right-img" src="HDS.png"
+           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
+           alt="HDS">
     </div>
 
     <!-- WIDGETS -->
