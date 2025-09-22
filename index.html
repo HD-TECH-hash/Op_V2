@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -27,17 +28,12 @@
     background:linear-gradient(135deg,var(--brand),var(--brand2));
     box-shadow:0 24px 56px rgba(40,130,187,.22);
   }
-  .hero .center-logo{height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
   .hero .logo{width:120px;height:auto;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
-
-  /* novo: ícone à esquerda (apenas 1) */
   .left-img{
     position:absolute; left:14px; top:50%; transform:translateY(-50%);
     height:38px; object-fit:contain; filter:drop-shadow(0 2px 4px #0002);
   }
-  /* já existia: imagem à direita */
   .right-img{position:absolute;right:14px;top:50%;transform:translateY(-50%)}
-
   .tools{position:absolute;right:148px;top:50%;transform:translateY(-50%);display:flex;gap:10px}
   .iconbtn{
     width:36px;height:36px;border-radius:12px;border:1px solid #ffffff40; display:grid;place-items:center;
@@ -96,7 +92,6 @@
     display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
     border-radius:12px; box-shadow:var(--card-shadow); border:1px solid #e7eaf3;
   }
-  /* Esconde o "PDFs" só nesse card */
   #pdfCard .tag{ display:none; }
 
   footer{margin:18px 0 6px;text-align:center}
@@ -108,15 +103,12 @@
   <div class="wrap">
     <!-- HEADER -->
     <div class="hero">
-      <!-- esquerda: icon2.png -->
+      <!-- esquerda -->
       <img class="left-img" src="icon2.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
            alt="Logo esquerdo">
 
-      <img class="center-logo" src="RICai.png"
-           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion/main/RICai.png';"
-           alt="RIC AI CRION">
-
+      <!-- controles -->
       <div class="tools">
         <button id="toggleNote" type="button" class="iconbtn icon-note" title="Post-it">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -133,7 +125,7 @@
         </button>
       </div>
 
-      <!-- direita: HDS.png -->
+      <!-- direita -->
       <img class="logo right-img" src="HDS.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
            alt="HDS">
@@ -215,7 +207,6 @@
         <div class="tag">PDFs</div>
         <img src="v2.jpeg" alt="HDSTEC — banner" class="banner">
 
-        <!-- elementos abaixo permanecem ocultos para compatibilidade -->
         <div class="row" style="display:none">
           <input id="qPDF" class="input" placeholder="Ex.: Affix, Coparticipação, Carência 30 dias">
           <button id="btnPDF" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
