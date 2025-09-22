@@ -39,18 +39,14 @@
   .icon-note{background:#ffd95e} .icon-calc{background:#60a5fa}
   .iconbtn svg{display:block}
 
-  /* ====== TRIO DE LOGOS (esquerda da barra) ====== */
+  /* ====== LOGOS À ESQUERDA (maiores, sem contorno) ====== */
   .left-logos{
     position:absolute; left:14px; top:50%; transform:translateY(-50%);
-    display:flex; align-items:center; gap:8px;
-    padding:6px 10px; border-radius:14px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.25);
-    backdrop-filter: blur(2px);
-    box-shadow:0 6px 16px rgba(0,0,0,.15);
+    display:flex; align-items:center; gap:12px;
+    padding:0; background:transparent; border:0; box-shadow:none;
   }
-  .left-logos .logo-mini{ height:22px; object-fit:contain; filter:drop-shadow(0 1px 2px #0002) }
-  .left-logos .plus{ color:#fff; opacity:.9; font-weight:800; line-height:1; font-size:14px }
+  .left-logos .logo-mini{ height:36px; object-fit:contain; filter:drop-shadow(0 1px 2px #0002) }
+  .left-logos .plus{ color:#fff; opacity:.95; font-weight:800; line-height:1; font-size:18px; text-shadow:0 1px 2px rgba(0,0,0,.2) }
 
   /* ====== GRID / CARDS ====== */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
@@ -58,8 +54,9 @@
     .grid{grid-template-columns:1fr}
     .right-img{display:none}
     .tools{right:14px}
-    .left-logos{ left:10px; padding:5px 8px }
-    .left-logos .logo-mini{ height:18px }
+    .left-logos{ left:10px; gap:8px }
+    .left-logos .logo-mini{ height:20px }
+    .left-logos .plus{ font-size:14px }
   }
 
   .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--card-shadow)}
@@ -115,7 +112,7 @@
   <div class="wrap">
     <!-- HEADER -->
     <div class="hero">
-      <!-- Pacote de 3 logos à esquerda -->
+      <!-- 3 logos à esquerda com "+" -->
       <div class="left-logos" aria-label="logos parceiros">
         <img src="Affix.png"   alt="Affix"       class="logo-mini">
         <span class="plus">+</span>
@@ -309,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Alerta */
   $('#btnAlert').addEventListener('click', async ()=>{
-    const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
+    const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp']);
     show(box,false); show($('#alertBusy'),true);
     try{
       const r = await call('getalert',{});
