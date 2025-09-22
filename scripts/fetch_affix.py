@@ -1,149 +1,85 @@
-#!/usr/bin/env python3
 # scripts/fetch_affix.py
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
-import hashlib, json, time
-import requests
-from bs4 import BeautifulSoup
-from tqdm import tqdm
+import requests, json, time, sys, hashlib
 
-RAW_DIR     = Path("data/affix/raw")
-MANIFEST    = Path("data/affix/manifest.json")
-SOURCES_TXT = Path("scripts/affix_sources.txt")
+RAW_DIR   = Path("data/affix/raw")
+MANIFEST  = Path("data/affix/manifest.json")
+SOURCES   = Path("scripts/affix_sources.txt")
 
-UA = "Mozilla/5.0 (compatible; RicCrionBot/1.0; +https://github.com/HD-TECH-hash)"
-
-RAW_DIR.mkdir(parents=True, exist_ok=True)
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/125.0 Safari/537.36")
 
 def load_manifest():
-    if MANIFEST.exists():
-        try:
-            return json.loads(MANIFEST.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    return {}
+    try:
+        return json.loads(MANIFEST.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 def save_manifest(m):
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps(m, ensure_ascii=False, indent=2), encoding="utf-8")
 
-def norm_filename_from_url(url: str) -> str:
-    p = urlsplit(url)
-    name = Path(unquote(p.path)).name or "arquivo.pdf"
+def sanitize_name(url: str) -> str:
+    name = Path(unquote(urlsplit(url).path)).name or "file.pdf"
     if not name.lower().endswith(".pdf"):
-        name += ".pdf"
-    # remove trechos perigosos
-    name = name.replace("/", "_").replace("\\", "_").replace("?", "_")
+        name = hashlib.md5(url.encode()).hexdigest() + ".pdf"
     return name
 
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
+def fetch_one(url: str) -> bool:
+    name = sanitize_name(url)
+    dst  = RAW_DIR / name
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-def is_pdf_url(url: str) -> bool:
-    up = urlsplit(url)
-    return up.path.lower().endswith(".pdf")
-
-def list_pdf_links_from_page(url: str) -> list[str]:
+    print(f"→ Baixando: {url}")
     try:
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
-        pdfs = []
-        for a in soup.find_all("a", href=True):
-            href = a["href"].strip()
-            if href.lower().endswith(".pdf"):
-                # resolver links relativos
-                pdf_url = requests.compat.urljoin(url, href)
-                pdfs.append(pdf_url)
-        return sorted(set(pdfs))
-    except Exception as e:
-        print(f"[WARN] Falha ao varrer página: {url} -> {e}")
-        return []
+        headers = {
+            "User-Agent": UA,
+            "Referer": "https://www.affix.com.br/",
+            "Accept": "*/*",
+        }
+        r = requests.get(url, headers=headers, allow_redirects=True, timeout=60, stream=True)
+        print(f"  status={r.status_code}  type={r.headers.get('Content-Type')}  len={r.headers.get('Content-Length')}")
+        if r.status_code != 200:
+            print(f"  ERRO: HTTP {r.status_code}")
+            return False
 
-def read_sources() -> list[str]:
-    if not SOURCES_TXT.exists():
-        print(f"[ERRO] {SOURCES_TXT} não encontrado.")
-        return []
-    urls = []
-    for line in SOURCES_TXT.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        urls.append(line)
-    return urls
-
-def download_pdf(url: str, manifest: dict) -> None:
-    fname = norm_filename_from_url(url)
-    dest  = RAW_DIR / fname
-
-    try:
-        with requests.get(url, headers={"User-Agent": UA}, stream=True, timeout=60) as r:
-            r.raise_for_status()
-            tmp = dest.with_suffix(".downloading")
-            total = int(r.headers.get("Content-Length") or 0)
-            pbar = tqdm(total=total, unit="B", unit_scale=True, desc=fname)
-            with tmp.open("wb") as f:
-                for chunk in r.iter_content(chunk_size=1024*64):
-                    if not chunk:
-                        continue
+        tmp = dst.with_suffix(dst.suffix + ".part")
+        with open(tmp, "wb") as f:
+            for chunk in r.iter_content(chunk_size=65536):
+                if chunk:
                     f.write(chunk)
-                    pbar.update(len(chunk))
-            pbar.close()
-
-        new_hash = sha256_file(tmp)
-        old_hash = manifest.get(fname, {}).get("sha256")
-
-        # somente substitui se mudou ou não existia
-        if dest.exists() and old_hash == new_hash:
-            tmp.unlink(missing_ok=True)
-            print(f"[SKIP] Sem mudanças: {fname}")
-        else:
-            tmp.replace(dest)
-            manifest[fname] = {
-                "url": url,
-                "sha256": new_hash,
-                "ts": int(time.time())
-            }
-            print(f"[OK] Salvo: {dest}")
-
-    except requests.HTTPError as e:
-        print(f"[HTTP] {e.response.status_code} ao baixar {url}")
+        tmp.rename(dst)
+        print(f"  ✓ Salvo em {dst}")
+        return True
     except Exception as e:
-        print(f"[ERRO] Falha ao baixar {url} -> {e}")
+        print("  EXCEÇÃO:", repr(e))
+        return False
 
 def main():
+    if not SOURCES.exists():
+        print(f"Arquivo de fontes não encontrado: {SOURCES}")
+        sys.exit(1)
+
+    urls = [
+        ln.strip() for ln in SOURCES.read_text(encoding="utf-8").splitlines()
+        if ln.strip() and not ln.strip().startswith("#")
+    ]
+    print("Fontes:", urls)
+    if not urls:
+        print("Nenhum URL na lista.")
+        sys.exit(0)
+
+    ok = 0
     manifest = load_manifest()
-    seeds = read_sources()
-    if not seeds:
-        return
-
-    # expande: links diretos + páginas com PDFs
-    all_pdfs = []
-    for s in seeds:
-        if is_pdf_url(s):
-            all_pdfs.append(s)
-        else:
-            all_pdfs.extend(list_pdf_links_from_page(s))
-
-    # de-duplicar preservando ordem
-    seen = set()
-    queue = []
-    for u in all_pdfs:
-        if u not in seen:
-            seen.add(u)
-            queue.append(u)
-
-    print(f"Encontrados {len(queue)} PDFs para processar.")
-
-    for url in queue:
-        download_pdf(url, manifest)
-
+    for url in urls:
+        if fetch_one(url):
+            ok += 1
+            manifest[url] = {"ts": int(time.time())}
     save_manifest(manifest)
-    print("Concluído.")
+    print(f"Concluído. Baixados: {ok}/{len(urls)}")
+    # exit 0 mesmo que 0 arquivos, para o job não falhar à toa
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()
