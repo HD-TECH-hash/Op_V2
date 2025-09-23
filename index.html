@@ -10,17 +10,22 @@
     --brand:#2882bb; --brand2:#2a8fcf;
     --bg:#f7f8fc; --ink:#0f172a; --muted:#667085; --line:#E7EAF3;
     --lime:#22c55e; --lime2:#a3e635;
-    --tag:#F2E7FF; --tag-ink:#6D28D9; --card-shadow:0 18px 36px rgba(99,102,241,.12), 0 8px 24px rgba(40,130,187,.10);
+    --tag:#F2E7FF; --tag-ink:#6D28D9;
+    --card-shadow:0 18px 36px rgba(99,102,241,.12), 0 8px 24px rgba(40,130,187,.10);
   }
-  *{box-sizing:border-box} body{margin:0;font:var(--base-font)/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--ink);background:radial-gradient(1200px 520px at -10% -10%, #eaf4ff 0, #ffffff 60%, #f7faff 100%)}
+  *{box-sizing:border-box}
+  body{margin:0;font:var(--base-font)/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--ink);
+       background:radial-gradient(1200px 520px at -10% -10%, #eaf4ff 0, #ffffff 60%, #f7faff 100%)}
   .wrap{max-width:1290px;margin:0 auto;padding:16px}
-  .hero{position:relative;min-height:78px;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 24px 56px rgba(40,130,187,.22)}
+  .hero{position:relative;min-height:78px;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;
+        color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 24px 56px rgba(40,130,187,.22)}
   .left-img{position:absolute;left:14px;top:50%;transform:translateY(-50%);height:38px}
-  .right-img{position:absolute;right:14px;top:50%;;height:38px}
+  .right-img{position:absolute;right:14px;top:50%;transform:translateY(-50%);height:38px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} .right-img{display:none} .left-img{left:10px;height:22px} }
   .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--card-shadow)}
-  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);
+       border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
   h2{margin:8px 0 10px;font-size:18px}
   .row{display:flex;gap:10px;align-items:center}
   .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
@@ -40,30 +45,47 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <img class="left-img" src="icon2.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';" alt="">
-      <img class="right-img" src="HDS.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';" alt="">
+      <img class="left-img"
+           src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png"
+           alt="Logo">
+      <img class="right-img"
+           src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png"
+           alt="HDS TEC">
     </div>
 
     <div class="grid">
+      <!-- ALERTA -->
       <section class="card">
         <div class="tag">ALERTA</div>
         <h2>Controle de alerta</h2>
-        <div class="row"><button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button></div>
+        <div class="row">
+          <button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button>
+        </div>
         <div class="hint" id="alertBusy" style="display:none">Pesquisando alerta…</div>
         <div id="alertBox" class="out" style="display:none"></div>
       </section>
 
+      <!-- SITES OFICIAIS -->
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input" placeholder='Digite sua pergunta ..... (ex.: "manual")'>
+          <input id="qSites" class="input" placeholder='Ex.: "manual", "hapvida", "RJ"'>
           <button id="btnSites" type="button" class="btn btn-search">Pesquisar</button>
+          <button id="btnAll" type="button" class="btn btn-plain">Mostrar todos</button>
         </div>
         <div class="hint" id="sitesBusy" style="display:none">Pesquisando…</div>
         <div id="outSites" class="out">—</div>
       </section>
 
+      <!-- SLOT LIVRE (mascote) -->
+      <section class="card" style="background:transparent;border:0;box-shadow:none">
+        <img src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png"
+             style="display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 24px 56px rgba(99,102,241,.22))"
+             alt="Mascote RIC">
+      </section>
+
+      <!-- CRION -->
       <section class="card">
         <div class="tag">PROCEDIMENTOS CRION</div>
         <h2>Procedimentos</h2>
@@ -93,6 +115,8 @@ const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZ
 const $  = sel => document.querySelector(sel);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+const norm = s => String(s||"").toLowerCase()
+  .normalize('NFD').replace(/[\u0300-\u036f]/g,''); // remove acentos
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(2)+" "+u[i]; }
 
 /* ======= GITHUB (repo + pages) ======= */
@@ -101,25 +125,18 @@ const GH_REPO  = "Ricai-crion-operacao";
 const RAW_BASE   = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
 const PAGES_BASE = `https://${GH_OWNER}.github.io/${GH_REPO}`;
 
-/* Constrói URL estável de visualização no GitHub Pages */
-function pagesPdfUrl(name){
-  // evita 'download' do raw; usa Pages que abre inline
-  return `${PAGES_BASE}/data/affix/raw/${encodeURIComponent(name)}`;
-}
+const pagesPdfUrl = (name)=> `${PAGES_BASE}/data/affix/raw/${encodeURIComponent(name)}`;
 
-/* Lista PDFs presentes no repositório */
+/* Lista PDFs presentes no repo (via API) */
 async function listRepoPdfs(){
-  const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
-  const r = await fetch(api, {cache:'no-store'}); if(!r.ok) return [];
-  const arr = await r.json();
-  return arr
-    .filter(it => it.type==="file" && /\.pdf$/i.test(it.name))
-    .map(it => ({
-      name: it.name,
-      size: it.size||0,
-      openUrl: pagesPdfUrl(it.name),   // <— abre inline em nova aba
-      origin: "repo"
-    }));
+  try{
+    const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
+    const r = await fetch(api, {cache:'no-store'}); if(!r.ok) return [];
+    const arr = await r.json();
+    return arr
+      .filter(it => it.type==="file" && /\.pdf$/i.test(it.name))
+      .map(it => ({ name: it.name, size: it.size||0, openUrl: pagesPdfUrl(it.name), origin: "repo" }));
+  }catch{ return []; }
 }
 
 /* Lê manifest.json e traz SOMENTE status=ok */
@@ -132,16 +149,15 @@ async function listManifestPdfs(){
       .filter(x => x && x.url && /\.pdf$/i.test(x.url) && (x.status === "ok"))
       .map(x => {
         const name = x.name || x.url.split('/').pop();
-        // se baixou, preferir o Pages (inline). Se não, usar link externo.
-        const openUrl = x.repo_raw ? pagesPdfUrl(name) : x.url;
+        const openUrl = x.repo_raw ? pagesPdfUrl(name) : x.url; // se baixou, usa Pages
         return { name, size: x.size||0, openUrl, origin: x.repo_raw ? "repo" : "external" };
       });
-  }catch(_){ return []; }
+  }catch{ return []; }
 }
 
 /* ======= UI ======= */
 document.addEventListener('DOMContentLoaded', () => {
-  // ALERTA
+  // ALERTA (GAS)
   $('#btnAlert')?.addEventListener('click', async ()=>{
     show($('#alertBusy'),true); show($('#alertBox'),false);
     try{
@@ -157,10 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // SITES OFICIAIS
   $('#btnSites')?.addEventListener('click', doSites);
+  $('#btnAll')?.addEventListener('click', ()=>{ $('#qSites').value=""; doSites(true); });
   $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 
-  async function doSites(){
-    const q=(($('#qSites').value)||'').trim().toLowerCase();
+  async function doSites(forceAll=false){
+    const qRaw = (($('#qSites').value)||'').trim();
+    const q = forceAll ? "" : qRaw;
     show($('#sitesBusy'),true);
     const box = $('#outSites'); box.innerHTML = "—";
 
@@ -170,12 +188,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const map = new Map();
       for (const it of [...manifest, ...repo]){ if(!map.has(it.name)) map.set(it.name, it); }
       let items = [...map.values()];
-      if(q) items = items.filter(it => it.name.toLowerCase().includes(q));
+
+      // filtro: por termos (qualquer termo)
+      if(q){
+        const terms = norm(q).split(/\s+/).filter(Boolean);
+        items = items.filter(it=>{
+          const hay = norm(it.name);
+          return terms.some(t => hay.includes(t));
+        });
+      }
+
+      // se nada encontrado com o filtro, mostra todos com aviso
+      let note = `Resultados: ${items.length} • filtro: “${q || '*'}”`;
+      if(q && items.length===0){
+        items = [...map.values()];
+        note = `Nenhum item para “${qRaw}”. Exibindo todos (${items.length}).`;
+      }
 
       const frag = document.createDocumentFragment();
       const meta = document.createElement('div');
       meta.className='hint';
-      meta.textContent = `Resultados: ${items.length} • filtro: “${q||'*'}”`;
+      meta.textContent = note;
       frag.appendChild(meta);
 
       for (const it of items){
@@ -193,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnOpen.addEventListener('click', ()=> window.open(it.openUrl, '_blank', 'noopener,noreferrer'));
         actions.appendChild(btnOpen);
 
-        // Prévia — inline com <embed>; fallback p/ Google Viewer no <object>
+        // Prévia — inline com <object>; fallback p/ Google Viewer
         const btnPrev = document.createElement('button');
         btnPrev.className='btn btn-plain btn-sm'; btnPrev.textContent='Prévia';
         btnPrev.addEventListener('click', ()=>{
@@ -201,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
           let prev = document.getElementById(id);
           if(prev){ prev.remove(); return; }
           prev = document.createElement('div'); prev.id = id; prev.style.marginTop='8px';
-
           const gview = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(it.openUrl)}`;
           prev.innerHTML = `
             <object data="${it.openUrl}" type="application/pdf" style="width:100%;height:520px;border:1px solid var(--line);border-radius:10px">
@@ -226,6 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // auto: listar todos ao carregar
+  doSites(true);
+
   // CRION (GAS)
   $('#btnCRION')?.addEventListener('click', async ()=>{
     const q=(($('#qCRION').value)||'').trim(); if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
@@ -244,8 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
       $('#crionList').appendChild(frag);
 
       if(items.length){
-        let from=0;
-        const sid = r.sessionId;
+        let from=0; const sid=r.sessionId;
         while(from<items.length){
           const x = await fetch(APP_URL+"?fn=fetchcrionsnippets", {method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({sessionId:sid,from,limit:6})}).then(r=>r.json());
           (x.items||[]).forEach(row=>{
