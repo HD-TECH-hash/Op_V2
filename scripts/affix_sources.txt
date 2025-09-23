@@ -1,2 +1,119 @@
-# Cole aqui os PDFs (um por linha). Exemplo:
-https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
+# AFFIX – seeds mensais (2017 → 2025) + backoffice
+crawl https://www.affix.com.br/backoffice/
+
+crawl https://www.affix.com.br/wp-content/uploads/2017/01/
+crawl https://www.affix.com.br/wp-content/uploads/2017/02/
+crawl https://www.affix.com.br/wp-content/uploads/2017/03/
+crawl https://www.affix.com.br/wp-content/uploads/2017/04/
+crawl https://www.affix.com.br/wp-content/uploads/2017/05/
+crawl https://www.affix.com.br/wp-content/uploads/2017/06/
+crawl https://www.affix.com.br/wp-content/uploads/2017/07/
+crawl https://www.affix.com.br/wp-content/uploads/2017/08/
+crawl https://www.affix.com.br/wp-content/uploads/2017/09/
+crawl https://www.affix.com.br/wp-content/uploads/2017/10/
+crawl https://www.affix.com.br/wp-content/uploads/2017/11/
+crawl https://www.affix.com.br/wp-content/uploads/2017/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2018/01/
+crawl https://www.affix.com.br/wp-content/uploads/2018/02/
+crawl https://www.affix.com.br/wp-content/uploads/2018/03/
+crawl https://www.affix.com.br/wp-content/uploads/2018/04/
+crawl https://www.affix.com.br/wp-content/uploads/2018/05/
+crawl https://www.affix.com.br/wp-content/uploads/2018/06/
+crawl https://www.affix.com.br/wp-content/uploads/2018/07/
+crawl https://www.affix.com.br/wp-content/uploads/2018/08/
+crawl https://www.affix.com.br/wp-content/uploads/2018/09/
+crawl https://www.affix.com.br/wp-content/uploads/2018/10/
+crawl https://www.affix.com.br/wp-content/uploads/2018/11/
+crawl https://www.affix.com.br/wp-content/uploads/2018/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2019/01/
+crawl https://www.affix.com.br/wp-content/uploads/2019/02/
+crawl https://www.affix.com.br/wp-content/uploads/2019/03/
+crawl https://www.affix.com.br/wp-content/uploads/2019/04/
+crawl https://www.affix.com.br/wp-content/uploads/2019/05/
+crawl https://www.affix.com.br/wp-content/uploads/2019/06/
+crawl https://www.affix.com.br/wp-content/uploads/2019/07/
+crawl https://www.affix.com.br/wp-content/uploads/2019/08/
+crawl https://www.affix.com.br/wp-content/uploads/2019/09/
+crawl https://www.affix.com.br/wp-content/uploads/2019/10/
+crawl https://www.affix.com.br/wp-content/uploads/2019/11/
+crawl https://www.affix.com.br/wp-content/uploads/2019/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2020/01/
+crawl https://www.affix.com.br/wp-content/uploads/2020/02/
+crawl https://www.affix.com.br/wp-content/uploads/2020/03/
+crawl https://www.affix.com.br/wp-content/uploads/2020/04/
+crawl https://www.affix.com.br/wp-content/uploads/2020/05/
+crawl https://www.affix.com.br/wp-content/uploads/2020/06/
+crawl https://www.affix.com.br/wp-content/uploads/2020/07/
+crawl https://www.affix.com.br/wp-content/uploads/2020/08/
+crawl https://www.affix.com.br/wp-content/uploads/2020/09/
+crawl https://www.affix.com.br/wp-content/uploads/2020/10/
+crawl https://www.affix.com.br/wp-content/uploads/2020/11/
+crawl https://www.affix.com.br/wp-content/uploads/2020/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2021/01/
+crawl https://www.affix.com.br/wp-content/uploads/2021/02/
+crawl https://www.affix.com.br/wp-content/uploads/2021/03/
+crawl https://www.affix.com.br/wp-content/uploads/2021/04/
+crawl https://www.affix.com.br/wp-content/uploads/2021/05/
+crawl https://www.affix.com.br/wp-content/uploads/2021/06/
+crawl https://www.affix.com.br/wp-content/uploads/2021/07/
+crawl https://www.affix.com.br/wp-content/uploads/2021/08/
+crawl https://www.affix.com.br/wp-content/uploads/2021/09/
+crawl https://www.affix.com.br/wp-content/uploads/2021/10/
+crawl https://www.affix.com.br/wp-content/uploads/2021/11/
+crawl https://www.affix.com.br/wp-content/uploads/2021/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2022/01/
+crawl https://www.affix.com.br/wp-content/uploads/2022/02/
+crawl https://www.affix.com.br/wp-content/uploads/2022/03/
+crawl https://www.affix.com.br/wp-content/uploads/2022/04/
+crawl https://www.affix.com.br/wp-content/uploads/2022/05/
+crawl https://www.affix.com.br/wp-content/uploads/2022/06/
+crawl https://www.affix.com.br/wp-content/uploads/2022/07/
+crawl https://www.affix.com.br/wp-content/uploads/2022/08/
+crawl https://www.affix.com.br/wp-content/uploads/2022/09/
+crawl https://www.affix.com.br/wp-content/uploads/2022/10/
+crawl https://www.affix.com.br/wp-content/uploads/2022/11/
+crawl https://www.affix.com.br/wp-content/uploads/2022/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2023/01/
+crawl https://www.affix.com.br/wp-content/uploads/2023/02/
+crawl https://www.affix.com.br/wp-content/uploads/2023/03/
+crawl https://www.affix.com.br/wp-content/uploads/2023/04/
+crawl https://www.affix.com.br/wp-content/uploads/2023/05/
+crawl https://www.affix.com.br/wp-content/uploads/2023/06/
+crawl https://www.affix.com.br/wp-content/uploads/2023/07/
+crawl https://www.affix.com.br/wp-content/uploads/2023/08/
+crawl https://www.affix.com.br/wp-content/uploads/2023/09/
+crawl https://www.affix.com.br/wp-content/uploads/2023/10/
+crawl https://www.affix.com.br/wp-content/uploads/2023/11/
+crawl https://www.affix.com.br/wp-content/uploads/2023/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2024/01/
+crawl https://www.affix.com.br/wp-content/uploads/2024/02/
+crawl https://www.affix.com.br/wp-content/uploads/2024/03/
+crawl https://www.affix.com.br/wp-content/uploads/2024/04/
+crawl https://www.affix.com.br/wp-content/uploads/2024/05/
+crawl https://www.affix.com.br/wp-content/uploads/2024/06/
+crawl https://www.affix.com.br/wp-content/uploads/2024/07/
+crawl https://www.affix.com.br/wp-content/uploads/2024/08/
+crawl https://www.affix.com.br/wp-content/uploads/2024/09/
+crawl https://www.affix.com.br/wp-content/uploads/2024/10/
+crawl https://www.affix.com.br/wp-content/uploads/2024/11/
+crawl https://www.affix.com.br/wp-content/uploads/2024/12/
+
+crawl https://www.affix.com.br/wp-content/uploads/2025/01/
+crawl https://www.affix.com.br/wp-content/uploads/2025/02/
+crawl https://www.affix.com.br/wp-content/uploads/2025/03/
+crawl https://www.affix.com.br/wp-content/uploads/2025/04/
+crawl https://www.affix.com.br/wp-content/uploads/2025/05/
+crawl https://www.affix.com.br/wp-content/uploads/2025/06/
+crawl https://www.affix.com.br/wp-content/uploads/2025/07/
+crawl https://www.affix.com.br/wp-content/uploads/2025/08/
+crawl https://www.affix.com.br/wp-content/uploads/2025/09/
+crawl https://www.affix.com.br/wp-content/uploads/2025/10/
+crawl https://www.affix.com.br/wp-content/uploads/2025/11/
+crawl https://www.affix.com.br/wp-content/uploads/2025/12/
