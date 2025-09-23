@@ -1,11 +1,7 @@
-# Linhas aceitas:
-#  - crawl <URL>   -> varre a página e sublinks (mesmo domínio) e coleta PDFs válidos
-#  - link  <URL>   -> adiciona diretamente o PDF
-
-# Backoffice / regionais 2025
+# Tags/categorias que costumam publicar materiais
 crawl https://www.affix.com.br/tag/backoffice/
 crawl https://www.affix.com.br/tag/recife/
 crawl https://www.affix.com.br/tag/asscompe/
-
-# Exemplos de links diretos (terminam com -25.pdf)
-# link https://www.affix.com.br/wp-content/uploads/2025/08/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
+crawl https://www.affix.com.br/category/noticias/
+# Exemplos diretos (adicione quando tiver o link do PDF em 2025)
+# link https://www.affix.com.br/wp-content/uploads/2025/08/NOME-DO-ARQUIVO-2025.pdf
