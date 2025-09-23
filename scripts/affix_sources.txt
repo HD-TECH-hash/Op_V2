@@ -1,29 +1,29 @@
 # AFFIX — PDFs 2025 (links diretos)
-link https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2025/05/BRASIL-HAPVIDA_Manual-Corretor-AR_04-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2025/05/Affix-RJ-Hapvida-Manual-Corretor-Varejo-04-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2025/05/Affix-SE-Hapvida-Gov.-Sergipe-BANESE-Manual-04-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2025/05/BRASIL-HAPVIDA_Manual-Corretor-AR_04-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2025/05/Affix-RJ-Hapvida-Manual-Corretor-Varejo-04-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2025/05/Affix-SE-Hapvida-Gov.-Sergipe-BANESE-Manual-04-25.pdf
 
 # Norte / Nordeste
-link https://www.affix.com.br/wp-content/uploads/2018/12/Affix-AM-Hapvida-Manual-do-Corretor-08-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2024/10/Affix-CE-Hapvida-Manual-Corretor-10-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2024/11/Affix-BA-Hapvida-Manual-do-Corretor-desconto-pix-09-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2025/11/Affix-BA-Hapvida-Manual-Corretor-Alagoinhas_Edif–dos–Sind–Oficiais%EF%80%A2-11-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2016/03/Affix-RN-Hapvida-Manual-do-Corretor-10-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2025/12/Affix-AL-Hapvida-Manual-Corretor-12-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2018/12/Affix-AM-Hapvida-Manual-do-Corretor-08-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2024/10/Affix-CE-Hapvida-Manual-Corretor-10-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2024/11/Affix-BA-Hapvida-Manual-do-Corretor-desconto-pix-09-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2025/11/Affix-BA-Hapvida-Manual-Corretor-Alagoinhas_Edif–dos–Sind–Oficiais%EF%80%A2-11-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2016/03/Affix-RN-Hapvida-Manual-do-Corretor-10-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2025/12/Affix-AL-Hapvida-Manual-Corretor-12-25.pdf
 
 # Centro-Oeste / DF
-link https://www.affix.com.br/wp-content/uploads/2021/12/Affix-DF-Hapvida-Manual-do-Corretor-08-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2021/12/Affix-DF-Hapvida-Manual-do-Corretor-08-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf
 
 # Sudeste
-link https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-Manual-do-Corretor-08-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-AD-Manual-do-Corretor-06-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2016/02/Affix-SP-Hapvida-AD-Manual-do-Corretor-Gov-SP-10-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2024/10/Affix-ES-Hapvida-Manual-do-Corretor-10-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-Manual-do-Corretor-08-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-AD-Manual-do-Corretor-06-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2016/02/Affix-SP-Hapvida-AD-Manual-do-Corretor-Gov-SP-10-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2024/10/Affix-ES-Hapvida-Manual-do-Corretor-10-25.pdf
 
 # Sul
-link https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Campo-Largo-03-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-02-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2016/03/Affix-PR-SulAmerica-Man-ual-do-Corretor-08-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2018/01/Affix-RS-Unicred-Manual-NEW-07-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Campo-Largo-03-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-02-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2016/03/Affix-PR-SulAmerica-Man-ual-do-Corretor-08-25.pdf
+crawl https://www.affix.com.br/wp-content/uploads/2018/01/Affix-RS-Unicred-Manual-NEW-07-25.pdf
