@@ -3,7 +3,7 @@ name: Affix PDFs nightly
 on:
   workflow_dispatch:
   schedule:
-    - cron: "25 23 * * *"  # seu horário
+    - cron: "25 23 * * *"   # rode todo dia ~20:25 BRT (ajuste se quiser)
 
 jobs:
   fetch:
@@ -16,16 +16,26 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
+
+      - name: Install OCR deps (poppler + tesseract)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils tesseract-ocr
 
       - name: Fetch Affix PDFs
         env:
-          AFFIX_ONLY_2025: "1"   # <- ative o filtro 2025 aqui (ou remova para baixar tudo)
+          # deixe "1" para priorizar 2025; remova a var p/ buscar tudo da lista/crawls
+          AFFIX_ONLY_2025: "1"
         run: |
           python scripts/fetch_affix.py
+
+      - name: Generate OCR thumbs/text
+        run: |
+          python scripts/ocr_affix.py || true
 
       - name: Commit & push if changed
         run: |
