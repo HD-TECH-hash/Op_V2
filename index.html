@@ -12,7 +12,6 @@
     --lime:#22c55e; --lime2:#a3e635; --danger:#ef4444;
     --tag:#F2E7FF; --tag-ink:#6D28D9; --tag-shadow:0 4px 10px rgba(40,130,187,.18);
     --card-shadow:0 18px 36px rgba(99,102,241,.12), 0 8px 24px rgba(40,130,187,.10);
-    --violet: #6366f1;
   }
   *{box-sizing:border-box}
   body{
@@ -21,7 +20,7 @@
   }
   .wrap{max-width:1290px;margin:0 auto;padding:16px}
 
-  /* ====== HEADER ====== */
+  /* HEADER */
   .hero{
     position:relative; min-height:78px; border-radius:18px; padding:12px 16px;
     display:flex; align-items:center; justify-content:center; color:#fff;
@@ -46,7 +45,7 @@
   .icon-note{background:#ffd95e} .icon-calc{background:#60a5fa}
   .iconbtn svg{display:block}
 
-  /* ====== GRID / CARDS ====== */
+  /* GRID / CARDS */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
   @media (max-width:980px){
     .grid{grid-template-columns:1fr}
@@ -90,30 +89,25 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* ====== SLOT LIVRE (imagem flutuando) ====== */
+  /* SLOT LIVRE (RR.png flutuando com mesma sombra roxa) */
   .free-card{background:transparent;border:0;box-shadow:none;padding:0}
   .free-pad{padding:10px}
-  /* drop-shadow roxo, igual “vibe” dos cards */
-  .rr-img{
-    display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;
-    filter:
-      drop-shadow(0 18px 36px rgba(99,102,241,.18))
-      drop-shadow(0 8px 24px rgba(99,102,241,.12));
-  }
+  .rr-img{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 24px 56px rgba(99,102,241,.22));}
+
+  /* MINI-THUMB NA LISTA */
+  .thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;border:1px solid var(--line);
+         box-shadow:0 6px 14px rgba(99,102,241,.16), 0 3px 8px rgba(40,130,187,.10)}
+  .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .file-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .btn-sm{padding:6px 10px;font-size:12px}
 
   footer{margin:18px 0 6px;text-align:center}
   .copyright{font-size:12px;font-weight:700;color:#2882bb;padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
   .credit{margin-top:4px;font-size:6px;color:#cfd6e3;display:block}
-
-  /* mini estilização da prévia */
-  .preview{
-    margin-top:10px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff
-  }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HEADER -->
     <div class="hero">
       <img class="left-img" src="icon2.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
@@ -140,11 +134,44 @@
            alt="HDS TEC">
     </div>
 
-    <!-- Widgets (post-it e calc) omitidos por brevidade: idênticos ao seu -->
+    <!-- WIDGETS -->
+    <div id="noteWrap" class="widget note" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:240px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
+        <b>Post-it</b>
+        <div class="row" style="gap:6px">
+          <button id="clearNote" type="button" class="btn btn-plain" style="padding:4px 8px">Limpar</button>
+          <button id="closeNote" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
+        </div>
+      </div>
+      <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif"></textarea>
+    </div>
+
+    <div id="calcWrap" class="widget calc" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:260px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px #0001;padding:12px">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px">
+        <b>Calculadora</b>
+        <button id="closeCalc" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
+      </div>
+      <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
+      <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+        <div class="key op" data-k="C">C</div>
+        <div class="key op" data-k="±">±</div>
+        <div class="key op" data-k="%">%</div>
+        <div class="key op" data-k="/">÷</div>
+        <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
+        <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
+        <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
+        <div class="key" data-k="0">0</div><div class="key" data-k="00">00</div><div class="key" data-k=".">.</div><div class="key eq" data-k="=">=</div>
+      </div>
+      <style>
+        .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
+        .key.op{background:#eef6ff;border-color:#cfe7ff}
+        .key.eq{background:linear-gradient(135deg,var(--lime),var(--lime2));color:#053}
+      </style>
+    </div>
 
     <!-- GRID -->
     <div class="grid">
-      <!-- ALERTA (igual ao seu) -->
+      <!-- ALERTA -->
       <section class="card">
         <div class="tag">ALERTA</div>
         <h2>Controle de alerta</h2>
@@ -161,7 +188,7 @@
         </div>
       </section>
 
-      <!-- SITES OFICIAIS (lista PDFs do repositório) -->
+      <!-- SITES OFICIAIS -->
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -176,7 +203,7 @@
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- SLOT LIVRE → imagem PNG flutuando -->
+      <!-- SLOT LIVRE -->
       <section class="free-card">
         <div class="free-pad">
           <img class="rr-img" src="rr.png"
@@ -185,7 +212,7 @@
         </div>
       </section>
 
-      <!-- CRION (igual ao seu) -->
+      <!-- CRION -->
       <section class="card">
         <div class="tag">PROCEDIMENTOS CRION</div>
         <h2>Procedimentos</h2>
@@ -213,7 +240,7 @@
   </div>
 
 <script>
-/* ======= CONFIG ======= */
+/* ======= CONFIG (GAS) ======= */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ======= HELPERS ======= */
@@ -221,9 +248,11 @@ const $  = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+const cleanName = n => String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,'');
+const link = (url, txt) => `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`;
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
-/* ======= GAS: ALERTA e CRION (iguais) ======= */
+/* ======= CHAMADAS GAS ======= */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   return fetch(url, {
@@ -233,7 +262,59 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
+/* ======= GITHUB RAW/CONTENTS ======= */
+const GH_OWNER = "HD-TECH-hash";
+const GH_REPO  = "Ricai-crion-operacao";
+const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
+
+async function listRawPdfs() {
+  const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
+  const r = await fetch(api, {cache:'no-store'});
+  if(!r.ok) throw new Error("Falha GitHub API");
+  const arr = await r.json();
+  return arr.filter(it => it.type === "file" && /\.pdf$/i.test(it.name));
+}
+async function exists(url){
+  try{
+    const r = await fetch(url, {method:'HEAD', cache:'no-store'});
+    return r.ok;
+  }catch(e){ return false; }
+}
+
+/* ======= APP ======= */
 document.addEventListener('DOMContentLoaded', () => {
+  /* Post-it */
+  const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
+  $('#toggleNote')?.addEventListener('click', ()=>{
+    const on = noteWrap.style.display !== "block"; noteWrap.style.display = on? "block" : "";
+    if(on) noteArea.focus();
+  });
+  $('#clearNote')?.addEventListener('click', ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); });
+  $('#closeNote')?.addEventListener('click', ()=>{ noteWrap.style.display="none"; });
+  noteArea.value = localStorage.getItem('ric_note') || "";
+  noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
+
+  /* Calculadora */
+  $('#toggleCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; });
+  $('#closeCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display="none"; });
+  const scr = $('#scr');
+  const calc = { buf:"0", op:null, mem:0, fresh:true };
+  function refresh(){ scr.textContent = calc.buf; }
+  function press(k){
+    if(/\d/.test(k)){ calc.buf = (calc.fresh||calc.buf==="0")? k : calc.buf+k; calc.fresh=false; return refresh(); }
+    if(k==="00"){ press("0"); return press("0"); }
+    if(k==="."){ if(!calc.buf.includes(".")) calc.buf += "."; calc.fresh=false; return refresh(); }
+    if(k==="C"){ calc.buf="0"; calc.op=null; calc.fresh=true; return refresh(); }
+    if(k==="±"){ if(calc.buf!=="0") calc.buf = calc.buf.startsWith("-")? calc.buf.slice(1):"-"+calc.buf; return refresh(); }
+    if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
+    if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
+    if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
+      let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+      calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
+    }
+  }
+  $('#keys')?.addEventListener('click', e=>{ const k=e.target?.dataset?.k; if(k) press(k); });
+
   /* ALERTA */
   $('#btnAlert')?.addEventListener('click', async ()=>{
     const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
@@ -249,73 +330,127 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#alertBusy'),false); }
   });
 
-  /* ========== SITES OFICIAIS: lista PDFs do repositório ========== */
+  /* SITES OFICIAIS — lista de PDFs do repositório (raw) com OCR/Thumb */
   $('#btnSites')?.addEventListener('click', doSites);
   $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
-
   async function doSites(){
-    const q = ($('#qSites').value||'').trim().toLowerCase();
+    const q=($('#qSites').value||'').trim().toLowerCase();
     show($('#sitesBusy'),true);
-    $('#outSites').textContent='—';
+    const box = $('#outSites');
+    box.innerHTML = "—";
+
     try{
-      // carrega o manifesto gerado pelo workflow
-      const resp = await fetch('data/affix/manifest.json', {cache: 'no-store'});
-      if(!resp.ok) throw new Error('manifest.json não encontrado');
-      const manifest = await resp.json();
-      const items = Object.values(manifest.items||manifest||{}); // compatível com ambos formatos
+      const items = await listRawPdfs();
+      const filtered = items.filter(it => it.name.toLowerCase().includes(q));
+      const total = filtered.length;
 
-      // normaliza
-      const rows = items.map(it => ({
-        name: it.saved_name || it.name || (it.url ? new URL(it.url).pathname.split('/').pop() : 'arquivo.pdf'),
-        size: it.bytes || it.size || 0,
-        url:  it.local_path || `data/affix/raw/${(it.saved_name||it.name||'').replace(/^\/+/,'')}`
-      }));
+      const frag = document.createDocumentFragment();
+      const metaBar = document.createElement('div');
+      metaBar.className='hint';
+      metaBar.textContent = `Resultados: ${total} • filtro: “${q||'*'}”`;
+      frag.appendChild(metaBar);
 
-      // filtro simples
-      const filt = q ? rows.filter(r => r.name.toLowerCase().includes(q)) : rows;
+      for (const it of filtered){
+        const name = it.name;
+        const openUrl = it.download_url; // abre no navegador (não força download)
+        const base = name.replace(/\.pdf$/i,'');
+        const thumbUrl = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/thumb.png`;
+        const textUrl  = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/text.txt`;
 
-      const head = `Resultados: ${filt.length}${q?` • filtro: “${esc(q)}”`:""}`;
-      const out = document.createElement('div');
-      out.innerHTML = `<div class="hint" style="margin-bottom:8px">${head}</div>`;
-      filt.forEach((r,idx)=>{
-        const box = document.createElement('div');
-        box.className = 'item';
-        box.innerHTML = `
-          <div style="font-weight:800">${esc(r.name)}</div>
-          <div class="row" style="margin-top:8px;gap:8px">
-            <a class="btn btn-plain" href="${r.url}">Abrir</a>
-            <button class="btn btn-plain" data-prev="${idx}">Prévia</button>
-          </div>
-          <div class="hint" style="margin-top:8px">Tamanho: ${humanSize(r.size)}</div>
-          <div id="prev_${idx}" class="preview" style="display:none"></div>
-        `;
-        out.appendChild(box);
-      });
+        // checa OCR/Thumb
+        const [hasThumb, hasText] = await Promise.all([exists(thumbUrl), exists(textUrl)]);
 
-      const container = document.createElement('div');
-      container.appendChild(out);
-      $('#outSites').innerHTML = '';
-      $('#outSites').appendChild(container);
+        const wrap = document.createElement('div');
+        wrap.className = 'item';
+        const head = document.createElement('div');
+        head.className = 'file-head';
 
-      // prévia sob demanda
-      container.addEventListener('click', (ev)=>{
-        const btn = ev.target.closest('button[data-prev]');
-        if(!btn) return;
-        const i = btn.getAttribute('data-prev');
-        const pane = document.getElementById('prev_'+i);
-        const url  = filt[i].url;
-        if(pane.style.display==='none'){
-          pane.style.display = '';
-          pane.innerHTML = `
-            <object data="${url}#view=FitH" type="application/pdf" width="100%" height="420">
-              <div style="padding:12px">Não foi possível embutir a prévia. <a href="${url}" target="_blank" rel="noopener">Abrir PDF</a></div>
-            </object>
-          `;
-        }else{
-          pane.style.display = 'none';
-          pane.innerHTML = '';
+        if(hasThumb){
+          const img = document.createElement('img');
+          img.className = 'thumb';
+          img.src = thumbUrl;
+          img.alt = 'Thumb';
+          head.appendChild(img);
         }
-      });
+
+        const title = document.createElement('div');
+        title.innerHTML = `<b>${esc(name)}</b>`;
+        head.appendChild(title);
+
+        wrap.appendChild(head);
+
+        const actions = document.createElement('div');
+        actions.className = 'file-actions';
+
+        const aOpen = document.createElement('a');
+        aOpen.className = 'btn btn-plain btn-sm';
+        aOpen.href = openUrl;
+        aOpen.target = '_blank';
+        aOpen.rel = 'noopener';
+        aOpen.textContent = 'Abrir';
+        actions.appendChild(aOpen);
+
+        // Prévia inline
+        const btnPrev = document.createElement('button');
+        btnPrev.className = 'btn btn-plain btn-sm';
+        btnPrev.textContent = 'Prévia';
+        btnPrev.addEventListener('click', ()=>{
+          const id = 'prev_'+btoa(name).replace(/=+/g,'');
+          let prev = document.getElementById(id);
+          if(prev){ prev.remove(); return; }
+          prev = document.createElement('div');
+          prev.id = id;
+          prev.style.marginTop = '8px';
+          // PDF viewer nativo do navegador
+          prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
+          wrap.appendChild(prev);
+        });
+        actions.appendChild(btnPrev);
+
+        // Botão Copiar Link
+        const btnCopy = document.createElement('button');
+        btnCopy.className = 'btn btn-plain btn-sm';
+        btnCopy.textContent = 'Copiar link';
+        btnCopy.addEventListener('click', async ()=>{
+          try{ await navigator.clipboard.writeText(openUrl); btnCopy.textContent='Copiado!'; setTimeout(()=>btnCopy.textContent='Copiar link', 1500); }
+          catch(e){ btnCopy.textContent='Falhou'; setTimeout(()=>btnCopy.textContent='Copiar link', 1500); }
+        });
+        actions.appendChild(btnCopy);
+
+        // Ver texto (OCR) se existir
+        if(hasText){
+          const btnOCR = document.createElement('button');
+          btnOCR.className = 'btn btn-plain btn-sm';
+          btnOCR.textContent = 'Ver texto (OCR)';
+          btnOCR.addEventListener('click', async ()=>{
+            const id = 'ocr_'+btoa(name).replace(/=+/g,'');
+            let box = document.getElementById(id);
+            if(box){ box.remove(); return; }
+            box = document.createElement('div');
+            box.id = id;
+            box.className = 'out';
+            box.textContent = 'Carregando OCR…';
+            wrap.appendChild(box);
+            try{
+              const r = await fetch(textUrl, {cache:'no-store'});
+              box.textContent = r.ok ? await r.text() : 'OCR não disponível.';
+            }catch(e){ box.textContent = 'Erro ao carregar OCR.'; }
+          });
+          actions.appendChild(btnOCR);
+        }
+
+        // tamanho
+        const meta = document.createElement('div');
+        meta.className = 'hint';
+        meta.textContent = `Tamanho: ${humanSize(it.size||0)}`;
+
+        wrap.appendChild(actions);
+        wrap.appendChild(meta);
+        frag.appendChild(wrap);
+      }
+
+      box.innerHTML = '';
+      box.appendChild(frag);
 
     }catch(e){
       $('#outSites').textContent = 'Erro: '+e.message;
@@ -324,9 +459,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* CRION — igual ao seu (omitido por brevidade), só manter o que já estava funcionando */
-  // ... (mantenha seu bloco CRION original)
-
+  /* CRION (GAS) */
+  $('#btnCRION')?.addEventListener('click', doCRION);
+  $('#qCRION')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+  $('#btnReIdxCRION')?.addEventListener('click', async ()=>{
+    $('#crionStatus').textContent='Reindexando CRION…'; show($('#crionBusy'),true);
+    try{ const r=await call('reindexcrion',{}); $('#crionStatus').textContent="Index CRION: "+(r && r.ok ? "OK" : "Falhou"); }
+    catch(e){ $('#crionStatus').textContent='Erro: '+e.message; }
+    finally{ show($('#crionBusy'),false); }
+  });
+  async function doCRION(){
+    const q=($('#qCRION').value||'').trim();
+    if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
+    show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
+    try{
+      const res = await call('searchcrion',{q});
+      if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
+      const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
+      const frag=document.createDocumentFragment();
+      items.forEach((it,idx)=>{
+        const li=document.createElement('li'); li.className='item'; li.id='crion_'+idx;
+        const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+        li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
+                      <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
+        frag.appendChild(li);
+      });
+      $('#crionList').appendChild(frag);
+      if(items.length){
+        let from=0;
+        while(from < items.length){
+          const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
+          (r.items||[]).forEach(row=>{
+            const el=$('#snip_crion_'+row.index);
+            el.innerHTML=(row.snippets && row.snippets.length)
+              ? row.snippets.map(s=>`<div class="snip">${esc(s)}</div>`).join("")
+              : '<span class="hint">—</span>';
+          });
+          from = r.to;
+        }
+        $('#crionStatus').textContent += " • prévias completas";
+      }
+    }catch(e){ $('#crionStatus').textContent='Erro: '+e.message;
+    }finally{ show($('#crionBusy'),false); }
+  }
 });
 </script>
 </body>
