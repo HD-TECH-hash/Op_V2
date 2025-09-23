@@ -3,22 +3,20 @@ name: Affix PDFs nightly
 on:
   workflow_dispatch:
   schedule:
-    - cron: "25 23 * * *"  # horário UTC
+    - cron: "25 23 * * *"  # UTC
 
-# necessário para poder dar git push
 permissions:
   contents: write
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # garante histórico completo para poder commitar e fazer push
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,35 +26,31 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
 
       - name: Fetch Affix PDFs
         env:
-          # deixe "1" para filtrar 2025; troque para "0" (ou remova) se quiser tudo
-          AFFIX_ONLY_2025: "1"
+          AFFIX_ONLY_2025: "0"   # 1 = filtra só 2025 | 0 = usa tudo do sources
         run: |
-          set -e
           python scripts/fetch_affix.py
-          echo "---- manifest (primeiras linhas) ----"
-          head -n 80 data/affix/manifest.json || true
+
+      # (Opcional) gerar thumb + OCR
+      # - name: OCR thumbs (optional)
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-por tesseract-ocr-eng
+      #     python scripts/ocr_affix.py
 
       - name: Commit & push if changed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
-          branch="${GITHUB_REF_NAME:-main}"
-
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
+          git fetch origin main
+          git pull --rebase origin main || true
           git add -A
-          if git diff --cached --quiet; then
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(affix): nightly fetch $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin HEAD:main
+          else
             echo "Sem alterações."
-            exit 0
           fi
-
-          git commit -m "chore(affix): nightly fetch $(date -u +'%Y-%m-%d %H:%M UTC')"
-
-          # usa URL com token para evitar erro 128 (branch destacado/credenciais)
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:"$branch"
