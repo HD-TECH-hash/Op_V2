@@ -1,5 +1,16 @@
 {
   "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf": {
     "ts": 1758586188
-  }
+  },
+  "items": {
+    "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf": {
+      "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+      "local_path": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+      "bytes": 2209576,
+      "sha256": "795f8c15d125bf1f2752eb23b8962d822dca66dd920553fc896373222383a40e",
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+      "updated": 1758586482
+    }
+  },
+  "generated_at": 1758586482
 }
