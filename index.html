@@ -2,229 +2,224 @@
 <html lang="pt-br">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>RIC AI — CRION</title>
 <style>
   :root{
-    --bg:#0f6fa3;          /* azul do painel */
-    --card:#ffffff;        /* cards */
-    --ink:#11223a;
-    --muted:#5f6b7a;
-    --line:#e9eef7;
-    --pill-sites:#1541ff;  /* azul tag SITES */
-    --pill-alert:#ff2a2a;  /* vermelho tag ALERTAS */
-    --pill-proc:#ff7a2a;   /* laranja tag PROCEDIMENTOS */
-    --btn:#24b38a;         /* verde do botão */
-    --btn-ink:#053b2e;
-    --shadow:0 24px 50px rgba(5,35,70,.28);
-    --card-shadow:0 16px 36px rgba(15,111,163,.22);
+    --brand:#1E6FB4; --brand2:#2a8fcf;
+    --bg:#0e67a8; --panel:#eaf3ff;
+    --ink:#0f172a; --muted:#64748b; --line:#e7eef7;
+    --lime:#22c55e; --lime2:#a3e635; --danger:#ef4444;
+    --tagA:#ff4646; --tagS:#2a32ff; --tagP:#ff7a2a;
+    --shadow:0 18px 36px rgba(40,130,187,.12), 0 8px 24px rgba(40,130,187,.10);
   }
   *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0; font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; color:var(--ink);
-    background:radial-gradient(1100px 520px at -8% -10%, #1d8fd0 0, var(--bg) 55%);
-  }
-  .wrap{max-width:1180px;margin:20px auto;padding:22px;border-radius:26px;background:linear-gradient(180deg,#1884bf,#1577b0);
-        box-shadow:var(--shadow)}
+  body{margin:0;font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--ink);
+       background:linear-gradient(180deg,var(--bg) 0,#1a79c7 35%,#2e8fd8 100%)}
+  .wrap{max-width:1160px;margin:0 auto;padding:20px}
   /* header */
-  .hero{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,#188bc8,#1577b0);
-        border-radius:18px;padding:12px 16px;color:#fff}
-  .logoL{height:46px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
-  .tools{display:flex;gap:10px;align-items:center}
-  .tool{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#0b2b46;
-        background:#ffd85b;box-shadow:0 10px 24px rgba(0,0,0,.18)}
-  .tool.calc{background:#98b7ff}
-  .brandR{height:40px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
-
-  /* grid 2x2 */
+  .hero{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));
+    color:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 24px 56px rgba(0,0,0,.18)
+  }
+  .logoL{height:48px}
+  .h-tools{display:flex;gap:10px}
+  .iconbtn{width:40px;height:40px;border-radius:12px;border:1px solid #ffffff3a;background:#ffffff20;display:grid;place-items:center}
+  .logoR{height:42px}
+  /* grid */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
-
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--card-shadow)}
-  .tag{display:inline-block;color:#fff;font-weight:900;border-radius:12px;padding:6px 14px;letter-spacing:.3px}
-  .tag.alert{background:var(--pill-alert)}
-  .tag.sites{background:var(--pill-sites)}
-  .tag.proc{background:var(--pill-proc)}
-  h2{margin:10px 0 10px;font-size:20px}
-
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-weight:900;border-radius:999px;padding:6px 12px;color:#fff;font-size:12px}
+  .tagA{background:var(--tagA)} .tagS{background:var(--tagS)} .tagP{background:var(--tagP)}
+  h2{margin:10px 0 10px}
   .row{display:flex;gap:10px;align-items:center}
-  .input{flex:1;border:1px solid var(--line);border-radius:12px;background:#fbfdff;padding:12px}
-  .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer;
-       background:var(--btn);color:var(--btn-ink);box-shadow:0 12px 26px rgba(36,179,138,.3)}
-  .btn:active{transform:translateY(1px)}
-
-  .out{min-height:118px;border:1px dashed var(--line);border-radius:12px;background:#f6f9ff;padding:12px;margin-top:10px;white-space:pre-wrap}
+  .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
+  .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+  .btn-search{color:#053;background:linear-gradient(135deg,var(--lime),var(--lime2));box-shadow:0 10px 22px rgba(34,197,94,.28)}
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
-
-  /* RR.png box (grande, com sombra) */
-  .rrbox{display:grid;place-items:center;background:#ffffff;border:1px solid var(--line);border-radius:16px;padding:10px;
-         box-shadow:var(--card-shadow)}
-  .rr{width:100%;max-width:540px;height:auto;display:block;filter:drop-shadow(0 20px 40px rgba(99,102,241,.25))}
-
-  footer{margin-top:18px;text-align:center;color:#e6f4ff;font-size:12px}
+  .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:10px;padding:10px;margin-top:10px;background:#fbfbff}
+  .busy{display:flex;align-items:center;gap:8px}
+  .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #94a3b866;border-top-color:#2563eb;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
+  .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
+  @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
+  /* RR.png */
+  .mascot{
+    position:fixed;left:40px;bottom:30px;width:min(360px,38vw);
+    filter:drop-shadow(0 24px 40px rgba(94,74,194,.35))
+  }
+  @media (max-width:980px){ .mascot{position:relative;left:auto;bottom:auto;display:block;margin:8px auto 0} }
+  footer{margin:18px 0 8px;text-align:center;color:#dfe9f8;font-weight:700}
 </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HEADER -->
     <header class="hero">
       <img class="logoL" src="icon2.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';" alt="CRION">
-      <div class="tools">
-        <div class="tool">📝</div>
-        <div class="tool calc">🧮</div>
+      <div class="h-tools">
+        <div class="iconbtn" title="Post-it">🗒️</div>
+        <div class="iconbtn" title="Calculadora">🧮</div>
       </div>
-      <img class="brandR" src="HDS.png"
+      <img class="logoR" src="HDS.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';" alt="HDSTEC">
     </header>
 
-    <!-- GRID 2x2 (sem o card de PDFs; RR.png no lugar) -->
     <div class="grid">
-      <!-- ALERTAS (esquerda em cima) -->
+      <!-- ALERTAS -->
       <section class="card">
-        <span class="tag alert">ALERTAS</span>
+        <span class="tag tagA">ALERTAS</span>
         <h2>Controle de alerta</h2>
-        <div class="row"><button id="btnAlert" class="btn">PESQUISAR</button></div>
-        <div class="out" id="alertBox" style="display:none">
-          <div id="alertMsg" style="font-size:22px;font-weight:900;color:#b91c1c">—</div>
-          <div id="alertResp" class="hint">—</div>
+        <div class="row">
+          <button id="btnAlert" class="btn btn-search">PESQUISAR</button>
         </div>
         <div class="hint" id="alertBusy" style="display:none">
-          Carregando alerta…
+          <div class="busy"><div class="spinner"></div><div>Pesquisando alerta...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
+        <div id="alertBox" class="out" style="min-height:140px">
+          <div id="alertMsg" style="font-size:22px;font-weight:900;color:#b91c1c;display:none">—</div>
+          <div id="alertResp" class="hint" style="text-transform:lowercase;display:none">—</div>
         </div>
       </section>
 
-      <!-- SITES (direita em cima) -->
+      <!-- SITES -->
       <section class="card">
-        <span class="tag sites">SITES</span>
+        <span class="tag tagS">SITES</span>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
           <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
-          <button id="btnSites" class="btn">PESQUISAR</button>
+          <button id="btnSites" class="btn btn-search">PESQUISAR</button>
         </div>
-        <div class="out" id="outSites">_</div>
+        <div class="hint" id="sitesBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
+        <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- RR.png (esquerda em baixo) -->
-      <section class="rrbox">
-        <img class="rr" src="rr.png"
-             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
-             alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
-      </section>
-
-      <!-- PROCEDIMENTOS (direita em baixo) -->
+      <!-- PROCEDIMENTOS -->
       <section class="card">
-        <span class="tag proc">PROCEDIMENTOS</span>
+        <span class="tag tagP">PROCEDIMENTOS</span>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
-        <div class="row" style="margin-top:6px">
+        <div class="row">
           <input id="qCRION" class="input" placeholder="Digite sua pergunta .....">
-          <button id="btnCRION" class="btn">PESQUISAR</button>
+          <button id="btnCRION" class="btn btn-search">PESQUISAR</button>
         </div>
-        <div class="out" id="crionOut">_</div>
-        <div class="hint" id="crionBusy" style="display:none">Listando procedimentos…</div>
+        <div class="hint" id="crionBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Listando procedimentos...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
+        <div id="crionBox" class="out">
+          <div id="crionStatus" class="hint" style="margin-top:0">—</div>
+          <ul id="crionList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
+        </div>
       </section>
     </div>
+
+    <img class="mascot" src="rr.png"
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';" alt="RIC">
 
     <footer>© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 - Operacao</footer>
   </div>
 
 <script>
-/* ===== Config ===== */
+/* ===== CONFIG ===== */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
-/* ===== Helpers ===== */
+/* ===== helpers ===== */
 const $ = s => document.querySelector(s);
-const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
-function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
-
-/* POST text/plain (sem preflight) */
-function call(endpoint, payload){
-  const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
-  return fetch(url, {
+const show = (el,on=true)=>{ if(el) el.style.display = on? '' : 'none'; };
+const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+function call(fn, payload){
+  const url = APP_URL + "?fn=" + encodeURIComponent(fn);
+  return fetch(url,{
     method:"POST",
-    headers:{ "Content-Type":"text/plain" },
+    headers:{ "Content-Type":"text/plain" }, // evita preflight
     body: JSON.stringify(payload||{})
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
 /* ===== ALERTA ===== */
 $('#btnAlert').addEventListener('click', async ()=>{
-  show($('#alertBusy'),true); show($('#alertBox'),false);
+  const msg=$('#alertMsg'), resp=$('#alertResp');
+  show(msg,false); show(resp,false); show($('#alertBusy'),true);
   try{
     const r = await call('getalert',{});
-    const msg=$('#alertMsg'), resp=$('#alertResp');
-    if(r && r.ok && r.found){
-      msg.textContent = "🚨 " + String(r.mensagem||"").toUpperCase();
-      resp.textContent = r.responsavel ? String(r.responsavel).toLowerCase() : "";
-    }else{
-      msg.textContent = "Sem recado no momento.";
-      resp.textContent = "";
-    }
-    show($('#alertBox'),true);
+    if(!r || r.ok===false){ msg.textContent="Erro ao consultar."; show(msg,true); return; }
+    if(!r.found){ msg.textContent="Sem recado no momento."; show(msg,true); return; }
+    msg.textContent = "🚨 " + String(r.mensagem||"—").toUpperCase();
+    show(msg,true);
+    if(r.responsavel){ resp.textContent = String(r.responsavel||"").toLowerCase(); show(resp,true); }
   }catch(e){
-    $('#alertMsg').textContent="Erro: "+(e.message||e);
-    $('#alertResp').textContent="";
-    show($('#alertBox'),true);
+    msg.textContent = "Erro: "+(e.message||e); show(msg,true);
   }finally{ show($('#alertBusy'),false); }
 });
 
 /* ===== SITES ===== */
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
+
 async function doSites(){
-  const q=($('#qSites').value||'').trim();
+  const q = ($('#qSites').value||'').trim();
   if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
-  $('#outSites').textContent='Pesquisando...';
+  show($('#sitesBusy'),true); $('#outSites').textContent='—';
   try{
-    const qRich = q + " — FORMATO: responda em português e liste as URLs oficiais no final.";
-    const r = await call('chat',{q:qRich, ua:navigator.userAgent||''});
+    const qRich = q + " — FORMATO: responda em português e liste as URLs oficiais no final. Substitua notas por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+    const r = await call('chat',{q:qRich});
     const txt = (r && r.text) ? r.text : '—';
     const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
     $('#outSites').innerHTML = html;
-  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e); }
+  }catch(e){
+    $('#outSites').innerHTML = 'Erro: Failed to fetch<br><span class="hint">Dica: confirme se o Web App do GAS está em “Anyone” e “Executar como: proprietário”, e se o APP_URL acima é o da versão publicada (…/exec).</span>';
+  }finally{ show($('#sitesBusy'),false); }
 }
 
-/* ===== PROCEDIMENTOS (CRION) ===== */
+/* ===== CRION ===== */
 $('#btnCRION').addEventListener('click', doCRION);
 $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+
+function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
+
 async function doCRION(){
   const q=($('#qCRION').value||'').trim();
-  if(!q){ $('#crionOut').textContent='Digite um termo.'; return; }
-  $('#crionOut').textContent='Listando…'; show($('#crionBusy'),true);
+  const status=$('#crionStatus'), list=$('#crionList');
+  if(!q){ status.textContent='Digite um termo.'; return; }
+  show($('#crionBusy'),true); status.textContent='Listando arquivos…'; list.innerHTML="";
   try{
     const res = await call('searchcrion',{q});
-    if(!res || res.ok===false){ $('#crionOut').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
-    const items = res.items || [];
-    if(!items.length){ $('#crionOut').textContent='Nenhum resultado.'; return; }
-
-    // Lista simples com meta, e em seguida busca prévias por lote
-    const frag = document.createElement('div');
-    frag.innerHTML = items.map((it,idx)=>(
-      `<div style="padding:10px 0;border-top:1px solid var(--line)">
-         <div><b>${esc(it.name||'')}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>
-         <div class="hint">Tamanho: ${it.size? (it.size/1024/1024).toFixed(2)+' MB':'—'} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString():'—'}</div>
-         <div class="hint" id="snip_${idx}">Carregando prévias…</div>
-       </div>`
-    )).join("");
-    $('#crionOut').innerHTML = ''; $('#crionOut').appendChild(frag);
-
-    // Snippets
-    let from=0;
-    while(from < items.length){
-      const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
-      (r.items||[]).forEach(row=>{
-        const el = document.getElementById('snip_'+row.index);
-        if(!el) return;
-        el.innerHTML = (row.snippets && row.snippets.length)
-          ? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("")
-          : '<span class="hint">—</span>';
-      });
-      from = r.to;
+    if(!res || res.ok===false){ status.textContent='Erro ao buscar.'; return; }
+    const items=res.items||[]; status.textContent=`Resultados: ${items.length}`;
+    const frag=document.createDocumentFragment();
+    items.forEach((it,idx)=>{
+      const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)";
+      const meta=`<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+      li.innerHTML=`<div><b>${esc(it.name||'')}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}
+                    <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
+      frag.appendChild(li);
+    });
+    list.appendChild(frag);
+    // snippets em lotes
+    if(items.length){
+      let from=0;
+      while(from < items.length){
+        const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
+        (r.items||[]).forEach(row=>{
+          const el=$('#snip_crion_'+row.index);
+          el.innerHTML=(row.snippets && row.snippets.length)
+            ? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("") : '<span class="hint">—</span>';
+        });
+        from = r.to;
+      }
+      status.textContent += " • prévias completas";
     }
-  }catch(e){ $('#crionOut').textContent='Erro: '+(e.message||e);
+  }catch(e){
+    status.textContent='Erro: '+(e.message||e);
   }finally{ show($('#crionBusy'),false); }
 }
 </script>
 </body>
-</html>>
+</html>
