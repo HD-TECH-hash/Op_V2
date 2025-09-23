@@ -9,50 +9,119 @@
     --base-font:12px;
     --brand:#2882bb; --brand2:#2a8fcf;
     --bg:#f7f8fc; --ink:#0f172a; --muted:#667085; --line:#E7EAF3;
-    --lime:#22c55e; --lime2:#a3e635;
-    --tag:#F2E7FF; --tag-ink:#6D28D9;
+    --lime:#22c55e; --lime2:#a3e635; --danger:#ef4444;
+    --tag:#F2E7FF; --tag-ink:#6D28D9; --tag-shadow:0 4px 10px rgba(40,130,187,.18);
     --card-shadow:0 18px 36px rgba(99,102,241,.12), 0 8px 24px rgba(40,130,187,.10);
   }
   *{box-sizing:border-box}
-  body{margin:0;font:var(--base-font)/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--ink);
-       background:radial-gradient(1200px 520px at -10% -10%, #eaf4ff 0, #ffffff 60%, #f7faff 100%)}
+  body{ margin:0; font:var(--base-font)/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; color:var(--ink);
+        background:radial-gradient(1200px 520px at -10% -10%, #eaf4ff 0, #ffffff 60%, #f7faff 100%); }
   .wrap{max-width:1290px;margin:0 auto;padding:16px}
-  .hero{position:relative;min-height:78px;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;
-        color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 24px 56px rgba(40,130,187,.22)}
-  .left-img{position:absolute;left:14px;top:50%;transform:translateY(-50%);height:38px}
-  .right-img{position:absolute;right:14px;top:50%;transform:translateY(-50%);height:38px}
+
+  /* HEADER flex */
+  .hero{display:flex;align-items:center;gap:12px;border-radius:18px;padding:12px 16px;color:#fff;
+        background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 24px 56px rgba(40,130,187,.22);min-height:78px;}
+  .hero-left{display:flex;align-items:center;gap:10px}
+  .hero-center{flex:1}
+  .hero-right{display:flex;align-items:center;gap:12px}
+  .logo-left,.logo-hds{height:44px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
+  .iconbtn{width:36px;height:36px;border-radius:12px;border:1px solid #ffffff40;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px);transition:.15s;box-shadow:0 6px 14px rgba(0,0,0,.15)}
+  .iconbtn:hover{transform:translateY(-1px)}
+  .icon-note{background:#ffd95e} .icon-calc{background:#60a5fa}
+  @media (max-width:980px){ .logo-left,.logo-hds{height:34px} .iconbtn{width:34px;height:34px} }
+
+  /* GRID / CARDS */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-  @media (max-width:980px){ .grid{grid-template-columns:1fr} .right-img{display:none} .left-img{left:10px;height:22px} }
+  @media (max-width:980px){ .grid{grid-template-columns:1fr} }
   .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--card-shadow)}
-  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);
-       border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px;box-shadow:var(--tag-shadow)}
   h2{margin:8px 0 10px;font-size:18px}
   .row{display:flex;gap:10px;align-items:center}
   .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
-  .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
-  .btn-search{color:#053;background:linear-gradient(135deg,var(--lime),var(--lime2))}
+  .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;user-select:none}
+  .btn:active{transform:translateY(1px)}
+  .btn[disabled]{opacity:.6;cursor:not-allowed}
+  .btn-search{color:#053;background:linear-gradient(135deg,var(--lime),var(--lime2));box-shadow:0 10px 22px rgba(34,197,94,.28)}
   .btn-plain{background:#f7f7fb;color:#111;border:1px solid var(--line)}
+  .btn-danger{background:var(--danger);color:#fff;box-shadow:0 10px 22px rgba(239,68,68,.24)}
+  .btn-reindex{padding:6px 10px;font-size:.78rem;position:relative;top:-3px}
+
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
-  .out{white-space:pre-wrap;min-height:90px;border:1px dashed #c9d5ea;border-radius:12px;padding:10px;margin-top:10px;background:#f3f6ff;color:#0f172a}
+  .out{white-space:pre-wrap;min-height:90px;border:1px dashed #c9d5ea;border-radius:12px;padding:10px;margin-top:10px;background:#f3f6ff;color:#0f172a;box-shadow:inset 0 1px 0 #ffffffcc}
+  .out-alert{min-height:60px;padding:12px;text-align:center}
+  #alertMsg{font-size:24px;font-weight:900;color:#991b1b;margin:0 0 6px}
+  #alertResp{margin:0}
+
   .list{margin:8px 0 0;padding:0;list-style:none}
   .item{padding:10px 0;border-top:1px solid var(--line)}
   .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .file-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
   .btn-sm{padding:6px 10px;font-size:12px}
+
+  .busy{display:flex;align-items:center;gap:8px}
+  .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #ffffff66;border-top-color:#fff;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
+  .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
+  @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
+
   footer{margin:18px 0 6px;text-align:center}
+  .copyright{font-size:12px;font-weight:700;color:#2882bb;padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
+  .credit{margin-top:4px;font-size:6px;color:#cfd6e3;display:block}
 </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- HEADER -->
     <div class="hero">
-      <img class="left-img"
-           src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png"
-           alt="Logo">
-      <img class="right-img"
-           src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png"
-           alt="HDS TEC">
+      <div class="hero-left">
+        <img class="logo-left" src="icon2.png"
+             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
+             alt="Logo esquerdo">
+      </div>
+      <div class="hero-center"></div>
+      <div class="hero-right">
+        <button id="toggleNote" type="button" class="iconbtn icon-note" title="Post-it">🗒️</button>
+        <button id="toggleCalc" type="button" class="iconbtn icon-calc" title="Calculadora">🧮</button>
+        <img class="logo-hds" src="HDS.png"
+             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
+             alt="HDSTEC">
+      </div>
     </div>
 
+    <!-- Widgets flutuantes -->
+    <div id="noteWrap" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:240px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
+        <b>Post-it</b>
+        <div class="row" style="gap:6px">
+          <button id="clearNote" type="button" class="btn btn-plain" style="padding:4px 8px">Limpar</button>
+          <button id="closeNote" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
+        </div>
+      </div>
+      <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif"></textarea>
+    </div>
+
+    <div id="calcWrap" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:260px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px #0001;padding:12px">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px">
+        <b>Calculadora</b>
+        <button id="closeCalc" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
+      </div>
+      <div id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
+      <div id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+        <div class="key op" data-k="C">C</div><div class="key op" data-k="±">±</div><div class="key op" data-k="%">%</div><div class="key op" data-k="/">÷</div>
+        <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
+        <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
+        <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
+        <div class="key" data-k="0">0</div><div class="key" data-k="00">00</div><div class="key" data-k=".">.</div><div class="key eq" data-k="=">=</div>
+      </div>
+      <style>
+        .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
+        .key.op{background:#eef6ff;border-color:#cfe7ff}
+        .key.eq{background:linear-gradient(135deg,var(--lime),var(--lime2));color:#053}
+      </style>
+    </div>
+
+    <!-- GRID -->
     <div class="grid">
       <!-- ALERTA -->
       <section class="card">
@@ -60,27 +129,38 @@
         <h2>Controle de alerta</h2>
         <div class="row">
           <button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button>
+          <button id="btnAdjust" type="button" class="btn btn-plain">Ajustar</button>
         </div>
-        <div class="hint" id="alertBusy" style="display:none">Pesquisando alerta…</div>
-        <div id="alertBox" class="out" style="display:none"></div>
+        <div class="hint" id="alertBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Pesquisando alerta...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
+        <div id="alertBox" class="out out-alert" style="display:none">
+          <div id="alertMsg">—</div>
+          <div id="alertResp" class="hint">—</div>
+        </div>
       </section>
 
-      <!-- SITES OFICIAIS -->
+      <!-- SITES OFICIAIS + PDFs (apenas após pesquisa) -->
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input" placeholder='Ex.: "manual", "hapvida", "RJ"'>
+          <input id="qSites" class="input" placeholder='Digite sua pergunta ..... (ex.: "manual")'>
           <button id="btnSites" type="button" class="btn btn-search">Pesquisar</button>
           <button id="btnAll" type="button" class="btn btn-plain">Mostrar todos</button>
         </div>
-        <div class="hint" id="sitesBusy" style="display:none">Pesquisando…</div>
+        <div class="hint" id="sitesBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- SLOT LIVRE (mascote) -->
+      <!-- SLOT LIVRE: RR -->
       <section class="card" style="background:transparent;border:0;box-shadow:none">
-        <img src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png"
+        <img src="rr.png"
+             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
              style="display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 24px 56px rgba(99,102,241,.22))"
              alt="Mascote RIC">
       </section>
@@ -93,8 +173,12 @@
         <div class="row">
           <input id="qCRION" class="input" placeholder="Ex.: Onboarding, Retenção, URA, Script de Cobrança, Affix">
           <button id="btnCRION" type="button" class="btn btn-search" style="min-width:112px">Pesquisar</button>
+          <button id="btnReIdxCRION" type="button" class="btn btn-danger btn-reindex" style="min-width:112px">Reindexar</button>
         </div>
-        <div class="hint" id="crionBusy" style="display:none">Listando procedimentos…</div>
+        <div class="hint" id="crionBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Listando procedimentos...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
         <div class="out" id="crionBox">
           <div id="crionStatus" class="hint" style="margin-top:0">—</div>
           <ul id="crionList" class="list"></ul>
@@ -103,130 +187,150 @@
     </div>
 
     <footer>
-      <span style="font-size:12px;font-weight:700;color:#2882bb">© 2025 HDSTEC — v3.0.0 Operação</span>
+      <span class="copyright">© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 -Operacao</span>
+      <span class="credit">desenvolvido por Alexandre Cavalcante</span>
     </footer>
   </div>
 
 <script>
-/* ======= CONFIG (GAS) ======= */
+/* ======= CONFIG ======= */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ======= HELPERS ======= */
 const $  = sel => document.querySelector(sel);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-const norm = s => String(s||"").toLowerCase()
-  .normalize('NFD').replace(/[\u0300-\u036f]/g,''); // remove acentos
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(2)+" "+u[i]; }
+function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
 
-/* ======= GITHUB (repo + pages) ======= */
+/* ======= GITHUB (lista PDFs do repo/manifest) ======= */
 const GH_OWNER = "HD-TECH-hash";
 const GH_REPO  = "Ricai-crion-operacao";
-const RAW_BASE   = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
-const PAGES_BASE = `https://${GH_OWNER}.github.io/${GH_REPO}`;
+const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
 
-const pagesPdfUrl = (name)=> `${PAGES_BASE}/data/affix/raw/${encodeURIComponent(name)}`;
-
-/* Lista PDFs presentes no repo (via API) */
 async function listRepoPdfs(){
-  try{
-    const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
-    const r = await fetch(api, {cache:'no-store'}); if(!r.ok) return [];
-    const arr = await r.json();
-    return arr
-      .filter(it => it.type==="file" && /\.pdf$/i.test(it.name))
-      .map(it => ({ name: it.name, size: it.size||0, openUrl: pagesPdfUrl(it.name), origin: "repo" }));
-  }catch{ return []; }
+  const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
+  const r = await fetch(api, {cache:'no-store'});
+  if(!r.ok) return [];
+  const arr = await r.json();
+  return arr
+    .filter(it => it.type==="file" && /\.pdf$/i.test(it.name))
+    .map(it => ({ name: it.name, size: it.size||0, openUrl: it.download_url, origin: "repo" }));
 }
 
-/* Lê manifest.json e traz SOMENTE status=ok */
 async function listManifestPdfs(){
   try{
     const r = await fetch(`${RAW_BASE}/data/affix/manifest.json?ts=${Date.now()}`, {cache:'no-store'});
     if(!r.ok) return [];
     const j = await r.json();
     return (j.items||[])
-      .filter(x => x && x.url && /\.pdf$/i.test(x.url) && (x.status === "ok"))
-      .map(x => {
-        const name = x.name || x.url.split('/').pop();
-        const openUrl = x.repo_raw ? pagesPdfUrl(name) : x.url; // se baixou, usa Pages
-        return { name, size: x.size||0, openUrl, origin: x.repo_raw ? "repo" : "external" };
-      });
-  }catch{ return []; }
+      .filter(x => x && x.url && /\.pdf$/i.test(x.url))
+      .map(x => ({
+        name: x.name || x.url.split('/').pop(),
+        size: x.size || 0,
+        openUrl: x.repo_raw || x.url,
+        origin: x.repo_raw ? "repo" : "external"
+      }));
+  }catch(_){ return []; }
+}
+
+/* ======= CHAMADAS GAS ======= */
+function call(endpoint, payload){
+  const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
+  return fetch(url, {
+    method:"POST",
+    headers:{ "Content-Type":"text/plain" },
+    body: JSON.stringify(payload || {})
+  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
 /* ======= UI ======= */
 document.addEventListener('DOMContentLoaded', () => {
-  // ALERTA (GAS)
-  $('#btnAlert')?.addEventListener('click', async ()=>{
+  // widgets
+  const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
+  $('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
+  $('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
+  $('#closeNote').onclick = ()=>{ noteWrap.style.display="none"; };
+  noteArea.value = localStorage.getItem('ric_note') || "";
+  noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
+  $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; };
+  $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
+
+  // ALERTA
+  $('#btnAlert').addEventListener('click', async ()=>{
     show($('#alertBusy'),true); show($('#alertBox'),false);
     try{
-      const r = await fetch(APP_URL+"?fn=getalert", {method:"POST",headers:{"Content-Type":"text/plain"},body:"{}"}).then(r=>r.json());
-      const msg = (r && r.found) ? ("🚨 " + String(r.mensagem||"—").toUpperCase()) : "Sem recado no momento.";
-      $('#alertBox').innerHTML = `<div style="font-weight:900">${esc(msg)}</div><div class="hint">${esc(r?.responsavel||'')}</div>`;
+      const r = await call('getalert',{});
+      const msg = (!r||r.ok===false) ? "Falha ao consultar."
+                 : (!r.found) ? "Sem recado no momento."
+                 : ("🚨 " + String(r.mensagem||"—").toUpperCase());
+      $('#alertMsg').textContent = msg;
+      $('#alertResp').textContent = (r && r.responsavel) ? String(r.responsavel).toLowerCase() : "";
       show($('#alertBox'),true);
-    }catch(e){
-      $('#alertBox').textContent = "Erro: " + e.message;
-      show($('#alertBox'),true);
-    }finally{ show($('#alertBusy'),false); }
+    }catch(e){ $('#alertMsg').textContent="Erro: "+e.message; $('#alertResp').textContent=""; show($('#alertBox'),true); }
+    finally{ show($('#alertBusy'),false); }
   });
 
-  // SITES OFICIAIS
-  $('#btnSites')?.addEventListener('click', doSites);
-  $('#btnAll')?.addEventListener('click', ()=>{ $('#qSites').value=""; doSites(true); });
-  $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
+  // Ajuste de alerta (modais simples via prompt)
+  $('#btnAdjust').addEventListener('click', async ()=>{
+    const mensagem = prompt("Texto do alerta (vermelho):");
+    if(!mensagem) return;
+    const resp = prompt("Responsável (Primeira letra maiúscula):") || "";
+    try{ await call('adjustalert',{mensagem, responsavel: resp}); alert("OK!"); }
+    catch(e){ alert("Falha: "+e.message); }
+  });
 
-  async function doSites(forceAll=false){
-    const qRaw = (($('#qSites').value)||'').trim();
-    const q = forceAll ? "" : qRaw;
+  // SITES: pesquisar e também listar PDFs que casam com o termo
+  $('#btnSites').addEventListener('click', ()=> doSites(false));
+  $('#btnAll').addEventListener('click', ()=> doSites(true));
+  $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(false); });
+
+  async function doSites(showAll){
+    const q=($('#qSites').value||'').trim();
+    if(!q && !showAll){ $('#outSites').textContent='Digite a pergunta.'; return; }
     show($('#sitesBusy'),true);
-    const box = $('#outSites'); box.innerHTML = "—";
+    const out = $('#outSites'); out.innerHTML='—';
 
     try{
-      const [repo, manifest] = await Promise.all([listRepoPdfs(), listManifestPdfs()]);
-      // junta e de-duplica por nome (prioriza repo)
-      const map = new Map();
-      for (const it of [...manifest, ...repo]){ if(!map.has(it.name)) map.set(it.name, it); }
-      let items = [...map.values()];
-
-      // filtro: por termos (qualquer termo)
-      if(q){
-        const terms = norm(q).split(/\s+/).filter(Boolean);
-        items = items.filter(it=>{
-          const hay = norm(it.name);
-          return terms.some(t => hay.includes(t));
-        });
+      // 1) resposta do GAS (chat)
+      if(!showAll){
+        const qRich = q + " — FORMATO: responda em português e liste no final as URLs oficiais. Fontes: Affix, Alter, Hapvida.";
+        const r = await call('chat',{q:qRich});
+        const txt = (r && r.text) ? r.text : '—';
+        const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
+        out.innerHTML = `<div style="margin-bottom:10px">${html}</div>`;
+      }else{
+        out.innerHTML = "";
       }
 
-      // se nada encontrado com o filtro, mostra todos com aviso
-      let note = `Resultados: ${items.length} • filtro: “${q || '*'}”`;
-      if(q && items.length===0){
-        items = [...map.values()];
-        note = `Nenhum item para “${qRaw}”. Exibindo todos (${items.length}).`;
+      // 2) PDFs do repo/manifest (apenas após clique)
+      const [repo, manifest] = await Promise.all([listRepoPdfs(), listManifestPdfs()]);
+      const map = new Map(); // dedup por nome (prioriza repo)
+      for (const it of [...manifest, ...repo]){ if(!map.has(it.name)) map.set(it.name, it); }
+      let items = [...map.values()];
+      if(!showAll && q){
+        const ql = q.toLowerCase();
+        items = items.filter(it => it.name.toLowerCase().includes(ql));
       }
 
       const frag = document.createDocumentFragment();
-      const meta = document.createElement('div');
-      meta.className='hint';
-      meta.textContent = note;
+      const meta = document.createElement('div'); meta.className='hint';
+      meta.textContent = `Resultados: ${items.length} • filtro: “${showAll ? '*' : (q || '*')}”`;
       frag.appendChild(meta);
 
       for (const it of items){
         const wrap = document.createElement('div'); wrap.className='item';
-
         const head = document.createElement('div'); head.className='file-head';
         head.innerHTML = `<div><b>${esc(it.name)}</b>${it.origin==='external' ? ' <span class="hint">(link externo)</span>':''}</div>`;
         wrap.appendChild(head);
 
         const actions = document.createElement('div'); actions.className='file-actions';
 
-        // Abrir — nova aba SEM download (Pages ou externo)
         const btnOpen = document.createElement('button');
         btnOpen.className='btn btn-plain btn-sm'; btnOpen.textContent='Abrir';
-        btnOpen.addEventListener('click', ()=> window.open(it.openUrl, '_blank', 'noopener,noreferrer'));
+        btnOpen.addEventListener('click', ()=> window.open(it.openUrl, '_blank', 'noopener'));
         actions.appendChild(btnOpen);
 
-        // Prévia — inline com <object>; fallback p/ Google Viewer
         const btnPrev = document.createElement('button');
         btnPrev.className='btn btn-plain btn-sm'; btnPrev.textContent='Prévia';
         btnPrev.addEventListener('click', ()=>{
@@ -234,11 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
           let prev = document.getElementById(id);
           if(prev){ prev.remove(); return; }
           prev = document.createElement('div'); prev.id = id; prev.style.marginTop='8px';
-          const gview = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(it.openUrl)}`;
-          prev.innerHTML = `
-            <object data="${it.openUrl}" type="application/pdf" style="width:100%;height:520px;border:1px solid var(--line);border-radius:10px">
-              <iframe src="${gview}" style="width:100%;height:520px;border:1px solid var(--line);border-radius:10px"></iframe>
-            </object>`;
+          prev.innerHTML = `<embed src="${it.openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:480px;border:1px solid var(--line);border-radius:10px">`;
           wrap.appendChild(prev);
         });
         actions.appendChild(btnPrev);
@@ -250,51 +350,57 @@ document.addEventListener('DOMContentLoaded', () => {
         frag.appendChild(wrap);
       }
 
-      box.innerHTML = ''; box.appendChild(frag);
+      out.appendChild(frag);
     }catch(e){
-      box.textContent = 'Erro: '+e.message;
+      out.textContent = 'Erro: '+e.message;
     }finally{
       show($('#sitesBusy'),false);
     }
   }
 
-  // auto: listar todos ao carregar
-  doSites(true);
-
-  // CRION (GAS)
-  $('#btnCRION')?.addEventListener('click', async ()=>{
-    const q=(($('#qCRION').value)||'').trim(); if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
+  // CRION
+  $('#btnCRION').addEventListener('click', doCRION);
+  $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+  $('#btnReIdxCRION').addEventListener('click', async ()=>{
+    $('#crionStatus').textContent='Reindexando CRION…'; show($('#crionBusy'),true);
+    try{ const r=await call('reindexcrion',{}); $('#crionStatus').textContent="Index CRION: "+(r && r.ok ? "OK" : "Falhou"); }
+    catch(e){ $('#crionStatus').textContent='Erro: '+e.message; }
+    finally{ show($('#crionBusy'),false); }
+  });
+  async function doCRION(){
+    const q=($('#qCRION').value||'').trim();
+    if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
     show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
     try{
-      const r = await fetch(APP_URL+"?fn=searchcrion", {method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({q})}).then(r=>r.json());
-      const items=r.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
+      const res = await call('searchcrion',{q});
+      if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
+      const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
       const frag=document.createDocumentFragment();
       items.forEach((it,idx)=>{
         const li=document.createElement('li'); li.className='item'; li.id='crion_'+idx;
         const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-        li.innerHTML=`<div><b>${esc(it.name)}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}
+        li.innerHTML=`<div><b>${esc(it.name)}</b> • ${link(it.url,'Abrir')}</div>${meta}
                       <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
         frag.appendChild(li);
       });
       $('#crionList').appendChild(frag);
-
       if(items.length){
-        let from=0; const sid=r.sessionId;
-        while(from<items.length){
-          const x = await fetch(APP_URL+"?fn=fetchcrionsnippets", {method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({sessionId:sid,from,limit:6})}).then(r=>r.json());
-          (x.items||[]).forEach(row=>{
+        let from=0;
+        while(from < items.length){
+          const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
+          (r.items||[]).forEach(row=>{
             const el=$('#snip_crion_'+row.index);
             el.innerHTML=(row.snippets && row.snippets.length)
               ? row.snippets.map(s=>`<div style="color:#374151;font-size:13px;margin:6px 0">${esc(s)}</div>`).join("")
               : '<span class="hint">—</span>';
           });
-          from = x.to;
+          from = r.to;
         }
         $('#crionStatus').textContent += " • prévias completas";
       }
-    }catch(e){ $('#crionStatus').textContent='Erro: '+e.message; }
-    finally{ show($('#crionBusy'),false); }
-  });
+    }catch(e){ $('#crionStatus').textContent='Erro: '+e.message;
+    }finally{ show($('#crionBusy'),false); }
+  }
 });
 </script>
 </body>
