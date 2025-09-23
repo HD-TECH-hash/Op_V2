@@ -7,7 +7,6 @@
 <meta http-equiv="Cache-Control" content="no-store" />
 <style>
   :root{
-    /* Paleta pedida */
     --alert:#fe0000;
     --postit:#fddb56;
     --calc:#5fa5fa;
@@ -16,22 +15,19 @@
     --search:#31a59c;
     --shadow:#50d9cd;
 
-    --ink:#0f172a; --muted:#64748b; --line:#e7eef7;
+    --ink:#0f172a; --muted:#eef6ff; --line:#e7eef7;
   }
-
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
     margin:0; color:#fff; font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-    /* Fundo geral */
     background:#4889c5;
-    /* leve vinheta para profundidade */
     background-image:
       radial-gradient(1200px 520px at -10% -10%, rgba(255,255,255,.18) 0, rgba(255,255,255,.08) 45%, rgba(255,255,255,0) 70%),
       radial-gradient(1000px 440px at 110% -20%, rgba(255,255,255,.20) 0, rgba(255,255,255,.08) 40%, rgba(255,255,255,0) 70%);
   }
 
-  /* ====== TOPO FLUTUANTE (sem moldura) ====== */
+  /* TOPO flutuante */
   .floatbar{
     position:fixed; inset:12px 16px auto 16px; z-index:50;
     display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
@@ -41,7 +37,6 @@
   .logo-left{height:42px; filter:drop-shadow(0 4px 10px rgba(0,0,0,.12))}
   .logo-right{height:46px; justify-self:end; filter:drop-shadow(0 4px 10px rgba(0,0,0,.12))}
   .tools{display:flex; gap:10px; justify-self:end}
-
   .tool{
     width:44px;height:44px;border-radius:14px;border:1px solid #ffffff70;
     display:grid;place-items:center; backdrop-filter:blur(3px);
@@ -52,78 +47,86 @@
   .tool-calc{background:var(--calc)}
   .tool svg{width:22px;height:22px}
 
-  /* ====== CONTEÚDO ====== */
+  /* GRID com áreas fixas */
   .wrap{max-width:1260px;margin:96px auto 24px;padding:0 16px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media (max-width:980px){ .grid{grid-template-columns:1fr} }
-
+  .grid{
+    display:grid; gap:18px;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "alert sites"
+      "rr    procs";
+  }
   .card{
     background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;color:#0f172a;
     box-shadow:0 18px 36px rgba(80,217,205,.18), 0 8px 24px rgba(80,217,205,.14);
   }
-  h2{margin:8px 0 10px;font-size:18px}
+  .alert-card{grid-area:alert}
+  .sites-card{grid-area:sites}
+  .procs-card{grid-area:procs}
 
   .tag{
-    display:inline-flex;align-items:center;gap:8px;
-    color:#fff;border-radius:999px;padding:6px 12px;font-weight:900;font-size:12px;
-    text-transform:uppercase; letter-spacing:.3px;
-    box-shadow:0 10px 22px rgba(0,0,0,.06);
+    display:inline-flex;align-items:center;gap:8px;color:#fff;border-radius:999px;
+    padding:6px 12px;font-weight:900;font-size:12px;text-transform:uppercase; letter-spacing:.3px;
+    box-shadow:0 10px 22px rgba(0,0,0,.06)
   }
   .tag.alertas{background:var(--alert)}
   .tag.sites{background:var(--sites)}
   .tag.procs{background:var(--procs)}
+  h2{margin:8px 0 10px;font-size:18px}
 
   .row{display:flex;gap:10px;align-items:center}
   .input{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}
-  .btn-search{
-    background:var(--search); color:#053;
-    box-shadow:0 10px 22px rgba(49,165,156,.28);
-    transition:transform .06s ease;
-  }
-  .btn-search:active{ transform: translateY(1px) }
+  .btn-search{background:var(--search); color:#053; box-shadow:0 10px 22px rgba(49,165,156,.28)}
   .btn[disabled]{opacity:.7; cursor:not-allowed}
 
-  .hint{font-size:12px;color:var(--muted);margin-top:6px}
+  .hint{font-size:12px;color:#0f2b3a;margin-top:6px;opacity:.9}
   .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff;color:#0f172a}
 
-  /* Loader: bolinhas pulando */
+  /* Loader bolinhas */
   .dots{display:inline-flex;gap:6px;align-items:center}
   .dot{width:8px;height:8px;border-radius:50%;background:#0ea5a4;animation:bounce .9s infinite ease-in-out}
   .dot:nth-child(2){animation-delay:.15s}
   .dot:nth-child(3){animation-delay:.30s}
-  @keyframes bounce{
-    0%,80%,100%{transform:translateY(0); opacity:.5}
-    40%{transform:translateY(-7px); opacity:1}
-  }
+  @keyframes bounce{0%,80%,100%{transform:translateY(0);opacity:.5}40%{transform:translateY(-7px);opacity:1}}
 
-  /* RR.png grande, sem “janela” branca */
+  /* RR abaixo do alerta, sem card */
   .rr-holder{
-    grid-column:1 / -1;
-    display:grid; place-items:center; padding:0; background:transparent; border:0; box-shadow:none;
+    grid-area:rr; display:flex; justify-content:center; align-items:center;
+    padding:6px 0;
   }
-  .rr-holder img{max-width:560px;width:100%;height:auto;filter:drop-shadow(0 22px 44px rgba(80,217,205,.26))}
+  .rr-holder img{max-width:440px;width:100%;height:auto;filter:drop-shadow(0 22px 44px rgba(80,217,205,.26))}
 
   footer{margin:18px 0 8px;text-align:center;color:#eaf6ff}
-  footer .foot{font-size:12px;opacity:.9}
+  footer .foot{font-size:12px;opacity:.95}
+
+  /* Mobile: empilha em ordem — alert, rr, sites, procs */
+  @media (max-width:980px){
+    .grid{
+      grid-template-columns:1fr;
+      grid-template-areas:
+        "alert"
+        "rr"
+        "sites"
+        "procs";
+    }
+    .rr-holder img{max-width:520px}
+  }
 </style>
 </head>
 <body>
 
   <!-- TOPO FLUTUANTE -->
   <div class="floatbar">
-    <!-- Esquerda: icon2 -->
     <img class="logo-left" src="icon2.png"
-         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';" alt="icon2">
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/icon2.png';" alt="icon2">
     <div class="tools">
-      <!-- Post-it -->
       <button id="toggleNote" class="tool tool-postit" title="Post-it" aria-label="Post-it">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2"/>
           <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#222" stroke-width="2"/>
         </svg>
       </button>
-      <!-- Calculadora -->
       <button id="toggleCalc" class="tool tool-calc" title="Calculadora" aria-label="Calculadora">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect x="4" y="3" width="16" height="18" rx="2" stroke="#222" stroke-width="2"/>
@@ -132,17 +135,16 @@
         </svg>
       </button>
     </div>
-    <!-- Direita: HDS -->
     <img class="logo-right" src="HDS.png"
-         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';" alt="HDSTEC">
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/HDS.png';" alt="HDSTEC">
   </div>
 
   <div class="wrap">
     <div class="grid">
-      <!-- ALERTA (sem botão Ajustar) -->
-      <section class="card">
+      <!-- ALERTAS -->
+      <section class="card alert-card">
         <div class="tag alertas">Alertas</div>
-        <h2 style="color:#0f172a">Controle de alerta</h2>
+        <h2>Controle de alerta</h2>
         <div class="row">
           <button id="btnAlert" class="btn btn-search">Pesquisar</button>
         </div>
@@ -154,10 +156,10 @@
         <div id="alertResp" style="display:none;font-size:13px;font-weight:600;color:#334155;text-align:center;margin-top:4px;text-transform:lowercase">—</div>
       </section>
 
-      <!-- SITES OFICIAIS -->
-      <section class="card">
+      <!-- SITES -->
+      <section class="card sites-card">
         <div class="tag sites">Sites</div>
-        <h2 style="color:#0f172a">CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
+        <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
           <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnSites" class="btn btn-search">Pesquisar</button>
@@ -169,7 +171,7 @@
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- RR.png sem “janela” -->
+      <!-- RR.png (abaixo do alerta) -->
       <div class="rr-holder">
         <img src="rr.png"
              onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/rr.png';"
@@ -177,9 +179,9 @@
       </div>
 
       <!-- PROCEDIMENTOS -->
-      <section class="card">
+      <section class="card procs-card">
         <div class="tag procs">Procedimentos</div>
-        <h2 style="color:#0f172a">CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
+        <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row">
           <input id="qCRION" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnCRION" class="btn btn-search">Pesquisar</button>
@@ -188,23 +190,27 @@
           <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span style="margin-left:8px">Listando procedimentos…</span>
         </div>
-        <div id="crionStatus" class="hint" style="margin-top:6px">—</div>
+        <div id="crionStatus" class="hint" style="margin-top:6px;color:#073e53">—</div>
         <ul id="crionList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
       </section>
     </div>
 
-    <footer><span class="foot">Desenvolvido por Alexandre Cavalcante V3.0</span></footer>
+    <footer><span class="foot">Desenvolvido por Alexandre Cavalcante V3.0-Operacao</span></footer>
   </div>
 
-  <!-- WIDGETS (Post-it & Calculadora) -->
-  <div id="noteWrap" style="position:fixed;right:18px;top:86px;z-index:60;display:none;width:260px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.06);padding:10px">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;color:#0f172a">
+  <!-- POST-IT (fechar + limpar) -->
+  <div id="noteWrap" style="position:fixed;right:18px;top:86px;z-index:60;display:none;width:260px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.06);padding:10px;color:#0f172a">
+    <div style="display:flex;gap:8px;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Post-it</b>
-      <button id="clearNote" class="btn" style="background:#fff;border:1px solid #f5d565;color:#0f172a">Limpar</button>
+      <div style="display:flex;gap:6px">
+        <button id="clearNote" class="btn" style="background:#fff;border:1px solid #f5d565;color:#0f172a">Limpar</button>
+        <button id="closeNote" class="btn" style="background:#fff;border:1px solid #f5d565;color:#0f172a">Fechar</button>
+      </div>
     </div>
     <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif;color:#0f172a"></textarea>
   </div>
 
+  <!-- CALCULADORA -->
   <div id="calcWrap" style="position:fixed;right:18px;top:260px;z-index:60;display:none;width:270px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.06);padding:12px;color:#0f172a">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Calculadora</b>
@@ -229,9 +235,8 @@
   </div>
 
 <script>
-/* ===== CONFIG ===== */
-const USE_GAS = true; // usa google.script.run quando disponível
-const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec"; // fallback REST
+/* ===== CONFIG REST ===== */
+const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ===== HELPERS ===== */
 const $ = s => document.querySelector(s);
@@ -241,46 +246,24 @@ function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener"
 function cleanName(n){ return String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,''); }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
-/* ===== CALLS (GAS ou REST) ===== */
+/* ===== REST calls para seu GAS ===== */
 function call(endpoint, payload){
-  payload = payload || {};
-  // Se estiver dentro do GAS e habilitado:
-  if (USE_GAS && typeof google !== 'undefined' && google.script && google.script.run){
-    return new Promise((resolve,reject)=>{
-      const r = google.script.run.withSuccessHandler(res=>{
-        if(endpoint==='chat' && typeof res==='string') resolve({ok:true, text:res});
-        else resolve(res);
-      }).withFailureHandler(err=>reject(err));
-      try{
-        switch(endpoint){
-          case 'getalert': r.apiGetAlert(); break;
-          case 'searchcrion': r.apiSearchCrion(payload.q); break;
-          case 'fetchcrionsnippets': r.apiFetchCrionSnippets(payload.sessionId, payload.from, payload.limit); break;
-          case 'chat': r.chatServer(payload.q, navigator.userAgent||''); break;
-          default: reject('endpoint não mapeado');
-        }
-      }catch(e){ reject(e); }
-    });
-  }
-
-  // Fallback REST (fora do GAS)
-  const url = APP_URL + "?fn=" + encodeURIComponent(
-    endpoint==='getalert' ? 'getalert' :
-    endpoint==='searchcrion' ? 'searchcrion' :
-    endpoint==='fetchcrionsnippets' ? 'fetchcrionsnippets' :
-    endpoint==='chat' ? 'chat' : 'status'
-  );
+  const map = { getalert:'getalert', searchcrion:'searchcrion', fetchcrionsnippets:'fetchcrionsnippets', chat:'chat' };
+  const fn = map[endpoint] || 'status';
+  const url = APP_URL + "?fn=" + encodeURIComponent(fn);
   return fetch(url,{
     method:'POST',
     headers:{'Content-Type':'text/plain'},
     body: JSON.stringify(payload||{})
-  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
+  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json ? r.json() : r.text(); })
+    .then(data=> (fn==='chat' && typeof data==='string') ? ({ok:true, text:data}) : data);
 }
 
-/* ===== WIDGETS ===== */
+/* ===== Widgets (Post-it & Calc) ===== */
 const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
 $('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
-$('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
+$('#closeNote').onclick  = ()=>{ noteWrap.style.display="none"; };
+$('#clearNote').onclick  = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
 noteArea.value = localStorage.getItem('ric_note') || "";
 noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
@@ -295,18 +278,17 @@ function press(k){
   if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
   if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
   if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
-    calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
+    let v=0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+    calc.buf=String(v); calc.op=null; calc.fresh=true; return refresh();
   }
 }
 $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
 $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; };
-$('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
+$('#closeCalc').onclick  = ()=>{ $('#calcWrap').style.display="none"; };
 
-/* ===== ALERTA ===== */
+/* ===== Alerta ===== */
 $('#btnAlert').addEventListener('click', async ()=>{
-  const btn = $('#btnAlert');
-  const msg=$('#alertMsg'), resp=$('#alertResp'), busy=$('#alertBusy');
+  const btn=$('#btnAlert'), msg=$('#alertMsg'), resp=$('#alertResp'), busy=$('#alertBusy');
   show(msg,false); show(resp,false); show(busy,true); btn.disabled=true;
   try{
     const r = await call('getalert',{});
@@ -318,12 +300,11 @@ $('#btnAlert').addEventListener('click', async ()=>{
   }finally{ show(busy,false); btn.disabled=false; }
 });
 
-/* ===== SITES ===== */
+/* ===== Sites ===== */
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 async function doSites(){
-  const q=($('#qSites').value||'').trim();
-  const btn=$('#btnSites'); const busy=$('#sitesBusy');
+  const q=($('#qSites').value||'').trim(); const btn=$('#btnSites'); const busy=$('#sitesBusy');
   if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
   show(busy,true); $('#outSites').textContent='—'; btn.disabled=true;
   try{
@@ -336,12 +317,11 @@ async function doSites(){
   }finally{ show(busy,false); btn.disabled=false; }
 }
 
-/* ===== CRION ===== */
+/* ===== Procedimentos ===== */
 $('#btnCRION').addEventListener('click', doCRION);
 $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
 async function doCRION(){
-  const q=($('#qCRION').value||'').trim();
-  const btn=$('#btnCRION'); const busy=$('#crionBusy');
+  const q=($('#qCRION').value||'').trim(); const btn=$('#btnCRION'); const busy=$('#crionBusy');
   if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
   show(busy,true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML=""; btn.disabled=true;
   try{
@@ -351,7 +331,7 @@ async function doCRION(){
     const frag=document.createDocumentFragment();
     items.forEach((it,idx)=>{
       const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
-      const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+      const meta  = `<div class="hint" style="color:#073e53">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
       li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
                     <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
