@@ -59,7 +59,6 @@
        border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px;box-shadow:var(--tag-shadow)}
   h2{margin:8px 0 10px;font-size:18px}
   .row{display:flex;gap:10px;align-items:center}
-
   .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;user-select:none}
   .btn:active{transform:translateY(1px)}
@@ -89,22 +88,18 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* ====== SLOT LIVRE (RR.png com sombra roxa) ====== */
+  /* ====== SLOT LIVRE (RR com sombra roxa) ====== */
   .free-card{background:transparent;border:0;box-shadow:none;padding:0}
   .free-pad{padding:10px}
   .rr-img{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;
           filter:drop-shadow(0 24px 56px rgba(99,102,241,.22));}
 
-  /* MINI-THUMB NA LISTA */
+  /* ====== THUMBS MANUAIS ====== */
   .thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;border:1px solid var(--line);
          box-shadow:0 6px 14px rgba(99,102,241,.16), 0 3px 8px rgba(40,130,187,.10)}
   .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .file-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
   .btn-sm{padding:6px 10px;font-size:12px}
-
-  footer{margin:18px 0 6px;text-align:center}
-  .copyright{font-size:12px;font-weight:700;color:#2882bb;padding:10px 12px;border-radius:10px;background:rgba(40,130,187,.06);display:inline-block}
-  .credit{margin-top:4px;font-size:6px;color:#cfd6e3;display:block}
 </style>
 </head>
 <body>
@@ -136,63 +131,24 @@
            alt="HDS TEC">
     </div>
 
-    <!-- WIDGETS -->
-    <div id="noteWrap" class="widget note" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:240px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
-      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
-        <b>Post-it</b>
-        <div class="row" style="gap:6px">
-          <button id="clearNote" type="button" class="btn btn-plain" style="padding:4px 8px">Limpar</button>
-          <button id="closeNote" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
-        </div>
-      </div>
-      <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif"></textarea>
-    </div>
-
-    <div id="calcWrap" class="widget calc" style="position:fixed;right:18px;top:84px;z-index:50;display:none;width:260px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px #0001;padding:12px">
-      <div class="row" style="justify-content:space-between;margin-bottom:6px">
-        <b>Calculadora</b>
-        <button id="closeCalc" type="button" class="btn btn-plain" style="padding:4px 8px">Fechar</button>
-      </div>
-      <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
-      <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-        <div class="key op" data-k="C">C</div>
-        <div class="key op" data-k="±">±</div>
-        <div class="key op" data-k="%">%</div>
-        <div class="key op" data-k="/">÷</div>
-        <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
-        <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
-        <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
-        <div class="key" data-k="0">0</div><div class="key" data-k="00">00</div><div class="key" data-k=".">.</div><div class="key eq" data-k="=">=</div>
-      </div>
-      <style>
-        .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
-        .key.op{background:#eef6ff;border-color:#cfe7ff}
-        .key.eq{background:linear-gradient(135deg,var(--lime),var(--lime2));color:#053}
-      </style>
-    </div>
-
     <!-- GRID -->
     <div class="grid">
       <!-- ALERTA -->
       <section class="card">
         <div class="tag">ALERTA</div>
         <h2>Controle de alerta</h2>
-        <div class="row">
-          <button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button>
-        </div>
-
+        <div class="row"><button id="btnAlert" type="button" class="btn btn-search">Pesquisar</button></div>
         <div class="hint" id="alertBusy" style="display:none">
           <div class="busy"><div class="spinner"></div><div>Pesquisando alerta...</div></div>
           <div class="bar" style="margin-top:6px"></div>
         </div>
-
         <div id="alertBox" class="out out-alert" style="display:none">
           <div id="alertMsg">—</div>
           <div id="alertResp" class="hint">—</div>
         </div>
       </section>
 
-      <!-- SITES OFICIAIS -->
+      <!-- SITES OFICIAIS (via GAS / lê Affix, Alter, Hapvida etc.) -->
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -200,25 +156,35 @@
           <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnSites" type="button" class="btn btn-search">Pesquisar</button>
         </div>
-
         <div class="hint" id="sitesBusy" style="display:none">
           <div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div>
           <div class="bar" style="margin-top:6px"></div>
         </div>
-
-        <div id="outSites" class="out">
-          <div id="sitesAnswer" style="margin-bottom:10px">—</div>
-          <div id="sitesFiles">—</div>
-        </div>
+        <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- SLOT LIVRE → RR.png -->
+      <!-- SLOT LIVRE (RR com sombra roxa) -->
       <section class="free-card">
         <div class="free-pad">
           <img class="rr-img" src="rr.png"
                onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
                alt="Mascote RIC acenando">
         </div>
+      </section>
+
+      <!-- MANUAIS AFFIX (lista do repositório) -->
+      <section class="card">
+        <div class="tag">MANUAIS AFFIX</div>
+        <h2>PDFs em <code>data/affix/raw</code></h2>
+        <div class="row" style="margin-top:6px">
+          <input id="qPdfs" class="input" placeholder="Ex.: manual, hapvida, recife">
+          <button id="btnPdfs" type="button" class="btn btn-search">Pesquisar</button>
+        </div>
+        <div class="hint" id="pdfsBusy" style="display:none">
+          <div class="busy"><div class="spinner"></div><div>Carregando lista...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
+        </div>
+        <div class="out" id="pdfsBox">—</div>
       </section>
 
       <!-- CRION -->
@@ -272,7 +238,7 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= GITHUB RAW/CONTENTS ======= */
+/* ======= GITHUB RAW/CONTENTS (manuais) ======= */
 const GH_OWNER = "HD-TECH-hash";
 const GH_REPO  = "Ricai-crion-operacao";
 const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
@@ -283,12 +249,6 @@ async function listRawPdfs() {
   if(!r.ok) throw new Error("Falha GitHub API");
   const arr = await r.json();
   return arr.filter(it => it.type === "file" && /\.pdf$/i.test(it.name));
-}
-async function exists(url){
-  try{
-    const r = await fetch(url, {method:'HEAD', cache:'no-store'});
-    return r.ok;
-  }catch(e){ return false; }
 }
 
 /* ======= APP ======= */
@@ -340,131 +300,97 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#alertBusy'),false); }
   });
 
-  /* SITES OFICIAIS — IA + lista de PDFs (com prévia e OCR) */
+  /* SITES OFICIAIS (via GAS) */
   $('#btnSites')?.addEventListener('click', doSites);
   $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
-
   async function doSites(){
     const q=($('#qSites').value||'').trim();
-    if(!q){ $('#sitesAnswer').textContent='Digite a pergunta.'; $('#sitesFiles').textContent='—'; return; }
+    if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
+    show($('#sitesBusy'),true); $('#outSites').textContent='—';
+    try{
+      const qRich = q + " — FORMATO: responda em português com texto útil e liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+      const r = await call('chat',{q:qRich});
+      const txt = (r && r.text) ? r.text : '—';
+      const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
+      $('#outSites').innerHTML = html;
+    }catch(e){ $('#outSites').textContent='Erro: '+e.message;
+    }finally{ show($('#sitesBusy'),false); }
+  }
 
-    show($('#sitesBusy'),true);
-    $('#sitesAnswer').textContent='—';
-    $('#sitesFiles').textContent='—';
+  /* MANUAIS AFFIX (lista/pesquisa local do repo) */
+  $('#btnPdfs')?.addEventListener('click', doPdfs);
+  $('#qPdfs')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doPdfs(); });
+  async function doPdfs(){
+    const q=($('#qPdfs').value||'').trim().toLowerCase();
+    show($('#pdfsBusy'),true);
+    const box = $('#pdfsBox'); box.innerHTML = "—";
+    try{
+      const items = await listRawPdfs();
+      const filtered = q ? items.filter(it => it.name.toLowerCase().includes(q)) : items;
+      const frag = document.createDocumentFragment();
 
-    const askSite = (async ()=>{
-      try{
-        const qRich = q + " — FORMATO: responda em português com texto útil e liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
-        const r = await call('chat',{q:qRich});
-        const txt = (r && r.text) ? r.text : '—';
-        const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
-        $('#sitesAnswer').innerHTML = html;
-      }catch(e){ $('#sitesAnswer').textContent = 'Erro (IA): '+e.message; }
-    })();
+      const meta = document.createElement('div');
+      meta.className='hint';
+      meta.textContent = `Resultados: ${filtered.length}` + (q? ` • filtro: “${q}”` : '');
+      frag.appendChild(meta);
 
-    const listFiles = (async ()=>{
-      try{
-        const items = await listRawPdfs();
-        const filtered = items.filter(it => it.name.toLowerCase().includes(q.toLowerCase()));
-        const frag = document.createDocumentFragment();
+      for (const it of filtered){
+        const name = it.name;
+        const openUrl = it.download_url; // abre no viewer do navegador
+        const wrap = document.createElement('div');
+        wrap.className = 'item';
 
-        const metaBar = document.createElement('div');
-        metaBar.className='hint';
-        metaBar.textContent = `Manuais encontrados: ${filtered.length} • filtro: “${q}”`;
-        frag.appendChild(metaBar);
+        // Cabeçalho
+        const head = document.createElement('div');
+        head.className = 'file-head';
+        const title = document.createElement('div');
+        title.innerHTML = `<b>${esc(name)}</b>`;
+        head.appendChild(title);
+        wrap.appendChild(head);
 
-        for (const it of filtered){
-          const name = it.name;
-          const openUrl = it.download_url; // abre no navegador em nova aba
-          const base = name.replace(/\.pdf$/i,'');
-          const ocrBase = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}`;
-          const thumbUrl = `${ocrBase}/thumb.png`;
-          const textUrl  = `${ocrBase}/text.txt`;
+        // Ações
+        const actions = document.createElement('div');
+        actions.className = 'file-actions';
 
-          const [hasThumb, hasText] = await Promise.all([exists(thumbUrl), exists(textUrl)]);
+        const aOpen = document.createElement('a');
+        aOpen.className = 'btn btn-plain btn-sm';
+        aOpen.href = openUrl;
+        aOpen.target = '_blank';
+        aOpen.rel = 'noopener';
+        aOpen.textContent = 'Abrir';
+        actions.appendChild(aOpen);
 
-          const wrap = document.createElement('div');
-          wrap.className = 'item';
-          const head = document.createElement('div');
-          head.className = 'file-head';
+        const btnPrev = document.createElement('button');
+        btnPrev.className = 'btn btn-plain btn-sm';
+        btnPrev.textContent = 'Prévia';
+        btnPrev.addEventListener('click', ()=>{
+          const id = 'prev_'+btoa(name).replace(/=+/g,'');
+          let prev = document.getElementById(id);
+          if(prev){ prev.remove(); return; }
+          prev = document.createElement('div');
+          prev.id = id;
+          prev.style.marginTop = '8px';
+          prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
+          wrap.appendChild(prev);
+        });
+        actions.appendChild(btnPrev);
 
-          if(hasThumb){
-            const img = document.createElement('img');
-            img.className = 'thumb';
-            img.src = thumbUrl;
-            img.alt = 'Thumb';
-            head.appendChild(img);
-          }
+        const metaSize = document.createElement('div');
+        metaSize.className = 'hint';
+        metaSize.textContent = `Tamanho: ${humanSize(it.size||0)}`;
 
-          const title = document.createElement('div');
-          title.innerHTML = `<b>${esc(name)}</b>`;
-          head.appendChild(title);
-          wrap.appendChild(head);
-
-          const actions = document.createElement('div');
-          actions.className = 'file-actions';
-
-          const aOpen = document.createElement('a');
-          aOpen.className = 'btn btn-plain btn-sm';
-          aOpen.href = openUrl;
-          aOpen.target = '_blank';
-          aOpen.rel = 'noopener';
-          aOpen.textContent = 'Abrir';
-          actions.appendChild(aOpen);
-
-          const btnPrev = document.createElement('button');
-          btnPrev.className = 'btn btn-plain btn-sm';
-          btnPrev.textContent = 'Prévia';
-          btnPrev.addEventListener('click', ()=>{
-            const id = 'prev_'+btoa(name).replace(/=+/g,'');
-            let prev = document.getElementById(id);
-            if(prev){ prev.remove(); return; }
-            prev = document.createElement('div');
-            prev.id = id;
-            prev.style.marginTop = '8px';
-            prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
-            wrap.appendChild(prev);
-          });
-          actions.appendChild(btnPrev);
-
-          if(hasText){
-            const btnOCR = document.createElement('button');
-            btnOCR.className = 'btn btn-plain btn-sm';
-            btnOCR.textContent = 'Ver texto (OCR)';
-            btnOCR.addEventListener('click', async ()=>{
-              const id = 'ocr_'+btoa(name).replace(/=+/g,'');
-              let box = document.getElementById(id);
-              if(box){ box.remove(); return; }
-              box = document.createElement('div');
-              box.id = id;
-              box.className = 'out';
-              box.textContent = 'Carregando OCR…';
-              wrap.appendChild(box);
-              try{
-                const r = await fetch(textUrl, {cache:'no-store'});
-                box.textContent = r.ok ? await r.text() : 'OCR não disponível.';
-              }catch(e){ box.textContent = 'Erro ao carregar OCR.'; }
-            });
-            actions.appendChild(btnOCR);
-          }
-
-          const meta = document.createElement('div');
-          meta.className = 'hint';
-          meta.textContent = `Tamanho: ${humanSize(it.size||0)}`;
-
-          wrap.appendChild(actions);
-          wrap.appendChild(meta);
-          frag.appendChild(wrap);
-        }
-        const box = $('#sitesFiles');
-        box.innerHTML = '';
-        box.appendChild(frag);
-      }catch(e){
-        $('#sitesFiles').textContent = 'Erro (manuais): '+e.message;
+        wrap.appendChild(actions);
+        wrap.appendChild(metaSize);
+        frag.appendChild(wrap);
       }
-    })();
 
-    await Promise.all([askSite, listFiles]).finally(()=> show($('#sitesBusy'),false));
+      box.innerHTML = '';
+      box.appendChild(frag);
+    }catch(e){
+      box.textContent = 'Erro: '+e.message;
+    }finally{
+      show($('#pdfsBusy'),false);
+    }
   }
 
   /* CRION (GAS) */
