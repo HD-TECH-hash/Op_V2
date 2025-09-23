@@ -89,12 +89,15 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* SLOT LIVRE (RR.png com sombra roxa) */
+  /* SLOT LIVRE (RR.png flutuando com mesma sombra roxa) */
   .free-card{background:transparent;border:0;box-shadow:none;padding:0}
   .free-pad{padding:10px}
-  .rr-img{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 24px 56px rgba(99,102,241,.22));}
+  .rr-img{
+    display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;
+    filter:drop-shadow(0 24px 56px rgba(99,102,241,.22));
+  }
 
-  /* MINI-THUMB NA LISTA */
+  /* MINI-THUMB (se existir) */
   .thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;border:1px solid var(--line);
          box-shadow:0 6px 14px rgba(99,102,241,.16), 0 3px 8px rgba(40,130,187,.10)}
   .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -116,7 +119,7 @@
       <div class="tools">
         <button id="toggleNote" type="button" class="iconbtn icon-note" title="Post-it">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#1f2937" stroke-width="2" fill="#fde68a"/>
+            <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1 3-3V6a3 3 0 0 1 3-3Z" stroke="#1f2937" stroke-width="2" fill="#fde68a"/>
             <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#1f2937" stroke-width="2"/>
           </svg>
         </button>
@@ -245,10 +248,9 @@ const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZ
 
 /* ======= HELPERS ======= */
 const $  = sel => document.querySelector(sel);
-const $$ = sel => Array.from(document.querySelectorAll(sel));
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-const cleanName = n => String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,'');
+const link = (url, txt) => `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`;
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
 /* ======= CHAMADAS GAS ======= */
@@ -261,11 +263,10 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= GITHUB ======= */
+/* ======= GITHUB RAW/CONTENTS ======= */
 const GH_OWNER = "HD-TECH-hash";
 const GH_REPO  = "Ricai-crion-operacao";
 const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
-const PDFJS_VIEWER = "https://mozilla.github.io/pdf.js/web/viewer.html?file=";
 
 async function listRawPdfs() {
   const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
@@ -275,35 +276,24 @@ async function listRawPdfs() {
   return arr.filter(it => it.type === "file" && /\.pdf$/i.test(it.name));
 }
 
-async function fetchManifest(){
-  const url = `${RAW_BASE}/data/affix/manifest.json`;
-  try{
-    const r = await fetch(url, {cache:'no-store'});
-    if(!r.ok) return {};
-    const arr = await r.json();
-    const map = {};
-    (arr||[]).forEach(x=>{ map[x.name] = x; });
-    return map;
-  }catch(e){ return {}; }
-}
-
 /* ======= APP ======= */
 document.addEventListener('DOMContentLoaded', () => {
   /* Post-it */
-  const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
-  $('#toggleNote')?.addEventListener('click', ()=>{
+  const noteWrap = $('#noteWrap'), noteArea = document.getElementById('noteArea');
+  document.getElementById('toggleNote')?.addEventListener('click', ()=>{
     const on = noteWrap.style.display !== "block"; noteWrap.style.display = on? "block" : "";
-    if(on) noteArea.focus();
+    if(on) noteArea?.focus();
   });
-  $('#clearNote')?.addEventListener('click', ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); });
-  $('#closeNote')?.addEventListener('click', ()=>{ noteWrap.style.display="none"; });
-  noteArea.value = localStorage.getItem('ric_note') || "";
-  noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
+  document.getElementById('clearNote')?.addEventListener('click', ()=>{ if(noteArea){ noteArea.value=""; localStorage.removeItem('ric_note'); }});
+  document.getElementById('closeNote')?.addEventListener('click', ()=>{ noteWrap.style.display="none"; });
+  if(noteArea){ noteArea.value = localStorage.getItem('ric_note') || "";
+    noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
+  }
 
   /* Calculadora */
-  $('#toggleCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; });
-  $('#closeCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display="none"; });
-  const scr = $('#scr');
+  document.getElementById('toggleCalc')?.addEventListener('click', ()=>{ document.getElementById('calcWrap').style.display = document.getElementById('calcWrap').style.display? "" : "block"; });
+  document.getElementById('closeCalc')?.addEventListener('click', ()=>{ document.getElementById('calcWrap').style.display="none"; });
+  const scr = document.getElementById('scr');
   const calc = { buf:"0", op:null, mem:0, fresh:true };
   function refresh(){ scr.textContent = calc.buf; }
   function press(k){
@@ -319,12 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
       calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
     }
   }
-  $('#keys')?.addEventListener('click', e=>{ const k=e.target?.dataset?.k; if(k) press(k); });
+  document.getElementById('keys')?.addEventListener('click', e=>{ const k=e.target?.dataset?.k; if(k) press(k); });
 
   /* ALERTA */
-  $('#btnAlert')?.addEventListener('click', async ()=>{
-    const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
-    show(box,false); show($('#alertBusy'),true);
+  document.getElementById('btnAlert')?.addEventListener('click', async ()=>{
+    const box=document.getElementById('alertBox'), msg=document.getElementById('alertMsg'), resp=document.getElementById('alertResp');
+    show(box,false); show(document.getElementById('alertBusy'),true);
     try{
       const r = await call('getalert',{});
       if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; resp.textContent=""; show(box,true); return; }
@@ -333,55 +323,37 @@ document.addEventListener('DOMContentLoaded', () => {
       resp.textContent = r.responsavel ? String(r.responsavel||"").toLowerCase() : "";
       show(box,true);
     }catch(e){ msg.textContent="Erro: "+e.message; resp.textContent=""; show(box,true);
-    }finally{ show($('#alertBusy'),false); }
+    }finally{ show(document.getElementById('alertBusy'),false); }
   });
 
-  /* SITES OFICIAIS → PDFs do repositório + prévia */
-  $('#btnSites')?.addEventListener('click', doSites);
-  $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
-
+  /* SITES OFICIAIS — lista PDFs do repositório (raw) */
+  document.getElementById('btnSites')?.addEventListener('click', doSites);
+  document.getElementById('qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
   async function doSites(){
-    const q=($('#qSites').value||'').trim().toLowerCase();
-    show($('#sitesBusy'),true);
-    const box = $('#outSites');
+    const q=(document.getElementById('qSites').value||'').trim().toLowerCase();
+    show(document.getElementById('sitesBusy'),true);
+    const box = document.getElementById('outSites');
     box.innerHTML = "—";
 
     try{
-      const [items, manifest] = await Promise.all([listRawPdfs(), fetchManifest()]);
-      const filtered = (q ? items.filter(it => it.name.toLowerCase().includes(q)) : items);
+      const items = await listRawPdfs();
+      const filtered = items.filter(it => it.name.toLowerCase().includes(q || 'manual'));
       const total = filtered.length;
 
       const frag = document.createDocumentFragment();
       const metaBar = document.createElement('div');
       metaBar.className='hint';
-      metaBar.textContent = `Manuais no repositório: ${total} • filtro: “${q||'*'}”`;
+      metaBar.textContent = `Resultados: ${total} • filtro: “${q||'manual'}”`;
       frag.appendChild(metaBar);
 
       for (const it of filtered){
         const name = it.name;
-        const base = name.replace(/\.pdf$/i,'');
-        const manifestRow = manifest[name] || {};
-        // preferir URL original do Affix (abre/previa sem download)
-        const sourceUrl = manifestRow.source || manifestRow.origin || null;
-        const rawUrl    = `${RAW_BASE}/data/affix/raw/${encodeURIComponent(name)}`;
-        const viewUrl   = sourceUrl || rawUrl;
-
-        const thumbUrl = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/thumb.png`;
-        const textUrl  = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/text.txt`;
+        const openUrl = it.download_url; // abre em nova aba (sem forçar download)
 
         const wrap = document.createElement('div');
         wrap.className = 'item';
-
         const head = document.createElement('div');
         head.className = 'file-head';
-
-        const img = document.createElement('img');
-        img.className = 'thumb';
-        img.src = thumbUrl;
-        img.alt = 'Thumb';
-        img.onerror = ()=>{ img.style.display='none'; };
-        head.appendChild(img);
-
         const title = document.createElement('div');
         title.innerHTML = `<b>${esc(name)}</b>`;
         head.appendChild(title);
@@ -390,16 +362,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const actions = document.createElement('div');
         actions.className = 'file-actions';
 
-        // ABRIR → sempre em nova aba pelo PDF.js viewer (evita download)
+        // ABRIR (nova aba)
         const aOpen = document.createElement('a');
         aOpen.className = 'btn btn-plain btn-sm';
-        aOpen.href = PDFJS_VIEWER + encodeURIComponent(viewUrl);
+        aOpen.href = openUrl;
         aOpen.target = '_blank';
         aOpen.rel = 'noopener';
         aOpen.textContent = 'Abrir';
         actions.appendChild(aOpen);
 
-        // PRÉVIA inline com o mesmo viewer
+        // PRÉVIA embutida (sem baixar)
         const btnPrev = document.createElement('button');
         btnPrev.className = 'btn btn-plain btn-sm';
         btnPrev.textContent = 'Prévia';
@@ -410,36 +382,16 @@ document.addEventListener('DOMContentLoaded', () => {
           prev = document.createElement('div');
           prev.id = id;
           prev.style.marginTop = '8px';
-          prev.innerHTML = `<iframe src="${PDFJS_VIEWER + encodeURIComponent(viewUrl)}#zoom=page-fit"
-                               style="width:100%;height:460px;border:1px solid var(--line);border-radius:10px"
-                               loading="lazy"></iframe>`;
+          prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
           wrap.appendChild(prev);
         });
         actions.appendChild(btnPrev);
 
-        // Ver texto (OCR) se existir
-        const btnOCR = document.createElement('button');
-        btnOCR.className = 'btn btn-plain btn-sm';
-        btnOCR.textContent = 'Ver texto (OCR)';
-        btnOCR.addEventListener('click', async ()=>{
-          const id = 'ocr_'+btoa(name).replace(/=+/g,'');
-          let box = document.getElementById(id);
-          if(box){ box.remove(); return; }
-          box = document.createElement('div');
-          box.id = id;
-          box.className = 'out';
-          box.textContent = 'Carregando OCR…';
-          wrap.appendChild(box);
-          try{
-            const r = await fetch(textUrl, {cache:'no-store'});
-            box.textContent = r.ok ? await r.text() : 'OCR não disponível.';
-          }catch(e){ box.textContent = 'Erro ao carregar OCR.'; }
-        });
-        actions.appendChild(btnOCR);
-
+        // tamanho
         const meta = document.createElement('div');
         meta.className = 'hint';
-        meta.textContent = `Tamanho: ${humanSize(it.size||0)}`;
+        meta.textContent = `Tamanho: ${ (it.size? (it.size/1024/1024).toFixed(2)+' MB':'—') }`;
+
         wrap.appendChild(actions);
         wrap.appendChild(meta);
         frag.appendChild(wrap);
@@ -448,71 +400,55 @@ document.addEventListener('DOMContentLoaded', () => {
       box.innerHTML = '';
       box.appendChild(frag);
 
-      // Se o usuário escreveu pergunta, ainda respondemos via GAS (mantém sua “tela que lê site”)
-      if(q){
-        const hr = document.createElement('hr'); hr.style.margin='12px 0'; hr.style.border='0'; hr.style.borderTop='1px dashed var(--line)';
-        box.appendChild(hr);
-        const info = document.createElement('div'); info.className='hint'; info.textContent='Resposta das fontes oficiais:';
-        box.appendChild(info);
-        try{
-          const qRich = q + " — FORMATO: responda em português com texto útil e liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
-          const r = await call('chat',{q:qRich});
-          const div = document.createElement('div'); div.className='out'; 
-          const txt = (r && r.text) ? r.text : '—';
-          div.innerHTML = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
-          box.appendChild(div);
-        }catch(e){ /* silencioso */ }
-      }
-
     }catch(e){
-      $('#outSites').textContent = 'Erro: '+e.message;
+      document.getElementById('outSites').textContent = 'Erro: '+e.message;
     }finally{
-      show($('#sitesBusy'),false);
+      show(document.getElementById('sitesBusy'),false);
     }
   }
 
   /* CRION (GAS) */
-  $('#btnCRION')?.addEventListener('click', doCRION);
-  $('#qCRION')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
-  $('#btnReIdxCRION')?.addEventListener('click', async ()=>{
-    $('#crionStatus').textContent='Reindexando CRION…'; show($('#crionBusy'),true);
-    try{ const r=await call('reindexcrion',{}); $('#crionStatus').textContent="Index CRION: "+(r && r.ok ? "OK" : "Falhou"); }
-    catch(e){ $('#crionStatus').textContent='Erro: '+e.message; }
-    finally{ show($('#crionBusy'),false); }
+  document.getElementById('btnCRION')?.addEventListener('click', doCRION);
+  document.getElementById('qCRION')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+  document.getElementById('btnReIdxCRION')?.addEventListener('click', async ()=>{
+    document.getElementById('crionStatus').textContent='Reindexando CRION…'; show(document.getElementById('crionBusy'),true);
+    try{ const r=await call('reindexcrion',{}); document.getElementById('crionStatus').textContent="Index CRION: "+(r && r.ok ? "OK" : "Falhou"); }
+    catch(e){ document.getElementById('crionStatus').textContent='Erro: '+e.message; }
+    finally{ show(document.getElementById('crionBusy'),false); }
   });
   async function doCRION(){
-    const q=($('#qCRION').value||'').trim();
-    if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
-    show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
+    const q=(document.getElementById('qCRION').value||'').trim();
+    if(!q){ document.getElementById('crionStatus').textContent='Digite um termo.'; return; }
+    show(document.getElementById('crionBusy'),true); document.getElementById('crionStatus').textContent='Listando arquivos…'; document.getElementById('crionList').innerHTML="";
     try{
       const res = await call('searchcrion',{q});
-      if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
-      const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
+      if(!res || res.ok===false){ document.getElementById('crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
+      const items=res.items||[]; document.getElementById('crionStatus').textContent=`Resultados: ${items.length}`;
       const frag=document.createDocumentFragment();
       items.forEach((it,idx)=>{
         const li=document.createElement('li'); li.className='item'; li.id='crion_'+idx;
-        const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-        li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}
+        const meta  = `<div class="hint">Tamanho: ${it.size? (it.size/1024/1024).toFixed(1)+' MB':'—'} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+        li.innerHTML=`<div><b>${esc(it.name)}</b> • ${link(it.url,'Abrir')}</div>${meta}
                       <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
         frag.appendChild(li);
       });
-      $('#crionList').appendChild(frag);
+      document.getElementById('crionList').appendChild(frag);
       if(items.length){
         let from=0;
         while(from < items.length){
           const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
           (r.items||[]).forEach(row=>{
-            const el=$('#snip_crion_'+row.index);
+            const el=document.getElementById('snip_crion_'+row.index);
             el.innerHTML=(row.snippets && row.snippets.length)
               ? row.snippets.map(s=>`<div class="snip">${esc(s)}</div>`).join("")
               : '<span class="hint">—</span>';
           });
           from = r.to;
         }
-        $('#crionStatus').textContent += " • prévias completas";
+        document.getElementById('crionStatus').textContent += " • prévias completas";
       }
-    }catch(e){ $('#crionStatus').textContent='Erro: '+e.message;
-    }finally{ show($('#crionBusy'),false); }
+    }catch(e){ document.getElementById('crionStatus').textContent='Erro: '+e.message;
+    }finally{ show(document.getElementById('crionBusy'),false); }
   }
 });
 </script>
