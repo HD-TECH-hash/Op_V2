@@ -48,9 +48,6 @@
 
   .list{margin:8px 0 0;padding:0;list-style:none}
   .item{padding:10px 0;border-top:1px solid var(--line)}
-  .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .file-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-  .btn-sm{padding:6px 10px;font-size:12px}
   .snip{color:#374151;font-size:13px;margin:6px 0}
 
   .busy{display:flex;align-items:center;gap:8px}
@@ -122,14 +119,13 @@
         <div id="alertBox" class="out out-alert" style="display:none"><div id="alertMsg">—</div><div id="alertResp" class="hint">—</div></div>
       </section>
 
-      <!-- SITES OFICIAIS (lista PDFs do GitHub) -->
+      <!-- SITES OFICIAIS (via GAS scraping) -->
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input" placeholder='Digite sua pergunta ..... (ex.: "manual")'>
+          <input id="qSites" class="input" placeholder='Digite sua pergunta ..... (ex.: "vencimento hapvida")'>
           <button id="btnSites" type="button" class="btn btn-search">Pesquisar</button>
-          <button id="btnAll"   type="button" class="btn btn-plain">Mostrar todos</button>
         </div>
         <div class="hint" id="sitesBusy" style="display:none"><div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div><div class="bar" style="margin-top:6px"></div></div>
         <div id="outSites" class="out">—</div>
@@ -163,34 +159,27 @@
 
 <script>
 /* ======= CONFIG ======= */
-const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec"; // GAS (apenas ALERTA/CRION)
-const GH_OWNER = "HD-TECH-hash";
-const GH_REPO  = "Ricai-crion-operacao";
-const PAGES_BASE = `https://${GH_OWNER}.github.io/${GH_REPO}`;
-const RAW_BASE   = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
+/* use o MESMO URL do seu GAS (o que já funciona no alerta): */
+const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ======= HELPERS ======= */
 const $  = s => document.querySelector(s);
 const show = (el,on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(2)+" "+u[i]; }
-function preferPages(url){ // converte raw.githubusercontent em GitHub Pages p/ não forçar download
-  return url.replace(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/main/, "https://$1.github.io/$2");
-}
 
-/* fetch com timeout */
-async function fetchTimed(url, opts={}, ms=12000){
-  const ctrl = new AbortController();
-  const id = setTimeout(()=>ctrl.abort(), ms);
+/* fetch com timeout maior (evita “Failed to fetch” no chat) */
+async function fetchTimed(url, opts={}, ms=45000){
+  const ctrl = new AbortController(); const id=setTimeout(()=>ctrl.abort(), ms);
   try{ return await fetch(url, {...opts, signal:ctrl.signal}); }
   finally{ clearTimeout(id); }
 }
 
-/* ======= CHAMADAS GAS (erro amigável) ======= */
+/* ======= CHAMADAS GAS (REST simples) ======= */
 async function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   try{
-    const r = await fetchTimed(url, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(payload||{})}, 12000);
+    const r = await fetchTimed(url, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(payload||{})}, 45000);
     if(!r.ok) throw new Error("HTTP "+r.status);
     return await r.json();
   }catch(e){
@@ -198,32 +187,7 @@ async function call(endpoint, payload){
   }
 }
 
-/* ======= GITHUB: listar PDFs ======= */
-async function listRepoPdfs(){
-  const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
-  const r = await fetchTimed(api, {cache:"no-store"}, 12000);
-  if(!r.ok) return [];
-  const arr = await r.json();
-  return arr.filter(it=>it.type==="file" && /\.pdf$/i.test(it.name))
-            .map(it=>({ name: it.name, size: it.size||0, openUrl: `${PAGES_BASE}/data/affix/raw/${encodeURIComponent(it.name)}`, origin:"repo" }));
-}
-async function listManifestPdfs(){
-  try{
-    const r = await fetchTimed(`${RAW_BASE}/data/affix/manifest.json?ts=${Date.now()}`, {cache:"no-store"}, 12000);
-    if(!r.ok) return [];
-    const j = await r.json();
-    return (j.items||[])
-      .filter(x=>x && x.url && /\.pdf$/i.test(x.url))
-      .map(x=>({
-        name: x.name || x.url.split("/").pop(),
-        size: x.size || 0,
-        openUrl: x.repo_raw ? preferPages(x.repo_raw) : x.url,
-        origin: x.repo_raw ? "repo" : "external"
-      }));
-  }catch(_){ return []; }
-}
-
-/* ======= UI ======= */
+/* ======= APP ======= */
 document.addEventListener('DOMContentLoaded', () => {
   /* Post-it */
   const noteWrap=$('#noteWrap'), noteArea=$('#noteArea');
@@ -234,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
   /* Calculadora */
-  $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; $('#scr').textContent='0'; };
+  $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; };
   $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
   $('#keys').addEventListener('click', e=>{
     const k=e.target.dataset.k; if(!k) return;
@@ -266,54 +230,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#alertBusy'),false); }
   });
 
-  /* SITES OFICIAIS (PDFs do GitHub/manifest) */
-  $('#btnSites').addEventListener('click', ()=> doSites(($('#qSites').value||'').trim().toLowerCase()));
-  $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(($('#qSites').value||'').trim().toLowerCase()); });
-  $('#btnAll').addEventListener('click', ()=> doSites(""));
+  /* SITES OFICIAIS — usa seu GAS (chatServer com scraping Affix/Alter/Hapvida) */
+  $('#btnSites').addEventListener('click', doSites);
+  $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 
-  async function doSites(q){
-    show($('#sitesBusy'),true); const box=$('#outSites'); box.innerHTML="—";
+  async function doSites(){
+    const q = ($('#qSites').value||'').trim();
+    if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
+    show($('#sitesBusy'),true); $('#outSites').textContent='—';
     try{
-      const [repo, manifest] = await Promise.all([listRepoPdfs(), listManifestPdfs()]);
-      // de-duplica por nome (prioriza repo)
-      const map = new Map();
-      for(const it of [...manifest, ...repo]){ if(!map.has(it.name)) map.set(it.name, it); }
-      let items = [...map.values()];
-      if(q) items = items.filter(it => it.name.toLowerCase().includes(q));
-      // UI
-      const frag=document.createDocumentFragment();
-      const meta=document.createElement('div'); meta.className='hint'; meta.textContent=`Resultados: ${items.length} • filtro: “${q||'*'}”`; frag.appendChild(meta);
-
-      for(const it of items){
-        const wrap=document.createElement('div'); wrap.className='item';
-        const head=document.createElement('div'); head.className='file-head';
-        head.innerHTML=`<div><b>${esc(it.name)}</b>${it.origin==='external'?' <span class="hint">(link externo)</span>':''}</div>`;
-        wrap.appendChild(head);
-
-        const actions=document.createElement('div'); actions.className='file-actions';
-        const btnOpen=document.createElement('button'); btnOpen.className='btn btn-plain btn-sm'; btnOpen.textContent='Abrir';
-        btnOpen.addEventListener('click', ()=> window.open(it.openUrl, '_blank', 'noopener'));
-        actions.appendChild(btnOpen);
-
-        const btnPrev=document.createElement('button'); btnPrev.className='btn btn-plain btn-sm'; btnPrev.textContent='Prévia';
-        btnPrev.addEventListener('click', ()=>{
-          const id='prev_'+btoa(it.openUrl).replace(/=+/g,'');
-          let prev=document.getElementById(id);
-          if(prev){ prev.remove(); return; }
-          prev=document.createElement('div'); prev.id=id; prev.style.marginTop='8px';
-          prev.innerHTML=`<embed src="${it.openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:480px;border:1px solid var(--line);border-radius:10px">`;
-          wrap.appendChild(prev);
-        });
-        actions.appendChild(btnPrev);
-
-        const meta2=document.createElement('div'); meta2.className='hint'; meta2.textContent=`Tamanho: ${humanSize(it.size||0)}`;
-        wrap.appendChild(actions); wrap.appendChild(meta2);
-        frag.appendChild(wrap);
-      }
-      box.innerHTML=""; box.appendChild(frag);
+      const r = await call('chat', { q, ua: navigator.userAgent||'' });
+      const txt = (r && r.text) ? r.text : '—';
+      // transforma URLs em links e mantém quebras de linha
+      const html = String(txt)
+        .replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`)
+        .replace(/\n/g,'<br>');
+      $('#outSites').innerHTML = html;
     }catch(e){
-      box.textContent="Erro: não foi possível listar (offline).";
-    }finally{ show($('#sitesBusy'),false); }
+      $('#outSites').textContent = 'Erro: ' + e.message;  // ex.: sem conexão ou timeout
+    }finally{
+      show($('#sitesBusy'),false);
+    }
   }
 
   /* CRION (GAS) */
