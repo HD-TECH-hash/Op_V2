@@ -1,195 +1,284 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Baixa PDFs da Affix a partir de seeds em scripts/affix_sources.txt.
-Suporta:
-  - Linha com URL direta para PDF
-  - Linha "crawl <URL>" para varrer a página e coletar todos os .pdf visíveis
-Gera/atualiza:
-  - data/affix/raw/<arquivo>.pdf
-  - data/affix/manifest.json  (com link oficial, size, sha256, updated)
+fetch_affix.py
+- Lê scripts/affix_sources.txt (ou AFFIX_SOURCES_PATH) com linhas:
+    • URL direta p/ .pdf
+    • ou: 'crawl https://exemplo/pasta-ou-pagina/'  -> varre e coleta todos os .pdf daquela página
+- Baixa/atualiza PDFs em data/affix/raw/
+- Gera/atualiza data/affix/manifest.json com metadados (url, size, sha256, etag, last_modified)
+- Substitui arquivo se o conteúdo mudou; caso contrário mantém.
+- Finaliza com exit 0 mesmo sem mudanças (bom p/ GitHub Actions).
+
+Dicas:
+- Programe seu workflow para rodar diariamente às 00:00 (~00:25 é comum p/ evitar concorrência).
+- Este script não faz commit; deixe o YAML commitar após a execução se houver difs.
 """
 
-from __future__ import annotations
-import os, re, json, hashlib, time
+import os
+import sys
+import json
+import time
+import hashlib
+import mimetypes
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, unquote
 
 import requests
 from bs4 import BeautifulSoup
 
-ROOT = Path(__file__).resolve().parents[1]
-SRC_FILE = ROOT / "scripts" / "affix_sources.txt"
-RAW_DIR  = ROOT / "data" / "affix" / "raw"
-DATA_DIR = ROOT / "data" / "affix"
-MANIFEST = DATA_DIR / "manifest.json"
+# ------------ Config ------------
+ROOT = Path(__file__).resolve().parents[1]  # repo root (../..)
+SOURCES_PATH = Path(os.environ.get("AFFIX_SOURCES_PATH") or ROOT / "scripts" / "affix_sources.txt")
+RAW_DIR = ROOT / "data" / "affix" / "raw"
+MANIFEST_PATH = ROOT / "data" / "affix" / "manifest.json"
 
-RAW_DIR.mkdir(parents=True, exist_ok=True)
+USER_AGENT = "RIC-AFFIX-Fetcher/1.0 (+github-actions; python requests)"
+TIMEOUT = (10, 30)  # connect, read
+RETRIES = 2
 
-UA = {"User-Agent": "ricai-affix-fetcher (+github actions)"}
+# ------------ HTTP session with retries ------------
+def make_session():
+    s = requests.Session()
+    s.headers.update({"User-Agent": USER_AGENT, "Accept": "*/*"})
+    adapter = requests.adapters.HTTPAdapter(max_retries=RETRIES)
+    s.mount("http://", adapter)
+    s.mount("https://", adapter)
+    return s
 
-def sha256_of(path: Path) -> str:
+SESSION = make_session()
+
+# ------------ Helpers ------------
+def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
 
-def safe_name_from_url(url: str) -> str:
-    # usa último segmento do path, decodifica %20 etc.
-    name = unquote(urlparse(url).path.rsplit("/", 1)[-1])
-    # fallback
-    if not name or not name.lower().endswith(".pdf"):
-        name = re.sub(r"[^A-Za-z0-9_.-]+", "_", name or "file.pdf")
-        if not name.lower().endswith(".pdf"):
-            name += ".pdf"
+def safe_filename_from_url(url: str) -> str:
+    """
+    Extrai o basename do path, remove query/fragment e normaliza caracteres.
+    Mantém .pdf no final (se não tiver, tenta deduzir).
+    """
+    p = urlparse(url)
+    name = unquote(os.path.basename(p.path)) or "arquivo.pdf"
+    # remove coisas suspeitas
+    name = name.replace("\n", " ").replace("\r", " ").strip()
+    # garante extensão .pdf
+    if not name.lower().endswith(".pdf"):
+        # tenta deduzir pelo mimetype
+        guess = mimetypes.guess_extension("application/pdf") or ".pdf"
+        name += guess
+    # evita nomes absurdamente longos
+    if len(name) > 180:
+        prefix, ext = os.path.splitext(name)
+        name = prefix[:160] + ext
     return name
 
-def head(url: str):
-    try:
-        r = requests.head(url, timeout=25, allow_redirects=True, headers=UA)
-        if r.ok:
-            return r.headers
-    except Exception:
-        return None
-    return None
-
-def download(url: str, dest: Path) -> tuple[bool, int]:
-    """Baixa para dest; retorna (baixou?, bytes)."""
-    with requests.get(url, stream=True, timeout=60, headers=UA) as r:
-        r.raise_for_status()
-        tmp = dest.with_suffix(dest.suffix + ".part")
-        total = 0
-        with tmp.open("wb") as f:
-            for chunk in r.iter_content(chunk_size=1024 * 128):
-                if chunk:
-                    f.write(chunk)
-                    total += len(chunk)
-        tmp.replace(dest)
-        return True, total
-
-def discover_pdfs_from_page(page_url: str) -> list[str]:
-    urls = set()
-    try:
-        r = requests.get(page_url, timeout=40, headers=UA)
-        r.raise_for_status()
-    except Exception as e:
-        print(f"[WARN] falha ao abrir {page_url}: {e}")
-        return []
-
-    soup = BeautifulSoup(r.text, "html.parser")
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        full = urljoin(page_url, href)
-        if re.search(r"\.pdf(\?.*)?$", full, re.I):
-            urls.add(full.split("?")[0])  # normaliza, remove query
-    # alguns diretórios WordPress mostram a listagem simples:
-    # se a página for um índice "cru", ainda assim os <a> aparecem.
-    return sorted(urls)
-
-def read_sources() -> list[str]:
-    lines = []
-    if not SRC_FILE.exists():
-        print(f"[ERROR] {SRC_FILE} não existe.")
-        return lines
-    for raw in SRC_FILE.read_text(encoding="utf-8").splitlines():
-        s = raw.strip()
-        if not s or s.startswith("#"):
-            continue
-        lines.append(s)
-    return lines
-
 def load_manifest() -> dict:
-    if MANIFEST.exists():
+    if MANIFEST_PATH.exists():
         try:
-            return json.loads(MANIFEST.read_text(encoding="utf-8"))
+            return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
         except Exception:
             pass
-    return {"generated_at": 0, "items": []}
+    return {"fetched_at": None, "items": []}
 
-def save_manifest(items: list[dict]):
-    MANIFEST.write_text(
-        json.dumps({"generated_at": int(time.time()), "items": items}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+def save_manifest(manifest: dict):
+    manifest["items"] = sorted(manifest.get("items", []), key=lambda x: x.get("name", "").lower())
+    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
+    MANIFEST_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-def main():
-    sources = read_sources()
-    manifest = load_manifest()
-    by_name = {it.get("name"): it for it in manifest.get("items", [])}
-    seen_names = set()
+def normalize_pdf_url(base_url: str, href: str) -> str:
+    abs_url = urljoin(base_url, href)
+    # Remove anchors/fragments
+    u = urlparse(abs_url)
+    return u._replace(fragment="").geturl()
 
-    discovered = []  # (url_pdf, referer)
-    for s in sources:
-        if s.lower().startswith("crawl "):
-            page = s.split(" ", 1)[1].strip()
-            print(f"[crawl] {page}")
-            for pdf in discover_pdfs_from_page(page):
-                discovered.append((pdf, page))
-        elif re.search(r"^https?://.+\.pdf(\?.*)?$", s, re.I):
-            discovered.append((s, None))
+def is_pdf_link(href: str) -> bool:
+    if not href:
+        return False
+    href = href.split("#", 1)[0]
+    return href.lower().endswith(".pdf")
+
+def discover_pdfs_from_page(url: str) -> set[str]:
+    """Varre uma página/pasta e retorna conjunto de links absolutos .pdf"""
+    try:
+        r = SESSION.get(url, timeout=TIMEOUT)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"[crawl] ERRO ao abrir {url}: {e}")
+        return set()
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    found = set()
+
+    # anchors
+    for a in soup.find_all("a", href=True):
+        href = a.get("href")
+        if is_pdf_link(href):
+            found.add(normalize_pdf_url(r.url, href))
+
+    # alguns servidores listam em <pre> ou listagem; anchors já cobrem na maioria
+    print(f"[crawl] {url} -> {len(found)} PDFs")
+    return found
+
+def read_sources_file(path: Path) -> list[str]:
+    """Lê o arquivo de fontes e retorna lista de URLs resolvidas (sem duplicatas)."""
+    if not path.exists():
+        print(f"Arquivo de fontes não encontrado: {path}")
+        return []
+    urls: set[str] = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.lower().startswith("crawl "):
+            seed = line.split(None, 1)[1].strip()
+            for u in discover_pdfs_from_page(seed):
+                urls.add(u)
         else:
-            print(f"[skip] {s}")
-
-    total_new = total_kept = 0
-    items_out = []
-
-    for url_pdf, referer in discovered:
-        url_pdf = url_pdf.split("?")[0]
-        name = safe_name_from_url(url_pdf)
-        dest = RAW_DIR / name
-        seen_names.add(name)
-
-        # HEAD/ETag/Length para decidir se baixa de novo
-        remote_len = None
-        hdr = head(url_pdf)
-        if hdr:
-            try:
-                remote_len = int(hdr.get("Content-Length") or 0)
-            except Exception:
-                remote_len = None
-
-        need = True
-        old_sha = None
-        if dest.exists():
-            if remote_len is not None and dest.stat().st_size == remote_len:
-                need = False  # mesma length: assume igual
+            # URL direta
+            if is_pdf_link(line):
+                urls.add(line)
             else:
-                old_sha = sha256_of(dest)
+                # Pode haver URL sem .pdf explícito; ainda assim tente
+                urls.add(line)
+    print(f"[sources] Total único de URLs: {len(urls)}")
+    return sorted(urls)
 
-        if need:
+def head_info(url: str) -> dict:
+    """Tenta HEAD para captar ETag/Last-Modified/Content-Length (opcional)."""
+    info = {}
+    try:
+        hr = SESSION.head(url, allow_redirects=True, timeout=TIMEOUT)
+        # Alguns servidores não suportam HEAD; ignore erros
+        if hr.ok:
+            info["etag"] = hr.headers.get("ETag")
+            info["last_modified"] = hr.headers.get("Last-Modified")
             try:
-                print(f"[get] {name}")
-                _, _ = download(url_pdf, dest)
-                total_new += 1
-            except Exception as e:
-                print(f"[ERR] {url_pdf}: {e}")
-                continue
+                info["remote_length"] = int(hr.headers.get("Content-Length") or "0")
+            except Exception:
+                info["remote_length"] = None
+    except Exception:
+        pass
+    return info
 
-            if old_sha and sha256_of(dest) == old_sha:
-                # conteúdo igual apesar de tamanho diferente/HEAD falho
-                pass
-        else:
-            total_kept += 1
+def download_pdf(url: str, dest_path: Path) -> tuple[bool, dict]:
+    """
+    Baixa para dest_path (substitui se conteúdo mudou).
+    Retorna (changed, meta) onde:
+      changed=True se arquivo foi criado/atualizado;
+      meta = {name, url, size, sha256, etag, last_modified}
+    """
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # atualiza manifest
-        item = by_name.get(name, {}).copy()
-        item.update({
-            "name": name,
-            "url": url_pdf,                   # link oficial (affix.com.br)
-            "size": dest.stat().st_size,
-            "sha256": sha256_of(dest),
-            "updated": int(time.time()),
-            "referer": referer or url_pdf,
-        })
-        items_out.append(item)
+    # Info HEAD (opcional)
+    info = head_info(url)
 
-    # mantém apenas os arquivos "vistos" nesta rodada (ficam na pasta; se upstream mudar amanhã, a gente substitui)
-    items_out.sort(key=lambda x: x["name"].lower())
-    save_manifest(items_out)
+    # Baixa para temp
+    tmp = dest_path.with_suffix(dest_path.suffix + ".tmp")
+    try:
+        with SESSION.get(url, stream=True, timeout=TIMEOUT) as r:
+            r.raise_for_status()
+            with tmp.open("wb") as f:
+                for chunk in r.iter_content(chunk_size=1024 * 64):
+                    if chunk:
+                        f.write(chunk)
+    except Exception as e:
+        print(f"[download] ERRO {url}: {e}")
+        if tmp.exists():
+            tmp.unlink(missing_ok=True)
+        return (False, {})
 
-    print(f"[done] novos: {total_new} • mantidos: {total_kept} • total: {len(items_out)}")
-    print(f"[hint] manifest em {MANIFEST.relative_to(ROOT)}")
+    # Se já existe, compara hash
+    new_hash = sha256_file(tmp)
+    new_size = tmp.stat().st_size
+
+    if dest_path.exists():
+        old_hash = sha256_file(dest_path)
+        if old_hash == new_hash:
+            # Igual: descarta tmp
+            tmp.unlink(missing_ok=True)
+            meta = {
+                "name": dest_path.name,
+                "url": url,
+                "size": dest_path.stat().st_size,
+                "sha256": old_hash,
+                "etag": info.get("etag"),
+                "last_modified": info.get("last_modified"),
+            }
+            print(f"[download] SEM MUDANÇA: {dest_path.name} ({new_size} bytes)")
+            return (False, meta)
+
+    # Diferente (ou não existia): move tmp -> dest
+    tmp.replace(dest_path)
+    meta = {
+        "name": dest_path.name,
+        "url": url,
+        "size": new_size,
+        "sha256": new_hash,
+        "etag": info.get("etag"),
+        "last_modified": info.get("last_modified"),
+    }
+    print(f"[download] ATUALIZADO: {dest_path.name} ({new_size} bytes)")
+    return (True, meta)
+
+# ------------ Main ------------
+def main() -> int:
+    print("=== AFFIX FETCH ===")
+    print(f"Repo root: {ROOT}")
+    print(f"Sources:   {SOURCES_PATH}")
+    print(f"Raw dir:   {RAW_DIR}")
+
+    urls = read_sources_file(SOURCES_PATH)
+    if not urls:
+        print("Nenhuma URL encontrada nas fontes.")
+        # não é erro fatal — pode ser intencional
+        return 0
+
+    manifest = load_manifest()
+    existing = {item["name"]: item for item in manifest.get("items", [])}
+
+    changed_any = False
+    new_items: dict[str, dict] = {}
+
+    for url in urls:
+        fname = safe_filename_from_url(url)
+        # força .pdf no nome e evita path traversal
+        fname = os.path.basename(fname)
+        dest = RAW_DIR / fname
+
+        changed, meta = download_pdf(url, dest)
+        if meta:
+            new_items[fname] = meta
+        if changed:
+            changed_any = True
+
+    # Mantém entradas antigas para arquivos que ainda existem,
+    # e substitui/insere pelas novas
+    final_items = {}
+    # 1) começa pelas novas (fonte atual)
+    final_items.update(new_items)
+    # 2) mantém do manifest anterior os que ainda existem no disco e não foram sobrescritos
+    for name, item in existing.items():
+        path = RAW_DIR / name
+        if name not in final_items and path.exists():
+            final_items[name] = item
+
+    manifest["fetched_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    manifest["items"] = list(final_items.values())
+    save_manifest(manifest)
+
+    print(f"Arquivos no manifest: {len(manifest['items'])}")
+    print("Concluído.")
+
+    # Sinaliza sucesso independentemente de mudanças
+    return 0
 
 if __name__ == "__main__":
-    main()
+    try:
+        sys.exit(main())
+    except KeyboardInterrupt:
+        print("Interrompido.")
+        sys.exit(130)
