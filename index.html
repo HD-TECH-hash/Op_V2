@@ -8,7 +8,6 @@
   :root{
     --bg1:#0e73a9; --bg2:#1b7eb3;
     --ink:#0b1220; --muted:#6b7a90; --line:#dfe8f3;
-    --chip:#f3eaff; --chip-ink:#5b21b6;
     --ok1:#22c55e; --ok2:#84cc16;
     --card:#ffffff; --shadow:0 20px 50px rgba(0,0,0,.10);
   }
@@ -16,15 +15,14 @@
   body{margin:0;font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--ink)}
   .wrap{max-width:1260px;margin:0 auto;padding:18px}
 
-  /* HEADER */
+  /* HEADER fixo e visível */
   .hero{
     background:linear-gradient(135deg,#1e7db2,#2c8ec2);
     border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);
     display:flex;align-items:center;gap:14px;justify-content:space-between
   }
-  .brand{display:flex;align-items:center;gap:14px}
   .logo{height:44px;display:block}
-  .tools{display:flex;gap:12px}
+  .tools{display:flex;gap:12px}        /* ícones presos ao topo, não flutuam */
   .tool{
     width:44px;height:44px;border-radius:14px;background:#ffffff20;border:1px solid #ffffff3d;
     display:grid;place-items:center;backdrop-filter:blur(4px);cursor:pointer;transition:.15s
@@ -37,39 +35,33 @@
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
   /* CARDS */
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px; box-shadow:var(--shadow)
-  }
-  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--chip);color:var(--chip-ink);
-       border:1px solid #e9d7ff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--shadow)}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:#f3eaff;color:#5b21b6;border:1px solid #e9d7ff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
   h2{margin:10px 0 12px;font-size:20px;letter-spacing:.2px}
   .row{display:flex;gap:10px;align-items:center}
   .input{flex:1;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#f9fbff}
   .btn{appearance:none;border:0;border-radius:12px;padding:12px 18px;font-weight:900;cursor:pointer}
   .btn-ok{color:#053;background:linear-gradient(135deg,var(--ok1),var(--ok2));box-shadow:0 10px 22px rgba(34,197,94,.28)}
-  .hint{font-size:12px;color:var(--muted);margin-top:6px}
   .out{white-space:pre-wrap;min-height:160px;border:1px dashed var(--line);border-radius:12px;padding:12px;margin-top:10px;background:#fbfdff}
 
-  /* RR.png bloco */
-  .rrWrap{display:grid;place-items:center;padding:8px}
+  /* RR.png SEM CARD: bloco transparente centralizado */
+  .rrSlot{min-height:360px;display:grid;place-items:center}
   .rr{max-width:520px;width:100%;height:auto;display:block;filter:drop-shadow(0 18px 38px rgba(86,115,189,.35))}
 </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HEADER -->
+    <!-- TOPO AZUL -->
     <header class="hero">
-      <img class="logo" src="HDS.png" alt="CRION logo" id="logoCrion">
+      <img class="logo" src="HDS.png" alt="CRION" id="logoCrion">
       <div class="tools">
-        <!-- Post-it (SVG nítido) -->
-        <button class="tool" title="Post-it" id="toggleNote" aria-label="Post-it">
+        <button class="tool" id="toggleNote" title="Post-it" aria-label="Post-it">
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M7 3h7a4 4 0 0 1 4 4v6l-6 6H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="#fff" stroke-width="2"/>
             <path d="M18 13h-3a4 4 0 0 0-4 4v3" stroke="#fff" stroke-width="2"/>
           </svg>
         </button>
-        <!-- Calculadora (SVG nítido) -->
-        <button class="tool" title="Calculadora" id="toggleCalc" aria-label="Calculadora">
+        <button class="tool" id="toggleCalc" title="Calculadora" aria-label="Calculadora">
           <svg viewBox="0 0 24 24" fill="none">
             <rect x="4" y="3" width="16" height="18" rx="3" stroke="#fff" stroke-width="2"/>
             <rect x="7" y="6" width="10" height="3" rx="1" fill="#fff"/>
@@ -77,21 +69,19 @@
           </svg>
         </button>
       </div>
-      <img class="logo" src="icon2.png" alt="HDSTEC logo" id="logoHdstec">
+      <img class="logo" src="icon2.png" alt="HDSTEC" id="logoHdstec">
     </header>
 
     <div class="grid">
-      <!-- COLUNA ESQUERDA: ALERTA + RR.png -->
+      <!-- ESQUERDA: ALERTA -->
       <section class="card">
         <div class="tag">ALERTAS</div>
         <h2>Controle de alerta</h2>
-        <div class="row">
-          <button id="btnAlert" class="btn btn-ok">PESQUISAR</button>
-        </div>
+        <div class="row"><button id="btnAlert" class="btn btn-ok">PESQUISAR</button></div>
         <div id="alertBox" class="out" style="min-height:120px;margin-top:10px">—</div>
       </section>
 
-      <!-- COLUNA DIREITA: SITES -->
+      <!-- DIREITA: SITES -->
       <section class="card">
         <div class="tag" style="background:#e9efff;color:#1e3a8a;border-color:#d8e4ff">SITES</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -102,12 +92,12 @@
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- RR grande e central -->
-      <section class="card rrWrap">
+      <!-- ESQUERDA (2ª linha): RR.png centralizado, sem card -->
+      <div class="rrSlot">
         <img src="rr.png" class="rr" alt="RIC — Precisa de ajuda?"/>
-      </section>
+      </div>
 
-      <!-- PROCEDIMENTOS -->
+      <!-- DIREITA (2ª linha): PROCEDIMENTOS -->
       <section class="card">
         <div class="tag" style="background:#fff4e5;color:#9a3412;border-color:#ffe2bf">PROCEDIMENTOS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -121,93 +111,51 @@
   </div>
 
 <script>
-/* ========== CONFIG: seu GAS publicado ==========
-   Precisa estar: Implantado como versão • Executar como "proprietário" • Acesso "Qualquer pessoa".
-*/
-const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
+const APP_URL="https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
+async function gas(fn,p={}){const r=await fetch(APP_URL+"?fn="+encodeURIComponent(fn),{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(p)});if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}
+const esc=s=>String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 
-/* Helper para evitar preflight: Content-Type 'text/plain' */
-async function gas(fn, payload={}){
-  const url = APP_URL + "?fn=" + encodeURIComponent(fn);
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(payload)
-  });
-  if(!res.ok) throw new Error("HTTP "+res.status);
-  return await res.json();
-}
-function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
-
-/* ALERTA */
-document.getElementById("btnAlert").onclick = async ()=>{
-  const box = document.getElementById("alertBox");
-  box.textContent = "Pesquisando...";
+btnAlert.onclick=async()=>{
+  alertBox.textContent="Pesquisando...";
   try{
-    const r = await gas("getalert", {});
-    if(!r || r.ok===false){ box.textContent = "Falha ao consultar."; return; }
-    if(!r.found){ box.textContent = "Sem recado no momento."; return; }
-    box.innerHTML = `<div style="font-weight:900;color:#b91c1c;font-size:22px">🚨 ${esc(String(r.mensagem||"").toUpperCase())}</div>` +
-                    (r.responsavel? `<div style="color:#475569;margin-top:6px">responsável: ${esc(String(r.responsavel||""))}</div>` : "");
-  }catch(e){
-    box.innerHTML = `<b style="color:#b91c1c">Erro: Failed to fetch</b><div class="hint">Dica: confira se o Web App do GAS está em “Anyone” e “Executar como: proprietário”, e se o APP_URL acima é o da versão publicada (.../exec).</div>`;
-  }
+    const r=await gas("getalert",{});
+    if(!r||r.ok===false){alertBox.textContent="Falha ao consultar.";return;}
+    if(!r.found){alertBox.textContent="Sem recado no momento.";return;}
+    alertBox.innerHTML=`<div style="font-weight:900;color:#b91c1c;font-size:22px">🚨 ${esc(String(r.mensagem||"").toUpperCase())}</div>`+(r.responsavel?`<div style="color:#475569;margin-top:6px">responsável: ${esc(r.responsavel)}</div>`:"");
+  }catch{alertBox.innerHTML=`<b style="color:#b91c1c">Erro: Failed to fetch</b>`;}
 };
 
-/* SITES (chatServer) */
-document.getElementById("btnSites").onclick = async ()=>{
-  const q = (document.getElementById("qSites").value||"").trim();
-  const out = document.getElementById("outSites");
-  if(!q){ out.textContent = "Digite a pergunta."; return; }
-  out.textContent = "Pesquisando...";
+btnSites.onclick=async()=>{
+  const q=(qSites.value||"").trim(); if(!q){outSites.textContent="Digite a pergunta.";return;}
+  outSites.textContent="Pesquisando...";
   try{
-    const r = await gas("chat",{ q });
-    const txt = (r && (r.text || r.answer)) || "—";
-    const html = String(txt).replace(/(https?:\/\/[^\s)]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
-    out.innerHTML = html;
-  }catch(e){ out.innerHTML = `<b style="color:#b91c1c">Erro: Failed to fetch</b>`; }
+    const r=await gas("chat",{q}); const txt=(r&&(r.text||r.answer))||"—";
+    outSites.innerHTML=String(txt).replace(/(https?:\/\/[^\s)]+)/g,m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
+  }catch{outSites.innerHTML=`<b style="color:#b91c1c">Erro: Failed to fetch</b>`;}
 };
 
-/* CRION (lista + prévias) */
-document.getElementById("btnCRION").onclick = async ()=>{
-  const q = (document.getElementById("qCRION").value||"").trim();
-  const out = document.getElementById("crionList");
-  if(!q){ out.textContent = "Digite um termo."; return; }
-  out.textContent = "Listando arquivos...";
+btnCRION.onclick=async()=>{
+  const q=(qCRION.value||"").trim(); if(!q){crionList.textContent="Digite um termo.";return;}
+  crionList.textContent="Listando arquivos...";
   try{
-    const res = await gas("searchcrion",{ q });
-    if(!res || res.ok===false){ out.textContent="Erro ao buscar."; return; }
-    if(!(res.items||[]).length){ out.textContent = "Nenhum resultado."; return; }
-    // render básico
-    out.innerHTML = (res.items||[]).slice(0,40).map((it,idx)=>(
+    const res=await gas("searchcrion",{q}); if(!res||res.ok===false){crionList.textContent="Erro ao buscar.";return;}
+    if(!(res.items||[]).length){crionList.textContent="Nenhum resultado.";return;}
+    crionList.innerHTML=(res.items||[]).slice(0,40).map((it,idx)=>(
       `<div style="padding:8px 0;border-top:1px solid #e8eef6">
          <div><b>${esc(it.name)}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>
-         <div class="hint">${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>
-         <div id="snip_${idx}" class="hint">Carregando prévias…</div>
-       </div>`
-    )).join("");
-
-    // buscar prévias em lotes
-    let from=0;
-    while(from < res.items.length){
-      const r = await gas("fetchcrionsnippets",{ sessionId: res.sessionId, from, limit: 6 });
-      (r.items||[]).forEach(row=>{
-        const el = document.getElementById("snip_"+row.index);
-        el.innerHTML = (row.snippets && row.snippets.length)
-          ? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("")
-          : "<span class='hint'>—</span>";
-      });
-      from = r.to;
-      if(from >= 40) break; // segurança para não inundar a página
-    }
-  }catch(e){ out.innerHTML = `<b style="color:#b91c1c">Erro: Failed to fetch</b>`; }
+         <div style="font-size:12px;color:#6b7a90">${it.updated?new Date(it.updated).toLocaleString():"—"}</div>
+         <div id="snip_${idx}" style="font-size:12px;color:#6b7a90">Carregando prévias…</div>
+       </div>`)).join("");
+    let from=0; while(from<res.items.length){const r=await gas("fetchcrionsnippets",{sessionId:res.sessionId,from,limit:6});
+      (r.items||[]).forEach(row=>{const el=document.getElementById("snip_"+row.index);
+        el.innerHTML=(row.snippets&&row.snippets.length)?row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join(""):"<span style='color:#6b7a90'>—</span>";});
+      from=r.to; if(from>=40) break;}
+  }catch{crionList.innerHTML=`<b style="color:#b91c1c">Erro: Failed to fetch</b>`;}
 };
 
-/* Logos com mesma altura (se imagens tiverem dimensões diferentes) */
-(function equalizeLogos(){
-  const a=document.getElementById('logoCrion'), b=document.getElementById('logoHdstec');
-  a.style.height=b.style.height='44px';
-})();
+/* logos com mesma altura */
+document.getElementById('logoCrion').style.height=
+document.getElementById('logoHdstec').style.height='44px';
 </script>
 </body>
 </html>
