@@ -1,12 +1,5 @@
 {
-  "name": "RIC AI — CRION (Operação)",
-  "short_name": "CRION-OP",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#f7f8fc",
-  "theme_color": "#2882bb",
-  "icons": [
-    { "src": "icon2.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "HDS.png",  "sizes": "512x512", "type": "image/png" }
-  ]
+  "generated_at": "2025-09-23T19:14:10Z",
+  "base": "./data/affix/raw/",
+  "items": []
 }
