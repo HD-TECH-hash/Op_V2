@@ -1,94 +1,147 @@
 {
-  "generated_at": 1758589600,
   "items": [
     {
       "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
       "status": "ok",
       "size": 2209576,
-      "timestamp": 1758586200,
+      "timestamp": 1758641253,
       "repo_raw": "https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/data/affix/raw/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf"
     },
-
-    { "name": "BRASIL-HAPVIDA_Manual-Corretor-AR_04-25.pdf",
+    {
+      "name": "BRASIL-HAPVIDA_Manual-Corretor-AR_04-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2025/05/BRASIL-HAPVIDA_Manual-Corretor-AR_04-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586201
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641255
     },
-    { "name": "Affix-RJ-Hapvida-Manual-Corretor-Varejo-04-25.pdf",
+    {
+      "name": "Affix-RJ-Hapvida-Manual-Corretor-Varejo-04-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2025/05/Affix-RJ-Hapvida-Manual-Corretor-Varejo-04-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586202
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641255
     },
-    { "name": "Affix-SE-Hapvida-Gov.-Sergipe-BANESE-Manual-04-25.pdf",
+    {
+      "name": "Affix-SE-Hapvida-Gov.-Sergipe-BANESE-Manual-04-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2025/05/Affix-SE-Hapvida-Gov.-Sergipe-BANESE-Manual-04-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586203
+      "status": "error: HTTPError",
+      "size": 0,
+      "timestamp": 1758641256
     },
-
-    { "name": "Affix-AM-Hapvida-Manual-do-Corretor-08-25.pdf",
+    {
+      "name": "Affix-AM-Hapvida-Manual-do-Corretor-08-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2018/12/Affix-AM-Hapvida-Manual-do-Corretor-08-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586204
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641266
     },
-    { "name": "Affix-CE-Hapvida-Manual-Corretor-10-25.pdf",
+    {
+      "name": "Affix-CE-Hapvida-Manual-Corretor-10-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2024/10/Affix-CE-Hapvida-Manual-Corretor-10-25.pdf",
-      "status": "unavailable", "size": 0, "timestamp": 1758586205
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641267
     },
-    { "name": "Affix-BA-Hapvida-Manual-do-Corretor-desconto-pix-09-25.pdf",
+    {
+      "name": "Affix-BA-Hapvida-Manual-do-Corretor-desconto-pix-09-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2024/11/Affix-BA-Hapvida-Manual-do-Corretor-desconto-pix-09-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586206
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641277
     },
-    { "name": "Affix-BA-Hapvida-Manual-Corretor-Alagoinhas_Edif_dos_Sind_Oficiais__11-25.pdf",
+    {
+      "name": "Affix-BA-Hapvida-Manual-Corretor-Alagoinhas_Edif_dos_Sind_Oficiais_EF_80_A2-11-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2025/11/Affix-BA-Hapvida-Manual-Corretor-Alagoinhas_Edif–dos–Sind–Oficiais%EF%80%A2-11-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586207
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641287
     },
-    { "name": "Affix-RN-Hapvida-Manual-do-Corretor-10-25.pdf",
+    {
+      "name": "Affix-RN-Hapvida-Manual-do-Corretor-10-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2016/03/Affix-RN-Hapvida-Manual-do-Corretor-10-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586208
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641288
     },
-    { "name": "Affix-AL-Hapvida-Manual-Corretor-12-25.pdf",
+    {
+      "name": "Affix-AL-Hapvida-Manual-Corretor-12-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2025/12/Affix-AL-Hapvida-Manual-Corretor-12-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586209
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641288
     },
-
-    { "name": "Affix-DF-Hapvida-Manual-do-Corretor-08-25.pdf",
+    {
+      "name": "Affix-DF-Hapvida-Manual-do-Corretor-08-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2021/12/Affix-DF-Hapvida-Manual-do-Corretor-08-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586210
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641289
     },
-    { "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
+    {
+      "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586211
+      "status": "ok",
+      "size": 1847750,
+      "timestamp": 1758641289,
+      "repo_raw": "https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/data/affix/raw/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf"
     },
-
-    { "name": "Affix-RJ-Hapvida-Manual-do-Corretor-08-25.pdf",
+    {
+      "name": "Affix-RJ-Hapvida-Manual-do-Corretor-08-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-Manual-do-Corretor-08-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586212
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641290
     },
-    { "name": "Affix-RJ-Hapvida-AD-Manual-do-Corretor-06-25.pdf",
+    {
+      "name": "Affix-RJ-Hapvida-AD-Manual-do-Corretor-06-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2020/06/Affix-RJ-Hapvida-AD-Manual-do-Corretor-06-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586213
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641301
     },
-    { "name": "Affix-SP-Hapvida-AD-Manual-do-Corretor-Gov-SP-10-25.pdf",
+    {
+      "name": "Affix-SP-Hapvida-AD-Manual-do-Corretor-Gov-SP-10-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2016/02/Affix-SP-Hapvida-AD-Manual-do-Corretor-Gov-SP-10-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586214
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641301
     },
-    { "name": "Affix-ES-Hapvida-Manual-do-Corretor-10-25.pdf",
+    {
+      "name": "Affix-ES-Hapvida-Manual-do-Corretor-10-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2024/10/Affix-ES-Hapvida-Manual-do-Corretor-10-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586215
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641312
     },
-
-    { "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Campo-Largo-03-25.pdf",
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Campo-Largo-03-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Campo-Largo-03-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586216
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641322
     },
-    { "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-02-25.pdf",
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-02-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-02-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586217
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641332
     },
-    { "name": "Affix-PR-SulAmerica-Man-ual-do-Corretor-08-25.pdf",
+    {
+      "name": "Affix-PR-SulAmerica-Man-ual-do-Corretor-08-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2016/03/Affix-PR-SulAmerica-Man-ual-do-Corretor-08-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586218
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641343
     },
-    { "name": "Affix-RS-Unicred-Manual-NEW-07-25.pdf",
+    {
+      "name": "Affix-RS-Unicred-Manual-NEW-07-25.pdf",
       "url": "https://www.affix.com.br/wp-content/uploads/2018/01/Affix-RS-Unicred-Manual-NEW-07-25.pdf",
-      "status": "pending", "size": 0, "timestamp": 1758586219
+      "status": "unavailable",
+      "size": 0,
+      "timestamp": 1758641353
     }
-  ]
+  ],
+  "generated_at": 1758641354
 }
