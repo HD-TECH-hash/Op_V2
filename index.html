@@ -58,8 +58,7 @@
   .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);
        border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px;box-shadow:var(--tag-shadow)}
   h2{margin:8px 0 10px;font-size:18px}
-  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  .grow{flex:1 1 auto}
+  .row{display:flex;gap:10px;align-items:center}
 
   .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;user-select:none}
@@ -90,13 +89,13 @@
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
-  /* ====== SLOT LIVRE (imagem flutuando, sem card) ====== */
+  /* ====== SLOT LIVRE (RR.png com sombra roxa) ====== */
   .free-card{background:transparent;border:0;box-shadow:none;padding:0}
   .free-pad{padding:10px}
   .rr-img{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;
           filter:drop-shadow(0 24px 56px rgba(99,102,241,.22));}
 
-  /* ====== LISTA ====== */
+  /* MINI-THUMB NA LISTA */
   .thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;border:1px solid var(--line);
          box-shadow:0 6px 14px rgba(99,102,241,.16), 0 3px 8px rgba(40,130,187,.10)}
   .file-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -112,12 +111,10 @@
   <div class="wrap">
     <!-- HEADER -->
     <div class="hero">
-      <!-- esquerda (CRION) -->
       <img class="left-img" src="icon2.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
            alt="Logo esquerdo">
 
-      <!-- ícones à direita -->
       <div class="tools">
         <button id="toggleNote" type="button" class="iconbtn icon-note" title="Post-it">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -134,7 +131,6 @@
         </button>
       </div>
 
-      <!-- direita (HDS) -->
       <img class="logo right-img" src="HDS.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
            alt="HDS TEC">
@@ -200,15 +196,8 @@
       <section class="card">
         <div class="tag">SITES OFICIAIS</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
-
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input grow" placeholder="Digite sua pergunta ... (ex.: Manual)">
-          <select id="yearSel" class="input" style="max-width:140px">
-            <option value="">Todos</option>
-            <option>2015</option><option>2016</option><option>2017</option><option>2018</option>
-            <option>2019</option><option>2020</option><option>2021</option><option>2022</option>
-            <option>2023</option><option>2024</option><option>2025</option>
-          </select>
+          <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnSites" type="button" class="btn btn-search">Pesquisar</button>
         </div>
 
@@ -216,10 +205,14 @@
           <div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div>
           <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div id="outSites" class="out">—</div>
+
+        <div id="outSites" class="out">
+          <div id="sitesAnswer" style="margin-bottom:10px">—</div>
+          <div id="sitesFiles">—</div>
+        </div>
       </section>
 
-      <!-- SLOT LIVRE → imagem PNG flutuando -->
+      <!-- SLOT LIVRE → RR.png -->
       <section class="free-card">
         <div class="free-pad">
           <img class="rr-img" src="rr.png"
@@ -257,7 +250,7 @@
   </div>
 
 <script>
-/* ======= CONFIG ======= */
+/* ======= CONFIG (GAS) ======= */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ======= HELPERS ======= */
@@ -266,22 +259,10 @@ const $$ = sel => Array.from(document.querySelectorAll(sel));
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 const esc  = s => String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 const cleanName = n => String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,'');
+const link = (url, txt) => `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`;
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
-/* ======= GITHUB RAW ======= */
-const GH_OWNER = "HD-TECH-hash";
-const GH_REPO  = "Ricai-crion-operacao";
-const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
-
-/* ----- OCR/Thumb helpers (opcional) ----- */
-async function exists(url){
-  try{
-    const r = await fetch(url, {method:'HEAD', cache:'no-store'});
-    return r.ok;
-  }catch(e){ return false; }
-}
-
-/* ======= CHAMADAS GAS (CRION) ======= */
+/* ======= CHAMADAS GAS ======= */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   return fetch(url, {
@@ -291,18 +272,28 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= MANIFEST (Affix PDFs) ======= */
-async function loadManifest(){
-  const url = `${RAW_BASE}/data/affix/manifest.json`;
-  const r = await fetch(url, {cache:'no-store'});
-  if(!r.ok) throw new Error("manifest.json não encontrado");
-  const j = await r.json();
-  return Array.isArray(j.items) ? j.items : [];
+/* ======= GITHUB RAW/CONTENTS ======= */
+const GH_OWNER = "HD-TECH-hash";
+const GH_REPO  = "Ricai-crion-operacao";
+const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main`;
+
+async function listRawPdfs() {
+  const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/data/affix/raw?ref=main`;
+  const r = await fetch(api, {cache:'no-store'});
+  if(!r.ok) throw new Error("Falha GitHub API");
+  const arr = await r.json();
+  return arr.filter(it => it.type === "file" && /\.pdf$/i.test(it.name));
+}
+async function exists(url){
+  try{
+    const r = await fetch(url, {method:'HEAD', cache:'no-store'});
+    return r.ok;
+  }catch(e){ return false; }
 }
 
 /* ======= APP ======= */
 document.addEventListener('DOMContentLoaded', () => {
-  // Post-it
+  /* Post-it */
   const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
   $('#toggleNote')?.addEventListener('click', ()=>{
     const on = noteWrap.style.display !== "block"; noteWrap.style.display = on? "block" : "";
@@ -313,11 +304,28 @@ document.addEventListener('DOMContentLoaded', () => {
   noteArea.value = localStorage.getItem('ric_note') || "";
   noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
-  // Calculadora
+  /* Calculadora */
   $('#toggleCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; });
   $('#closeCalc')?.addEventListener('click', ()=>{ $('#calcWrap').style.display="none"; });
+  const scr = $('#scr');
+  const calc = { buf:"0", op:null, mem:0, fresh:true };
+  function refresh(){ scr.textContent = calc.buf; }
+  function press(k){
+    if(/\d/.test(k)){ calc.buf = (calc.fresh||calc.buf==="0")? k : calc.buf+k; calc.fresh=false; return refresh(); }
+    if(k==="00"){ press("0"); return press("0"); }
+    if(k==="."){ if(!calc.buf.includes(".")) calc.buf += "."; calc.fresh=false; return refresh(); }
+    if(k==="C"){ calc.buf="0"; calc.op=null; calc.fresh=true; return refresh(); }
+    if(k==="±"){ if(calc.buf!=="0") calc.buf = calc.buf.startsWith("-")? calc.buf.slice(1):"-"+calc.buf; return refresh(); }
+    if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
+    if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
+    if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
+      let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+      calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
+    }
+  }
+  $('#keys')?.addEventListener('click', e=>{ const k=e.target?.dataset?.k; if(k) press(k); });
 
-  // ALERTA
+  /* ALERTA */
   $('#btnAlert')?.addEventListener('click', async ()=>{
     const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
     show(box,false); show($('#alertBusy'),true);
@@ -332,156 +340,134 @@ document.addEventListener('DOMContentLoaded', () => {
     }finally{ show($('#alertBusy'),false); }
   });
 
-  // ----- SITES OFICIAIS (Affix PDFs a partir do manifest) -----
-  const yearSel = $('#yearSel');
-  yearSel.value = '2015'; // por padrão mostrar 2015, como você pediu
-
+  /* SITES OFICIAIS — IA + lista de PDFs (com prévia e OCR) */
   $('#btnSites')?.addEventListener('click', doSites);
   $('#qSites')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
-  yearSel?.addEventListener('change', doSites);
 
   async function doSites(){
-    const q = ($('#qSites').value||'').trim().toLowerCase();
-    const year = yearSel.value;
+    const q=($('#qSites').value||'').trim();
+    if(!q){ $('#sitesAnswer').textContent='Digite a pergunta.'; $('#sitesFiles').textContent='—'; return; }
+
     show($('#sitesBusy'),true);
-    const box = $('#outSites');
-    box.innerHTML = "—";
+    $('#sitesAnswer').textContent='—';
+    $('#sitesFiles').textContent='—';
 
-    try{
-      const items = await loadManifest();
+    const askSite = (async ()=>{
+      try{
+        const qRich = q + " — FORMATO: responda em português com texto útil e liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+        const r = await call('chat',{q:qRich});
+        const txt = (r && r.text) ? r.text : '—';
+        const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
+        $('#sitesAnswer').innerHTML = html;
+      }catch(e){ $('#sitesAnswer').textContent = 'Erro (IA): '+e.message; }
+    })();
 
-      // Enriquecer: inferir ano/mês pelo URL oficial
-      const enhanced = items.map(it=>{
-        const m = String(it.url||'').match(/\/(20\d{2}|201[5-9])\/(\d{2})\//);
-        const yr = m ? m[1] : '';
-        const mo = m ? m[2] : '';
-        return {...it, yr, mo};
-      });
+    const listFiles = (async ()=>{
+      try{
+        const items = await listRawPdfs();
+        const filtered = items.filter(it => it.name.toLowerCase().includes(q.toLowerCase()));
+        const frag = document.createDocumentFragment();
 
-      // Filtro por ano e termo
-      const filtered = enhanced.filter(it=>{
-        const okYear = year ? (it.yr === year) : true;
-        const okTerm = q ? (it.name||'').toLowerCase().includes(q) : true;
-        return okYear && okTerm;
-      });
+        const metaBar = document.createElement('div');
+        metaBar.className='hint';
+        metaBar.textContent = `Manuais encontrados: ${filtered.length} • filtro: “${q}”`;
+        frag.appendChild(metaBar);
 
-      const total = filtered.length;
+        for (const it of filtered){
+          const name = it.name;
+          const openUrl = it.download_url; // abre no navegador em nova aba
+          const base = name.replace(/\.pdf$/i,'');
+          const ocrBase = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}`;
+          const thumbUrl = `${ocrBase}/thumb.png`;
+          const textUrl  = `${ocrBase}/text.txt`;
 
-      const frag = document.createDocumentFragment();
-      const metaBar = document.createElement('div');
-      metaBar.className='hint';
-      metaBar.textContent = `Resultados: ${total} • filtro: “${q || '*'}” • ano: ${year || 'Todos'}`;
-      frag.appendChild(metaBar);
+          const [hasThumb, hasText] = await Promise.all([exists(thumbUrl), exists(textUrl)]);
 
-      // Render
-      for (const it of filtered){
-        const name = it.name;
-        const openUrl = it.url;     // link oficial da Affix
-        const size = it.size || 0;
+          const wrap = document.createElement('div');
+          wrap.className = 'item';
+          const head = document.createElement('div');
+          head.className = 'file-head';
 
-        const base = name.replace(/\.pdf$/i,'');
-        const thumbUrl = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/thumb.png`;
-        const textUrl  = `${RAW_BASE}/data/affix/ocr/${encodeURIComponent(base)}/text.txt`;
-
-        const wrap = document.createElement('div');
-        wrap.className = 'item';
-        const head = document.createElement('div');
-        head.className = 'file-head';
-
-        // Tenta thumb (se pipeline de OCR gerar)
-        // não bloqueia a listagem se não existir
-        let addedThumb = false;
-        try {
-          if (await exists(thumbUrl)) {
+          if(hasThumb){
             const img = document.createElement('img');
             img.className = 'thumb';
             img.src = thumbUrl;
             img.alt = 'Thumb';
             head.appendChild(img);
-            addedThumb = true;
           }
-        }catch(_){}
 
-        const title = document.createElement('div');
-        title.innerHTML = `<b>${esc(name)}</b>${it.yr ? ` — <span class="hint"> ${it.yr}/${it.mo||'??'}</span>`:''}`;
-        head.appendChild(title);
-        wrap.appendChild(head);
+          const title = document.createElement('div');
+          title.innerHTML = `<b>${esc(name)}</b>`;
+          head.appendChild(title);
+          wrap.appendChild(head);
 
-        const actions = document.createElement('div');
-        actions.className = 'file-actions';
+          const actions = document.createElement('div');
+          actions.className = 'file-actions';
 
-        // Abrir (nova aba, sem download)
-        const aOpen = document.createElement('a');
-        aOpen.className = 'btn btn-plain btn-sm';
-        aOpen.href = openUrl;
-        aOpen.target = '_blank';
-        aOpen.rel = 'noopener';
-        aOpen.textContent = 'Abrir';
-        actions.appendChild(aOpen);
+          const aOpen = document.createElement('a');
+          aOpen.className = 'btn btn-plain btn-sm';
+          aOpen.href = openUrl;
+          aOpen.target = '_blank';
+          aOpen.rel = 'noopener';
+          aOpen.textContent = 'Abrir';
+          actions.appendChild(aOpen);
 
-        // Prévia inline (usa o viewer nativo do navegador)
-        const btnPrev = document.createElement('button');
-        btnPrev.className = 'btn btn-plain btn-sm';
-        btnPrev.textContent = 'Prévia';
-        btnPrev.addEventListener('click', ()=>{
-          const id = 'prev_'+btoa(name).replace(/=+/g,'');
-          let prev = document.getElementById(id);
-          if(prev){ prev.remove(); return; }
-          prev = document.createElement('div');
-          prev.id = id;
-          prev.style.marginTop = '8px';
-          prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
-          wrap.appendChild(prev);
-        });
-        actions.appendChild(btnPrev);
+          const btnPrev = document.createElement('button');
+          btnPrev.className = 'btn btn-plain btn-sm';
+          btnPrev.textContent = 'Prévia';
+          btnPrev.addEventListener('click', ()=>{
+            const id = 'prev_'+btoa(name).replace(/=+/g,'');
+            let prev = document.getElementById(id);
+            if(prev){ prev.remove(); return; }
+            prev = document.createElement('div');
+            prev.id = id;
+            prev.style.marginTop = '8px';
+            prev.innerHTML = `<embed src="${openUrl}#toolbar=1" type="application/pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:10px">`;
+            wrap.appendChild(prev);
+          });
+          actions.appendChild(btnPrev);
 
-        // OCR (se existir)
-        (async ()=>{
-          try{
-            const hasText = await exists(textUrl);
-            if(hasText){
-              const btnOCR = document.createElement('button');
-              btnOCR.className = 'btn btn-plain btn-sm';
-              btnOCR.textContent = 'Ver texto (OCR)';
-              btnOCR.addEventListener('click', async ()=>{
-                const id = 'ocr_'+btoa(name).replace(/=+/g,'');
-                let box = document.getElementById(id);
-                if(box){ box.remove(); return; }
-                box = document.createElement('div');
-                box.id = id;
-                box.className = 'out';
-                box.textContent = 'Carregando OCR…';
-                wrap.appendChild(box);
-                try{
-                  const r = await fetch(textUrl, {cache:'no-store'});
-                  box.textContent = r.ok ? await r.text() : 'OCR não disponível.';
-                }catch(e){ box.textContent = 'Erro ao carregar OCR.'; }
-              });
-              actions.appendChild(btnOCR);
-            }
-          }catch(_){}
-        })();
+          if(hasText){
+            const btnOCR = document.createElement('button');
+            btnOCR.className = 'btn btn-plain btn-sm';
+            btnOCR.textContent = 'Ver texto (OCR)';
+            btnOCR.addEventListener('click', async ()=>{
+              const id = 'ocr_'+btoa(name).replace(/=+/g,'');
+              let box = document.getElementById(id);
+              if(box){ box.remove(); return; }
+              box = document.createElement('div');
+              box.id = id;
+              box.className = 'out';
+              box.textContent = 'Carregando OCR…';
+              wrap.appendChild(box);
+              try{
+                const r = await fetch(textUrl, {cache:'no-store'});
+                box.textContent = r.ok ? await r.text() : 'OCR não disponível.';
+              }catch(e){ box.textContent = 'Erro ao carregar OCR.'; }
+            });
+            actions.appendChild(btnOCR);
+          }
 
-        const meta = document.createElement('div');
-        meta.className = 'hint';
-        meta.textContent = `Tamanho: ${humanSize(size)}`;
+          const meta = document.createElement('div');
+          meta.className = 'hint';
+          meta.textContent = `Tamanho: ${humanSize(it.size||0)}`;
 
-        wrap.appendChild(actions);
-        wrap.appendChild(meta);
-        frag.appendChild(wrap);
+          wrap.appendChild(actions);
+          wrap.appendChild(meta);
+          frag.appendChild(wrap);
+        }
+        const box = $('#sitesFiles');
+        box.innerHTML = '';
+        box.appendChild(frag);
+      }catch(e){
+        $('#sitesFiles').textContent = 'Erro (manuais): '+e.message;
       }
+    })();
 
-      box.innerHTML = '';
-      box.appendChild(frag);
-
-    }catch(e){
-      $('#outSites').textContent = 'Erro: '+e.message;
-    }finally{
-      show($('#sitesBusy'),false);
-    }
+    await Promise.all([askSite, listFiles]).finally(()=> show($('#sitesBusy'),false));
   }
 
-  // CRION
+  /* CRION (GAS) */
   $('#btnCRION')?.addEventListener('click', doCRION);
   $('#qCRION')?.addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
   $('#btnReIdxCRION')?.addEventListener('click', async ()=>{
@@ -502,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
       items.forEach((it,idx)=>{
         const li=document.createElement('li'); li.className='item'; li.id='crion_'+idx;
         const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-        li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}
+        li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
                       <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
         frag.appendChild(li);
       });
@@ -524,9 +510,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }catch(e){ $('#crionStatus').textContent='Erro: '+e.message;
     }finally{ show($('#crionBusy'),false); }
   }
-
-  // dispara uma busca inicial (ano 2015 + termo vazio)
-  doSites();
 });
 </script>
 </body>
