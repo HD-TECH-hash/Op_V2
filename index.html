@@ -4,136 +4,141 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>RIC AI — CRION</title>
-<link rel="manifest" href="manifest.json"/>
 <style>
   :root{
-    --brand:#2882bb; --brand2:#2a8fcf;
-    --bg:#f7f8fc; --ink:#0f172a; --muted:#667085; --line:#E7EAF3;
-    --lime:#22c55e; --lime2:#a3e635; --danger:#ef4444;
-    --tag:#F2E7FF; --tag-ink:#6D28D9;
-    --card-shadow:0 18px 36px rgba(99,102,241,.12), 0 8px 24px rgba(40,130,187,.10);
+    --bg:#0f6fa3;          /* azul do painel */
+    --card:#ffffff;        /* cards */
+    --ink:#11223a;
+    --muted:#5f6b7a;
+    --line:#e9eef7;
+    --pill-sites:#1541ff;  /* azul tag SITES */
+    --pill-alert:#ff2a2a;  /* vermelho tag ALERTAS */
+    --pill-proc:#ff7a2a;   /* laranja tag PROCEDIMENTOS */
+    --btn:#24b38a;         /* verde do botão */
+    --btn-ink:#053b2e;
+    --shadow:0 24px 50px rgba(5,35,70,.28);
+    --card-shadow:0 16px 36px rgba(15,111,163,.22);
   }
   *{box-sizing:border-box}
-  body{margin:0;font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--ink);
-       background:radial-gradient(1200px 520px at -10% -10%, #eaf4ff 0, #ffffff 60%, #f7faff 100%)}
-  .wrap{max-width:1290px;margin:0 auto;padding:16px}
+  html,body{height:100%}
+  body{
+    margin:0; font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; color:var(--ink);
+    background:radial-gradient(1100px 520px at -8% -10%, #1d8fd0 0, var(--bg) 55%);
+  }
+  .wrap{max-width:1180px;margin:20px auto;padding:22px;border-radius:26px;background:linear-gradient(180deg,#1884bf,#1577b0);
+        box-shadow:var(--shadow)}
   /* header */
-  .hero{display:flex;align-items:center;justify-content:space-between;gap:12px;
-        border-radius:18px;padding:12px 16px;color:#fff;
-        background:linear-gradient(135deg,var(--brand),var(--brand2));
-        box-shadow:0 24px 56px rgba(40,130,187,.22)}
-  .logo-left,.logo-right{height:44px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
-  .tools{display:flex;gap:10px}
-  .iconbtn{width:36px;height:36px;border-radius:12px;border:1px solid #ffffff40;
-           display:grid;place-items:center;background:#ffffff1a;backdrop-filter:blur(4px);cursor:pointer}
-  /* grid/cards */
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-  @media (max-width:980px){.grid{grid-template-columns:1fr}}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--card-shadow)}
-  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--tag-ink);
-       border:1px solid #eadbff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
-  h2{margin:8px 0 10px;font-size:18px}
-  .row{display:flex;gap:10px;align-items:center}
-  .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcff}
-  .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
-  .btn-search{color:#053;background:linear-gradient(135deg,var(--lime),var(--lime2));box-shadow:0 10px 22px rgba(34,197,94,.28)}
-  .btn-plain{background:#f7f7fb;color:#111;border:1px solid var(--line)}
-  .hint{font-size:12px;color:var(--muted);margin-top:6px}
-  .out{white-space:pre-wrap;min-height:96px;border:1px dashed #c9d5ea;border-radius:12px;padding:10px;margin-top:10px;background:#f3f6ff}
-  .busy{display:flex;align-items:center;gap:8px}
-  .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #ffffff66;border-top-color:#fff;animation:spin .9s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
-  .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
-  @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
+  .hero{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,#188bc8,#1577b0);
+        border-radius:18px;padding:12px 16px;color:#fff}
+  .logoL{height:46px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
+  .tools{display:flex;gap:10px;align-items:center}
+  .tool{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#0b2b46;
+        background:#ffd85b;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+  .tool.calc{background:#98b7ff}
+  .brandR{height:40px;object-fit:contain;filter:drop-shadow(0 2px 6px #0002)}
 
-  /* RR.png com a mesma “sombra roxa” dos cards */
-  .rr{display:block;width:100%;aspect-ratio:16/11;object-fit:contain;border-radius:14px;
-      box-shadow:var(--card-shadow);border:1px solid var(--line);background:#fff}
-  .pdf-item{padding:10px 0;border-top:1px solid var(--line)}
-  .pdf-actions{display:flex;gap:8px;margin-top:6px}
-  .pdf-actions .btn{padding:6px 10px}
-  iframe.preview{width:100%;height:520px;border:1px solid var(--line);border-radius:10px;margin-top:8px}
-  footer{margin:18px 0 6px;text-align:center;font-size:12px;color:#2882bb}
+  /* grid 2x2 */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--card-shadow)}
+  .tag{display:inline-block;color:#fff;font-weight:900;border-radius:12px;padding:6px 14px;letter-spacing:.3px}
+  .tag.alert{background:var(--pill-alert)}
+  .tag.sites{background:var(--pill-sites)}
+  .tag.proc{background:var(--pill-proc)}
+  h2{margin:10px 0 10px;font-size:20px}
+
+  .row{display:flex;gap:10px;align-items:center}
+  .input{flex:1;border:1px solid var(--line);border-radius:12px;background:#fbfdff;padding:12px}
+  .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer;
+       background:var(--btn);color:var(--btn-ink);box-shadow:0 12px 26px rgba(36,179,138,.3)}
+  .btn:active{transform:translateY(1px)}
+
+  .out{min-height:118px;border:1px dashed var(--line);border-radius:12px;background:#f6f9ff;padding:12px;margin-top:10px;white-space:pre-wrap}
+  .hint{font-size:12px;color:var(--muted);margin-top:6px}
+
+  /* RR.png box (grande, com sombra) */
+  .rrbox{display:grid;place-items:center;background:#ffffff;border:1px solid var(--line);border-radius:16px;padding:10px;
+         box-shadow:var(--card-shadow)}
+  .rr{width:100%;max-width:540px;height:auto;display:block;filter:drop-shadow(0 20px 40px rgba(99,102,241,.25))}
+
+  footer{margin-top:18px;text-align:center;color:#e6f4ff;font-size:12px}
 </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- HEADER -->
     <header class="hero">
-      <img class="logo-left" src="icon2.png" onerror="this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png'">
+      <img class="logoL" src="icon2.png"
+           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';" alt="CRION">
       <div class="tools">
-        <button class="iconbtn" title="Post-it" id="toggleNote">📝</button>
-        <button class="iconbtn" title="Calculadora" id="toggleCalc">🧮</button>
+        <div class="tool">📝</div>
+        <div class="tool calc">🧮</div>
       </div>
-      <img class="logo-right" src="HDS.png" onerror="this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png'">
+      <img class="brandR" src="HDS.png"
+           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';" alt="HDSTEC">
     </header>
 
+    <!-- GRID 2x2 (sem o card de PDFs; RR.png no lugar) -->
     <div class="grid">
-      <!-- ALERTA -->
+      <!-- ALERTAS (esquerda em cima) -->
       <section class="card">
-        <div class="tag">ALERTA</div>
+        <span class="tag alert">ALERTAS</span>
         <h2>Controle de alerta</h2>
-        <div class="row"><button id="btnAlert" class="btn btn-search">Pesquisar</button></div>
-        <div class="hint" id="alertBusy" style="display:none">
-          <div class="busy"><div class="spinner"></div><div>Pesquisando alerta...</div></div><div class="bar" style="margin-top:6px"></div>
-        </div>
+        <div class="row"><button id="btnAlert" class="btn">PESQUISAR</button></div>
         <div class="out" id="alertBox" style="display:none">
           <div id="alertMsg" style="font-size:22px;font-weight:900;color:#b91c1c">—</div>
           <div id="alertResp" class="hint">—</div>
         </div>
-
-        <!-- RR.png -->
-        <img class="rr" src="rr.png" alt="RIC" style="margin-top:10px"
-             onerror="this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png'">
+        <div class="hint" id="alertBusy" style="display:none">
+          Carregando alerta…
+        </div>
       </section>
 
-      <!-- SITES OFICIAIS -->
+      <!-- SITES (direita em cima) -->
       <section class="card">
-        <div class="tag">SITES OFICIAIS</div>
+        <span class="tag sites">SITES</span>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
           <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
-          <button id="btnSites" class="btn btn-search">Pesquisar</button>
+          <button id="btnSites" class="btn">PESQUISAR</button>
         </div>
-        <div class="hint" id="sitesBusy" style="display:none">
-          <div class="busy"><div class="spinner"></div><div>Pesquisando...</div></div><div class="bar" style="margin-top:6px"></div>
-        </div>
-        <div id="outSites" class="out">—</div>
+        <div class="out" id="outSites">_</div>
       </section>
 
-      <!-- PDFs do repositório -->
-      <section class="card" style="grid-column:1 / -1">
-        <div class="tag">PDFs</div>
-        <h2>Manuais do Corretor (repositório Git)</h2>
-        <p class="hint">Os PDFs são atualizados pelo robô (scripts/fetch_affix.py). Pesquise pelo nome do arquivo.</p>
-        <div class="row">
-          <input id="qPDF" class="input" placeholder="Ex.: manual backoffice recife">
-          <button id="btnPDF" class="btn btn-search">Pesquisar</button>
+      <!-- RR.png (esquerda em baixo) -->
+      <section class="rrbox">
+        <img class="rr" src="rr.png"
+             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
+             alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
+      </section>
+
+      <!-- PROCEDIMENTOS (direita em baixo) -->
+      <section class="card">
+        <span class="tag proc">PROCEDIMENTOS</span>
+        <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
+        <div class="row" style="margin-top:6px">
+          <input id="qCRION" class="input" placeholder="Digite sua pergunta .....">
+          <button id="btnCRION" class="btn">PESQUISAR</button>
         </div>
-        <div class="hint" id="pdfBusy" style="display:none">
-          <div class="busy"><div class="spinner"></div><div>Carregando manifest…</div></div><div class="bar" style="margin-top:6px"></div>
-        </div>
-        <div class="out">
-          <div id="pdfStatus" class="hint">—</div>
-          <ul id="pdfList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
-        </div>
+        <div class="out" id="crionOut">_</div>
+        <div class="hint" id="crionBusy" style="display:none">Listando procedimentos…</div>
       </section>
     </div>
 
-    <footer>© 2025 HDSTEC — v3.0.0 Operação</footer>
+    <footer>© 2025 Copyright: HDSTEC. Todos os Direitos Reservados v3.0.0 - Operacao</footer>
   </div>
 
 <script>
-/* ---------- CONFIG ---------- */
+/* ===== Config ===== */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
-const PDF_MANIFEST_URL = "./data/affix/manifest.json";
 
-/* ---------- helpers ---------- */
+/* ===== Helpers ===== */
 const $ = s => document.querySelector(s);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 
-/* ---------- low-level call (text/plain evita preflight) ---------- */
+/* POST text/plain (sem preflight) */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   return fetch(url, {
@@ -143,96 +148,83 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ---------- ALERTA ---------- */
+/* ===== ALERTA ===== */
 $('#btnAlert').addEventListener('click', async ()=>{
   show($('#alertBusy'),true); show($('#alertBox'),false);
   try{
     const r = await call('getalert',{});
-    const msg = $('#alertMsg'), resp = $('#alertResp');
+    const msg=$('#alertMsg'), resp=$('#alertResp');
     if(r && r.ok && r.found){
       msg.textContent = "🚨 " + String(r.mensagem||"").toUpperCase();
       resp.textContent = r.responsavel ? String(r.responsavel).toLowerCase() : "";
     }else{
-      msg.textContent = "Sem recado no momento."; resp.textContent = "";
+      msg.textContent = "Sem recado no momento.";
+      resp.textContent = "";
     }
     show($('#alertBox'),true);
   }catch(e){
-    $('#alertMsg').textContent="Erro: "+(e.message||e); $('#alertResp').textContent=""; show($('#alertBox'),true);
+    $('#alertMsg').textContent="Erro: "+(e.message||e);
+    $('#alertResp').textContent="";
+    show($('#alertBox'),true);
   }finally{ show($('#alertBusy'),false); }
 });
 
-/* ---------- SITES ---------- */
+/* ===== SITES ===== */
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 async function doSites(){
   const q=($('#qSites').value||'').trim();
   if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
-  show($('#sitesBusy'),true); $('#outSites').textContent='—';
+  $('#outSites').textContent='Pesquisando...';
   try{
-    const qRich = q + " — FORMATO: português + liste URLs oficiais ao final. Substitua notas por 'Fontes oficiais Affix, Alter, Hapvida'.";
+    const qRich = q + " — FORMATO: responda em português e liste as URLs oficiais no final.";
     const r = await call('chat',{q:qRich, ua:navigator.userAgent||''});
     const txt = (r && r.text) ? r.text : '—';
     const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
     $('#outSites').innerHTML = html;
-  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e);
-  }finally{ show($('#sitesBusy'),false); }
+  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e); }
 }
 
-/* ---------- PDFs (manifest do repo) ---------- */
-let _pdfManifest=null;
-async function loadManifest(){
-  if(_pdfManifest) return _pdfManifest;
-  const r = await fetch(PDF_MANIFEST_URL, {cache:'no-store'});
-  if(!r.ok) throw new Error("Manifest não encontrado");
-  _pdfManifest = await r.json();
-  return _pdfManifest;
-}
-$('#btnPDF').addEventListener('click', doPDF);
-$('#qPDF').addEventListener('keydown', e=>{ if(e.key==='Enter') doPDF(); });
-async function doPDF(){
-  const q=($('#qPDF').value||'').trim().toLowerCase();
-  if(!q){ $('#pdfStatus').textContent='Digite um termo para filtrar.'; return; }
-  show($('#pdfBusy'),true); $('#pdfStatus').textContent='Carregando…'; $('#pdfList').innerHTML="";
+/* ===== PROCEDIMENTOS (CRION) ===== */
+$('#btnCRION').addEventListener('click', doCRION);
+$('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+async function doCRION(){
+  const q=($('#qCRION').value||'').trim();
+  if(!q){ $('#crionOut').textContent='Digite um termo.'; return; }
+  $('#crionOut').textContent='Listando…'; show($('#crionBusy'),true);
   try{
-    const m = await loadManifest();
-    const items = (m.items||[]).filter(it => String(it.name||'').toLowerCase().includes(q));
-    $('#pdfStatus').textContent = `Resultados: ${items.length} • filtro: “${q}”`;
-    const frag=document.createDocumentFragment();
-    items.forEach((it,idx)=>{
-      const li=document.createElement('li'); li.className='pdf-item';
-      const openUrl = `./data/affix/raw/${encodeURIComponent(it.name)}`;
-      li.innerHTML = `
-        <div><b>${esc(it.name)}</b></div>
-        <div class="hint">Tamanho: ${ (it.size? (it.size/1024/1024).toFixed(2)+' MB' : '—') }</div>
-        <div class="pdf-actions">
-          <a class="btn btn-plain" href="${openUrl}" target="_blank" rel="noopener">Abrir</a>
-          <button class="btn btn-plain" data-prev="${openUrl}">Prévia</button>
-        </div>
-        <div class="preview-wrap"></div>
-      `;
-      frag.appendChild(li);
-    });
-    $('#pdfList').appendChild(frag);
+    const res = await call('searchcrion',{q});
+    if(!res || res.ok===false){ $('#crionOut').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
+    const items = res.items || [];
+    if(!items.length){ $('#crionOut').textContent='Nenhum resultado.'; return; }
 
-    // toggle prévia
-    $('#pdfList').addEventListener('click', e=>{
-      const u=e.target && e.target.dataset && e.target.dataset.prev;
-      if(!u) return;
-      const wrap = e.target.closest('li').querySelector('.preview-wrap');
-      if(wrap.dataset.open==='1'){ wrap.innerHTML=''; wrap.dataset.open='0'; return; }
-      wrap.innerHTML = `<iframe class="preview" src="${u}#toolbar=1&view=FitH" loading="lazy"></iframe>`;
-      wrap.dataset.open='1';
-    }, {once:true}); // delega apenas uma vez
-  }catch(e){ $('#pdfStatus').textContent='Erro: '+(e.message||e);
-  }finally{ show($('#pdfBusy'),false); }
+    // Lista simples com meta, e em seguida busca prévias por lote
+    const frag = document.createElement('div');
+    frag.innerHTML = items.map((it,idx)=>(
+      `<div style="padding:10px 0;border-top:1px solid var(--line)">
+         <div><b>${esc(it.name||'')}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>
+         <div class="hint">Tamanho: ${it.size? (it.size/1024/1024).toFixed(2)+' MB':'—'} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString():'—'}</div>
+         <div class="hint" id="snip_${idx}">Carregando prévias…</div>
+       </div>`
+    )).join("");
+    $('#crionOut').innerHTML = ''; $('#crionOut').appendChild(frag);
+
+    // Snippets
+    let from=0;
+    while(from < items.length){
+      const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
+      (r.items||[]).forEach(row=>{
+        const el = document.getElementById('snip_'+row.index);
+        if(!el) return;
+        el.innerHTML = (row.snippets && row.snippets.length)
+          ? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("")
+          : '<span class="hint">—</span>';
+      });
+      from = r.to;
+    }
+  }catch(e){ $('#crionOut').textContent='Erro: '+(e.message||e);
+  }finally{ show($('#crionBusy'),false); }
 }
-
-/* ---------- widgets simples (nota/calc) ---------- */
-document.getElementById('toggleNote').onclick = ()=> alert('Dica: use o bloco de notas do navegador 😉');
-document.getElementById('toggleCalc').onclick = ()=> alert('Abra a calculadora do sistema.');
-
-/* ---------- SW opcional ---------- */
-if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js").catch(()=>{}); }
 </script>
 </body>
-</html>
+</html>>
