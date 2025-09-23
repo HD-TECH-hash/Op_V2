@@ -1,14 +1,13 @@
 crawl https://www.affix.com.br/backoffice/
-
-crawl https://www.affix.com.br/wp-content/uploads/2015/01/
-crawl https://www.affix.com.br/wp-content/uploads/2015/02/
-crawl https://www.affix.com.br/wp-content/uploads/2015/03/
-crawl https://www.affix.com.br/wp-content/uploads/2015/04/
-crawl https://www.affix.com.br/wp-content/uploads/2015/05/
-crawl https://www.affix.com.br/wp-content/uploads/2015/06/
-crawl https://www.affix.com.br/wp-content/uploads/2015/07/
-crawl https://www.affix.com.br/wp-content/uploads/2015/08/
-crawl https://www.affix.com.br/wp-content/uploads/2015/09/
-crawl https://www.affix.com.br/wp-content/uploads/2015/10/
-crawl https://www.affix.com.br/wp-content/uploads/2015/11/
-crawl https://www.affix.com.br/wp-content/uploads/2015/12/
+crawl https://www.affix.com.br/wp-content/uploads/2025/01/
+crawl https://www.affix.com.br/wp-content/uploads/2025/02/
+crawl https://www.affix.com.br/wp-content/uploads/2025/03/
+crawl https://www.affix.com.br/wp-content/uploads/2025/04/
+crawl https://www.affix.com.br/wp-content/uploads/2025/05/
+crawl https://www.affix.com.br/wp-content/uploads/2025/06/
+crawl https://www.affix.com.br/wp-content/uploads/2025/07/
+crawl https://www.affix.com.br/wp-content/uploads/2025/08/
+crawl https://www.affix.com.br/wp-content/uploads/2025/09/
+crawl https://www.affix.com.br/wp-content/uploads/2025/10/
+crawl https://www.affix.com.br/wp-content/uploads/2025/11/
+crawl https://www.affix.com.br/wp-content/uploads/2025/12/
