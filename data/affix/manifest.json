@@ -1,9 +1,23 @@
-name,url,year,state,source
-"Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf","https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf","2025","PE","crawl+seed"
-"Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf","https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf","2025","MS","crawl+seed"
-"Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf","https://www.affix.com.br/wp-content/uploads/2024/03/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf","2024","BA","crawl+seed"
-"Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf","https://www.affix.com.br/wp-content/uploads/2021/02/Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf","2024","SP","crawl+seed"
-"Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf","https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf","2024","BA","crawl+seed"
-"Affix-MA-Humana-Manual-Corretor-SAO-LUIS-01-25.pdf","https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-01-25.pdf","2025","MA","crawl+seed"
-"Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf","https://www.affix.com.br/wp-content/uploads/2019/02/Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf","2024","DF","crawl+seed"
-"Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf","https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf","2024","SP","crawl+seed"
+[
+  {
+    "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+    "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+    "year": "2019",
+    "state": "PE",
+    "source": "crawl+seed"
+  },
+  {
+    "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
+    "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
+    "year": "2025",
+    "state": "MS",
+    "source": "crawl+seed"
+  },
+  {
+    "name": "Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
+    "url": "https://www.affix.com.br/wp-content/uploads/2024/03/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
+    "year": "2024",
+    "state": "BA",
+    "source": "crawl+seed"
+  }
+]
