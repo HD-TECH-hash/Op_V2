@@ -9,47 +9,57 @@
   :root{
     /* Paleta pedida */
     --alert:#fe0000;
-    --postit:#fddb56;
-    --calc:#5fa5fa;
     --sites:#0001fc;
     --procs:#fe6700;
     --search:#31a59c;
     --shadow:#50d9cd;
 
-    --ink:#0f172a; --muted:#667085; --line:#E7EAF3; --white:#ffffff;
+    --postit:#fddb56;
+    --calc:#5fa5fa;
+
+    --ink:#0f172a; 
+    --muted:#64748b; 
+    --line:#e7eef7;
+
+    /* Fundo geral #4889c5 com leve vinheta */
+    --bg1:#4889c5;
+    --bg2:#3f7eb9;
   }
 
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0; color:var(--ink);
-    /* fundo geral #4889c5 */
+    margin:0;color:var(--ink);
+    font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
     background:
-      radial-gradient(1200px 520px at -10% -10%, #69a7db 0, #5f9ed5 40%, #4889c5 100%);
-    font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial
+      radial-gradient(1200px 520px at 15% -10%, #ffffff18 0, #ffffff0a 50%, #0000 80%),
+      linear-gradient(180deg, var(--bg1), var(--bg2));
   }
 
-  /* ====== TOPO (flutuante, sem moldura) ====== */
+  /* ===== TOPO FLUTUANTE ===== */
   .floatbar{
-    position:sticky; top:0; z-index:50;
-    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px;
-    padding:12px 16px;
+    position:fixed; inset:14px 16px auto 16px; z-index:50;
+    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
+    pointer-events:none;
   }
-  .logo-left{height:44px; object-fit:contain; filter:drop-shadow(0 2px 6px #0002)}
-  .logo-right{height:44px; object-fit:contain; filter:drop-shadow(0 2px 6px #0002)}
+  .floatbar > *{ pointer-events:auto; }
+
+  .logo-left{height:44px; object-fit:contain; filter:drop-shadow(0 4px 10px #0002)}
+  .logo-right{height:46px; justify-self:end; object-fit:contain; filter:drop-shadow(0 4px 10px #0002)}
+
   .tools{display:flex; gap:10px; justify-self:end}
   .tool{
-    width:40px;height:40px;border-radius:12px;border:1px solid #ffffff70;
-    display:grid;place-items:center; backdrop-filter:blur(4px);
+    width:44px;height:44px;border-radius:14px;border:1px solid #ffffff70;
+    display:grid;place-items:center; backdrop-filter:blur(3px);
     box-shadow:0 10px 22px #0002; cursor:pointer; transition:.15s; outline:none;
   }
   .tool:hover{transform:translateY(-1px)}
   .tool-postit{background:var(--postit)}
   .tool-calc{background:var(--calc)}
-  .tool svg{width:20px;height:20px}
+  .tool svg{width:22px;height:22px}
 
-  /* ====== CONTEÚDO ====== */
-  .wrap{max-width:1260px;margin:0 auto;padding:0 16px 18px}
+  /* ===== CONTEÚDO ===== */
+  .wrap{max-width:1260px;margin:96px auto 24px;padding:0 16px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
@@ -62,7 +72,8 @@
   .tag{
     display:inline-flex;align-items:center;gap:8px;
     color:#fff;border-radius:999px;padding:6px 12px;font-weight:900;font-size:12px;
-    text-transform:uppercase; letter-spacing:.3px; box-shadow:0 10px 22px #0001
+    text-transform:uppercase; letter-spacing:.3px;
+    box-shadow:0 10px 22px #0001
   }
   .tag.alertas{background:var(--alert)}
   .tag.sites{background:var(--sites)}
@@ -73,62 +84,50 @@
   .input{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}
   .btn-search{background:var(--search); color:#053; box-shadow:0 10px 22px rgba(49,165,156,.28)}
-  .btn-plain{background:#f7f8fd;color:#111;border:1px solid var(--line)}
-  .btn-danger{background:#ef4444;color:#fff}
-  .btn-mini{padding:6px 10px;font-size:.78rem}
-
+  .btn-plain{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0}
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
-  .out{white-space:pre-wrap;min-height:90px;border:1px dashed #c9d5ea;border-radius:12px;padding:10px;margin-top:10px;background:#f3f6ff;color:#0f172a}
-  .list{margin:8px 0 0;padding:0;list-style:none}
-  .item{padding:10px 0;border-top:1px solid var(--line)}
-  .snip{color:#374151;font-size:13px;margin:6px 0}
+  .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff}
 
-  /* loader: bolinhas pulando */
-  .dots{display:inline-flex;gap:4px;vertical-align:middle}
-  .dots i{width:6px;height:6px;border-radius:50%;background:#64748b;display:inline-block;animation:bounce 0.9s infinite}
-  .dots i:nth-child(2){animation-delay:.15s}
-  .dots i:nth-child(3){animation-delay:.3s}
+  /* Animações “bolinhas” */
+  .busy{display:flex;align-items:center;gap:10px}
+  .dots{display:inline-block;width:36px;height:10px;position:relative}
+  .dots i{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#94a3b8;animation:bounce 0.85s infinite}
+  .dots i:nth-child(2){left:12px;animation-delay:.1s}
+  .dots i:nth-child(3){left:24px;animation-delay:.2s}
   @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
 
-  /* RR.png grande, sem “janela” */
-  .rr-holder{display:grid;place-items:center;padding:0;background:transparent;border:0;box-shadow:none}
+  .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
+  .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.1s infinite}
+  @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
+
+  /* RR.png sem “janela” */
+  .rr-holder{
+    display:grid; place-items:center; padding:0; background:transparent; border:0; box-shadow:none;
+  }
   .rr-holder img{max-width:520px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(80,217,205,.24))}
 
-  /* Prévia de PDF (PDF.js) */
-  .preview-frame{
-    margin-top:10px; border:1px solid #e7eaf3; border-radius:12px;
-    overflow:hidden; background:#fff; box-shadow:0 14px 34px rgba(40,130,187,.18);
-  }
-  .preview-toolbar{
-    display:flex; justify-content:space-between; align-items:center;
-    gap:10px; padding:8px 10px; border-bottom:1px solid #eef1f7; background:#f9fbff;
-  }
-  .preview-title{font-weight:800; font-size:13px; color:#0f172a}
-  .preview-close{appearance:none;border:1px solid #dbe0ea;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer}
-  .preview-viewport{height:68vh; min-height:360px; background:#fff}
-  .preview-viewport iframe{width:100%; height:100%; border:0; display:block}
-
   footer{margin:18px 0 6px;text-align:center}
-  .copyright{font-size:12px;color:#eaf4ff;font-weight:700}
+  .copyright{font-size:12px;color:#e2e8f0}
 </style>
 </head>
 <body>
 
-  <!-- TOPO -->
+  <!-- TOPO FLUTUANTE -->
   <div class="floatbar">
-    <!-- esquerda: icon2 -->
+    <!-- Esquerda: icon2 (logo CRION pequeno) -->
     <img class="logo-left" src="icon2.png"
-         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';" alt="icon2">
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
+         alt="icon2">
 
     <div class="tools">
-      <!-- Post-it (amarelinho) -->
+      <!-- Post-it -->
       <button id="toggleNote" class="tool tool-postit" title="Post-it">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#1f2937" stroke-width="2" fill="#fde68a"/>
-          <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#1f2937" stroke-width="2"/>
+          <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2" fill="#fde68a"/>
+          <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#222" stroke-width="2"/>
         </svg>
       </button>
-      <!-- Calculadora (azul) -->
+      <!-- Calculadora -->
       <button id="toggleCalc" class="tool tool-calc" title="Calculadora">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect x="4" y="3" width="16" height="18" rx="2" stroke="#0b2555" stroke-width="2" fill="#dbeafe"/>
@@ -138,14 +137,15 @@
       </button>
     </div>
 
-    <!-- direita: HDS -->
+    <!-- Direita: HDS -->
     <img class="logo-right" src="HDS.png"
-         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';" alt="HDSTEC">
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
+         alt="HDSTEC">
   </div>
 
   <div class="wrap">
     <div class="grid">
-      <!-- ALERTA (canto superior esquerdo) -->
+      <!-- ALERTA -->
       <section class="card">
         <div class="tag alertas">Alertas</div>
         <h2>Controle de alerta</h2>
@@ -153,15 +153,14 @@
           <button id="btnAlert" class="btn btn-search">Pesquisar</button>
         </div>
         <div class="hint" id="alertBusy" style="display:none">
-          <span class="dots"><i></i><i></i><i></i></span> pesquisando alerta…
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Pesquisando alerta...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div id="alertBox" class="out" style="display:none;text-align:center">
-          <div id="alertMsg" style="font-size:22px;font-weight:900;color:#b91c1c;margin:0 0 6px">—</div>
-          <div id="alertResp" class="hint">—</div>
-        </div>
+        <div id="alertMsg"  style="display:none;font-size:22px;font-weight:900;color:#b91c1c;text-align:center;margin-top:8px">—</div>
+        <div id="alertResp" style="display:none;font-size:13px;font-weight:600;color:#334155;text-align:center;margin-top:4px;text-transform:lowercase">—</div>
       </section>
 
-      <!-- SITES (canto superior direito) -->
+      <!-- SITES -->
       <section class="card">
         <div class="tag sites">Sites</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -170,19 +169,20 @@
           <button id="btnSites" class="btn btn-search">Pesquisar</button>
         </div>
         <div class="hint" id="sitesBusy" style="display:none">
-          <span class="dots"><i></i><i></i><i></i></span> pesquisando…
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Pesquisando...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
         <div id="outSites" class="out">—</div>
       </section>
 
-      <!-- RR.png (abaixo do ALERTA, à esquerda) -->
+      <!-- RR.png (abaixo do Alerta) -->
       <div class="rr-holder">
         <img src="rr.png"
              onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
              alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
       </div>
 
-      <!-- PROCEDIMENTOS (abaixo de SITES, à direita) -->
+      <!-- PROCEDIMENTOS (abaixo de Sites) -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -191,45 +191,26 @@
           <button id="btnCRION" class="btn btn-search">Pesquisar</button>
         </div>
         <div class="hint" id="crionBusy" style="display:none">
-          <span class="dots"><i></i><i></i><i></i></span> listando procedimentos…
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Listando procedimentos...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div class="out" id="crionBox">
-          <div id="crionStatus" class="hint" style="margin-top:0">—</div>
-          <ul id="crionList" class="list"></ul>
-        </div>
-      </section>
-
-      <!-- PDFs (caixa EXTRA – embaixo de tudo, ocupa toda largura em telas pequenas) -->
-      <section class="card" style="grid-column:1/-1">
-        <div class="tag pdfs">PDFs</div>
-        <h2>Manuais do Corretor (Sharepoint / GitHub)</h2>
-        <p class="hint">Busca no índice de PDFs (sem OCR nesta página). “Abrir” em nova aba. “Prévia” embutida com PDF.js quando o link for público.</p>
-        <div class="row">
-          <input id="qPDF" class="input" placeholder="Ex.: Affix, Coparticipação, Carência 30 dias">
-          <button id="btnPDF" class="btn btn-search">Pesquisar</button>
-        </div>
-        <div class="hint" id="pdfBusy" style="display:none">
-          <span class="dots"><i></i><i></i><i></i></span> listando arquivos…
-        </div>
-        <div class="out" id="pdfBox">
-          <div id="pdfStatus" class="hint" style="margin-top:0">—</div>
-          <ul id="pdfList" class="list"></ul>
-        </div>
+        <div id="crionStatus" class="hint" style="margin-top:6px">—</div>
+        <ul id="crionList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
       </section>
     </div>
 
-    <footer>
+    <footer style="margin:18px 0 8px;text-align:center">
       <span class="copyright">Desenvolvido por Alexandre Cavalcante V3.0-Operacao</span>
     </footer>
   </div>
 
-  <!-- Widgets: Post-it e Calculadora -->
+  <!-- WIDGETS -->
   <div id="noteWrap" style="position:fixed;right:18px;top:86px;z-index:60;display:none;width:260px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Post-it</b>
-      <div class="row" style="gap:6px">
-        <button id="clearNote" class="btn btn-plain btn-mini">Limpar</button>
-        <button id="closeNote" class="btn btn-plain btn-mini">Fechar</button>
+      <div style="display:flex;gap:6px">
+        <button id="clearNote" class="btn btn-plain" style="padding:6px 10px">Limpar</button>
+        <button id="closeNote" class="btn btn-plain" style="padding:6px 10px">Fechar</button>
       </div>
     </div>
     <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif"></textarea>
@@ -238,10 +219,10 @@
   <div id="calcWrap" style="position:fixed;right:18px;top:260px;z-index:60;display:none;width:270px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px #0001;padding:12px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Calculadora</b>
-      <button id="closeCalc" class="btn btn-plain btn-mini">Fechar</button>
+      <button id="closeCalc" class="btn btn-plain" style="padding:6px 10px">Fechar</button>
     </div>
     <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
-    <div id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+    <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
       <div class="key op" data-k="C">C</div>
       <div class="key op" data-k="±">±</div>
       <div class="key op" data-k="%">%</div>
@@ -260,32 +241,18 @@
 
 <script>
 /* ======= CONFIG ======= */
+/* NÃO alteramos o GAS. Mantemos seu Web App: */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
-const PDFJS_BASE = "https://mozilla.github.io/pdf.js/web/viewer.html?file=";
 
 /* ======= HELPERS ======= */
 const $ = s => document.querySelector(s);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 function cleanName(n){ return String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,''); }
-function link(url, txt){ return `<a class="btn btn-plain btn-mini" href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
+function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
-function isDrive(u){ return /drive\.google\.com/.test(u); }
-function pdfjs(u){ return PDFJS_BASE + encodeURIComponent(u); }
-function buildPreviewHTML(url, title, id){
-  return `
-    <div class="preview-frame" id="pv_${id}">
-      <div class="preview-toolbar">
-        <div class="preview-title">${esc(title)}</div>
-        <button type="button" class="preview-close" onclick="(function(el){el&&el.remove()})(document.getElementById('pv_${id}'))">Fechar prévia</button>
-      </div>
-      <div class="preview-viewport">
-        <iframe src="${pdfjs(url)}" allowfullscreen></iframe>
-      </div>
-    </div>`;
-}
 
-/* ======= CHAMADAS (GAS) ======= */
+/* ======= CHAMADAS ======= */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   return fetch(url, {
@@ -295,7 +262,7 @@ function call(endpoint, payload){
   }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ======= Widgets ======= */
+/* ======= WIDGETS ======= */
 const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
 $('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
 $('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
@@ -314,7 +281,7 @@ function press(k){
   if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
   if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
   if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v=0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
     calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
   }
 }
@@ -324,16 +291,15 @@ $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
 
 /* ======= ALERTA ======= */
 $('#btnAlert').addEventListener('click', async ()=>{
-  const box=$('#alertBox'), msg=$('#alertMsg'), resp=$('#alertResp');
-  show(box,false); show($('#alertBusy'),true);
+  const msg=$('#alertMsg'), resp=$('#alertResp');
+  show(msg,false); show(resp,false); show($('#alertBusy'),true);
   try{
     const r = await call('getalert',{});
-    if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; resp.textContent=""; show(box,true); return; }
-    if(!r.found){ msg.textContent="Sem recado no momento."; resp.textContent=""; show(box,true); return; }
-    msg.textContent = "🚨 " + String(r.mensagem||"—").toUpperCase();
-    resp.textContent = r.responsavel ? String(r.responsavel||"").toLowerCase() : "";
-    show(box,true);
-  }catch(e){ msg.textContent="Erro: "+e.message; resp.textContent=""; show(box,true);
+    if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; show(msg,true); return; }
+    if(!r.found){ msg.textContent="Sem recado no momento."; show(msg,true); return; }
+    msg.textContent = "🚨 " + String(r.mensagem||"—").toUpperCase(); show(msg,true);
+    if(r.responsavel){ resp.textContent = String(r.responsavel||"").toLowerCase(); show(resp,true); }
+  }catch(e){ msg.textContent="Erro: "+(e.message||e); show(msg,true);
   }finally{ show($('#alertBusy'),false); }
 });
 
@@ -350,122 +316,45 @@ async function doSites(){
     const txt = (r && r.text) ? r.text : '—';
     const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
     $('#outSites').innerHTML = html;
-  }catch(e){ $('#outSites').textContent='Erro: '+e.message;
+  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e);
   }finally{ show($('#sitesBusy'),false); }
 }
 
-/* ======= PDFs (índice) ======= */
-let PDF_ITEMS = [];
-$('#btnPDF').addEventListener('click', doPDF);
-$('#qPDF').addEventListener('keydown', e=>{ if(e.key==='Enter') doPDF(); });
-async function doPDF(){
-  const q=($('#qPDF').value||'').trim();
-  if(!q){ $('#pdfStatus').textContent='Digite um termo.'; return; }
-  show($('#pdfBusy'),true); $('#pdfStatus').textContent='Listando arquivos...'; $('#pdfList').innerHTML=""; PDF_ITEMS=[];
-  try{
-    const res = await call('searchindexed',{q});
-    PDF_ITEMS = res.items || [];
-    if(!res || res.ok===false){ $('#pdfStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
-    $('#pdfStatus').textContent=`Resultados: ${PDF_ITEMS.length}`;
-    const frag=document.createDocumentFragment();
-    PDF_ITEMS.forEach((it,idx)=>{
-      const li=document.createElement('li'); li.className='item'; li.id='pdf_'+idx;
-      const fileTitle = cleanName(it.name);
-      const openBtn = link(it.url,'Abrir');
-      const prevBtn = isDrive(it.url) ? "" : `<button type="button" class="btn btn-plain btn-mini" data-prev="${idx}">Prévia</button>`;
-      const meta = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-      li.innerHTML=`<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-                      <b>${esc(fileTitle)}</b> ${openBtn} ${prevBtn}
-                    </div>${meta}
-                    <div class="hint" id="snip_pdf_${idx}">Carregando prévias…</div>`;
-      frag.appendChild(li);
-    });
-    $('#pdfList').appendChild(frag);
-    // snippets
-    if(PDF_ITEMS.length){
-      let from=0;
-      while(from < PDF_ITEMS.length){
-        const r = await call('fetchindexedsnippets',{sessionId:res.sessionId, from, limit:6});
-        (r.items||[]).forEach(row=>{
-          const el=$('#snip_pdf_'+row.index);
-          el.innerHTML=(row.snippets && row.snippets.length)
-            ? row.snippets.map(s=>`<div class="snip">${esc(s)}</div>`).join("")
-            : '<span class="hint">—</span>';
-        });
-        from = r.to;
-      }
-      $('#pdfStatus').textContent += " • prévias completas";
-    }
-  }catch(e){ $('#pdfStatus').textContent='Erro: '+e.message;
-  }finally{ show($('#pdfBusy'),false); }
-}
-// delega botão Prévia (PDFs)
-$('#pdfList').addEventListener('click', e=>{
-  const id = e.target?.dataset?.prev;
-  if(!id) return;
-  const row = document.getElementById('pdf_'+id);
-  if(row.querySelector('#pv_'+id)) return;
-  const item = PDF_ITEMS[id];
-  if(!item || isDrive(item.url)) return;
-  row.insertAdjacentHTML('beforeend', buildPreviewHTML(item.url, item.name || 'Documento', id));
-});
-
 /* ======= CRION ======= */
-let CRION_ITEMS = [];
 $('#btnCRION').addEventListener('click', doCRION);
 $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
 async function doCRION(){
   const q=($('#qCRION').value||'').trim();
   if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
-  show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML=""; CRION_ITEMS=[];
+  show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
   try{
     const res = await call('searchcrion',{q});
     if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
-    CRION_ITEMS = res.items || [];
-    $('#crionStatus').textContent=`Resultados: ${CRION_ITEMS.length}`;
+    const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
     const frag=document.createDocumentFragment();
-    CRION_ITEMS.forEach((it,idx)=>{
-      const li=document.createElement('li'); li.className='item'; li.id='crion_'+idx;
-      const fileTitle = cleanName(it.name);
-      const openBtn = link(it.url,'Abrir');
-      const prevBtn = isDrive(it.url) ? "" : `<button type="button" class="btn btn-plain btn-mini" data-prevcr="${idx}">Prévia</button>`;
+    items.forEach((it,idx)=>{
+      const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
       const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-      li.innerHTML=`<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-                      <b>${esc(fileTitle)}</b> ${openBtn} ${prevBtn}
-                    </div>${meta}
+      li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
                     <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
     });
     $('#crionList').appendChild(frag);
-    // snippets
-    if(CRION_ITEMS.length){
+    if(items.length){
       let from=0;
-      while(from < CRION_ITEMS.length){
+      while(from < items.length){
         const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
         (r.items||[]).forEach(row=>{
           const el=$('#snip_crion_'+row.index);
-          el.innerHTML=(row.snippets && row.snippets.length)
-            ? row.snippets.map(s=>`<div class="snip">${esc(s)}</div>`).join("")
-            : '<span class="hint">—</span>';
+          el.innerHTML=(row.snippets && row.snippets.length)? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("") : '<span class="hint">—</span>';
         });
         from = r.to;
       }
       $('#crionStatus').textContent += " • prévias completas";
     }
-  }catch(e){ $('#crionStatus').textContent='Erro: '+e.message;
+  }catch(e){ $('#crionStatus').textContent='Erro: '+(e.message||e);
   }finally{ show($('#crionBusy'),false); }
 }
-// delega botão Prévia (CRION)
-$('#crionList').addEventListener('click', e=>{
-  const id = e.target?.dataset?.prevcr;
-  if(!id) return;
-  const row = document.getElementById('crion_'+id);
-  if(row.querySelector('#pv_cr_'+id)) return;
-  const item = CRION_ITEMS[id];
-  if(!item || isDrive(item.url)) return;
-  const html = buildPreviewHTML(item.url, item.name || 'Documento', 'cr_'+id);
-  row.insertAdjacentHTML('beforeend', html);
-});
 </script>
 </body>
 </html>
