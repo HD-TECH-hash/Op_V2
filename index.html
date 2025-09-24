@@ -1,239 +1,280 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>RIC AI — CRION</title>
-
 <style>
   :root{
+    /* Paleta pedida */
     --alert:#fe0000;
-    --postit:#fddb56;
-    --calc:#5fa5fa;
     --sites:#0001fc;
     --procs:#fe6700;
     --search:#31a59c;
+    --shadow:#50d9cd;
 
-    --ink:#0f172a; --muted:#64748b; --line:#e7eef7;
-    --bg-solid:#4889c5;
+    --postit:#fddb56;
+    --calc:#5fa5fa;
+
+    --ink:#0f172a; 
+    --muted:#64748b; 
+    --line:#e7eef7;
+
+    /* Fundo geral #4889c5 com leve vinheta */
+    --bg1:#4889c5;
+    --bg2:#3f7eb9;
   }
+
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0; color:var(--ink);
-    font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+    margin:0;color:var(--ink);
+    font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
     background:
-      radial-gradient(900px 420px at 30% -200px, #ffffff70 0%, #ffffff00 60%),
-      radial-gradient(900px 420px at 85% -220px, #ffffff50 0%, #ffffff00 65%),
-      var(--bg-solid);
+      radial-gradient(1200px 520px at 15% -10%, #ffffff18 0, #ffffff0a 50%, #0000 80%),
+      linear-gradient(180deg, var(--bg1), var(--bg2));
   }
 
-  /* ===== Topo (alinhado com as caixas) ===== */
-  .topbar{position:sticky; top:0; z-index:40; padding:12px 16px 0}
-  .rowmax{max-width:1260px; margin:0 auto; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px}
-  .logo-crion{height:44px; object-fit:contain}
-  .righttools{display:flex; gap:10px; align-items:center}
+  /* ===== TOPO FLUTUANTE ===== */
+  .floatbar{
+    position:fixed; inset:14px 16px auto 16px; z-index:50;
+    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
+    pointer-events:none;
+  }
+  .floatbar > *{ pointer-events:auto; }
+
+  .logo-left{height:44px; object-fit:contain; filter:drop-shadow(0 4px 10px #0002)}
+  .logo-right{height:46px; justify-self:end; object-fit:contain; filter:drop-shadow(0 4px 10px #0002)}
+
+  .tools{display:flex; gap:10px; justify-self:end}
   .tool{
-    width:40px;height:40px;border-radius:12px;border:1px solid #ffffff60;
+    width:44px;height:44px;border-radius:14px;border:1px solid #ffffff70;
     display:grid;place-items:center; backdrop-filter:blur(3px);
-    box-shadow:0 10px 22px #0002; cursor:pointer; transition:.15s;
+    box-shadow:0 10px 22px #0002; cursor:pointer; transition:.15s; outline:none;
   }
   .tool:hover{transform:translateY(-1px)}
-  .tool-note{background:var(--postit)}
+  .tool-postit{background:var(--postit)}
   .tool-calc{background:var(--calc)}
-  .logo-hds{height:44px; object-fit:contain; filter:drop-shadow(0 2px 6px #0002)}
+  .tool svg{width:22px;height:22px}
 
-  /* ===== Layout ===== */
-  .wrap{max-width:1260px;margin:0 auto;padding:0 16px 24px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  /* ===== CONTEÚDO ===== */
+  .wrap{max-width:1260px;margin:96px auto 24px;padding:0 16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
   .card{
     background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;
     box-shadow:0 18px 36px rgba(80,217,205,.18), 0 8px 24px rgba(80,217,205,.14);
-    position:relative;
   }
+  h2{margin:8px 0 10px;font-size:18px}
+
   .tag{
     display:inline-flex;align-items:center;gap:8px;
     color:#fff;border-radius:999px;padding:6px 12px;font-weight:900;font-size:12px;
     text-transform:uppercase; letter-spacing:.3px;
-    box-shadow:0 10px 22px #0001;
+    box-shadow:0 10px 22px #0001
   }
   .tag.alertas{background:var(--alert)}
   .tag.sites{background:var(--sites)}
   .tag.procs{background:var(--procs)}
-  h2{margin:8px 0 10px;font-size:18px}
+  .tag.pdfs{background:#0ea5e9}
 
   .row{display:flex;gap:10px;align-items:center}
   .input{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}
   .btn-search{background:var(--search); color:#053; box-shadow:0 10px 22px rgba(49,165,156,.28)}
+  .btn-plain{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0}
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
+  .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff}
 
-  .out{
-    white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff
+  /* iframe de prévia */
+  #affixList iframe{width:100%;height:520px;border:0;background:#fff;border-radius:8px;box-shadow:0 8px 22px #0001}
+
+  /* Animações “bolinhas” */
+  .busy{display:flex;align-items:center;gap:10px}
+  .dots{display:inline-block;width:36px;height:10px;position:relative}
+  .dots i{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#94a3b8;animation:bounce 0.85s infinite}
+  .dots i:nth-child(2){left:12px;animation-delay:.1s}
+  .dots i:nth-child(3){left:24px;animation-delay:.2s}
+  @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+
+  .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
+  .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.1s infinite}
+  @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
+
+  /* RR.png sem “janela” */
+  .rr-holder{
+    display:grid; place-items:center; padding:0; background:transparent; border:0; box-shadow:none;
   }
-
-  /* PDFs locais */
-  .pdf-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
-  .pdf-list{margin:8px 0 0;padding:0;list-style:none}
-  .pdf-item{border-top:1px solid var(--line);padding:10px 0}
-  .pdf-actions{display:flex;gap:8px;align-items:center;margin-top:6px}
-  .pill{font-size:11px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:999px;background:#f9fafb;color:#334155}
-  .preview{margin-top:8px;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}
-  .preview iframe{width:100%;height:520px;border:0;display:block;background:#f8fafc}
-
-  /* Widgets */
-  .widget{position:fixed;right:18px;z-index:60;display:none;border-radius:12px;box-shadow:0 14px 30px #0001}
-  #noteWrap{top:84px;width:260px;background:#fff3b0;border:1px solid #f5d565;padding:10px}
-  #calcWrap{top:260px;width:270px;background:#fff;border:1px solid #dbe0ea;padding:12px}
-  .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
-  .key.op{background:#eef6ff;border-color:#cfe7ff}
-  .key.eq{background:linear-gradient(135deg,#22c55e,#a3e635);color:#053}
+  .rr-holder img{max-width:520px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(80,217,205,.24))}
 
   footer{margin:18px 0 6px;text-align:center}
-  .copyright{font-size:12px;color:#164e63}
+  .copyright{font-size:12px;color:#e2e8f0}
 </style>
 </head>
 <body>
 
-  <!-- Topo -->
-  <div class="topbar">
-    <div class="rowmax">
-      <img class="logo-crion" src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png" alt="CRION">
-      <div></div>
-      <div class="righttools">
-        <button id="toggleNote" class="tool tool-note" title="Post-it">📝</button>
-        <button id="toggleCalc" class="tool tool-calc" title="Calculadora">🧮</button>
-        <img class="logo-hds" src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png" alt="HDSTEC">
-      </div>
+  <!-- TOPO FLUTUANTE -->
+  <div class="floatbar">
+    <!-- Esquerda: icon2 (logo CRION pequeno) -->
+    <img class="logo-left" src="icon2.png"
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
+         alt="icon2">
+
+    <div class="tools">
+      <!-- Post-it -->
+      <button id="toggleNote" class="tool tool-postit" title="Post-it">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2" fill="#fde68a"/>
+          <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#222" stroke-width="2"/>
+        </svg>
+      </button>
+      <!-- Calculadora -->
+      <button id="toggleCalc" class="tool tool-calc" title="Calculadora">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="3" width="16" height="18" rx="2" stroke="#0b2555" stroke-width="2" fill="#dbeafe"/>
+          <rect x="7" y="6" width="10" height="3" rx="1" fill="#0b2555"/>
+          <path d="M8 12h2M8 16h2M12 12h2M12 16h2M16 12h2M16 16h2" stroke="#0b2555" stroke-width="2"/>
+        </svg>
+      </button>
     </div>
+
+    <!-- Direita: HDS -->
+    <img class="logo-right" src="HDS.png"
+         onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
+         alt="HDSTEC">
   </div>
 
   <div class="wrap">
     <div class="grid">
       <!-- ALERTA -->
-      <section class="card" id="cardAlert">
+      <section class="card">
         <div class="tag alertas">Alertas</div>
         <h2>Controle de alerta</h2>
         <div class="row">
           <button id="btnAlert" class="btn btn-search">Pesquisar</button>
         </div>
-        <div class="hint" id="alertBusy" style="display:none">Consultando…</div>
-        <div id="alertBox" class="out" style="display:none">
-          <div id="alertMsg" style="font-size:22px;font-weight:900;color:#b91c1c">—</div>
-          <div id="alertResp" class="hint">—</div>
+        <div class="hint" id="alertBusy" style="display:none">
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Pesquisando alerta...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div class="hint" id="alertNeedGas" style="display:none;color:#b91c1c;font-weight:800">
-          Este recurso depende do Google Apps Script.
-        </div>
+        <div id="alertMsg"  style="display:none;font-size:22px;font-weight:900;color:#b91c1c;text-align:center;margin-top:8px">—</div>
+        <div id="alertResp" style="display:none;font-size:13px;font-weight:600;color:#334155;text-align:center;margin-top:4px;text-transform:lowercase">—</div>
       </section>
 
       <!-- SITES -->
-      <section class="card" id="cardSites">
+      <section class="card">
         <div class="tag sites">Sites</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input" placeholder="Digite: ex. manual, estado (SP), 2024 …">
+          <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnSites" class="btn btn-search">Pesquisar</button>
         </div>
-
-        <!-- Saída IA (só aparece se clicar e houver GAS) -->
-        <div class="hint" id="sitesBusy" style="display:none">Pesquisando…</div>
-        <div id="outSitesIa" class="out" style="display:none"></div>
-        <div class="hint" id="sitesNeedGas" style="display:none;color:#b45309;font-weight:700">
-          Dica: recursos de IA/alerta/CRION exigem abrir esta página via Web App do Google Apps Script.
+        <div class="hint" id="sitesBusy" style="display:none">
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Pesquisando...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
+        <div id="outSites" class="out">—</div>
 
-        <!-- PDFs locais -->
-        <div class="pdf-head">
-          <div class="hint" style="margin:0"><b>PDFs (Affix — índice local)</b></div>
-          <div class="pill"><span id="pdfCount">0</span> resultado(s)</div>
+        <!-- PDFs (Affix — índice local) -->
+        <div style="margin-top:10px;font-weight:800">PDFs (Affix — índice local)
+          <span id="affixCount" class="hint" style="margin-left:8px">0 resultado(s)</span>
         </div>
-        <ul id="pdfList" class="pdf-list"></ul>
+        <div id="affixList" class="out">—</div>
       </section>
 
-      <!-- Mascote -->
-      <div class="card" style="display:grid;place-items:center;padding:0;background:transparent;border:0;box-shadow:none">
-        <img src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png" alt="Olá, meu nome é RIC. Precisa de uma ajuda?" style="max-width:420px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(80,217,205,.24))">
+      <!-- RR.png (abaixo do Alerta) -->
+      <div class="rr-holder">
+        <img src="rr.png"
+             onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
+             alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
       </div>
 
-      <!-- PROCEDIMENTOS -->
+      <!-- PROCEDIMENTOS (abaixo de Sites) -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row">
-          <input id="qCRION" class="input" placeholder="Digite sua pergunta …..">
+          <input id="qCRION" class="input" placeholder="Digite sua pergunta .....">
           <button id="btnCRION" class="btn btn-search">Pesquisar</button>
         </div>
-        <div class="hint" id="crionBusy" style="display:none">Listando…</div>
-        <div id="crionNeedGas" class="hint" style="display:none;color:#b91c1c;font-weight:800">
-          Este recurso depende do Google Apps Script.
+        <div class="hint" id="crionBusy" style="display:none">
+          <div class="busy"><div class="dots"><i></i><i></i><i></i></div><div>Listando procedimentos...</div></div>
+          <div class="bar" style="margin-top:6px"></div>
         </div>
-        <div class="out" id="crionBox" style="display:none">
-          <div id="crionStatus" class="hint" style="margin-top:0">—</div>
-          <ul id="crionList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
-        </div>
+        <div id="crionStatus" class="hint" style="margin-top:6px">—</div>
+        <ul id="crionList" style="margin:8px 0 0;padding:0;list-style:none"></ul>
       </section>
     </div>
 
-    <footer>
-      <div class="copyright">Desenvolvido por Alexandre Cavalcante V3.0-Operacao</div>
+    <footer style="margin:18px 0 8px;text-align:center">
+      <span class="copyright">Desenvolvido por Alexandre Cavalcante V3.0-Operacao</span>
     </footer>
   </div>
 
-  <!-- Widgets -->
-  <div id="noteWrap" class="widget">
+  <!-- WIDGETS -->
+  <div id="noteWrap" style="position:fixed;right:18px;top:86px;z-index:60;display:none;width:260px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Post-it</b>
       <div style="display:flex;gap:6px">
-        <button id="clearNote" class="btn" style="background:#fff;border:1px solid #f5d565">Limpar</button>
-        <button id="closeNote" class="btn" style="background:#fff;border:1px solid #f5d565">Fechar</button>
+        <button id="clearNote" class="btn btn-plain" style="padding:6px 10px">Limpar</button>
+        <button id="closeNote" class="btn btn-plain" style="padding:6px 10px">Fechar</button>
       </div>
     </div>
     <textarea id="noteArea" placeholder="Anote algo..." style="width:100%;height:120px;border:0;background:transparent;outline:none;font:14px/1.45 ui-sans-serif"></textarea>
   </div>
 
-  <div id="calcWrap" class="widget">
+  <div id="calcWrap" style="position:fixed;right:18px;top:260px;z-index:60;display:none;width:270px;background:#fff;border:1px solid #dbe0ea;border-radius:12px;box-shadow:0 14px 30px #0001;padding:12px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Calculadora</b>
-      <button id="closeCalc" class="btn" style="background:#fff;border:1px solid #dbe0ea">Fechar</button>
+      <button id="closeCalc" class="btn btn-plain" style="padding:6px 10px">Fechar</button>
     </div>
     <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
     <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-      <div class="key op" data-k="C">C</div><div class="key op" data-k="±">±</div><div class="key op" data-k="%">%</div><div class="key op" data-k="/">÷</div>
+      <div class="key op" data-k="C">C</div>
+      <div class="key op" data-k="±">±</div>
+      <div class="key op" data-k="%">%</div>
+      <div class="key op" data-k="/">÷</div>
       <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
       <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
       <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
       <div class="key" data-k="0">0</div><div class="key" data-k="00">00</div><div class="key" data-k=".">.</div><div class="key eq" data-k="=">=</div>
     </div>
+    <style>
+      .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
+      .key.op{background:#eef6ff;border-color:#cfe7ff}
+      .key.eq{background:linear-gradient(135deg,#22c55e,#a3e635);color:#053}
+    </style>
   </div>
 
 <script>
-/* ===== Config ===== */
-const APP_URL = ""; // deixe vazio para não usar GAS
-const MANIFEST_URL = "data/affix/manifest.json";
+/* ======= CONFIG ======= */
+/* NÃO alteramos o GAS. Mantemos seu Web App: */
+const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
-/* ===== Helpers ===== */
+/* ======= HELPERS ======= */
 const $ = s => document.querySelector(s);
-const show = (el,on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
+const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
+function cleanName(n){ return String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig,''); }
+function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
-const delay = ms => new Promise(r=>setTimeout(r,ms));
 
-async function gas(endpoint, payload){
-  if(!APP_URL) throw new Error("NO_GAS");
+/* ======= CHAMADAS ======= */
+function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
-  const r = await fetch(url,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload||{})});
-  if(!r.ok) throw new Error("HTTP "+r.status);
-  return r.json();
+  return fetch(url, {
+    method:"POST",
+    headers:{ "Content-Type":"text/plain" },
+    body: JSON.stringify(payload || {})
+  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ===== Widgets ===== */
-const noteWrap=$('#noteWrap'), noteArea=$('#noteArea');
-$('#toggleNote').onclick=()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
-$('#clearNote').onclick=()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
-$('#closeNote').onclick=()=>{ noteWrap.style.display="none"; };
+/* ======= WIDGETS ======= */
+const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
+$('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
+$('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
+$('#closeNote').onclick = ()=>{ noteWrap.style.display="none"; };
 noteArea.value = localStorage.getItem('ric_note') || "";
 noteArea.addEventListener('input', ()=> localStorage.setItem('ric_note', noteArea.value));
 
@@ -248,127 +289,166 @@ function press(k){
   if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
   if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
   if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v=0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
-    calc.buf=String(v); calc.op=null; calc.fresh=true; return refresh();
+    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+    calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
   }
 }
 $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
-$('#toggleCalc').onclick=()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); };
-$('#closeCalc').onclick=()=>{ $('#calcWrap').style.display="none"; };
+$('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); };
+$('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
 
-/* ===== Alertas (só mostra aviso se clicar) ===== */
+/* ======= ALERTA ======= */
 $('#btnAlert').addEventListener('click', async ()=>{
-  if(!APP_URL){ show($('#alertNeedGas'), true); return; }
-  show($('#alertBusy'),true); show($('#alertBox'),false);
+  const msg=$('#alertMsg'), resp=$('#alertResp');
+  show(msg,false); show(resp,false); show($('#alertBusy'),true);
   try{
-    const r = await gas('getalert',{});
-    const msg=$('#alertMsg'), resp=$('#alertResp');
-    if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; resp.textContent=""; }
-    else if(!r.found){ msg.textContent="Sem recado no momento."; resp.textContent=""; }
-    else { msg.textContent="🚨 "+String(r.mensagem||"—").toUpperCase(); resp.textContent=r.responsavel? String(r.responsavel).toLowerCase():""; }
-    show($('#alertBox'),true);
-  }catch(e){
-    $('#alertMsg').textContent='Erro: '+(e.message||e); show($('#alertBox'),true);
+    const r = await call('getalert',{});
+    if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; show(msg,true); return; }
+    if(!r.found){ msg.textContent="Sem recado no momento."; show(msg,true); return; }
+    msg.textContent = "🚨 " + String(r.mensagem||"—").toUpperCase(); show(msg,true);
+    if(r.responsavel){ resp.textContent = String(r.responsavel||"").toLowerCase(); show(resp,true); }
+  }catch(e){ msg.textContent="Erro: "+(e.message||e); show(msg,true);
   }finally{ show($('#alertBusy'),false); }
 });
 
-/* ===== Sites: IA opcional + PDFs locais ===== */
-let MANIFEST=null;
-async function loadManifestOnce(){
-  if(MANIFEST) return MANIFEST;
-  const r = await fetch(MANIFEST_URL,{cache:"no-store"});
-  if(!r.ok) throw new Error("Manifesto não encontrado");
-  MANIFEST = await r.json();
-  return MANIFEST;
+/* ======= AFFIX PDFs (CSV local) ======= */
+const AFFIX_CSV_URL = "data/affix/affix_pdfs_manifest.csv"; // colunas: name,url
+let AFFIX_PDFS = [];
+
+async function loadAffixCSV(){
+  if (AFFIX_PDFS.length) return;
+  const res = await fetch(AFFIX_CSV_URL);
+  const text = await res.text();
+  AFFIX_PDFS = parseAffixCSV(text);
 }
-function renderPdfItem(it, idx){
-  const li=document.createElement('li'); li.className='pdf-item';
-  li.innerHTML=`
-    <div><b>${esc(it.name)}</b></div>
-    <div class="hint">
-      ${it.year?`Ano: ${esc(it.year)} • `:""}${it.state?`UF: ${esc(it.state)} • `:""}
-      <span class="pill">${esc(new URL(it.url).hostname)}</span>
-    </div>
-    <div class="pdf-actions">
-      <a class="btn" style="background:#eef2ff;border:1px solid #dbeafe" target="_blank" rel="noopener" href="${it.url}">Abrir</a>
-      <button class="btn" data-prev="p${idx}" style="background:#f1f5f9;border:1px solid #e2e8f0">Prévia</button>
-    </div>
-    <div id="p${idx}" class="preview" style="display:none">
-      <iframe title="Prévia PDF"></iframe>
-    </div>`;
-  li.querySelector('button[data-prev]').addEventListener('click',()=>{
-    const box=$('#p'+idx), ifr=box.querySelector('iframe');
-    if(box.style.display){ box.style.display="none"; ifr.removeAttribute('src'); }
-    else{
-      const viewer="https://mozilla.github.io/pdf.js/web/viewer.html?file="+encodeURIComponent(it.url);
-      ifr.src=viewer; box.style.display="";
-    }
-  });
-  return li;
-}
-async function doSites(){
-  const q = ($('#qSites').value||'').trim();
-  if(!q){ $('#outSitesIa').textContent='Digite a pergunta.'; show($('#outSitesIa'),true); }
-  // IA opcional
-  if(!APP_URL){ show($('#sitesNeedGas'), true); } else {
-    show($('#sitesBusy'),true); show($('#outSitesIa'),false);
-    try{
-      const qRich = q + " — FORMATO: responda em português; liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
-      const r = await gas('chat',{q:qRich});
-      const txt = (r && r.text) ? r.text : '—';
-      const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
-      $('#outSitesIa').innerHTML = html; show($('#outSitesIa'),true);
-    }catch(e){ $('#outSitesIa').textContent='Erro IA: '+(e.message||e); show($('#outSitesIa'),true); }
-    finally{ show($('#sitesBusy'),false); }
+
+function parseAffixCSV(text){
+  const lines = text.trim().split(/\r?\n/);
+  if (!lines.length) return [];
+  const out = [];
+  for (let i=1; i<lines.length; i++){
+    const line = lines[i].trim();
+    if (!line) continue;
+    const idx = line.indexOf(",");
+    if (idx === -1) continue;
+    const name = line.slice(0, idx).trim();
+    const url  = line.slice(idx + 1).trim();
+    if (name && url) out.push({ name, url });
   }
-  // PDFs locais
-  const list=$('#pdfList'); list.innerHTML=""; $('#pdfCount').textContent='0';
-  let count=0;
-  try{
-    const data = await loadManifestOnce();
-    const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const matches = data.filter(it=>{
-      const blob = [it.name,it.url,it.year,it.state].map(v=>String(v||'').toLowerCase()).join(' ');
-      return terms.every(t=>blob.includes(t));
-    });
-    for(let i=0;i<matches.length;i++){
-      list.appendChild(renderPdfItem(matches[i], i));
-      count++; $('#pdfCount').textContent=String(count);
-      if(i%5===0) await delay(20);
-    }
-    if(count===0){
-      const li=document.createElement('li'); li.className='pdf-item';
-      li.innerHTML='<div class="hint">Nenhum PDF local encontrado.</div>'; list.appendChild(li);
-    }
-  }catch(e){
-    const li=document.createElement('li'); li.className='pdf-item';
-    li.innerHTML='<div class="hint" style="color:#b91c1c">Falha ao ler manifest: '+esc(e.message||e)+'</div>'; list.appendChild(li);
-  }
+  return out;
 }
+
+function toggleAffixPrev(i){
+  const el = document.getElementById("affix_prev_" + i);
+  if (!el) return;
+  el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
+}
+
+async function searchAffixPDFs(q){
+  const list  = $('#affixList');
+  const badge = $('#affixCount');
+  try { await loadAffixCSV(); }
+  catch(e){ badge.textContent='erro ao ler CSV'; list.textContent='Falha: '+(e.message||e); return; }
+
+  const term = (q||'').toLowerCase().trim();
+  if(!term){ badge.textContent='0 resultado(s)'; list.textContent='—'; return; }
+
+  const tokens = term.split(/\s+/).filter(Boolean);
+  const results = AFFIX_PDFS.filter(r =>
+    tokens.every(t =>
+      (r.name && r.name.toLowerCase().includes(t)) ||
+      (r.url  && r.url.toLowerCase().includes(t))
+    )
+  );
+
+  badge.textContent = `${results.length} resultado(s)`;
+  if(!results.length){ list.textContent='—'; return; }
+
+  list.innerHTML = '';
+  let i = 0;
+  function pump(){
+    const frag = document.createDocumentFragment();
+    for(let k=0; k<10 && i<results.length; k++, i++){
+      const r = results[i];
+      const row = document.createElement('div');
+      row.style.padding='8px 0';
+      row.style.borderTop='1px solid var(--line)';
+      row.innerHTML = `
+        <div><b>${esc(r.name)}</b></div>
+        <div class="row" style="gap:8px;margin-top:6px">
+          <button class="btn btn-plain" onclick="window.open('${r.url}','_blank')">Abrir</button>
+          <button class="btn btn-plain" onclick="toggleAffixPrev(${i})">Prévia</button>
+        </div>
+        <div id="affix_prev_${i}" style="display:none;margin-top:8px">
+          <iframe
+            src="https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(r.url)}"
+            referrerpolicy="no-referrer"
+            loading="lazy"></iframe>
+        </div>`;
+      frag.appendChild(row);
+    }
+    list.appendChild(frag);
+    if(i < results.length) requestAnimationFrame(pump);
+  }
+  pump();
+}
+
+/* ======= SITES ======= */
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
+async function doSites(){
+  const q=($('#qSites').value||'').trim();
 
-/* ===== CRION (só mostra aviso se clicar) ===== */
-$('#btnCRION').addEventListener('click', async ()=>{
-  if(!APP_URL){ show($('#crionNeedGas'), true); return; }
-  const q = ($('#qCRION').value||'').trim();
-  if(!q){ $('#crionStatus').textContent='Digite um termo.'; show($('#crionBox'),true); return; }
+  // Busca no índice local de PDFs em paralelo
+  searchAffixPDFs(q);
+
+  if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
+  show($('#sitesBusy'),true); $('#outSites').textContent='—';
+  try{
+    const qRich = q + " — FORMATO: responda em português com texto útil e liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+    const r = await call('chat',{q:qRich});
+    const txt = (r && r.text) ? r.text : '—';
+    const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
+    $('#outSites').innerHTML = html;
+  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e);
+  }finally{ show($('#sitesBusy'),false); }
+}
+
+/* ======= CRION ======= */
+$('#btnCRION').addEventListener('click', doCRION);
+$('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
+async function doCRION(){
+  const q=($('#qCRION').value||'').trim();
+  if(!q){ $('#crionStatus').textContent='Digite um termo.'; return; }
   show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
   try{
-    const res = await gas('searchcrion',{q});
-    if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); show($('#crionBox'),true); return; }
+    const res = await call('searchcrion',{q});
+    if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); return; }
     const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
     const frag=document.createDocumentFragment();
-    items.forEach((it)=>{
-      const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)";
+    items.forEach((it,idx)=>{
+      const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
       const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
-      li.innerHTML=`<div><b>${esc(it.name||'')}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}`;
+      li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
+                    <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
     });
-    $('#crionList').appendChild(frag); show($('#crionBox'),true);
-  }catch(e){ $('#crionStatus').textContent='Erro: '+(e.message||e); show($('#crionBox'),true); }
-  finally{ show($('#crionBusy'),false); }
-});
+    $('#crionList').appendChild(frag);
+    if(items.length){
+      let from=0;
+      while(from < items.length){
+        const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
+        (r.items||[]).forEach(row=>{
+          const el=$('#snip_crion_'+row.index);
+          el.innerHTML=(row.snippets && row.snippets.length)? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("") : '<span class="hint">—</span>';
+        });
+        from = r.to;
+      }
+      $('#crionStatus').textContent += " • prévias completas";
+    }
+  }catch(e){ $('#crionStatus').textContent='Erro: '+(e.message||e);
+  }finally{ show($('#crionBusy'),false); }
+}
 </script>
 </body>
 </html>
