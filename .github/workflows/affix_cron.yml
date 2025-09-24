@@ -3,7 +3,7 @@ name: Affix PDFs nightly
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 6 * * *"   # 06:15 UTC diário
+    - cron: "15 6 * * *"  # 06:15 UTC diariamente
 
 permissions:
   contents: write
@@ -39,13 +39,3 @@ jobs:
             git commit -m "chore(affix): update PDFs + manifest [skip ci]"
             git push
           fi
-
-      # opcional: guardar log/manifest do job como artefato
-      - name: Upload crawl logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: affix-crawl
-          path: |
-            data/affix/manifest.json
-            scripts/affix_last_run.log
