@@ -3,7 +3,7 @@ name: Affix PDFs nightly
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 6 * * *"  # 06:15 UTC diariamente
+    - cron: "15 6 * * *" # 06:15 UTC diariamente
 
 permissions:
   contents: write
@@ -25,8 +25,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml
 
+      - name: Debug tree (antes)
+        run: |
+          ls -la
+          echo "---- scripts ----"
+          ls -la scripts || true
+          echo "---- data/affix ----"
+          ls -la data/affix || true
+
       - name: Run crawler
-        run: python scripts/fetch_affix.py
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python scripts/fetch_affix.py || echo "crawler retornou status !=0, mas seguimos"
+
+      - name: Debug tree (depois)
+        run: |
+          echo "---- data/affix/raw ----"
+          ls -la data/affix/raw || true
+          echo "---- manifest.json ----"
+          cat data/affix/manifest.json || true
 
       - name: Commit & push if changed
         run: |
