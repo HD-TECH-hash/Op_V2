@@ -1,44 +1,31 @@
-# ============================================
-# affix_sources.txt — seeds p/ crawler Affix
-# Aceita:
-#   - crawl <URL>  -> varre a página + sublinks do mesmo domínio e coleta PDFs
-#   - link  <URL>  -> adiciona diretamente um PDF conhecido
-# Obs.: O crawler valida HEAD 200 + Content-Type PDF antes de gravar/manifestar
-# ============================================
-
-# ------- TAGS gerais (produtos / manuais / backoffice) -------
-crawl https://www.affix.com.br/tag/backoffice/
-crawl https://www.affix.com.br/tag/affix/
-crawl https://www.affix.com.br/tag/hapvida/
-crawl https://www.affix.com.br/tag/manual/
-crawl https://www.affix.com.br/tag/adesao/
-crawl https://www.affix.com.br/tag/corretor/
-
-# ------- Regionais comuns -------
-crawl https://www.affix.com.br/tag/recife/
-crawl https://www.affix.com.br/tag/salvador/
-crawl https://www.affix.com.br/tag/brasilia/
-crawl https://www.affix.com.br/tag/sao-luis/
-crawl https://www.affix.com.br/tag/sao-jose-dos-campos/
-crawl https://www.affix.com.br/tag/mato-grosso-do-sul/
-
-# ------- Links diretos já validados (testados agora) -------
-# 2025
-link https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf
-link https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-SA%CC%83O-LUIS-01-25.pdf
-
-# 2024
-link https://www.affix.com.br/wp-content/uploads/2024/03/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf
-link https://www.affix.com.br/wp-content/uploads/2021/02/Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf
-link https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf
-link https://www.affix.com.br/wp-content/uploads/2019/02/Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf
-link https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf
-
-# ------- (Opcional) adicione aqui PDFs específicos que você queira forçar -------
-# link https://www.affix.com.br/wp-content/uploads/2022/07/Affix-XX-Manual-YYY-07-22.pdf
-
-# ------- Dicas -------
-# - Pode duplicar/expandir as linhas "crawl" para outras TAGs ou categorias da Affix.
-# - Pode colar quantos "link" quiser; o crawler mantém só os que retornarem 200 + PDF.
-# - Anos: o fetch captura QUALQUER ano 20xx (regex 20\d{2}); não precisa limitar.
+https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-HP-ES-Manual-Backoffice-02-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-HS-DF-Manual-AD-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-JEQUIE-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-HS-MA-Manual-AD-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-GO-Manual-AD-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-HS-RJ-Manual-AD-02-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AL-Manual-AD-01-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/AFFIX-ALIANCA-MANUAL-DE-VENDAS-ALIANCA-17-25.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-Manual-Mini-Empresa-07-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SE-Sergipe-AD-Manual-Engese-19-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Serv-Salvador-Manual-10-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Medicina-e-Saude-AD-Manual-06-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Juazeiro-Alianca-Planos-Manual-08-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-Juazeiro-do-Norte-02-24-DESCONTO.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CG-Manual-Corretor-10-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AL-Manual-AD-11-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AP-Manual-Corretor-AD-11-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AM-Manual-Corretor-AD-12-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Hapvida-Pref.-Joao-Pessoa-Manual-09-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-Manual-12-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RN-Hapvida-AD-Manual-09-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PR-Hapvida-AD-Manual-11-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PLENA-SALVADOR-Manual-ANC-09-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-AD-Manual-Fortaleza-08-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Hapvida-AD-Manual-Feira-de-Santana-09-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AM-Hapvida-AD-Manual-Manaus-11-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Hapvida-Pref.-Joao-Pessoa-Manual-09-24.pdf
+https://www.affix.com.br/wp-content/uploads/2019/02/Manual-Convenio-Adesao-02-25.pdf
