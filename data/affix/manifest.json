@@ -1,16 +1,1041 @@
 {
-  "generated_at": "2025-09-24T15:19:23Z",
+  "generated_at": "2025-09-24T15:32:10Z",
   "base": "./data/affix/raw/",
   "items": [
+    {
+      "name": "003-Relatorio-de-auditoria-ANSAffix-AdmDFs-2.pdf",
+      "size": 4236243,
+      "url": "https://www.affix.com.br/wp-content/uploads/2024/04/003-Relatorio-de-auditoria-ANSAffix-AdmDFs-2.pdf"
+    },
+    {
+      "name": "Affix-AL-Hapvida-BOMBEIROS-Manual-05-25.pdf",
+      "size": 2365029,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AL-Hapvida-BOMBEIROS-Manual-05-25.pdf"
+    },
+    {
+      "name": "Affix-AL-Hapvida-PM-ALAGOAS-Manual-05-25.pdf",
+      "size": 1752018,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AL-Hapvida-PM-ALAGOAS-Manual-05-25.pdf"
+    },
+    {
+      "name": "Affix-AL-Hapvida-PREF-MACEIO-Manual-05-25.pdf",
+      "size": 2023526,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AL-Hapvida-PREF-MACEIO-Manual-05-25.pdf"
+    },
+    {
+      "name": "Affix-AL-Hapvida-PREF-RIO-LARGO-Manual-03-25.pdf",
+      "size": 1986873,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AL-Hapvida-PREF-RIO-LARGO-Manual-03-25.pdf"
+    },
+    {
+      "name": "Affix-AM-Hapvida-BOMBEIROS-Manual-08-25.pdf",
+      "size": 1842083,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AM-Hapvida-BOMBEIROS-Manual-08-25.pdf"
+    },
+    {
+      "name": "Affix-AM-Hapvida-IFAM-Manual-06-25.pdf",
+      "size": 1973011,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AM-Hapvida-IFAM-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-AM-Hapvida-PM-AMAZONAS-Manual-01-24.pdf",
+      "size": 2170749,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-AM-Hapvida-PM-AMAZONAS-Manual-01-24.pdf"
+    },
+    {
+      "name": "Affix-BA-Dias-DAvila-Hapvida-Manual-01-25.pdf",
+      "size": 2410348,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Dias-DAvila-Hapvida-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-BA-Hapvida-NDI-SIMOES-FILHO-Manual-08-24-1.pdf",
+      "size": 2410061,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Hapvida-NDI-SIMOES-FILHO-Manual-08-24-1.pdf"
+    },
+    {
+      "name": "Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
+      "size": 1513142,
+      "url": "https://www.affix.com.br/wp-content/uploads/2024/03/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf"
+    },
+    {
+      "name": "Affix-BA-Manual-Vendas-Unimed-Sudoeste-05-25.pdf",
+      "size": 2223015,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/11/Affix-BA-Manual-Vendas-Unimed-Sudoeste-05-25.pdf"
+    },
+    {
+      "name": "Affix-BA-Manual-Vendas-Unimed-Sudoeste-Pref.-Aiquara-08-24.pdf",
+      "size": 2421248,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Manual-Vendas-Unimed-Sudoeste-Pref.-Aiquara-08-24.pdf"
+    },
+    {
+      "name": "Affix-BA-Messias-Hapvida-Manual-12-23-1.pdf",
+      "size": 2353378,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Messias-Hapvida-Manual-12-23-1.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ABME-11-24.pdf",
+      "size": 1325445,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ABME-11-24.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASPESCBA-01-25.pdf",
+      "size": 1273440,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASPESCBA-01-25.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASSERP-08-25-1.pdf",
+      "size": 1565223,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASSERP-08-25-1.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-Pref-Pocoes-08-25.pdf",
+      "size": 1257327,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-Pref-Pocoes-08-25.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Tremedal-12-24.pdf",
+      "size": 2412983,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Tremedal-12-24.pdf"
+    },
+    {
+      "name": "Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Vitoria-da-Conquista-08-25-1.pdf",
+      "size": 1766581,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Vitoria-da-Conquista-08-25-1.pdf"
+    },
+    {
+      "name": "Affix-Benef-C3-ADcios-Notas-Explicativas-2019-final.pdf",
+      "size": 639284,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/04/Affix-Benef%C3%ADcios-Notas-Explicativas-2019-final.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-AQUIRAZ-Manual-08-24.pdf",
+      "size": 2411151,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-AQUIRAZ-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-BEBERIBE-Manual-01-25.pdf",
+      "size": 2410810,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-BEBERIBE-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-CAUCAIA-Manual-06-25.pdf",
+      "size": 1972078,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-CAUCAIA-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-CHOROZINHO-Manual-01-25.pdf",
+      "size": 2411271,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-CHOROZINHO-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-ITAITINGA-Manual-01-25.pdf",
+      "size": 2411033,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-ITAITINGA-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-Juazeiro-do-Norte-Manual-12-24.pdf",
+      "size": 2406163,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-Juazeiro-do-Norte-Manual-12-24.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-MARACANAU-Manual-09-24.pdf",
+      "size": 1323600,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-MARACANAU-Manual-09-24.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-PACAJUS-Manual-02-25.pdf",
+      "size": 2411417,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-PACAJUS-Manual-02-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-PACATUBA-Manual-01-25.pdf",
+      "size": 2410907,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-PACATUBA-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-PARACURU-Manual-01-25.pdf",
+      "size": 2410959,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-PARACURU-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-CE-Hapvida-REDENCAO-Manual-01-25.pdf",
+      "size": 2412576,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-CE-Hapvida-REDENCAO-Manual-01-25.pdf"
+    },
+    {
+      "name": "Affix-Codigo-de-Etica-e-Conduta_jun23.pdf",
+      "size": 5702463,
+      "url": "https://www.affix.com.br/wp-content/uploads/2023/06/Affix-Codigo-de-Etica-e-Conduta_jun23.pdf"
+    },
+    {
+      "name": "Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf",
+      "size": 1952808,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf"
+    },
+    {
+      "name": "Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Samp-07-25-1.pdf",
+      "size": 2864249,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Samp-07-25-1.pdf"
+    },
+    {
+      "name": "Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Sao-Bernardo-07-25-1.pdf",
+      "size": 2505920,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Sao-Bernardo-07-25-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-ANAPOLIS-08-25B.pdf",
+      "size": 1796619,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/04/Affix-Hapvida-AD-Manual-ANAPOLIS-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-ARACAJU-08-25B.pdf",
+      "size": 1802697,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-ARACAJU-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-BELEM-08-25B.pdf",
+      "size": 1802913,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-BELEM-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-BELO-HORIZONTE-08-25B.pdf",
+      "size": 1825471,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/04/Affix-Hapvida-AD-Manual-BELO-HORIZONTE-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-BRASILIA-08-25B.pdf",
+      "size": 1782106,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-AD-Manual-BRASILIA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-CAMACARI-08-25B.pdf",
+      "size": 1803554,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-CAMACARI-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-CAMPINA-GRANDE-08-25B.pdf",
+      "size": 1802370,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-CAMPINA-GRANDE-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-CENTRO-CLI-NICO-GAU-CHO-08-25.pdf",
+      "size": 1729703,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-Hapvida-AD-Manual-CENTRO-CLÍNICO-GAÚCHO-08-25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-FEIRA-DE-SANTANA-08-25B.pdf",
+      "size": 1840578,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-FEIRA-DE-SANTANA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-FORTALEZA-08-25B.pdf",
+      "size": 1803900,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-FORTALEZA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-GOIANIA-08-25B.pdf",
+      "size": 1796766,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/04/Affix-Hapvida-AD-Manual-GOIANIA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-JOAO-PESSOA-08-25B.pdf",
+      "size": 1803170,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-JOAO-PESSOA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-JOINVILLE-08-25B.pdf",
+      "size": 1803121,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/02/Affix-Hapvida-AD-Manual-JOINVILLE-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25B.pdf",
+      "size": 1840388,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-MACEIO-08-25B.pdf",
+      "size": 1803739,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-Hapvida-AD-Manual-MACEIO-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-MANAUS-08-25B.pdf",
+      "size": 1802628,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-Hapvida-AD-Manual-MANAUS-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-MOSSORO-08-25B.pdf",
+      "size": 1803752,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-AD-Manual-MOSSORO-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-NATAL-08-25B.pdf",
+      "size": 1802355,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-AD-Manual-NATAL-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-PARAUAPEBAS-08-25B.pdf",
+      "size": 1803040,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-PARAUAPEBAS-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-SALVADOR-08-25B.pdf",
+      "size": 1826563,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-SALVADOR-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf",
+      "size": 2145798,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/11/Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf",
+      "size": 1307514,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-08-25B.pdf",
+      "size": 1796601,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-SAO-LUIS-08-25B.pdf",
+      "size": 1803473,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-Hapvida-AD-Manual-SAO-LUIS-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-TERESINA-08-25B.pdf",
+      "size": 1781001,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/04/Affix-Hapvida-AD-Manual-TERESINA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-UBERABA-08-25B.pdf",
+      "size": 1780826,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/04/Affix-Hapvida-AD-Manual-UBERABA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-AD-Manual-UBERLANDIA-08-25B.pdf",
+      "size": 1825276,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/04/Affix-Hapvida-AD-Manual-UBERLANDIA-08-25B.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-AFPPE-RECIFE-DESCONTO-08-25B-1.pdf",
+      "size": 1845990,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-AFPPE-RECIFE-DESCONTO-08-25B-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-ASSBRA-RECIFE-DESCONTO-08-25B-1.pdf",
+      "size": 1688797,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSBRA-RECIFE-DESCONTO-08-25B-1.pdf"
+    },
     {
       "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
       "size": 2209576,
       "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf"
     },
     {
+      "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-08-25B-1.pdf",
+      "size": 1721252,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-08-25B-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-ENTIDADES-NACIONAIS-DESCONTO-08-25B-1.pdf",
+      "size": 1753973,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ENTIDADES-NACIONAIS-DESCONTO-08-25B-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-SINDATE-RECIFE-DESCONTO-08-25B-1.pdf",
+      "size": 1780803,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-SINDATE-RECIFE-DESCONTO-08-25B-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-SINPOL-RECIFE-DESCONTO-08-25B-1.pdf",
+      "size": 1583139,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-SINPOL-RECIFE-DESCONTO-08-25B-1.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-ABCFARMA-29.08.25.pdf",
+      "size": 645329,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-ABCFARMA-29.08.25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-ACIG-29.08.25.pdf",
+      "size": 645355,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-Hapvida-Termo-Adesao-ACIG-29.08.25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-ACIJ-15.08.25.pdf",
+      "size": 644278,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-Hapvida-Termo-Adesao-ACIJ-15.08.25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-CAESBRA-29.08.25.pdf",
+      "size": 645254,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-CAESBRA-29.08.25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-FECOMERCIO.pdf",
+      "size": 644163,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-FECOMERCIO.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf",
+      "size": 721786,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf",
+      "size": 721786,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-SICOMERCIO-29.08.25.pdf",
+      "size": 645499,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-SICOMERCIO-29.08.25.pdf"
+    },
+    {
+      "name": "Affix-Hapvida-Termo-Adesao-SINDILOJAS-29.08.2025.pdf",
+      "size": 645311,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-Hapvida-Termo-Adesao-SINDILOJAS-29.08.2025.pdf"
+    },
+    {
+      "name": "Affix-MA-Hapvida-PM-Maranhao-Manual-12-24.pdf",
+      "size": 2279586,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-Hapvida-PM-Maranhao-Manual-12-24.pdf"
+    },
+    {
+      "name": "Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-ABERTA-03-25-B.pdf",
+      "size": 2317625,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-ABERTA-03-25-B.pdf"
+    },
+    {
+      "name": "Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-FECHADA-03-25-B.pdf",
+      "size": 2316176,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-FECHADA-03-25-B.pdf"
+    },
+    {
+      "name": "Affix-MA-Humana-Manual-Corretor-SA-CC-83O-LUIS-01-25.pdf",
+      "size": 2091396,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-SA%CC%83O-LUIS-01-25.pdf"
+    },
+    {
+      "name": "Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-ABERTA-03-25-B.pdf",
+      "size": 2286060,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-ABERTA-03-25-B.pdf"
+    },
+    {
+      "name": "Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-FECHADA-03-25-B.pdf",
+      "size": 2287387,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/11/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-FECHADA-03-25-B.pdf"
+    },
+    {
+      "name": "Affix-MA-PME-Unimed-Maranhao-do-Sul-Manual-Corretor-ACII-03-25.pdf",
+      "size": 2289540,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-PME-Unimed-Maranhao-do-Sul-Manual-Corretor-ACII-03-25.pdf"
+    },
+    {
+      "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-07-25.pdf",
+      "size": 1986737,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-07-25.pdf"
+    },
+    {
+      "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-CAAMA-07-25.pdf",
+      "size": 1815758,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-CAAMA-07-25.pdf"
+    },
+    {
+      "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-FNEL-ASCOSERVI-07-25.pdf",
+      "size": 1714305,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-FNEL-ASCOSERVI-07-25.pdf"
+    },
+    {
+      "name": "Affix-MA-Unimed-Maranhao-Sul-Termo-Adesao-ACII-06-21.pdf",
+      "size": 652597,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-MA-Unimed-Maranhao-Sul-Termo-Adesao-ACII-06-21.pdf"
+    },
+    {
+      "name": "Affix-MG-Manual-Corretor-Hapvida-NDI-Estudantes-08-25.pdf",
+      "size": 2303551,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/12/Affix-MG-Manual-Corretor-Hapvida-NDI-Estudantes-08-25.pdf"
+    },
+    {
+      "name": "Affix-MG-Manual-Corretor-Hapvida-NDI-Geral-08-25.pdf",
+      "size": 2366060,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/12/Affix-MG-Manual-Corretor-Hapvida-NDI-Geral-08-25.pdf"
+    },
+    {
       "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
       "size": 1847750,
       "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf"
+    },
+    {
+      "name": "Affix-PA-Hapvida-NDI-ANANINDEUA-Manual-12-24.pdf",
+      "size": 2411608,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PA-Hapvida-NDI-ANANINDEUA-Manual-12-24.pdf"
+    },
+    {
+      "name": "Affix-PA-Marituba-Hapvida-Manual-03-24.pdf",
+      "size": 2232790,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PA-Marituba-Hapvida-Manual-03-24.pdf"
+    },
+    {
+      "name": "Affix-PB-Cabedelo-Hapvida-Manual-11-24.pdf",
+      "size": 2416377,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Cabedelo-Hapvida-Manual-11-24.pdf"
+    },
+    {
+      "name": "Affix-PB-CONDE-Hapvida-Manual-08-24.pdf",
+      "size": 2431692,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-CONDE-Hapvida-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-PB-Hapvida-Bombeiros-Manual-08-24.pdf",
+      "size": 2285058,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Hapvida-Bombeiros-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-PB-Hapvida-Policia-Civil-PB-Manual-03-25.pdf",
+      "size": 1823632,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Hapvida-Policia-Civil-PB-Manual-03-25.pdf"
+    },
+    {
+      "name": "Affix-PB-Hapvida-PREF-JOAO-PESSOA-Manual-06-25.pdf",
+      "size": 2048266,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Hapvida-PREF-JOAO-PESSOA-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-PB-Sta-Rita-Hapvida-Manual-04-24-1.pdf",
+      "size": 2237107,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PB-Sta-Rita-Hapvida-Manual-04-24-1.pdf"
+    },
+    {
+      "name": "Affix-PE-Abreu-e-Lima-Hapvida-Manual-05-24.pdf",
+      "size": 2409053,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-Abreu-e-Lima-Hapvida-Manual-05-24.pdf"
+    },
+    {
+      "name": "Affix-PE-Hapvida-Policia-Militar-PE-Manual-04-24.pdf",
+      "size": 2156234,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-Hapvida-Policia-Militar-PE-Manual-04-24.pdf"
+    },
+    {
+      "name": "Affix-PE-IGARASSU-Hapvida-Manual-02-24.pdf",
+      "size": 2230371,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-IGARASSU-Hapvida-Manual-02-24.pdf"
+    },
+    {
+      "name": "Affix-PE-IPOJUCA-Hapvida-Manual-12-24.pdf",
+      "size": 2408938,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-IPOJUCA-Hapvida-Manual-12-24.pdf"
+    },
+    {
+      "name": "Affix-PE-ITAMARACA-Hapvida-Manual-09-24.pdf",
+      "size": 1316371,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-ITAMARACA-Hapvida-Manual-09-24.pdf"
+    },
+    {
+      "name": "Affix-PE-JABOATAO-DOS-GUARARAPES-Hapvida-Manual-03-25.pdf",
+      "size": 1984667,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-JABOATAO-DOS-GUARARAPES-Hapvida-Manual-03-25.pdf"
+    },
+    {
+      "name": "Affix-PE-OLINDA-Hapvida-Manual-12-24.pdf",
+      "size": 2409000,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-OLINDA-Hapvida-Manual-12-24.pdf"
+    },
+    {
+      "name": "Affix-PE-PAULISTA-Manual-05-24.pdf",
+      "size": 2409007,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-PAULISTA-Manual-05-24.pdf"
+    },
+    {
+      "name": "Affix-PE-POMBOS-Hapvida-Manual-10-24.pdf",
+      "size": 2409270,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-POMBOS-Hapvida-Manual-10-24.pdf"
+    },
+    {
+      "name": "Affix-PE-RECIFE-Hapvida-Manual-10-24.pdf",
+      "size": 2450493,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-RECIFE-Hapvida-Manual-10-24.pdf"
+    },
+    {
+      "name": "Affix-PE-SAO-LOURENCO-DA-MATA-Hapvida-Manual-06-25.pdf",
+      "size": 1976713,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-SAO-LOURENCO-DA-MATA-Hapvida-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-PE-VITORIA-DE-SANTO-ANTAO-Hapvida-Manual-08-24.pdf",
+      "size": 2412525,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PE-VITORIA-DE-SANTO-ANTAO-Hapvida-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-ACIG-DESCONTO-07-25.pdf",
+      "size": 1786030,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-PME-Hapvida-Manual-Corretor-ACIG-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-ACIJ-DESCONTO-07-25.pdf",
+      "size": 1785513,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-PME-Hapvida-Manual-Corretor-ACIJ-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-ANAPOLIS-DESCONTO-07-25.pdf",
+      "size": 1816634,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-PME-Hapvida-Manual-Corretor-ANAPOLIS-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-ARACAJU-DESCONTO-07-25.pdf",
+      "size": 1816093,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-ARACAJU-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-ASSOC-COMERCIAL-MACEIO-DESCONTO-07-25.pdf",
+      "size": 1835651,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-ASSOC-COMERCIAL-MACEIO-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-BELEM-DESCONTO-07-25.pdf",
+      "size": 1817256,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-BELEM-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-BELO-HORIZONTE-DESCONTO-07-25.pdf",
+      "size": 1839002,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/01/Affix-PME-Hapvida-Manual-Corretor-BELO-HORIZONTE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-CAMACARI-DESCONTO-07-25.pdf",
+      "size": 1816487,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-CAMACARI-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-CAMPINA-GRANDE-DESCONTO-07-25.pdf",
+      "size": 1815956,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-CAMPINA-GRANDE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-BA-DESCONTO-07-25.pdf",
+      "size": 1780229,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-BA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-CE-DESCONTO-07-25.pdf",
+      "size": 1778899,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-CE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
+      "size": 1780813,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FOTALEZA-DESCONTO-07-25.pdf",
+      "size": 1805609,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FOTALEZA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-JUAZEIRO-DO-NORTE-DESCONTO-07-25.pdf",
+      "size": 1779939,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-JUAZEIRO-DO-NORTE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-DESCONTO-07-25.pdf",
+      "size": 1748719,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-E-BANESE-DESCONTO-07-25-1.pdf",
+      "size": 1761665,
+      "url": "https://www.affix.com.br/wp-content/uploads/2017/05/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-E-BANESE-DESCONTO-07-25-1.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
+      "size": 1817017,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-GOIANIA-DESCONTO-07-25.pdf",
+      "size": 1816405,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-PME-Hapvida-Manual-Corretor-GOIANIA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-JOAO-PESSOA-DESCONTO-07-25.pdf",
+      "size": 1817387,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-JOAO-PESSOA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-JOINVILLE-DESCONTO-07-25-1.pdf",
+      "size": 1816505,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-PME-Hapvida-Manual-Corretor-JOINVILLE-DESCONTO-07-25-1.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-JUAZEIRO-DO-NORTE-DESCONTO-07-25-1.pdf",
+      "size": 1817303,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-JUAZEIRO-DO-NORTE-DESCONTO-07-25-1.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-LIMEIRA-DESCONTO-07-25.pdf",
+      "size": 1816249,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-PME-Hapvida-Manual-Corretor-LIMEIRA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-MACEIO-DESCONTO-07-25.pdf",
+      "size": 1817031,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-MACEIO-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-MANAUS-DESCONTO-07-25.pdf",
+      "size": 1816790,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-MANAUS-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-MOSSORO-DESCONTO-07-25.pdf",
+      "size": 1817163,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-MOSSORO-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-NATAL-DESCONTO-07-25.pdf",
+      "size": 1816617,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-NATAL-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-PARAUAPEBAS-DESCONTO-07-25-3.pdf",
+      "size": 1816435,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-PARAUAPEBAS-DESCONTO-07-25-3.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-RECIFE-DESCONTO-07-25.pdf",
+      "size": 1816157,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-RECIFE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SALVADOR-DESCONTO-07-25.pdf",
+      "size": 1816361,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SALVADOR-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SAO-JOSE-DOS-CAMPOS-DESCONTO-07-25.pdf",
+      "size": 1817307,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-PME-Hapvida-Manual-Corretor-SAO-JOSE-DOS-CAMPOS-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SAO-LUIS-DESCONTO-07-25.pdf",
+      "size": 1816834,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SAO-LUIS-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SICOMERCIO-CAMACARI-DESCONTO-07-25.pdf",
+      "size": 1819987,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SICOMERCIO-CAMACARI-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BA-DESCONTO-07-25.pdf",
+      "size": 1771583,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BELEM-DESCONTO-07-25.pdf",
+      "size": 1775077,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BELEM-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-SE-DESCONTO-07-25.pdf",
+      "size": 1785087,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-SE-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-SINDIVAREJISTA-DF-DESCONTO-07-25.pdf",
+      "size": 1780239,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Manual-Corretor-SINDIVAREJISTA-DF-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-UBERABA-DESCONTO-07-25.pdf",
+      "size": 1838057,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/01/Affix-PME-Hapvida-Manual-Corretor-UBERABA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Manual-Corretor-UBERLANDIA-DESCONTO-07-25.pdf",
+      "size": 1839304,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/01/Affix-PME-Hapvida-Manual-Corretor-UBERLANDIA-DESCONTO-07-25.pdf"
+    },
+    {
+      "name": "Affix-PME-HAPVIDA-NDI-Regional-Manual-08-25B.pdf",
+      "size": 2291249,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-PME-HAPVIDA-NDI-Regional-Manual-08-25B.pdf"
+    },
+    {
+      "name": "Affix-PME-HAPVIDA-NDI-Rio-de-Janeiro-Manual-08-25B.pdf",
+      "size": 2379302,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/01/Affix-PME-HAPVIDA-NDI-Rio-de-Janeiro-Manual-08-25B.pdf"
+    },
+    {
+      "name": "Affix-PME-HAPVIDA-NDI-Sao-Paulo-Manual-08-25B.pdf",
+      "size": 2293955,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-PME-HAPVIDA-NDI-Sao-Paulo-Manual-08-25B.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-ABCFARMA-11-22.pdf",
+      "size": 839629,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/05/Affix-PME-Hapvida-Termo-Adesao-ABCFARMA-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-ASSOC-COM-MACEIO-11-22.pdf",
+      "size": 854074,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Termo-Adesao-ASSOC-COM-MACEIO-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-CAESBRA-11-22.pdf",
+      "size": 852737,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-PME-Hapvida-Termo-Adesao-CAESBRA-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-FECOMERCIO-11-22.pdf",
+      "size": 852842,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Termo-Adesao-FECOMERCIO-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-PME-11-22.pdf",
+      "size": 852566,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-PME-Hapvida-Termo-Adesao-PME-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-SINDILOJAS-11-22.pdf",
+      "size": 852607,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Termo-Adesao-SINDILOJAS-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Hapvida-Termo-Adesao-SINDIVAREJISTA-11-22.pdf",
+      "size": 845510,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Hapvida-Termo-Adesao-SINDIVAREJISTA-11-22.pdf"
+    },
+    {
+      "name": "Affix-PME-Unimed-Sudoeste-Manual-08-25.pdf",
+      "size": 1695185,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-PME-Unimed-Sudoeste-Manual-08-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Aberta-09-25.pdf",
+      "size": 1925019,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Aberta-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Estudantil-09-25.pdf",
+      "size": 1894012,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Estudantil-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Fechada-09-25.pdf",
+      "size": 2340207,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Fechada-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-09-25.pdf",
+      "size": 1926367,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Estudantil-09-25.pdf",
+      "size": 1985761,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Estudantil-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Fechada-09-25.pdf",
+      "size": 1855071,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/02/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Fechada-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ABERTA-09-25.pdf",
+      "size": 1877914,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/01/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ABERTA-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ESTUDANTIL-09-25.pdf",
+      "size": 1841790,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/01/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ESTUDANTIL-09-25.pdf"
+    },
+    {
+      "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-FECHADA-09-25.pdf",
+      "size": 1914214,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/01/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-FECHADA-09-25.pdf"
+    },
+    {
+      "name": "Affix-Relatorio-da-Administracao-2024-1.pdf",
+      "size": 4216757,
+      "url": "https://www.affix.com.br/wp-content/uploads/2025/03/Affix-Relatorio-da-Administracao-2024-1.pdf"
+    },
+    {
+      "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
+      "size": 2023593,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RJ-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf"
+    },
+    {
+      "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
+      "size": 2430022,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf"
+    },
+    {
+      "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
+      "size": 2078673,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf"
+    },
+    {
+      "name": "Affix-RJ-Onix-Manual-Vendas-Corretor-05-25.pdf",
+      "size": 2058286,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RJ-Onix-Manual-Vendas-Corretor-05-25.pdf"
+    },
+    {
+      "name": "Affix-RJ-Plamer-Manual-Corretor-04-25-B.pdf",
+      "size": 2193880,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RJ-Plamer-Manual-Corretor-04-25-B.pdf"
+    },
+    {
+      "name": "Affix-RN-Barauna-Hapvida-Manual-03-24.pdf",
+      "size": 2232975,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RN-Barauna-Hapvida-Manual-03-24.pdf"
+    },
+    {
+      "name": "Affix-RN-Hapvida-MOSSORO-Manual-08-24.pdf",
+      "size": 2409200,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RN-Hapvida-MOSSORO-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-RN-Hapvida-PM-Manual-11-24.pdf",
+      "size": 1826024,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RN-Hapvida-PM-Manual-11-24.pdf"
+    },
+    {
+      "name": "Affix-RN-Hapvida-PREF-MACAIBA-Manual-06-25.pdf",
+      "size": 1974842,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-RN-Hapvida-PREF-MACAIBA-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-1-08-25-2.pdf",
+      "size": 2015444,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/08/Affix-RN-Humana-Manual-Corretor-GRUPO-1-08-25-2.pdf"
+    },
+    {
+      "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-2-08-25-2.pdf",
+      "size": 1914666,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/08/Affix-RN-Humana-Manual-Corretor-GRUPO-2-08-25-2.pdf"
+    },
+    {
+      "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-3-08-25-2.pdf",
+      "size": 1932443,
+      "url": "https://www.affix.com.br/wp-content/uploads/2020/08/Affix-RN-Humana-Manual-Corretor-GRUPO-3-08-25-2.pdf"
+    },
+    {
+      "name": "Affix-RS-Humana-Saude-Sul-TAB-ABERTA-09-25-1.pdf",
+      "size": 2139603,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-RS-Humana-Saude-Sul-TAB-ABERTA-09-25-1.pdf"
+    },
+    {
+      "name": "Affix-RS-Humana-Saude-Sul-TAB-ESTUDANTIL-09-25-1.pdf",
+      "size": 1845116,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-RS-Humana-Saude-Sul-TAB-ESTUDANTIL-09-25-1.pdf"
+    },
+    {
+      "name": "Affix-RS-Humana-Saude-Sul-TAB-FECHADA-09-25-1.pdf",
+      "size": 1861310,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-RS-Humana-Saude-Sul-TAB-FECHADA-09-25-1.pdf"
+    },
+    {
+      "name": "Affix-SE-Barra-dos-Coqueiros-Hapvida-Manual-08-24.pdf",
+      "size": 2412061,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SE-Barra-dos-Coqueiros-Hapvida-Manual-08-24.pdf"
+    },
+    {
+      "name": "Affix-SE-Hapvida-GOVERNO-SERGIPE-BANESE-Manual-06-25.pdf",
+      "size": 1618419,
+      "url": "https://www.affix.com.br/wp-content/uploads/2017/05/Affix-SE-Hapvida-GOVERNO-SERGIPE-BANESE-Manual-06-25.pdf"
+    },
+    {
+      "name": "Affix-SE-Hapvida-GOVERNO-SERGIPE-Manual-06-25-1.pdf",
+      "size": 2036880,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SE-Hapvida-GOVERNO-SERGIPE-Manual-06-25-1.pdf"
+    },
+    {
+      "name": "Affix-SE-Hapvida-PREF-ARACAJU-Manual-05-25.pdf",
+      "size": 2027517,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SE-Hapvida-PREF-ARACAJU-Manual-05-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Ativia-Manual-Corretor-01-25.pdf",
+      "size": 1152553,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Ativia-Manual-Corretor-01-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Ativia-Senior-Manual-Corretor-11-24-1.pdf",
+      "size": 640177,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Ativia-Senior-Manual-Corretor-11-24-1.pdf"
+    },
+    {
+      "name": "Affix-SP-Blue-Med-Manual-Corretor-05-25.pdf",
+      "size": 1507976,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Blue-Med-Manual-Corretor-05-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
+      "size": 2151255,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
+      "size": 2435881,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
+      "size": 2068656,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Manual-Corretor-Vera-Cruz-06-25.pdf",
+      "size": 1663625,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-SP-Manual-Corretor-Vera-Cruz-06-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf",
+      "size": 1796840,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/02/Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf"
+    },
+    {
+      "name": "Affix-SP-Manual-Vendas-Unimed-Jundiai-05-25-B.pdf",
+      "size": 2163923,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-SP-Manual-Vendas-Unimed-Jundiai-05-25-B.pdf"
+    },
+    {
+      "name": "Affix-SP-Manual-Vendas-Unimed-Jundiai-Pref-Campo-Limpo-12-24.pdf",
+      "size": 2184894,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/01/Affix-SP-Manual-Vendas-Unimed-Jundiai-Pref-Campo-Limpo-12-24.pdf"
+    },
+    {
+      "name": "Affix-SP-S-Cristovao-Manual-Corretor-09-25.pdf",
+      "size": 1209623,
+      "url": "https://www.affix.com.br/wp-content/uploads/2016/03/Affix-SP-S-Cristovao-Manual-Corretor-09-25.pdf"
+    },
+    {
+      "name": "Affix-SP-Santa-Filomena-Manual-Corretor-05-25.pdf",
+      "size": 1479580,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/02/Affix-SP-Santa-Filomena-Manual-Corretor-05-25.pdf"
+    },
+    {
+      "name": "demontracoes_financeiras_2020.pdf",
+      "size": 1447906,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/demontracoes_financeiras_2020.pdf"
+    },
+    {
+      "name": "demontracoes_financeiras_2022.pdf",
+      "size": 2013880,
+      "url": "https://www.affix.com.br/wp-content/uploads/2023/03/demontracoes_financeiras_2022.pdf"
+    },
+    {
+      "name": "Programa_de_Gestao_de_Riscos_e_Compliance_vers.26-04-23.pdf",
+      "size": 330541,
+      "url": "https://www.affix.com.br/wp-content/uploads/2023/04/Programa_de_Gestao_de_Riscos_e_Compliance_vers.26-04-23.pdf"
+    },
+    {
+      "name": "Relat-C3-B3rio-da-Administra-C3-A7-C3-A3o-Affix-Benef-C3-ADcios-2018-Final.pdf",
+      "size": 473222,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Relat%C3%B3rio-da-Administra%C3%A7%C3%A3o-Affix-Benef%C3%ADcios-2018-Final.pdf"
     }
   ]
 }
