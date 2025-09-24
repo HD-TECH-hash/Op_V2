@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -16,13 +17,17 @@
     --postit:#fddb56;
     --calc:#5fa5fa;
 
-    --ink:#0f172a; 
-    --muted:#64748b; 
+    --ink:#0f172a;
+    --muted:#64748b;
     --line:#e7eef7;
 
     /* Fundo geral #4889c5 com leve vinheta */
     --bg1:#4889c5;
     --bg2:#3f7eb9;
+
+    /* PDFs – laranja bem clarinho */
+    --pdf-bg:#fff7ed;      /* orange-50 */
+    --pdf-bd:#ffedd5;      /* orange-100 */
   }
 
   *{box-sizing:border-box}
@@ -35,9 +40,13 @@
       linear-gradient(180deg, var(--bg1), var(--bg2));
   }
 
-  /* ===== TOPO FLUTUANTE ===== */
+  /* ===== TOPO FLUTUANTE (alinhado à wrap) ===== */
   .floatbar{
-    position:fixed; inset:14px 16px auto 16px; z-index:50;
+    position:fixed; z-index:50;
+    left:50%; transform:translateX(-50%);
+    top:14px;
+    width:calc(1260px + 32px);       /* = max-width da wrap + padding lateral (16+16) */
+    max-width:calc(100% - 32px);     /* respeita margens laterais em telas menores */
     display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
     pointer-events:none;
   }
@@ -87,8 +96,11 @@
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
   .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff}
 
-  /* iframe de prévia */
-  #affixList iframe{width:100%;height:520px;border:0;background:#fff;border-radius:8px;box-shadow:0 8px 22px #0001}
+  /* Lista/Prévia de PDFs (laranja clarinho) */
+  #affixList .affix-row{padding:8px 10px;border:1px solid var(--pdf-bd);background:var(--pdf-bg);border-radius:12px;margin:10px 0}
+  #affixList .affix-actions{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+  #affixList .affix-prev{display:none;margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--pdf-bd);background:#fff}
+  #affixList iframe{width:100%;height:520px;border:0;background:#fff}
 
   /* Animações “bolinhas” */
   .busy{display:flex;align-items:center;gap:10px}
@@ -114,7 +126,7 @@
 </head>
 <body>
 
-  <!-- TOPO FLUTUANTE -->
+  <!-- TOPO FLUTUANTE (agora alinhado à largura das caixas) -->
   <div class="floatbar">
     <!-- Esquerda: icon2 (logo CRION pequeno) -->
     <img class="logo-left" src="icon2.png"
@@ -176,8 +188,8 @@
         </div>
         <div id="outSites" class="out">—</div>
 
-        <!-- PDFs (Affix — índice local) -->
-        <div style="margin-top:10px;font-weight:800">PDFs (Affix — índice local)
+        <!-- PDFs (Scraping) -->
+        <div style="margin-top:10px;font-weight:800">PDFs (Scraping)
           <span id="affixCount" class="hint" style="margin-left:8px">0 resultado(s)</span>
         </div>
         <div id="affixList" class="out">—</div>
@@ -344,6 +356,11 @@ function toggleAffixPrev(i){
   el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
 }
 
+function pdfjsURL(fileUrl){
+  // Usa o viewer local do PDF.js (sem download automático)
+  return "pdfjs/web/viewer.html?file=" + encodeURIComponent(fileUrl);
+}
+
 async function searchAffixPDFs(q){
   const list  = $('#affixList');
   const badge = $('#affixCount');
@@ -371,17 +388,16 @@ async function searchAffixPDFs(q){
     for(let k=0; k<10 && i<results.length; k++, i++){
       const r = results[i];
       const row = document.createElement('div');
-      row.style.padding='8px 0';
-      row.style.borderTop='1px solid var(--line)';
+      row.className = 'affix-row';
       row.innerHTML = `
         <div><b>${esc(r.name)}</b></div>
-        <div class="row" style="gap:8px;margin-top:6px">
-          <button class="btn btn-plain" onclick="window.open('${r.url}','_blank')">Abrir</button>
+        <div class="affix-actions">
+          <button class="btn btn-plain" onclick="window.open('${pdfjsURL(r.url)}','_blank')">Abrir</button>
           <button class="btn btn-plain" onclick="toggleAffixPrev(${i})">Prévia</button>
         </div>
-        <div id="affix_prev_${i}" style="display:none;margin-top:8px">
+        <div id="affix_prev_${i}" class="affix-prev">
           <iframe
-            src="https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(r.url)}"
+            src="${pdfjsURL(r.url)}"
             referrerpolicy="no-referrer"
             loading="lazy"></iframe>
         </div>`;
