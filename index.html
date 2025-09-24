@@ -6,7 +6,7 @@
 <title>RIC AI — CRION</title>
 <style>
   :root{
-    /* Paleta */
+    /* Paleta pedida */
     --alert:#fe0000;
     --sites:#0001fc;
     --procs:#fe6700;
@@ -20,13 +20,13 @@
     --muted:#64748b;
     --line:#e7eef7;
 
-    /* Fundo */
+    /* Fundo geral #4889c5 com leve vinheta */
     --bg1:#4889c5;
     --bg2:#3f7eb9;
 
-    /* PDFs – laranja clarinho */
-    --pdf-bg:#fff7ed;      /* orange-50 */
-    --pdf-bd:#ffedd5;      /* orange-100 */
+    /* PDFs – laranja bem clarinho */
+    --pdf-bg:#fff7ed;   /* orange-50 */
+    --pdf-bd:#ffedd5;   /* orange-100 */
   }
 
   *{box-sizing:border-box}
@@ -44,8 +44,8 @@
     position:fixed; z-index:50;
     left:50%; transform:translateX(-50%);
     top:14px;
-    width:calc(1260px + 32px);       /* wrap + paddings laterais (16+16) */
-    max-width:calc(100% - 32px);     /* respeita bordas em telas menores */
+    width:calc(1260px + 32px);      /* max-width da wrap + padding (16+16) */
+    max-width:calc(100% - 32px);    /* respeita bordas em telas menores */
     display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
     pointer-events:none;
   }
@@ -101,7 +101,7 @@
   #affixList .affix-prev{display:none;margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--pdf-bd);background:#fff}
   #affixList iframe{width:100%;height:520px;border:0;background:#fff}
 
-  /* Bolinhas */
+  /* Animações “bolinhas” */
   .busy{display:flex;align-items:center;gap:10px}
   .dots{display:inline-block;width:36px;height:10px;position:relative}
   .dots i{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#94a3b8;animation:bounce 0.85s infinite}
@@ -114,7 +114,9 @@
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
 
   /* RR.png sem “janela” */
-  .rr-holder{display:grid; place-items:center; padding:0; background:transparent; border:0; box-shadow:none;}
+  .rr-holder{
+    display:grid; place-items:center; padding:0; background:transparent; border:0; box-shadow:none;
+  }
   .rr-holder img{max-width:520px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(80,217,205,.24))}
 
   footer{margin:18px 0 6px;text-align:center}
@@ -123,8 +125,9 @@
 </head>
 <body>
 
-  <!-- TOPO FLUTUANTE (alinhado ao conteúdo) -->
+  <!-- TOPO FLUTUANTE (alinhado à largura das caixas) -->
   <div class="floatbar">
+    <!-- Esquerda: icon2 (logo CRION pequeno) -->
     <img class="logo-left" src="icon2.png"
          onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
          alt="icon2">
@@ -147,6 +150,7 @@
       </button>
     </div>
 
+    <!-- Direita: HDS -->
     <img class="logo-right" src="HDS.png"
          onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
          alt="HDSTEC">
@@ -190,14 +194,14 @@
         <div id="affixList" class="out">—</div>
       </section>
 
-      <!-- RR.png -->
+      <!-- RR.png (abaixo do Alerta) -->
       <div class="rr-holder">
         <img src="rr.png"
              onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
              alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
       </div>
 
-      <!-- PROCEDIMENTOS -->
+      <!-- PROCEDIMENTOS (abaixo de Sites) -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -256,6 +260,7 @@
 
 <script>
 /* ======= CONFIG ======= */
+/* NÃO alteramos o GAS. Mantemos seu Web App: */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
 
 /* ======= HELPERS ======= */
@@ -266,6 +271,7 @@ function cleanName(n){ return String(n||'').replace(/^(OCR_TMP_|TMP_SLIDES_)+/ig
 function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
+/* ======= CHAMADAS ======= */
 function call(endpoint, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
   return fetch(url, {
@@ -293,9 +299,10 @@ function press(k){
   if(k==="±"){ if(calc.buf!=="0") calc.buf = calc.buf.startsWith("-")? calc.buf.slice(1):"-"+calc.buf; return refresh(); }
   if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
   if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
-  if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
-    calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
+  if(k==="=" && calc.op){
+    const a=calc.mem, b=parseFloat(calc.buf);
+    let v=0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
+    calc.buf=String(v); calc.op=null; calc.fresh=true; return refresh();
   }
 }
 $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
@@ -317,7 +324,8 @@ $('#btnAlert').addEventListener('click', async ()=>{
 });
 
 /* ======= AFFIX PDFs (CSV local) ======= */
-const AFFIX_CSV_URL = "data/affix/affix_pdfs_manifest.csv"; // colunas: name,url
+/* CSV esperado em: data/affix/affix_pdfs_manifest.csv  (cabeçalho: name,url) */
+const AFFIX_CSV_URL = "data/affix/affix_pdfs_manifest.csv";
 let AFFIX_PDFS = [];
 
 async function loadAffixCSV(){
@@ -326,6 +334,7 @@ async function loadAffixCSV(){
   const text = await res.text();
   AFFIX_PDFS = parseAffixCSV(text);
 }
+
 function parseAffixCSV(text){
   const lines = text.trim().split(/\r?\n/);
   if (!lines.length) return [];
@@ -341,15 +350,17 @@ function parseAffixCSV(text){
   }
   return out;
 }
+
 function toggleAffixPrev(i){
   const el = document.getElementById("affix_prev_" + i);
   if (!el) return;
   el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
 }
-function pdfjsURL(fileUrl){
-  // usa o viewer local do PDF.js
-  return "pdfjs/web/viewer.html?file=" + encodeURIComponent(fileUrl);
+
+function googleViewerURL(fileUrl){
+  return "https://docs.google.com/viewer?embedded=true&url=" + encodeURIComponent(fileUrl);
 }
+
 async function searchAffixPDFs(q){
   const list  = $('#affixList');
   const badge = $('#affixCount');
@@ -381,12 +392,12 @@ async function searchAffixPDFs(q){
       row.innerHTML = `
         <div><b>${esc(r.name)}</b></div>
         <div class="affix-actions">
-          <button class="btn btn-plain" onclick="window.open('${pdfjsURL(r.url)}','_blank')">Abrir</button>
+          <button class="btn btn-plain" onclick="window.open('${r.url}','_blank')">Abrir</button>
           <button class="btn btn-plain" onclick="toggleAffixPrev(${i})">Prévia</button>
         </div>
         <div id="affix_prev_${i}" class="affix-prev">
           <iframe
-            src="${pdfjsURL(r.url)}"
+            src="${googleViewerURL(r.url)}"
             referrerpolicy="no-referrer"
             loading="lazy"></iframe>
         </div>`;
@@ -404,7 +415,7 @@ $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 async function doSites(){
   const q=($('#qSites').value||'').trim();
 
-  // Busca no índice local de PDFs em paralelo
+  /* Busca no índice local de PDFs em paralelo */
   searchAffixPDFs(q);
 
   if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
