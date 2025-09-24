@@ -1,153 +1,189 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import os, re, json, time, hashlib, sys
+"""
+Crawler Affix -> baixa PDFs públicos para data/affix/raw
+Gera manifest.json + manifest.csv apenas com URLs 200 (application/pdf)
+"""
+import os, re, json, time, csv, hashlib
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = ROOT / "data" / "affix" / "raw"
-MANIFEST = ROOT / "data" / "affix" / "manifest.json"
+AFFIX_DIR = ROOT / "data" / "affix"
+RAW_DIR = AFFIX_DIR / "raw"
+OCR_DIR = AFFIX_DIR / "ocr"  # reservado
+MANIFEST_JSON = AFFIX_DIR / "manifest.json"
+MANIFEST_CSV = AFFIX_DIR / "manifest.csv"
 SOURCES = ROOT / "scripts" / "affix_sources.txt"
-LOGFILE = ROOT / "scripts" / "affix_last_run.log"
 
-UA = "CRION-AffixCrawler/1.1 (+GitHub Actions)"
 session = requests.Session()
-session.headers.update({"User-Agent": UA, "Accept": "text/html,application/pdf"})
+session.headers.update({
+    "User-Agent": "CRION-AffixCrawler/1.3 (+GitHub Actions)",
+    "Accept": "text/html,application/pdf"
+})
 
-def log(*a):
-    msg = " ".join(map(str, a))
-    print(msg, flush=True)
-    try:
-        with LOGFILE.open("a", encoding="utf-8") as f:
-            f.write(msg + "\n")
-    except Exception:
-        pass
+YR = r"(20\d{2})"  # TODOS os anos 2000+ (ex.: 2015..2026)
 
-# aceita PDFs do domínio affix.com.br, priorizando 2025 (padrão -25.pdf ou /2025/)
-YR = r"(?:2025)"
-def is_pdf_ok(url: str) -> bool:
-    u = url.split("#")[0].split("?")[0]
-    if not u.lower().endswith(".pdf"):
-        return False
+PDF_RE = re.compile(r"\.pdf(?:$|\?)", re.I)
+AFFIX_DOM = "affix.com.br"
+
+def is_pdf_url(u: str) -> bool:
     try:
-        netloc = urlparse(u).netloc.lower()
-        if not netloc.endswith("affix.com.br"):
+        p = urlparse(u)
+        if not p.scheme.startswith("http"):
+            return False
+        if AFFIX_DOM not in p.netloc.lower():
             return False
     except Exception:
         return False
-    return (f"/{YR}/" in u) or bool(re.search(rf"-{YR[-2:]}\.pdf$", u, re.I))
+    return bool(PDF_RE.search(u))
+
+def head_ok(u: str, timeout=25) -> bool:
+    try:
+        r = session.head(u, timeout=timeout, allow_redirects=True)
+        if r.status_code != 200:
+            return False
+        ct = (r.headers.get("Content-Type") or "").lower()
+        return "pdf" in ct or ct == ""
+    except Exception:
+        return False
 
 def sanitize_name(url: str) -> str:
-    name = os.path.basename(urlparse(url).path)
+    path = urlparse(url).path
+    name = os.path.basename(path)
     name = re.sub(r"[^A-Za-z0-9._-]+", "-", name).strip("-")
     if not name.lower().endswith(".pdf"):
         name += ".pdf"
     return name
 
-def fetch(url: str, timeout=25):
+def fetch(url: str, timeout=40):
     try:
         r = session.get(url, timeout=timeout, allow_redirects=True)
         if r.status_code == 200:
-            return r
-        log("HTTP", r.status_code, url)
-    except Exception as e:
-        log("REQ_FAIL", url, e)
+            return r.content
+    except Exception:
+        pass
     return None
 
-def crawl(start_url: str, max_pages=600):
-    seen = set()
-    queue = [start_url]
+def crawl_page(start_url: str, max_pages=500):
     out = set()
-    domain = urlparse(start_url).netloc.lower()
+    seen = set([start_url])
+    queue = [start_url]
+    base_netloc = urlparse(start_url).netloc
 
-    while queue and len(seen) < max_pages:
+    while queue and len(seen) <= max_pages:
         u = queue.pop(0)
-        if u in seen:
+        try:
+            r = session.get(u, timeout=20)
+            if r.status_code != 200:
+                continue
+            ct = (r.headers.get("Content-Type") or "").lower()
+            if "text/html" not in ct:
+                continue
+            soup = BeautifulSoup(r.text, "lxml")
+        except Exception:
             continue
-        seen.add(u)
-        r = fetch(u, timeout=20)
-        if not r or "text/html" not in (r.headers.get("Content-Type") or ""):
-            continue
-        soup = BeautifulSoup(r.text, "lxml")
+
         for a in soup.select("a[href]"):
-            href = urljoin(u, a.get("href"))
-            href = href.split("#")[0]
-            if is_pdf_ok(href):
+            href = urljoin(u, a.get("href")).split("#")[0]
+            if is_pdf_url(href):
                 out.add(href)
                 continue
             try:
                 p = urlparse(href)
-                if p.netloc.lower().endswith("affix.com.br") and p.netloc.lower() == domain:
-                    queue.append(href)
+                if AFFIX_DOM in p.netloc.lower() and p.netloc == base_netloc:
+                    if href not in seen:
+                        seen.add(href)
+                        queue.append(href)
             except Exception:
                 pass
+
     return sorted(out)
 
 def read_sources():
-    pdfs = set()
-    if not SOURCES.exists():
-        return []
-    for raw in SOURCES.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#"):
-            continue
-        if line.lower().startswith("crawl "):
-            start = line.split(" ",1)[1].strip()
-            log("CRAWL", start)
-            for u in crawl(start):
-                pdfs.add(u)
-        elif line.lower().startswith("link "):
-            u = line.split(" ",1)[1].strip()
-            if is_pdf_ok(u):
-                pdfs.add(u)
-    return sorted(pdfs)
+    urls = set()
+    if SOURCES.exists():
+        for raw in SOURCES.read_text("utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#"): 
+                continue
+            if line.lower().startswith("crawl "):
+                start = line.split(" ",1)[1].strip()
+                for u in crawl_page(start):
+                    if is_pdf_url(u):
+                        urls.add(u)
+            elif line.lower().startswith("link "):
+                u = line.split(" ",1)[1].strip()
+                if is_pdf_url(u):
+                    urls.add(u)
+    return sorted(urls)
 
 def ensure_dirs():
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    (ROOT / "data" / "affix").mkdir(parents=True, exist_ok=True)
+    OCR_DIR.mkdir(parents=True, exist_ok=True)
 
-def download_all(urls):
-    rows = []
-    for u in urls:
-        name = sanitize_name(u)
-        dest = RAW_DIR / name
-        need = (not dest.exists())
-        if need:
-            r = fetch(u, timeout=40)
-            if not r or not r.content:
-                log("DL_FAIL", u)
-                continue
-            dest.write_bytes(r.content)
-            log("DOWN", name, len(r.content), "bytes")
-            time.sleep(0.3)
-        size = dest.stat().st_size if dest.exists() else 0
-        rows.append({"name": name, "size": size, "url": u})
-    return rows
+def parse_year(u: str) -> str:
+    m = re.search(YR, u)
+    return m.group(1) if m else ""
 
-def write_manifest(items):
-    items = sorted(items, key=lambda x: x["name"].lower())
-    MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    data = {
-        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "base": "./data/affix/raw/",
-        "items": items
-    }
-    new = json.dumps(data, ensure_ascii=False, indent=2)
-    MANIFEST.write_text(new, encoding="utf-8")
-    log("MANIFEST", MANIFEST)
+UF_RE = re.compile(r"-(AC|AL|AM|AP|BA|CE|DF|ES|GO|MA|MG|MS|MT|PA|PB|PE|PI|PR|RJ|RN|RO|RR|RS|SC|SE|SP|TO)-", re.I)
+def parse_uf(u: str) -> str:
+    m = UF_RE.search(u)
+    return m.group(1).upper() if m else ""
 
 def main():
-    LOGFILE.write_text("", encoding="utf-8")
     ensure_dirs()
-    urls = read_sources()
-    if not urls:
-        log("NO_URLS_FOUND")
-        write_manifest([])
-        sys.exit(0)
-    items = download_all(urls)
-    write_manifest(items)
+    urls = set(read_sources())
+
+    # Merge inicial com CSV existente (mantém seus testes manuais)
+    if MANIFEST_CSV.exists():
+        for row in csv.DictReader(MANIFEST_CSV.read_text("utf-8").splitlines()):
+            u = (row.get("url") or "").strip()
+            if is_pdf_url(u):
+                urls.add(u)
+
+    valid = []
+    for u in sorted(urls):
+        if not head_ok(u):
+            continue
+        name = sanitize_name(u)
+        dest = RAW_DIR / name
+        if not dest.exists():
+            data = fetch(u)
+            if not data:
+                continue
+            dest.write_bytes(data)
+            time.sleep(0.3)
+        size = dest.stat().st_size
+        valid.append({
+            "name": name,
+            "url": u,
+            "size": size,
+            "year": parse_year(u),
+            "state": parse_uf(u),
+            "source": "affix",
+        })
+
+    # manifest.json
+    MANIFEST_JSON.write_text(
+        json.dumps({
+            "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "base": "./data/affix/raw/",
+            "items": [{"name": v["name"], "size": v["size"]} for v in sorted(valid, key=lambda x: x["name"].lower())]
+        }, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    # manifest.csv
+    with MANIFEST_CSV.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["name","url","year","state","source"])
+        for v in sorted(valid, key=lambda x: x["name"].lower()):
+            w.writerow([v["name"], v["url"], v["year"], v["state"], v["source"]])
+
+    print(f"OK: {len(valid)} PDFs válidos.")
 
 if __name__ == "__main__":
-    main()
+    main())
