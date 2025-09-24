@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import os, re, json, time
+import os, re, json, time, hashlib, sys
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import requests
@@ -10,31 +10,34 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "affix" / "raw"
 MANIFEST = ROOT / "data" / "affix" / "manifest.json"
 SOURCES = ROOT / "scripts" / "affix_sources.txt"
+LOGFILE = ROOT / "scripts" / "affix_last_run.log"
 
-# UA de navegador para evitar bloqueio por WordPress/CDN
-UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+UA = "CRION-AffixCrawler/1.1 (+GitHub Actions)"
 session = requests.Session()
-session.headers.update({
-    "User-Agent": UA,
-    "Accept": "text/html,application/pdf",
-    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
-})
+session.headers.update({"User-Agent": UA, "Accept": "text/html,application/pdf"})
 
-def is_affix(u: str) -> bool:
+def log(*a):
+    msg = " ".join(map(str, a))
+    print(msg, flush=True)
     try:
-        return urlparse(u).netloc.lower().endswith("affix.com.br")
+        with LOGFILE.open("a", encoding="utf-8") as f:
+            f.write(msg + "\n")
     except Exception:
-        return False
+        pass
 
-def is_pdf_2025(url: str) -> bool:
-    """PDF do domínio Affix e com 2025 em qualquer parte do path ou nome."""
+# aceita PDFs do domínio affix.com.br, priorizando 2025 (padrão -25.pdf ou /2025/)
+YR = r"(?:2025)"
+def is_pdf_ok(url: str) -> bool:
     u = url.split("#")[0].split("?")[0]
     if not u.lower().endswith(".pdf"):
         return False
-    if not is_affix(u):
+    try:
+        netloc = urlparse(u).netloc.lower()
+        if not netloc.endswith("affix.com.br"):
+            return False
+    except Exception:
         return False
-    return "/2025/" in u or re.search(r"2025.*\.pdf$", u, re.I) is not None
+    return (f"/{YR}/" in u) or bool(re.search(rf"-{YR[-2:]}\.pdf$", u, re.I))
 
 def sanitize_name(url: str) -> str:
     name = os.path.basename(urlparse(url).path)
@@ -43,48 +46,43 @@ def sanitize_name(url: str) -> str:
         name += ".pdf"
     return name
 
-def get(url: str, timeout=25, tries=3):
-    for attempt in range(1, tries+1):
-        try:
-            r = session.get(url, timeout=timeout, allow_redirects=True)
-            if r.status_code == 200:
-                return r
-            time.sleep(0.4*attempt)
-        except Exception:
-            time.sleep(0.4*attempt)
+def fetch(url: str, timeout=25):
+    try:
+        r = session.get(url, timeout=timeout, allow_redirects=True)
+        if r.status_code == 200:
+            return r
+        log("HTTP", r.status_code, url)
+    except Exception as e:
+        log("REQ_FAIL", url, e)
     return None
 
 def crawl(start_url: str, max_pages=600):
     seen = set()
     queue = [start_url]
     out = set()
+    domain = urlparse(start_url).netloc.lower()
+
     while queue and len(seen) < max_pages:
         u = queue.pop(0)
         if u in seen:
             continue
         seen.add(u)
-        r = get(u, timeout=20)
-        if not r:
+        r = fetch(u, timeout=20)
+        if not r or "text/html" not in (r.headers.get("Content-Type") or ""):
             continue
-        ctype = (r.headers.get("Content-Type") or "").lower()
-        if "text/html" not in ctype:
-            # se não é HTML, ignora (PDF já é pego pelo link)
-            continue
-
         soup = BeautifulSoup(r.text, "lxml")
         for a in soup.select("a[href]"):
-            href = urljoin(u, a.get("href") or "")
+            href = urljoin(u, a.get("href"))
             href = href.split("#")[0]
-            if is_pdf_2025(href):
+            if is_pdf_ok(href):
                 out.add(href)
                 continue
-            # seguir apenas dentro do domínio affix
             try:
-                if is_affix(href):
+                p = urlparse(href)
+                if p.netloc.lower().endswith("affix.com.br") and p.netloc.lower() == domain:
                     queue.append(href)
             except Exception:
                 pass
-    print(f"[crawl] {start_url} -> {len(out)} PDFs 2025")
     return sorted(out)
 
 def read_sources():
@@ -96,14 +94,14 @@ def read_sources():
         if not line or line.startswith("#"):
             continue
         if line.lower().startswith("crawl "):
-            start = line.split(" ", 1)[1].strip()
+            start = line.split(" ",1)[1].strip()
+            log("CRAWL", start)
             for u in crawl(start):
                 pdfs.add(u)
         elif line.lower().startswith("link "):
-            u = line.split(" ", 1)[1].strip()
-            if is_pdf_2025(u):
+            u = line.split(" ",1)[1].strip()
+            if is_pdf_ok(u):
                 pdfs.add(u)
-    print(f"[sources] total PDFs 2025: {len(pdfs)}")
     return sorted(pdfs)
 
 def ensure_dirs():
@@ -115,17 +113,17 @@ def download_all(urls):
     for u in urls:
         name = sanitize_name(u)
         dest = RAW_DIR / name
-        need = not dest.exists()
+        need = (not dest.exists())
         if need:
-            r = get(u, timeout=40)
+            r = fetch(u, timeout=40)
             if not r or not r.content:
-                print(f"[download] falhou: {u}")
+                log("DL_FAIL", u)
                 continue
             dest.write_bytes(r.content)
-            print(f"[download] {name} ({len(r.content)} bytes)")
+            log("DOWN", name, len(r.content), "bytes")
             time.sleep(0.3)
         size = dest.stat().st_size if dest.exists() else 0
-        rows.append({"name": name, "size": size})
+        rows.append({"name": name, "size": size, "url": u})
     return rows
 
 def write_manifest(items):
@@ -136,21 +134,18 @@ def write_manifest(items):
         "base": "./data/affix/raw/",
         "items": items
     }
-    old = MANIFEST.read_text("utf-8") if MANIFEST.exists() else ""
     new = json.dumps(data, ensure_ascii=False, indent=2)
-    if new != old:
-        MANIFEST.write_text(new, encoding="utf-8")
-        print("[manifest] atualizado")
-    else:
-        print("[manifest] sem mudanças")
+    MANIFEST.write_text(new, encoding="utf-8")
+    log("MANIFEST", MANIFEST)
 
 def main():
+    LOGFILE.write_text("", encoding="utf-8")
     ensure_dirs()
     urls = read_sources()
     if not urls:
-        print("[main] Nenhum PDF 2025 encontrado a partir das fontes.")
+        log("NO_URLS_FOUND")
         write_manifest([])
-        return
+        sys.exit(0)
     items = download_all(urls)
     write_manifest(items)
 
