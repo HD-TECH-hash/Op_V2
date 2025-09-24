@@ -4,13 +4,13 @@
     "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
     "year": "2019",
     "state": "PE",
-    "source": "crawl+seed"
+    "source": "site"
   },
   {
     "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
     "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
-    "year": "2025",
+    "year": "2021",
     "state": "MS",
-    "source": "crawl+seed"
+    "source": "site"
   }
 ]
