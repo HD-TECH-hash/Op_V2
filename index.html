@@ -7,106 +7,68 @@
 <title>RIC AI — CRION</title>
 <style>
   :root{
-    /* Paleta e tokens */
-    --blue:#4889c5;              /* fundo pedido */
-    --blue2:#61a3d9;             /* brilho leve */
-    --ink:#0f172a; 
-    --muted:#667085; 
-    --line:#E7EAF3;
-
-    --alert:#fe0000;
-    --sites:#0001fc;
-    --procs:#fe6700;
-    --search:#31a59c;
-
+    --blue:#4889c5; --blue2:#61a3d9;
+    --ink:#0f172a; --muted:#667085; --line:#E7EAF3;
+    --alert:#fe0000; --sites:#0001fc; --procs:#fe6700; --search:#31a59c;
     --shadow:0 18px 36px rgba(80,217,205,.18),0 8px 24px rgba(80,217,205,.14);
   }
-
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0; 
-    color:var(--ink);
-    font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-    /* Fundo azul #4889c5 com leve radial para profundidade */
+    margin:0;color:var(--ink);font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
     background:
       radial-gradient(800px 400px at 20% 0%, rgba(255,255,255,.25), transparent 60%),
       radial-gradient(900px 520px at 80% -10%, rgba(255,255,255,.18), transparent 65%),
       linear-gradient(180deg, var(--blue2) 0%, var(--blue) 28%, var(--blue) 100%);
   }
-
-  /* Área central da página */
   .wrap{max-width:1260px;margin:0 auto;padding:14px 16px}
-
-  /* Barra de topo: agora dentro do .wrap para alinhar com as janelas */
-  .topbar{
-    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
-    margin-bottom:10px;
-  }
-  .logo-left{height:44px}
-  .logo-right{height:44px; justify-self:end}
-
-  .tools{display:flex; gap:10px; justify-self:end}
-  .tool{
-    width:40px;height:40px;border-radius:12px;border:1px solid #ffffff55;
-    display:grid;place-items:center; cursor:pointer; backdrop-filter:blur(4px);
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
-    transition:.15s; outline:none;
-  }
+  .topbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-bottom:10px}
+  .logo-left,.logo-right{height:44px}
+  .tools{display:flex;gap:10px;justify-self:end}
+  .tool{width:40px;height:40px;border-radius:12px;border:1px solid #ffffff55;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px);box-shadow:0 10px 20px rgba(0,0,0,.15);transition:.15s}
   .tool:hover{transform:translateY(-1px)}
-  .tool-postit{background:#fddb56}
-  .tool-calc{background:#5fa5fa}
-  .tool svg{width:22px;height:22px}
-
-  /* Grid das janelas — 2 colunas em desktop, 1 no mobile */
+  .tool-postit{background:#fddb56}.tool-calc{background:#5fa5fa}.tool svg{width:22px;height:22px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media (max-width:980px){ .grid{grid-template-columns:1fr} }
-
-  /* Cartões */
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;
-    box-shadow:var(--shadow);
-  }
-  .tag{
-    display:inline-flex;align-items:center;gap:8px;color:#fff;border-radius:999px;
-    padding:6px 12px;font-weight:900;font-size:12px;text-transform:uppercase;
-  }
-  .tag.alert{background:var(--alert)}
-  .tag.sites{background:var(--sites)}
-  .tag.procs{background:var(--procs)}
-
+  @media (max-width:980px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow)}
+  .tag{display:inline-flex;align-items:center;gap:8px;color:#fff;border-radius:999px;padding:6px 12px;font-weight:900;font-size:12px;text-transform:uppercase}
+  .tag.alert{background:var(--alert)}.tag.sites{background:var(--sites)}.tag.procs{background:var(--procs)}
   h2{margin:8px 0 10px;font-size:18px}
   .row{display:flex;gap:10px;align-items:center}
   .input{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfcff}
   .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}
-  .btn-search{background:var(--search); color:#053; box-shadow:0 10px 22px rgba(49,165,156,.28)}
+  .btn-search{background:var(--search);color:#053;box-shadow:0 10px 22px rgba(49,165,156,.28)}
   .hint{font-size:12px;color:var(--muted);margin-top:6px}
   .out{white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff}
-
-  /* RIC central */
-  .rr-holder{display:grid; place-items:center}
-  .rr-holder img{max-width:420px;width:100%;height:auto; filter:drop-shadow(0 18px 36px rgba(0,0,0,.18))}
-
-  /* Busy */
+  .rr-holder{display:grid;place-items:center}
+  .rr-holder img{max-width:420px;width:100%;height:auto;filter:drop-shadow(0 18px 36px rgba(0,0,0,.18))}
   .busy{display:flex;align-items:center;gap:8px}
-  .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #00000022;border-top-color:#0006;animation:spin .9s linear infinite}
+  .spinner{width:16px;height:16px;border-radius:50%;border:3px solid #0002;border-top-color:#0006;animation:spin .9s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
   .bar{position:relative;height:6px;border-radius:999px;background:#e9e9ff;overflow:hidden}
   .bar:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#c7b8ff,#a78bfa,#93c5fd);animation:load 1.2s infinite}
   @keyframes load{0%{left:-100%;right:100%}50%{left:0;right:0}100%{left:100%;right:-100%}}
-
   footer{margin:18px 0 8px;text-align:center;color:#eaf4ff;font-weight:700}
+
+  /* -------- Lista de PDFs (Affix) -------- */
+  .affix-box{margin-top:12px;border:1px dashed #c9d5ea;background:#f8fbff;border-radius:12px;padding:10px}
+  .affix-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .affix-items{list-style:none;margin:0;padding:0}
+  .affix-item{padding:10px 0;border-top:1px solid #e8eef7}
+  .affix-actions{display:flex;gap:8px;margin-top:6px}
+  .btn-sm{padding:8px 10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;font-weight:800}
+  .btn-open{background:#eef6ff;border-color:#cfe7ff}
+  .affix-meta{font-size:12px;color:#6b7280}
+  .affix-preview{margin-top:10px;border:1px solid #e6e9f2;border-radius:10px;overflow:hidden;display:none}
+  .affix-iframe{width:100%;height:520px;border:0}
 </style>
 </head>
 <body>
   <div class="wrap">
-
-    <!-- TOPO (alinhado às janelas) -->
     <div class="topbar">
       <img class="logo-left" src="icon2.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/icon2.png';"
            alt="CRION">
-
       <div class="tools">
         <button id="toggleNote" class="tool tool-postit" title="Post-it">
           <svg viewBox="0 0 24 24" fill="none"><path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2"/><path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#222" stroke-width="2"/></svg>
@@ -115,21 +77,16 @@
           <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#0b2555" stroke-width="2" fill="#dbeafe"/><rect x="7" y="6" width="10" height="3" rx="1" fill="#0b2555"/><path d="M8 12h2M8 16h2M12 12h2M12 16h2M16 12h2M16 16h2" stroke="#0b2555" stroke-width="2"/></svg>
         </button>
       </div>
-
       <img class="logo-right" src="HDS.png"
            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/HDS.png';"
            alt="HDSTEC">
     </div>
 
-    <!-- GRID -->
     <div class="grid">
-      <!-- ALERTAS -->
       <section class="card">
         <div class="tag alert">Alertas</div>
         <h2>Controle de alerta</h2>
-        <div class="row">
-          <button id="btnAlert" class="btn btn-search">Pesquisar</button>
-        </div>
+        <div class="row"><button id="btnAlert" class="btn btn-search">Pesquisar</button></div>
         <div class="hint" id="alertBusy" style="display:none">
           <div class="busy"><div class="spinner"></div><div>Pesquisando alerta...</div></div>
           <div class="bar" style="margin-top:6px"></div>
@@ -138,12 +95,11 @@
         <div id="alertResp" style="display:none;font-size:13px;font-weight:600;color:#334155;text-align:center;margin-top:4px;text-transform:lowercase">—</div>
       </section>
 
-      <!-- SITES -->
       <section class="card">
         <div class="tag sites">Sites</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
         <div class="row" style="margin-top:6px">
-          <input id="qSites" class="input" placeholder="Digite sua pergunta .....">
+          <input id="qSites" class="input" placeholder="Digite: ex. manual, estado (SP), 2024 ...">
           <button id="btnSites" class="btn btn-search">Pesquisar</button>
         </div>
         <div class="hint" id="sitesBusy" style="display:none">
@@ -151,16 +107,23 @@
           <div class="bar" style="margin-top:6px"></div>
         </div>
         <div id="outSites" class="out">—</div>
+
+        <!-- PDFs Affix (manifest) -->
+        <div id="affixBox" class="affix-box" style="display:none">
+          <div class="affix-head">
+            <b>PDFs (Affix — índice local)</b>
+            <span id="affixCount" class="affix-meta">0 resultados</span>
+          </div>
+          <ul id="affixList" class="affix-items"></ul>
+        </div>
       </section>
 
-      <!-- RIC central -->
       <div class="rr-holder">
         <img src="rr.png"
              onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ric-crion-operacao/main/rr.png';"
              alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
       </div>
 
-      <!-- PROCEDIMENTOS -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -199,45 +162,35 @@
     </div>
     <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
     <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-      <div class="key op" data-k="C">C</div>
-      <div class="key op" data-k="±">±</div>
-      <div class="key op" data-k="%">%</div>
-      <div class="key op" data-k="/">÷</div>
+      <div class="key op" data-k="C">C</div><div class="key op" data-k="±">±</div><div class="key op" data-k="%">%</div><div class="key op" data-k="/">÷</div>
       <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
       <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
       <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
       <div class="key" data-k="0">0</div><div class="key" data-k="00">00</div><div class="key" data-k=".">.</div><div class="key eq" data-k="=">=</div>
     </div>
-    <style>
-      .key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}
-      .key.op{background:#eef6ff;border-color:#cfe7ff}
-      .key.eq{background:linear-gradient(135deg,#22c55e,#a3e635);color:#053}
-    </style>
+    <style>.key{padding:10px;border-radius:10px;border:1px solid #e6e9f2;background:#f7f8fd;cursor:pointer;text-align:center;font-weight:800}.key.op{background:#eef6ff;border-color:#cfe7ff}.key.eq{background:linear-gradient(135deg,#22c55e,#a3e635);color:#053}</style>
   </div>
 
 <script>
-/* ============ CONFIG GAS (mesmo de antes) ============ */
+/* ===================== CONFIG ===================== */
 const APP_URL = "https://script.google.com/macros/s/AKfycbxnTEhSw1u5Ib0jCqJsURoZM30VfCpfeqKqKvYpXdKgJDUPrw8Q8hScbSzw4zVkI7u0rw/exec";
+const AFFIX_MANIFEST_URL = "data/affix/manifest.json"; // mesmo domínio (GitHub Pages)
 
-/* ============ HELPERS ============ */
+/* ===================== HELPERS ===================== */
 const $ = s => document.querySelector(s);
 const show = (el, on=true)=>{ if(!el) return; el.style.display = on? '' : 'none'; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 function link(url, txt){ return `<a href="${url}" target="_blank" rel="noopener">${esc(txt||url)}</a>`; }
-function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 
-/* ============ CHAMADAS ============ */
+/* ===================== GAS CALL ===================== */
 function call(fn, payload){
   const url = APP_URL + "?fn=" + encodeURIComponent(fn);
-  return fetch(url, {
-    method:"POST",
-    headers:{ "Content-Type":"text/plain" },
-    body: JSON.stringify(payload || {})
-  }).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
+  return fetch(url, { method:"POST", headers:{ "Content-Type":"text/plain" }, body: JSON.stringify(payload||{}) })
+    .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); });
 }
 
-/* ============ WIDGETS ============ */
-const noteWrap = $('#noteWrap'), noteArea = $('#noteArea');
+/* ===================== WIDGETS ===================== */
+const noteWrap=$('#noteWrap'), noteArea=$('#noteArea');
 $('#toggleNote').onclick = ()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
 $('#clearNote').onclick = ()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
 $('#closeNote').onclick = ()=>{ noteWrap.style.display="none"; };
@@ -255,15 +208,15 @@ function press(k){
   if(k==="%"){ calc.buf = String(parseFloat(calc.buf)/100); return refresh(); }
   if("+-*/".includes(k)){ calc.mem=parseFloat(calc.buf); calc.op=k; calc.fresh=true; return; }
   if(k==="=" && calc.op){ const a=calc.mem, b=parseFloat(calc.buf);
-    let v = 0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0? "Erro" : a/b;break;}
-    calc.buf = String(v); calc.op=null; calc.fresh=true; return refresh();
+    let v=0; switch(calc.op){case "+":v=a+b;break;case "-":v=a-b;break;case "*":v=a*b;break;case "/":v=b===0?"Erro":a/b;break;}
+    calc.buf=String(v); calc.op=null; calc.fresh=true; return refresh();
   }
 }
 $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
 $('#toggleCalc').onclick = ()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); };
 $('#closeCalc').onclick = ()=>{ $('#calcWrap').style.display="none"; };
 
-/* ============ ALERTA ============ */
+/* ===================== ALERTA ===================== */
 $('#btnAlert').addEventListener('click', async ()=>{
   const msg=$('#alertMsg'), resp=$('#alertResp');
   show(msg,false); show(resp,false); show($('#alertBusy'),true);
@@ -277,24 +230,97 @@ $('#btnAlert').addEventListener('click', async ()=>{
   }finally{ show($('#alertBusy'),false); }
 });
 
-/* ============ SITES (usa seu GAS chatServer) ============ */
+/* ===================== SITES + AFFIX (manifest) ===================== */
+let AFFIX = null; // cache
+async function loadAffix(){
+  if (AFFIX) return AFFIX;
+  const r = await fetch(AFFIX_MANIFEST_URL, {cache:"no-store"});
+  if(!r.ok) throw new Error("Manifest HTTP "+r.status);
+  AFFIX = await r.json();
+  // Aceita tanto array simples [{name,url,year,state,source}] quanto {items:[...]}
+  if (AFFIX.items) AFFIX = AFFIX.items;
+  return AFFIX;
+}
+function norm(s){ return String(s||"").normalize("NFD").replace(/\p{Diacritic}/gu,"").toLowerCase(); }
+
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
+
 async function doSites(){
   const q=($('#qSites').value||'').trim();
-  if(!q){ $('#outSites').textContent='Digite a pergunta.'; return; }
+  // 1) Chat (GAS) – mantém seu comportamento
   show($('#sitesBusy'),true); $('#outSites').textContent='—';
   try{
-    const qRich = q + " — FORMATO: responda em português e liste as URLs oficiais no final. Substitua notas por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+    const qRich = q ? (q + " — FORMATO: responda em português e liste as URLs oficiais no final. Substitua notas por: 'Fontes oficiais Affix, Alter, Hapvida'.") : "Responda em português.";
     const r = await call('chat',{q:qRich});
     const txt = (r && r.text) ? r.text : '—';
     const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
     $('#outSites').innerHTML = html;
-  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e);
-  }finally{ show($('#sitesBusy'),false); }
+  }catch(e){ $('#outSites').textContent='Erro: '+(e.message||e); }
+  finally{ show($('#sitesBusy'),false); }
+
+  // 2) Índice local Affix (manifest)
+  try{
+    const items = await loadAffix();
+    const list = $('#affixList'); list.innerHTML="";
+    const box = $('#affixBox');
+
+    // Filtro: nome + estado + ano (qualquer termo)
+    const terms = norm(q).split(/\s+/).filter(Boolean);
+    const filtered = items.filter(it=>{
+      const hay = norm([it.name,it.state,it.year].join(" "));
+      return terms.every(t => hay.includes(t));
+    }).slice(0,80); // segurança
+
+    $('#affixCount').textContent = filtered.length ? `${filtered.length} resultados` : "0 resultados";
+    show(box, filtered.length>0);
+
+    filtered.forEach((it,idx)=>{
+      const li = document.createElement('li'); li.className='affix-item';
+      const safeName = esc(it.name||'PDF');
+      const safeUrl = esc(it.url||'#');
+      const meta = esc(`${it.state||'–'} • ${it.year||'–'} • fonte: ${it.source||'site'}`);
+
+      const idPrev = `affix_prev_${idx}`;
+      li.innerHTML = `
+        <div><b>${safeName}</b></div>
+        <div class="affix-meta">${meta}</div>
+        <div class="affix-actions">
+          <a class="btn-sm btn-open" href="${safeUrl}" target="_blank" rel="noopener">Abrir</a>
+          <button class="btn-sm" data-prev="${idPrev}" data-url="${safeUrl}">Prévia</button>
+        </div>
+        <div id="${idPrev}" class="affix-preview">
+          <iframe class="affix-iframe" src="" loading="lazy"></iframe>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+
+    // Delegação: carregar/trocar prévia sob demanda
+    list.addEventListener('click', e=>{
+      const btn = e.target.closest('button[data-prev]');
+      if(!btn) return;
+      const box = document.getElementById(btn.dataset.prev);
+      const iframe = box.querySelector('iframe');
+      if(box.style.display==='none' || !box.style.display){
+        // Usando PDF.js hospedado (sem baixar)
+        const viewer = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + encodeURIComponent(btn.dataset.url);
+        if(!iframe.src) iframe.src = viewer;
+        box.style.display='block';
+        btn.textContent='Fechar prévia';
+      }else{
+        box.style.display='none';
+        btn.textContent='Prévia';
+      }
+    }, {once:true}); // cria apenas 1 listener por render
+  }catch(e){
+    // Silencioso se faltar manifest
+    console.warn('Affix manifest error:', e);
+    show($('#affixBox'), false);
+  }
 }
 
-/* ============ CRION ============ */
+/* ===================== CRION ===================== */
 $('#btnCRION').addEventListener('click', doCRION);
 $('#qCRION').addEventListener('keydown', e=>{ if(e.key==='Enter') doCRION(); });
 async function doCRION(){
@@ -308,7 +334,7 @@ async function doCRION(){
     const frag=document.createDocumentFragment();
     items.forEach((it,idx)=>{
       const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
-      const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+      const meta  = `<div class="hint">Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
       li.innerHTML=`<div><b>${esc(it.name||'arquivo')}</b> • ${link(it.url,'Abrir')}</div>${meta}
                     <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
@@ -320,7 +346,9 @@ async function doCRION(){
         const r = await call('fetchcrionsnippets',{sessionId:res.sessionId, from, limit:6});
         (r.items||[]).forEach(row=>{
           const el=$('#snip_crion_'+row.index);
-          el.innerHTML=(row.snippets && row.snippets.length)? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("") : '<span class="hint">—</span>';
+          el.innerHTML=(row.snippets && row.snippets.length)
+            ? row.snippets.map(s=>`<div style="color:#374151;margin:6px 0">${esc(s)}</div>`).join("")
+            : '<span class="hint">—</span>';
         });
         from = r.to;
       }
