@@ -1,5 +1,16 @@
-[{
-  "generated_at": "",
+{
+  "generated_at": "2025-09-24T14:37:53Z",
   "base": "./data/affix/raw/",
-  "items": []
+  "items": [
+    {
+      "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
+      "size": 2209576,
+      "url": "https://www.affix.com.br/wp-content/uploads/2019/03/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf"
+    },
+    {
+      "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
+      "size": 1847750,
+      "url": "https://www.affix.com.br/wp-content/uploads/2021/03/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf"
+    }
+  ]
 }
