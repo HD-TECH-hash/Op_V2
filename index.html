@@ -7,41 +7,32 @@
 
 <style>
   :root{
-    /* Paleta pedida anteriormente */
     --alert:#fe0000;
     --postit:#fddb56;
     --calc:#5fa5fa;
     --sites:#0001fc;
     --procs:#fe6700;
     --search:#31a59c;
-    --shadow:#50d9cd;
 
     --ink:#0f172a; --muted:#64748b; --line:#e7eef7;
-    --bg-solid:#4889c5; /* Fundo principal */
+    --bg-solid:#4889c5;
   }
-
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
     margin:0; color:var(--ink);
     font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-    /* Fundo azul com leve vinheta */
     background:
       radial-gradient(900px 420px at 30% -200px, #ffffff70 0%, #ffffff00 60%),
       radial-gradient(900px 420px at 85% -220px, #ffffff50 0%, #ffffff00 65%),
       var(--bg-solid);
   }
 
-  /* ========== TOPO / MARCAS (flutuantes, mas alinhadas visualmente às caixas) ========== */
-  .topbar {
-    position: sticky; top: 0; z-index: 40;
-    padding: 12px 16px 0 16px;
-  }
-  .brandrow{
-    max-width:1260px; margin:0 auto; display:grid; grid-template-columns:1fr auto; align-items:center;
-  }
-  .logo-crion { height:44px; object-fit:contain; }
-  .righttools { display:flex; gap:10px; align-items:center; }
+  /* ===== Topo (alinhado com as caixas) ===== */
+  .topbar{position:sticky; top:0; z-index:40; padding:12px 16px 0}
+  .rowmax{max-width:1260px; margin:0 auto; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px}
+  .logo-crion{height:44px; object-fit:contain}
+  .righttools{display:flex; gap:10px; align-items:center}
   .tool{
     width:40px;height:40px;border-radius:12px;border:1px solid #ffffff60;
     display:grid;place-items:center; backdrop-filter:blur(3px);
@@ -50,17 +41,17 @@
   .tool:hover{transform:translateY(-1px)}
   .tool-note{background:var(--postit)}
   .tool-calc{background:var(--calc)}
-  .logo-hds { height:44px; object-fit:contain; filter:drop-shadow(0 2px 6px #0002) }
+  .logo-hds{height:44px; object-fit:contain; filter:drop-shadow(0 2px 6px #0002)}
 
-  /* ========== LAYOUT ========== */
+  /* ===== Layout ===== */
   .wrap{max-width:1260px;margin:0 auto;padding:0 16px 24px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
   .card{
-    position:relative;
     background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;
     box-shadow:0 18px 36px rgba(80,217,205,.18), 0 8px 24px rgba(80,217,205,.14);
+    position:relative;
   }
   .tag{
     display:inline-flex;align-items:center;gap:8px;
@@ -83,23 +74,16 @@
     white-space:pre-wrap;min-height:120px;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:10px;background:#fbfbff
   }
 
-  /* Área de resultados locais (PDFs) */
+  /* PDFs locais */
   .pdf-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
   .pdf-list{margin:8px 0 0;padding:0;list-style:none}
   .pdf-item{border-top:1px solid var(--line);padding:10px 0}
   .pdf-actions{display:flex;gap:8px;align-items:center;margin-top:6px}
   .pill{font-size:11px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:999px;background:#f9fafb;color:#334155}
-
-  /* Prévia (PDF.js) embutida */
   .preview{margin-top:8px;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}
   .preview iframe{width:100%;height:520px;border:0;display:block;background:#f8fafc}
 
-  /* Ícones alinhados à caixa “Sites” */
-  .sites-tools{
-    position:absolute; right:12px; top:12px; display:flex; gap:8px; z-index:1;
-  }
-
-  /* Widgets Post-it / Calculadora */
+  /* Widgets */
   .widget{position:fixed;right:18px;z-index:60;display:none;border-radius:12px;box-shadow:0 14px 30px #0001}
   #noteWrap{top:84px;width:260px;background:#fff3b0;border:1px solid #f5d565;padding:10px}
   #calcWrap{top:260px;width:270px;background:#fff;border:1px solid #dbe0ea;padding:12px}
@@ -113,10 +97,11 @@
 </head>
 <body>
 
-  <!-- TOPO / MARCAS -->
+  <!-- Topo -->
   <div class="topbar">
-    <div class="brandrow">
+    <div class="rowmax">
       <img class="logo-crion" src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png" alt="CRION">
+      <div></div>
       <div class="righttools">
         <button id="toggleNote" class="tool tool-note" title="Post-it">📝</button>
         <button id="toggleCalc" class="tool tool-calc" title="Calculadora">🧮</button>
@@ -148,19 +133,12 @@
       <section class="card" id="cardSites">
         <div class="tag sites">Sites</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
-
-        <!-- Ícones dentro da caixa (alinhados) -->
-        <div class="sites-tools">
-          <button class="tool tool-note" title="Post-it" id="toggleNote2">📝</button>
-          <button class="tool tool-calc" title="Calculadora" id="toggleCalc2">🧮</button>
-        </div>
-
         <div class="row" style="margin-top:6px">
           <input id="qSites" class="input" placeholder="Digite: ex. manual, estado (SP), 2024 …">
           <button id="btnSites" class="btn btn-search">Pesquisar</button>
         </div>
 
-        <!-- Saída “IA” opcional (GAS) -->
+        <!-- Saída IA (só aparece se clicar e houver GAS) -->
         <div class="hint" id="sitesBusy" style="display:none">Pesquisando…</div>
         <div id="outSitesIa" class="out" style="display:none"></div>
         <div class="hint" id="sitesNeedGas" style="display:none;color:#b45309;font-weight:700">
@@ -175,12 +153,12 @@
         <ul id="pdfList" class="pdf-list"></ul>
       </section>
 
-      <!-- RR (mascote) -->
+      <!-- Mascote -->
       <div class="card" style="display:grid;place-items:center;padding:0;background:transparent;border:0;box-shadow:none">
         <img src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png" alt="Olá, meu nome é RIC. Precisa de uma ajuda?" style="max-width:420px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(80,217,205,.24))">
       </div>
 
-      <!-- PROCEDIMENTOS (opcional via GAS) -->
+      <!-- PROCEDIMENTOS -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -223,10 +201,7 @@
     </div>
     <div class="screen" id="scr" style="border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;margin-bottom:10px;background:#f9fbff">0</div>
     <div class="keys" id="keys" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-      <div class="key op" data-k="C">C</div>
-      <div class="key op" data-k="±">±</div>
-      <div class="key op" data-k="%">%</div>
-      <div class="key op" data-k="/">÷</div>
+      <div class="key op" data-k="C">C</div><div class="key op" data-k="±">±</div><div class="key op" data-k="%">%</div><div class="key op" data-k="/">÷</div>
       <div class="key" data-k="7">7</div><div class="key" data-k="8">8</div><div class="key" data-k="9">9</div><div class="key op" data-k="*">×</div>
       <div class="key" data-k="4">4</div><div class="key" data-k="5">5</div><div class="key" data-k="6">6</div><div class="key op" data-k="-">−</div>
       <div class="key" data-k="1">1</div><div class="key" data-k="2">2</div><div class="key" data-k="3">3</div><div class="key op" data-k="+">+</div>
@@ -235,23 +210,17 @@
   </div>
 
 <script>
-/* ================== CONFIG ================== */
-/* Se quiser ativar chamadas ao seu GAS, coloque aqui a URL do Web App (exec):
-   Ex.: const APP_URL = "https://script.google.com/macros/s/AKfycb.../exec";
-   Se deixar vazio, mostramos a mensagem “depende do GAS” e seguimos só com PDFs locais. */
-const APP_URL = "";
+/* ===== Config ===== */
+const APP_URL = ""; // deixe vazio para não usar GAS
+const MANIFEST_URL = "data/affix/manifest.json";
 
-/* Caminho do manifesto local gerado pelo cron */
-const MANIFEST_URL = "data/affix/manifest.json"; // já existe no seu repo
-
-/* ================== HELPERS ================== */
+/* ===== Helpers ===== */
 const $ = s => document.querySelector(s);
 const show = (el,on=true)=>{ if(!el) return; el.style.display = on? "" : "none"; };
 function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 function humanSize(b){ if(!b||b<=0) return "—"; const u=["B","KB","MB","GB"]; let i=0; while(b>=1024&&i<u.length-1){ b/=1024; i++; } return b.toFixed(1)+" "+u[i]; }
 const delay = ms => new Promise(r=>setTimeout(r,ms));
 
-/* GAS via fetch (opcional) */
 async function gas(endpoint, payload){
   if(!APP_URL) throw new Error("NO_GAS");
   const url = APP_URL + "?fn=" + encodeURIComponent(endpoint);
@@ -260,10 +229,9 @@ async function gas(endpoint, payload){
   return r.json();
 }
 
-/* ================== WIDGETS ================== */
+/* ===== Widgets ===== */
 const noteWrap=$('#noteWrap'), noteArea=$('#noteArea');
-function toggleNote(){ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); }
-$('#toggleNote').onclick=toggleNote; $('#toggleNote2').onclick=toggleNote;
+$('#toggleNote').onclick=()=>{ noteWrap.style.display = noteWrap.style.display ? "" : "block"; if(noteWrap.style.display) noteArea.focus(); };
 $('#clearNote').onclick=()=>{ noteArea.value=""; localStorage.removeItem('ric_note'); };
 $('#closeNote').onclick=()=>{ noteWrap.style.display="none"; };
 noteArea.value = localStorage.getItem('ric_note') || "";
@@ -285,50 +253,40 @@ function press(k){
   }
 }
 $('#keys').addEventListener('click', e=>{ const k=e.target.dataset.k; if(k) press(k); });
-function toggleCalc(){ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); }
-$('#toggleCalc').onclick=toggleCalc; $('#toggleCalc2').onclick=toggleCalc; $('#closeCalc').onclick=()=>$('#calcWrap').style.display="none";
+$('#toggleCalc').onclick=()=>{ $('#calcWrap').style.display = $('#calcWrap').style.display? "" : "block"; refresh(); };
+$('#closeCalc').onclick=()=>{ $('#calcWrap').style.display="none"; };
 
-/* ================== ALERTA (opcional) ================== */
+/* ===== Alertas (só mostra aviso se clicar) ===== */
 $('#btnAlert').addEventListener('click', async ()=>{
-  show($('#alertNeedGas'), !APP_URL);
-  if(!APP_URL) return;
-
+  if(!APP_URL){ show($('#alertNeedGas'), true); return; }
   show($('#alertBusy'),true); show($('#alertBox'),false);
   try{
     const r = await gas('getalert',{});
-    const msg = $('#alertMsg'), resp=$('#alertResp');
+    const msg=$('#alertMsg'), resp=$('#alertResp');
     if(!r || r.ok===false){ msg.textContent="Falha ao consultar."; resp.textContent=""; }
     else if(!r.found){ msg.textContent="Sem recado no momento."; resp.textContent=""; }
-    else {
-      msg.textContent="🚨 " + String(r.mensagem||"—").toUpperCase();
-      resp.textContent = r.responsavel ? String(r.responsavel).toLowerCase() : "";
-    }
+    else { msg.textContent="🚨 "+String(r.mensagem||"—").toUpperCase(); resp.textContent=r.responsavel? String(r.responsavel).toLowerCase():""; }
     show($('#alertBox'),true);
   }catch(e){
-    $('#alertMsg').textContent="Erro: "+(e.message||e); show($('#alertBox'),true);
+    $('#alertMsg').textContent='Erro: '+(e.message||e); show($('#alertBox'),true);
   }finally{ show($('#alertBusy'),false); }
 });
 
-/* ================== SITES ================== */
-/* 1) IA opcional via GAS   2) PDF local (manifest) incremental com Prévia (PDF.js) */
-let MANIFEST = null;
-
+/* ===== Sites: IA opcional + PDFs locais ===== */
+let MANIFEST=null;
 async function loadManifestOnce(){
   if(MANIFEST) return MANIFEST;
-  const r = await fetch(MANIFEST_URL, {cache:"no-store"});
+  const r = await fetch(MANIFEST_URL,{cache:"no-store"});
   if(!r.ok) throw new Error("Manifesto não encontrado");
-  MANIFEST = await r.json(); // formato [{name,url,year,state,source}, ...]
+  MANIFEST = await r.json();
   return MANIFEST;
 }
-
-/* Render de um item de PDF */
 function renderPdfItem(it, idx){
-  const li = document.createElement('li');
-  li.className = 'pdf-item';
-  li.innerHTML = `
+  const li=document.createElement('li'); li.className='pdf-item';
+  li.innerHTML=`
     <div><b>${esc(it.name)}</b></div>
     <div class="hint">
-      ${it.year ? `Ano: ${esc(it.year)} • ` : ""}${it.state ? `UF: ${esc(it.state)} • `: ""}
+      ${it.year?`Ano: ${esc(it.year)} • `:""}${it.state?`UF: ${esc(it.state)} • `:""}
       <span class="pill">${esc(new URL(it.url).hostname)}</span>
     </div>
     <div class="pdf-actions">
@@ -337,82 +295,62 @@ function renderPdfItem(it, idx){
     </div>
     <div id="p${idx}" class="preview" style="display:none">
       <iframe title="Prévia PDF"></iframe>
-    </div>
-  `;
+    </div>`;
   li.querySelector('button[data-prev]').addEventListener('click',()=>{
-    const pid = 'p'+idx;
-    const box = document.getElementById(pid);
-    const ifr = box.querySelector('iframe');
-    if(box.style.display){ // abrir
-      const viewer = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + encodeURIComponent(it.url);
-      ifr.src = viewer; // PDF.js (zoom, busca, thumbs…)
-      box.style.display="";
-    }else{
-      box.style.display="none"; ifr.removeAttribute('src');
+    const box=$('#p'+idx), ifr=box.querySelector('iframe');
+    if(box.style.display){ box.style.display="none"; ifr.removeAttribute('src'); }
+    else{
+      const viewer="https://mozilla.github.io/pdf.js/web/viewer.html?file="+encodeURIComponent(it.url);
+      ifr.src=viewer; box.style.display="";
     }
   });
   return li;
 }
-
 async function doSites(){
   const q = ($('#qSites').value||'').trim();
-  if(!q){ $('#outSitesIa').textContent='Digite a pergunta.'; show($('#outSitesIa'),true); return; }
-
-  // IA (opcional via GAS)
-  show($('#sitesNeedGas'), !APP_URL);
-  if(APP_URL){
+  if(!q){ $('#outSitesIa').textContent='Digite a pergunta.'; show($('#outSitesIa'),true); }
+  // IA opcional
+  if(!APP_URL){ show($('#sitesNeedGas'), true); } else {
     show($('#sitesBusy'),true); show($('#outSitesIa'),false);
     try{
-      const qRich = q + " — FORMATO: responda em português; liste URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
+      const qRich = q + " — FORMATO: responda em português; liste as URLs oficiais no final. Substitua observações por: 'Fontes oficiais Affix, Alter, Hapvida'.";
       const r = await gas('chat',{q:qRich});
       const txt = (r && r.text) ? r.text : '—';
       const html = String(txt).replace(/(https?:\/\/[^\s]+)/g, m=>`<a href="${m}" target="_blank" rel="noopener">${m}</a>`);
-      $('#outSitesIa').innerHTML = html;
-      show($('#outSitesIa'),true);
-    }catch(e){
-      $('#outSitesIa').textContent='Erro IA: '+(e.message||e);
-      show($('#outSitesIa'),true);
-    }finally{ show($('#sitesBusy'),false); }
+      $('#outSitesIa').innerHTML = html; show($('#outSitesIa'),true);
+    }catch(e){ $('#outSitesIa').textContent='Erro IA: '+(e.message||e); show($('#outSitesIa'),true); }
+    finally{ show($('#sitesBusy'),false); }
   }
-
-  // PDFs locais (incremental)
-  const list = $('#pdfList'); list.innerHTML=""; $('#pdfCount').textContent='0';
+  // PDFs locais
+  const list=$('#pdfList'); list.innerHTML=""; $('#pdfCount').textContent='0';
   let count=0;
   try{
     const data = await loadManifestOnce();
-    // filtro simples: todos os termos (case-insensitive) precisam aparecer em name ou url/ano/uf
     const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
     const matches = data.filter(it=>{
       const blob = [it.name,it.url,it.year,it.state].map(v=>String(v||'').toLowerCase()).join(' ');
       return terms.every(t=>blob.includes(t));
     });
-
-    // stream incremental
     for(let i=0;i<matches.length;i++){
-      const it = matches[i];
-      list.appendChild(renderPdfItem(it, i));
-      count++; $('#pdfCount').textContent = String(count);
-      if(i%5===0) await delay(20); // respiro pro render
+      list.appendChild(renderPdfItem(matches[i], i));
+      count++; $('#pdfCount').textContent=String(count);
+      if(i%5===0) await delay(20);
     }
     if(count===0){
       const li=document.createElement('li'); li.className='pdf-item';
-      li.innerHTML='<div class="hint">Nenhum PDF local encontrado.</div>';
-      list.appendChild(li);
+      li.innerHTML='<div class="hint">Nenhum PDF local encontrado.</div>'; list.appendChild(li);
     }
   }catch(e){
     const li=document.createElement('li'); li.className='pdf-item';
-    li.innerHTML='<div class="hint" style="color:#b91c1c">Falha ao ler manifest: '+esc(e.message||e)+'</div>';
-    list.appendChild(li);
+    li.innerHTML='<div class="hint" style="color:#b91c1c">Falha ao ler manifest: '+esc(e.message||e)+'</div>'; list.appendChild(li);
   }
 }
 $('#btnSites').addEventListener('click', doSites);
 $('#qSites').addEventListener('keydown', e=>{ if(e.key==='Enter') doSites(); });
 
-/* ================== CRION (opcional via GAS) ================== */
+/* ===== CRION (só mostra aviso se clicar) ===== */
 $('#btnCRION').addEventListener('click', async ()=>{
-  show($('#crionNeedGas'), !APP_URL);
-  if(!APP_URL) return;
-
+  if(!APP_URL){ show($('#crionNeedGas'), true); return; }
   const q = ($('#qCRION').value||'').trim();
   if(!q){ $('#crionStatus').textContent='Digite um termo.'; show($('#crionBox'),true); return; }
   show($('#crionBusy'),true); $('#crionStatus').textContent='Listando arquivos…'; $('#crionList').innerHTML="";
@@ -421,17 +359,15 @@ $('#btnCRION').addEventListener('click', async ()=>{
     if(!res || res.ok===false){ $('#crionStatus').textContent='Erro ao buscar: '+(res&&res.message?res.message:''); show($('#crionBox'),true); return; }
     const items=res.items||[]; $('#crionStatus').textContent=`Resultados: ${items.length}`;
     const frag=document.createDocumentFragment();
-    items.forEach((it,idx)=>{
+    items.forEach((it)=>{
       const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)";
       const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
       li.innerHTML=`<div><b>${esc(it.name||'')}</b> • <a href="${it.url}" target="_blank" rel="noopener">Abrir</a></div>${meta}`;
       frag.appendChild(li);
     });
-    $('#crionList').appendChild(frag);
-    show($('#crionBox'),true);
-  }catch(e){
-    $('#crionStatus').textContent='Erro: '+(e.message||e); show($('#crionBox'),true);
-  }finally{ show($('#crionBusy'),false); }
+    $('#crionList').appendChild(frag); show($('#crionBox'),true);
+  }catch(e){ $('#crionStatus').textContent='Erro: '+(e.message||e); show($('#crionBox'),true); }
+  finally{ show($('#crionBusy'),false); }
 });
 </script>
 </body>
