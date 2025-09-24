@@ -1,0 +1,8 @@
+CRAWL https://www.affix.com.br/tag/backoffice/
+HTTP 403 https://www.affix.com.br/tag/backoffice/
+CRAWL https://www.affix.com.br/tag/recife/
+HTTP 403 https://www.affix.com.br/tag/recife/
+CRAWL https://www.affix.com.br/tag/asscompe/
+HTTP 403 https://www.affix.com.br/tag/asscompe/
+NO_URLS_FOUND
+MANIFEST /home/runner/work/Ricai-crion-operacao/Ricai-crion-operacao/data/affix/manifest.json
