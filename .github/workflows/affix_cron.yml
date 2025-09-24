@@ -3,7 +3,7 @@ name: Affix PDFs nightly
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 6 * * *"  # 06:15 UTC diariamente
+    - cron: "15 6 * * *"   # 06:15 UTC diário
 
 permissions:
   contents: write
@@ -20,22 +20,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps (crawler)
+      - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install lxml
+          pip install requests beautifulsoup4 lxml
 
       - name: Run crawler
         run: python scripts/fetch_affix.py
-
-      # OPCIONAL: gerar thumb/texto via OCR (requer ferramentas nativas)
-      # - name: Install OCR tools
-      #   run: |
-      #     sudo apt-get update
-      #     sudo apt-get install -y poppler-utils tesseract-ocr
-      # - name: Run OCR
-      #   run: python scripts/ocr_affix.py
 
       - name: Commit & push if changed
         run: |
@@ -48,3 +39,13 @@ jobs:
             git commit -m "chore(affix): update PDFs + manifest [skip ci]"
             git push
           fi
+
+      # opcional: guardar log/manifest do job como artefato
+      - name: Upload crawl logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: affix-crawl
+          path: |
+            data/affix/manifest.json
+            scripts/affix_last_run.log
