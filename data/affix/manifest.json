@@ -12,12 +12,5 @@
     "year": "2025",
     "state": "MS",
     "source": "crawl+seed"
-  },
-  {
-    "name": "Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
-    "url": "https://www.affix.com.br/wp-content/uploads/2024/03/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
-    "year": "2024",
-    "state": "BA",
-    "source": "crawl+seed"
   }
 ]
