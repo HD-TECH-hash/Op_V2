@@ -66,7 +66,7 @@
   .tool svg{width:22px;height:22px}
 
   /* ===== CONTEÚDO ===== */
-  .wrap{max-width:1260px;margin:96px auto 24px;padding:0 16px}
+  .wrap{max-width:1260px;margin:100px auto 24px;padding:0 16px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
@@ -125,22 +125,18 @@
 </head>
 <body>
 
-  <!-- TOPO FLUTUANTE (alinhado à largura das caixas) -->
   <div class="floatbar">
-    <!-- Esquerda: icon2 (logo CRION pequeno) -->
     <img class="logo-left" src="icon2.png"
          onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png';"
          alt="icon2">
 
     <div class="tools">
-      <!-- Post-it -->
       <button id="toggleNote" class="tool tool-postit" title="Post-it">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2" fill="#fde68a"/>
           <path d="M19 13h-4a3 3 0 0 0-3 3v4" stroke="#222" stroke-width="2"/>
         </svg>
       </button>
-      <!-- Calculadora -->
       <button id="toggleCalc" class="tool tool-calc" title="Calculadora">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect x="4" y="3" width="16" height="18" rx="2" stroke="#0b2555" stroke-width="2" fill="#dbeafe"/>
@@ -150,7 +146,6 @@
       </button>
     </div>
 
-    <!-- Direita: HDS -->
     <img class="logo-right" src="HDS.png"
          onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png';"
          alt="HDSTEC">
@@ -158,7 +153,6 @@
 
   <div class="wrap">
     <div class="grid">
-      <!-- ALERTA -->
       <section class="card">
         <div class="tag alertas">Alertas</div>
         <h2>Controle de alerta</h2>
@@ -173,7 +167,6 @@
         <div id="alertResp" style="display:none;font-size:13px;font-weight:600;color:#334155;text-align:center;margin-top:4px;text-transform:lowercase">—</div>
       </section>
 
-      <!-- SITES -->
       <section class="card">
         <div class="tag sites">Sites</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -187,21 +180,18 @@
         </div>
         <div id="outSites" class="out">—</div>
 
-        <!-- PDFs (Scraping) -->
         <div style="margin-top:10px;font-weight:800">PDFs (Scraping)
           <span id="affixCount" class="hint" style="margin-left:8px">0 resultado(s)</span>
         </div>
         <div id="affixList" class="out">—</div>
       </section>
 
-      <!-- RR.png (abaixo do Alerta) -->
       <div class="rr-holder">
         <img src="rr.png"
              onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/rr.png';"
              alt="Olá, meu nome é RIC. Precisa de uma ajuda?">
       </div>
 
-      <!-- PROCEDIMENTOS (abaixo de Sites) -->
       <section class="card">
         <div class="tag procs">Procedimentos</div>
         <h2>CRION COMERCIAL (AFFIX, ALTER e CONECTA PLAN)</h2>
@@ -223,7 +213,6 @@
     </footer>
   </div>
 
-  <!-- WIDGETS -->
   <div id="noteWrap" style="position:fixed;right:18px;top:86px;z-index:60;display:none;width:260px;background:#fff3b0;border:1px solid #f5d565;border-radius:12px;box-shadow:0 14px 30px #0001;padding:10px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <b>Post-it</b>
@@ -446,7 +435,7 @@ async function doCRION(){
       const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
       const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
       li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
-                    <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
+                   <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
     });
     $('#crionList').appendChild(frag);
