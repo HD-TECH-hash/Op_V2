@@ -25,8 +25,8 @@
     --bg2:#3f7eb9;
 
     /* PDFs – laranja bem clarinho */
-    --pdf-bg:#fff7ed;   /* orange-50 */
-    --pdf-bd:#ffedd5;   /* orange-100 */
+    --pdf-bg:#fff7ed;   /* orange-50 */
+    --pdf-bd:#ffedd5;   /* orange-100 */
   }
 
   *{box-sizing:border-box}
@@ -34,18 +34,16 @@
   body{
     margin:0;color:var(--ink);
     font:14px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-    background:
-      radial-gradient(1200px 520px at 15% -10%, #ffffff18 0, #ffffff0a 50%, #0000 80%),
-      linear-gradient(180deg, var(--bg1), var(--bg2));
+    background: var(--bg1);
   }
 
   /* ===== TOPO FLUTUANTE (alinhado à wrap) ===== */
   .floatbar{
-    position:fixed; z-index:50;
+    z-index:50;
     left:50%; transform:translateX(-50%);
     top:14px;
-    width:calc(1260px + 32px);      /* max-width da wrap + padding (16+16) */
-    max-width:calc(100% - 32px);    /* respeita bordas em telas menores */
+    width:calc(1260px + 32px);      /* max-width da wrap + padding (16+16) */
+    max-width:calc(100% - 32px);    /* respeita bordas em telas menores */
     display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
     pointer-events:none;
   }
@@ -129,7 +127,7 @@
         <img class="logo-left" src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/icon2.png"
          alt="icon2">
 
-        <div class="tools">
+    <div class="tools">
             <button id="toggleNote" class="tool tool-postit" title="Post-it">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M8 3h8a3 3 0 0 1 3 3v7l-7 7H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" stroke="#222" stroke-width="2" fill="#fde68a"/>
@@ -143,10 +141,9 @@
           <path d="M8 12h2M8 16h2M12 12h2M12 16h2M16 12h2M16 16h2" stroke="#0b2555" stroke-width="2"/>
         </svg>
       </button>
-    </div>
-
         <img class="logo-right" src="https://raw.githubusercontent.com/HD-TECH-hash/Ricai-crion-operacao/main/HDS.png"
-         alt="HDSTEC">
+             alt="HDSTEC">
+    </div>
   </div>
 
   <div class="wrap">
@@ -310,7 +307,7 @@ $('#btnAlert').addEventListener('click', async ()=>{
 });
 
 /* ======= AFFIX PDFs (CSV local) ======= */
-/* CSV esperado em: data/affix/affix_pdfs_manifest.csv  (cabeçalho: name,url) */
+/* CSV esperado em: data/affix/affix_pdfs_manifest.csv  (cabeçalho: name,url) */
 const AFFIX_CSV_URL = "data/affix/affix_pdfs_manifest.csv";
 let AFFIX_PDFS = [];
 
@@ -331,7 +328,7 @@ function parseAffixCSV(text){
     const idx = line.indexOf(",");
     if (idx === -1) continue;
     const name = line.slice(0, idx).trim();
-    const url  = line.slice(idx + 1).trim();
+    const url  = line.slice(idx + 1).trim();
     if (name && url) out.push({ name, url });
   }
   return out;
@@ -348,7 +345,7 @@ function googleViewerURL(fileUrl){
 }
 
 async function searchAffixPDFs(q){
-  const list  = $('#affixList');
+  const list  = $('#affixList');
   const badge = $('#affixCount');
   try { await loadAffixCSV(); }
   catch(e){ badge.textContent='erro ao ler CSV'; list.textContent='Falha: '+(e.message||e); return; }
@@ -360,7 +357,7 @@ async function searchAffixPDFs(q){
   const results = AFFIX_PDFS.filter(r =>
     tokens.every(t =>
       (r.name && r.name.toLowerCase().includes(t)) ||
-      (r.url  && r.url.toLowerCase().includes(t))
+      (r.url  && r.url.toLowerCase().includes(t))
     )
   );
 
@@ -430,7 +427,7 @@ async function doCRION(){
     const frag=document.createDocumentFragment();
     items.forEach((it,idx)=>{
       const li=document.createElement('li'); li.style.padding="10px 0"; li.style.borderTop="1px solid var(--line)"; li.id='crion_'+idx;
-      const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
+      const meta  = `<div class="hint">Tamanho: ${humanSize(it.size||0)} • Atualizado: ${it.updated? new Date(it.updated).toLocaleString(): "—"}</div>`;
       li.innerHTML=`<div><b>${esc(cleanName(it.name))}</b> • ${link(it.url,'Abrir')}</div>${meta}
                     <div class="hint" id="snip_crion_${idx}">Carregando prévias…</div>`;
       frag.appendChild(li);
