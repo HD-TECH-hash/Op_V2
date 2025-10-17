@@ -1,22 +1,23 @@
-// codigo.js — CRION busca de alta precisão (index local, zero alucinação)
+// codigo.js — CRION busca de alta precisão (index local, zero alucinação, reforço ES⇄Espírito Santo)
 
 /* ===== UFs ===== */
 const UF_MAP = {
   ac:["acre","ac"], al:["alagoas","al"], ap:["amapa","amapá","ap"], am:["amazonas","am"],
   ba:["bahia","ba"], ce:["ceara","ceará","ce"], df:["distrito federal","df","brasilia","brasília"],
-  es:["espirito santo","espírito santo","es"], go:["goias","goiás","go"], ma:["maranhao","maranhão","ma"],
-  mt:["mato grosso","mt"], ms:["mato grosso do sul","ms"], mg:["minas gerais","mg"],
-  pa:["para","pará","pa"], pb:["paraiba","paraíba","pb"], pr:["parana","paraná","pr"],
-  pe:["pernambuco","pe"], pi:["piaui","piauí","pi"], rj:["rio de janeiro","rj"],
-  rn:["rio grande do norte","rn"], rs:["rio grande do sul","rs"], ro:["rondonia","rondônia","ro"],
-  rr:["roraima","rr"], sc:["santa catarina","sc"], sp:["sao paulo","são paulo","sp"],
-  se:["sergipe","se"], to:["tocantins","to"]
+  es:["espirito santo","espírito santo","es","es manual","manual es"], // reforço para Espírito Santo e variações
+  go:["goias","goiás","go"], ma:["maranhao","maranhão","ma"], mt:["mato grosso","mt"],
+  ms:["mato grosso do sul","ms"], mg:["minas gerais","mg"], pa:["para","pará","pa"],
+  pb:["paraiba","paraíba","pb"], pr:["parana","paraná","pr"], pe:["pernambuco","pe"],
+  pi:["piaui","piauí","pi"], rj:["rio de janeiro","rj"], rn:["rio grande do norte","rn"],
+  rs:["rio grande do sul","rs"], ro:["rondonia","rondônia","ro"], rr:["roraima","rr"],
+  sc:["santa catarina","sc"], sp:["sao paulo","são paulo","sp"], se:["sergipe","se"],
+  to:["tocantins","to"]
 };
 
 /* ===== Cidades e aliases ===== */
 const CITY_ALIASES = {
   "sao cristovao":["s.cristovao","s cristovao","sao-cristovao","sao cristóvão","s.cristovão","s cristovão"],
-  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado","samp"],
+  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado","samp","samp bernardo"], // inclui SAMP
   "sao jose dos campos":["sjc","s jose dos campos","s.jose dos campos"],
   "belo horizonte":["bh"], "rio de janeiro":["rj capital","rio"], "sao paulo":["sp capital","sampa"],
   "porto alegre":["poa"], "cuiaba":["cuiabá"], "goiania":["goiânia"], "joao pessoa":["joão pessoa"],
@@ -25,16 +26,19 @@ const CITY_ALIASES = {
   "maranhao":["ma"], "amazonas":["am"], "sergipe":["se"], "pernambuco":["pe"], "para":["pará","pa"]
 };
 
-/* ===== Token especial → cidade/UF ===== */
+/* ===== Tokens especiais ===== */
 const SPECIAL_CITY_TOKENS = {
-  "samp": { city:"sao bernardo", uf:"es" } // SAMP implica ES + São Bernardo
+  "samp": { city:"sao bernardo", uf:"es" }, // SAMP = São Bernardo + Espírito Santo
+  "espirito": { uf:"es" },
+  "espirito santo": { uf:"es" },
+  "espírito": { uf:"es" },
+  "espírito santo": { uf:"es" }
 };
 
 /* ===== Normalização ===== */
 const STOP = new Set(["de","da","do","das","dos","e","a","o","as","os","the"]);
 const norm = s => String(s||"").toLowerCase().normalize("NFD")
   .replace(/\p{Diacritic}/gu,"").replace(/[._]/g," ").replace(/\s+/g," ").trim();
-
 const tokenize = s => norm(s).replace(/[-/]/g," ")
   .replace(/[^\p{Letter}\p{Number}\s]/gu," ").split(/\s+/).filter(t=>t && !STOP.has(t));
 
@@ -49,18 +53,16 @@ function extractMY(nameN){
 }
 const dateScore = item => { const my=extractMY(item.nameN); return my? my.year*12+my.month : 0; };
 
-/* ===== Helpers de match ===== */
+/* ===== Helpers ===== */
 const wordsSlug = s => ` ${tokenize(s).join(" ")} `;
 const containsWord = (slug,t)=>slug.includes(` ${t} `);
 const containsPhrase=(slug,phrase)=>{ const p=tokenize(phrase).join(" "); return p && slug.includes(` ${p} `); };
 
-/* UF forte: bordas não alfabéticas */
 function hasUFStrong(raw, uf){
   const sig = uf.toUpperCase();
   const re = new RegExp(`(^|[^A-Za-z])${sig}([^A-Za-z]|$)`);
   return re.test(raw);
 }
-/* Regra extra: “ES-Manual” ou “Manual-ES” força ES */
 function hasESManual(raw){
   return /(^|[^A-Za-z])ES([^A-Za-z].*manual|$)|manual[^A-Za-z].*ES([^A-Za-z]|$)/i.test(raw);
 }
@@ -71,7 +73,7 @@ function passUFStrict(it, uf){
   return hasUFStrong(it.nameRaw, uf) || hasUFStrong(it.urlRaw, uf);
 }
 
-/* ===== Index ===== */
+/* ===== Indexação ===== */
 function buildIndex(rows){
   const seen=new Set(), out=[];
   for(const r of rows){
@@ -92,7 +94,7 @@ function buildIndex(rows){
       if(altsN.some(a=>containsWord(slug,a))) ufs.add(uf);
       else if(hasUFStrong(nameRaw,uf) || hasUFStrong(urlRaw,uf)) ufs.add(uf);
     }
-    if(hasESManual(nameRaw) || hasESManual(urlRaw)) ufs.add("es"); // reforço ES-Manual
+    if(hasESManual(nameRaw) || hasESManual(urlRaw)) ufs.add("es");
 
     const cities=new Set();
     for(const [base,alts] of Object.entries(CITY_ALIASES)){
@@ -109,47 +111,31 @@ function buildIndex(rows){
 function expandQuery(q){
   const qn=norm(q);
   const parts=tokenize(qn);
-
-  // Detecta UF e considera "apenas UF" quando TODOS os tokens são aliases da UF
   let uf=null;
+
   for(const [k,alts] of Object.entries(UF_MAP)){
     const aliasTokens = new Set([k, ...alts.flatMap(a=>tokenize(a))]);
     const allFromUF = parts.length>0 && parts.every(t=>aliasTokens.has(t));
     if(allFromUF || alts.some(a=>qn.includes(norm(a)))){ uf=k; break; }
   }
-  if(uf && parts.every(t=>new Set([uf,...UF_MAP[uf].flatMap(a=>tokenize(a))]).has(t))){
-    return {terms:new Set([uf]), uf};
-  }
 
-  // Lock por cidade (frase)
-  for(const [base,alts] of Object.entries(CITY_ALIASES)){
-    const all=[base,...alts.map(norm)];
-    if(all.some(a=>qn.includes(a)))
-      return {terms:new Set([...tokenize(base),...(uf?[uf]:[])]), uf, cityLock:base};
-  }
+  // Reforço direto para Espírito Santo
+  if(qn.includes("espirito santo") || qn.includes("espírito santo")) uf="es";
 
-  // Tokens especiais
   for(const [tok,rule] of Object.entries(SPECIAL_CITY_TOKENS)){
     if(parts.includes(tok)){
       const lockUF=uf||rule.uf;
-      return {terms:new Set([tok,...tokenize(rule.city),lockUF]), uf:lockUF, cityLock:rule.city};
+      return {terms:new Set([tok,...tokenize(rule.city||""),lockUF]), uf:lockUF, cityLock:rule.city};
     }
   }
 
-  // Expansões leves
-  const extra=[];
-  for(const [base,alts] of Object.entries(CITY_ALIASES)){
-    const all=new Set([base,...alts.map(norm)]);
-    for(const t of parts){ if(all.has(t)){ extra.push(base); break; } }
-  }
-  return {terms:new Set([...parts,...extra,...(uf?[uf]:[])]), uf};
+  return {terms:new Set([...parts,(uf||"")].filter(Boolean)), uf};
 }
 
 /* ===== Busca ===== */
 function search(index,q){
   if(!index?.length) return [];
   const qn=norm(q||""); if(!qn) return [];
-
   const {hasAffix,hasAlter}=detectBrands(qn);
   const {terms,uf,cityLock}=expandQuery(q);
   const brandFilter=hasAffix||hasAlter;
@@ -159,43 +145,14 @@ function search(index,q){
     (hasAlter&&it.url.includes(BRAND_DOMAINS.alter));
   const passCity=it=>!cityLock||containsPhrase(it.slug,cityLock);
 
-  // UF-only fast path: ex. "es" / "espirito santo"
-  if (uf && terms.size===1 && [...terms][0]===uf){
-    const arr=[];
-    for(const it of index){
-      if(!passBrand(it)) continue;
-      if(!passUFStrict(it, uf)) continue;
-      if(!passCity(it)) continue;
-      arr.push({it, score:800 + it.dscore});
-    }
-    return arr
-      .sort((a,b)=> b.score-a.score || a.it.name.localeCompare(b.it.name))
-      .map(x=>({name:x.it.name, url:x.it.url}));
-  }
-
-  // 1) frase exata
-  const exact=[];
+  const results=[];
   for(const it of index){
-    if(!passBrand(it) || !passUFStrict(it,uf) || !passCity(it)) continue;
-    if(it.nameN.includes(qn) || it.urlN.includes(qn)) exact.push({it,score:1000+it.dscore});
+    if(!passBrand(it)||!passUFStrict(it,uf)||!passCity(it)) continue;
+    const match=Array.from(terms).some(t=>containsWord(it.slug,t)||it.kws.has(t));
+    if(match) results.push({it,score:500+it.dscore/100});
   }
-  if(exact.length)
-    return exact.sort((a,b)=>b.score-a.score||a.it.name.localeCompare(b.it.name))
-      .map(x=>({name:x.it.name,url:x.it.url}));
-
-  // 2) AND estrito
-  const strict=[];
-  for(const it of index){
-    if(!passBrand(it) || !passUFStrict(it,uf) || !passCity(it)) continue;
-    const ok=[...terms].every(t=>containsWord(it.slug,t)||it.kws.has(t));
-    if(!ok) continue;
-    strict.push({it,score:500+terms.size*10+it.dscore/100});
-  }
-  if(strict.length)
-    return strict.sort((a,b)=>b.score-a.score||a.it.name.localeCompare(b.it.name))
-      .map(x=>({name:x.it.name,url:x.it.url}));
-
-  return [];
+  return results.sort((a,b)=>b.score-a.score||a.it.name.localeCompare(b.it.name))
+                .map(x=>({name:x.it.name,url:x.it.url}));
 }
 
 /* ===== Export ===== */
