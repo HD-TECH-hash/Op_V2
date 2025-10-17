@@ -1,6 +1,6 @@
 // codigo.js — CRION busca híbrida de alta precisão (somente index → zero alucinação)
 
-// ===== UF =====
+/* ===== UF ===== */
 const UF_MAP = {
   ac:["acre","ac"], al:["alagoas","al"], ap:["amapa","amapá","ap"], am:["amazonas","am"],
   ba:["bahia","ba"], ce:["ceara","ceará","ce"], df:["distrito federal","df","brasilia","brasília"],
@@ -13,27 +13,34 @@ const UF_MAP = {
   se:["sergipe","se"], to:["tocantins","to"]
 };
 
-// ===== CIDADES (aliases) =====
+/* ===== CIDADES (aliases) ===== */
 const CITY_ALIASES = {
-  "sao cristovao":["s.cristovao","s cristovao","sao-cristovao","sao cristóvão","s.cristovão","s cristovão"],
-  "sao jose dos campos":["sjc","s jose dos campos","s.jose dos campos"],
-  "belo horizonte":["bh"],
-  "rio de janeiro":["rj capital","rio"],
-  "sao paulo":["sp capital","sampa"],
-  "porto alegre":["poa"],
-  "cuiaba":["cuiabá"],
-  "goiania":["goiânia"],
-  "joao pessoa":["joão pessoa"],
-  "tres lagoas":["três lagoas"],
-  "mossoro":["mossoró"],
-  "uberlandia":["uberlândia"],
-  "ribeirao preto":["ribeirão preto"],
-  "vitoria de santo antao":["vitória de santo antão"],
-  "maranhao":["ma"], "amazonas":["am"], "sergipe":["se"], "pernambuco":["pe"],
-  "para":["pará","pa"]
+  "sao cristovao": ["s.cristovao","s cristovao","sao-cristovao","sao cristóvão","s.cristovão","s cristovão"],
+  "sao jose dos campos": ["sjc","s jose dos campos","s.jose dos campos"],
+  "sao bernardo": ["s bernardo","s. bernardo","sao-bernardo","sao bernado","bernardo","linha samp","samp"],
+  "belo horizonte": ["bh"],
+  "rio de janeiro": ["rj capital","rio"],
+  "sao paulo": ["sp capital","sampa"],
+  "porto alegre": ["poa"],
+  "cuiaba": ["cuiabá"],
+  "goiania": ["goiânia"],
+  "joao pessoa": ["joão pessoa"],
+  "tres lagoas": ["três lagoas"],
+  "mossoro": ["mossoró"],
+  "uberlandia": ["uberlândia"],
+  "ribeirao preto": ["ribeirão preto"],
+  "vitoria de santo antao": ["vitória de santo antão"],
+  "maranhao": ["ma"], "amazonas": ["am"], "sergipe": ["se"], "pernambuco": ["pe"],
+  "para": ["pará","pa"]
 };
 
-// ===== Normalização e tokenização =====
+/* ===== Token especial → cidade quando combinado com UF =====
+   Regra pedida: "samp" + ES ⇒ trava em São Bernardo */
+const SPECIAL_CITY_TOKENS = {
+  "samp": { city: "sao bernardo", uf: "es" }
+};
+
+/* ===== Normalização e tokenização ===== */
 const STOP = new Set(["de","da","do","das","dos","e","a","o","as","os","the"]);
 const norm = s => String(s||"")
   .toLowerCase()
@@ -49,18 +56,18 @@ const tokenize = s => norm(s)
   .split(/\s+/)
   .filter(t => t && !STOP.has(t));
 
-// ===== Marcas/domínios =====
+/* ===== Marcas/domínios ===== */
 const BRAND_DOMAINS = { affix:"affix.com.br", alter:"alter.com.br" };
 const detectBrands = qn => ({ hasAffix:/\baffix\b/i.test(qn), hasAlter:/\balter\b/i.test(qn) });
 
-// ===== Data no nome → boost =====
+/* ===== Data no nome → boost ===== */
 function extractMY(nameN){
   const m = nameN.match(/[-_](0[1-9]|1[0-2])[-_](\d{2})(?=($|[^0-9]))/);
   if(!m) return null; return {year:2000+ +m[2], month:+m[1]};
 }
 const dateScore = item => { const my=extractMY(item.nameN); return my? my.year*12+my.month : 0; };
 
-// ===== helpers de match =====
+/* ===== helpers de match ===== */
 const wordsSlug = s => ` ${tokenize(s).join(" ")} `;
 const containsWord = (slug, t) => slug.includes(` ${t} `);
 const containsPhrase = (slug, phrase) => {
@@ -71,7 +78,14 @@ const countWholeWords = (item, terms) => {
   let c=0; for(const t of terms){ if(containsWord(item.slug,t) || item.kws.has(t)) c++; } return c;
 };
 
-// ===== Monta índice =====
+function queryHasUF(qn, ufKey){
+  const alts = new Set([ufKey, ...(UF_MAP[ufKey]||[]).map(norm)]);
+  const toks = new Set(tokenize(qn));
+  for(const a of alts){ if(toks.has(a) || qn.includes(a)) return true; }
+  return false;
+}
+
+/* ===== Monta índice ===== */
 function buildIndex(rows){
   const seen=new Set(), out=[];
   for(const r of rows){
@@ -103,7 +117,7 @@ function buildIndex(rows){
   return out;
 }
 
-// ===== Expansão de consulta =====
+/* ===== Expansão de consulta ===== */
 function expandQuery(q){
   const qn = norm(q);
   const parts = tokenize(qn);
@@ -114,13 +128,20 @@ function expandQuery(q){
     if(all.has(qn)) return {terms:new Set(all), uf};
   }
 
-  // trava por cidade (frase)
+  // trava por cidade (frase completa)
   for(const [base,alts] of Object.entries(CITY_ALIASES)){
     const all = [base,...alts.map(norm)];
     if(all.some(a => qn.includes(a))) return {terms:new Set(tokenize(base)), cityLock:base};
   }
 
-  // aliases de cidade por token
+  // token especial + UF ⇒ cityLock
+  for(const [tok,rule] of Object.entries(SPECIAL_CITY_TOKENS)){
+    if(parts.includes(tok) && rule.uf && queryHasUF(qn, rule.uf)){
+      return {terms:new Set([tok, rule.city, rule.uf]), uf:rule.uf, cityLock:rule.city};
+    }
+  }
+
+  // aliases de cidade por token → só adiciona termos
   const extra=[];
   for(const [base,alts] of Object.entries(CITY_ALIASES)){
     const all = new Set([base,...alts.map(norm)]);
@@ -130,7 +151,7 @@ function expandQuery(q){
   return {terms:new Set([...parts,...extra])};
 }
 
-// ===== Busca =====
+/* ===== Busca ===== */
 function search(index, q){
   if(!index || !index.length) return [];
   const qOrig = String(q||"").trim(); if(!qOrig) return [];
@@ -160,7 +181,7 @@ function search(index, q){
                 .map(x=>({name:x.it.name,url:x.it.url}));
   }
 
-  // 2) AND estrito por palavra (exige TODOS os termos)
+  // 2) AND estrito por palavra (todos os termos)
   const strict=[];
   for(const it of index){
     if(!passBrand(it) || !passCityLock(it)) continue;
@@ -179,7 +200,7 @@ function search(index, q){
                  .map(x=>({name:x.it.name,url:x.it.url}));
   }
 
-  // 3) fallback parcial SOMENTE se busca tem 1 termo e sem UF/cidade
+  // 3) fallback parcial só quando 1 termo e sem UF/cidade
   if(terms.size===1 && !uf && !cityLock){
     const soft=[];
     for(const it of index){
@@ -195,6 +216,6 @@ function search(index, q){
   return [];
 }
 
-// ===== exporta (browser global) =====
+/* ===== exporta (browser) ===== */
 window.buildIndex = buildIndex;
 window.search     = search;
