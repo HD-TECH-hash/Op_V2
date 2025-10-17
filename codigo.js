@@ -16,7 +16,7 @@ const UF_MAP = {
 /* ===== Cidades e aliases ===== */
 const CITY_ALIASES = {
   "sao cristovao":["s.cristovao","s cristovao","sao-cristovao","sao cristóvão","s.cristovão","s cristovão"],
-  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado","samp"], // inclui SAMP
+  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado","samp"],
   "sao jose dos campos":["sjc","s jose dos campos","s.jose dos campos"],
   "belo horizonte":["bh"], "rio de janeiro":["rj capital","rio"], "sao paulo":["sp capital","sampa"],
   "porto alegre":["poa"], "cuiaba":["cuiabá"], "goiania":["goiânia"], "joao pessoa":["joão pessoa"],
@@ -27,7 +27,7 @@ const CITY_ALIASES = {
 
 /* ===== Token especial → cidade/UF ===== */
 const SPECIAL_CITY_TOKENS = {
-  "samp": { city:"sao bernardo", uf:"es" } // SAMP no nome implica ES + São Bernardo
+  "samp": { city:"sao bernardo", uf:"es" } // SAMP implica ES + São Bernardo
 };
 
 /* ===== Normalização ===== */
@@ -118,11 +118,10 @@ function expandQuery(q){
     if(allFromUF || alts.some(a=>qn.includes(norm(a)))){ uf=k; break; }
   }
   if(uf && parts.every(t=>new Set([uf,...UF_MAP[uf].flatMap(a=>tokenize(a))]).has(t))){
-    // Ex.: "espirito santo" -> termos só "es"
     return {terms:new Set([uf]), uf};
   }
 
-  // Lock por cidade
+  // Lock por cidade (frase)
   for(const [base,alts] of Object.entries(CITY_ALIASES)){
     const all=[base,...alts.map(norm)];
     if(all.some(a=>qn.includes(a)))
@@ -159,6 +158,20 @@ function search(index,q){
     (hasAffix&&it.url.includes(BRAND_DOMAINS.affix))||
     (hasAlter&&it.url.includes(BRAND_DOMAINS.alter));
   const passCity=it=>!cityLock||containsPhrase(it.slug,cityLock);
+
+  // UF-only fast path: ex. "es" / "espirito santo"
+  if (uf && terms.size===1 && [...terms][0]===uf){
+    const arr=[];
+    for(const it of index){
+      if(!passBrand(it)) continue;
+      if(!passUFStrict(it, uf)) continue;
+      if(!passCity(it)) continue;
+      arr.push({it, score:800 + it.dscore});
+    }
+    return arr
+      .sort((a,b)=> b.score-a.score || a.it.name.localeCompare(b.it.name))
+      .map(x=>({name:x.it.name, url:x.it.url}));
+  }
 
   // 1) frase exata
   const exact=[];
