@@ -16,8 +16,8 @@ const UF_MAP = {
 /* ===== Cidades e aliases ===== */
 const CITY_ALIASES = {
   "sao cristovao":["s.cristovao","s cristovao","sao-cristovao","sao cristóvão","s.cristovão","s cristovão"],
+  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado","samp"], // inclui SAMP
   "sao jose dos campos":["sjc","s jose dos campos","s.jose dos campos"],
-  "sao bernardo":["s.bernardo","s bernardo","sao-bernardo","sao bernado"],
   "belo horizonte":["bh"], "rio de janeiro":["rj capital","rio"], "sao paulo":["sp capital","sampa"],
   "porto alegre":["poa"], "cuiaba":["cuiabá"], "goiania":["goiânia"], "joao pessoa":["joão pessoa"],
   "tres lagoas":["três lagoas"], "mossoro":["mossoró"], "uberlandia":["uberlândia"],
@@ -27,7 +27,7 @@ const CITY_ALIASES = {
 
 /* ===== Token especial → cidade/UF ===== */
 const SPECIAL_CITY_TOKENS = {
-  "samp": { city:"sao bernardo", uf:"es" } // “SAMP” = São Bernardo (ES)
+  "samp": { city:"sao bernardo", uf:"es" } // SAMP no nome implica ES + São Bernardo
 };
 
 /* ===== Normalização ===== */
@@ -42,13 +42,14 @@ const tokenize = s => norm(s).replace(/[-/]/g," ")
 const BRAND_DOMAINS = { affix:"affix.com.br", alter:"alter.com.br" };
 const detectBrands = qn => ({ hasAffix:/\baffix\b/i.test(qn), hasAlter:/\balter\b/i.test(qn) });
 
-/* ===== Util ===== */
+/* ===== Datas ===== */
 function extractMY(nameN){
   const m = nameN.match(/[-_](0[1-9]|1[0-2])[-_](\d{2})(?=($|[^0-9]))/);
   return m ? {year:2000+ +m[2], month:+m[1]} : null;
 }
 const dateScore = item => { const my=extractMY(item.nameN); return my? my.year*12+my.month : 0; };
 
+/* ===== Helpers de match ===== */
 const wordsSlug = s => ` ${tokenize(s).join(" ")} `;
 const containsWord = (slug,t)=>slug.includes(` ${t} `);
 const containsPhrase=(slug,phrase)=>{ const p=tokenize(phrase).join(" "); return p && slug.includes(` ${p} `); };
@@ -109,22 +110,26 @@ function expandQuery(q){
   const qn=norm(q);
   const parts=tokenize(qn);
 
-  let uf=null, aliasSet=null;
+  // Detecta UF e considera "apenas UF" quando TODOS os tokens são aliases da UF
+  let uf=null;
   for(const [k,alts] of Object.entries(UF_MAP)){
-    const alias=[k,...alts.map(norm)];
-    if(alias.some(a=>parts.includes(a)||qn.includes(a))){ uf=k; aliasSet=new Set(alias); break; }
+    const aliasTokens = new Set([k, ...alts.flatMap(a=>tokenize(a))]);
+    const allFromUF = parts.length>0 && parts.every(t=>aliasTokens.has(t));
+    if(allFromUF || alts.some(a=>qn.includes(norm(a)))){ uf=k; break; }
   }
-  if(uf){
-    const onlyUF=[...parts].every(t=>aliasSet.has(t));
-    if(onlyUF) return {terms:new Set([uf]), uf};
+  if(uf && parts.every(t=>new Set([uf,...UF_MAP[uf].flatMap(a=>tokenize(a))]).has(t))){
+    // Ex.: "espirito santo" -> termos só "es"
+    return {terms:new Set([uf]), uf};
   }
 
+  // Lock por cidade
   for(const [base,alts] of Object.entries(CITY_ALIASES)){
     const all=[base,...alts.map(norm)];
     if(all.some(a=>qn.includes(a)))
       return {terms:new Set([...tokenize(base),...(uf?[uf]:[])]), uf, cityLock:base};
   }
 
+  // Tokens especiais
   for(const [tok,rule] of Object.entries(SPECIAL_CITY_TOKENS)){
     if(parts.includes(tok)){
       const lockUF=uf||rule.uf;
@@ -132,12 +137,12 @@ function expandQuery(q){
     }
   }
 
+  // Expansões leves
   const extra=[];
   for(const [base,alts] of Object.entries(CITY_ALIASES)){
     const all=new Set([base,...alts.map(norm)]);
     for(const t of parts){ if(all.has(t)){ extra.push(base); break; } }
   }
-
   return {terms:new Set([...parts,...extra,...(uf?[uf]:[])]), uf};
 }
 
