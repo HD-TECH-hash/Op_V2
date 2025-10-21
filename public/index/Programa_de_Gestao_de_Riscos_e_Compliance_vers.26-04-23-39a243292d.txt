@@ -1,0 +1,324 @@
+Sumário
+1.Conceito..................................................................................................................................................................3
+2. Objetivo................................................................................................................................................................. 3
+3. Abrangência........................................................................................................................................................... 3
+4.Divulgação............................................................................................................................................................. 3
+5. Atualização........................................................................................................................................................... 3
+6. Princípios............................................................................................................................................................... 3
+7.Gestão de Riscos Corporativos....................................................................................................................... 3
+ 7.1 Estabelecimento do Contexto................................................................................................................. 3
+ 7.2 Contexto e Critérios................................................................................................................................... 3
+ 7.3 Identificação dos Riscos............................................................................................................................ 4
+ 7.4 Análise de Riscos..........................................................................................................................................4
+ 7.5 Avaliação de Riscos..................................................................................................................................... 5
+ 7.6 Avaliação de Riscos..................................................................................................................................... 7
+ 7.7 Monitoramento e Controle dos Riscos................................................................................................. 8
+ 7.8 Registro de Riscos.....................................................................................................................................8
+8. Risco de Subscrição.........................................................................................................................................9
+9. Elementos Centrais da Governança Corporativa na Affix.................................................................10
+10. Disposições Finais.................................................................................................................................................10
+ 1. Conceito
+Gestão de Riscos é o processo de identificação, análise, avaliação, priorização, tratamento e monitoramento de riscos
+que possam afetar, positiva ou negativamente, os objetivos e projetos da empresa nos níveis estratégicos, tático e
+operacional.
+ 2. Objetivo
+O Programa de Gestão de Riscos e Compliance na Affix, estabelece diretrizes gerais e responsabilidades no que tange à
+identificação, análise, avaliação, priorização, tratamento e monitoramento dos riscos aos quais a empresa está exposta.
+Para apoiar os Gestores no atingimento de seus objetivos estratégicos, bem como atuar preventivamente no
+desenvolvimento de medidas e controles para mitigar os riscos envolvidos nos processos de um modo geral, envolvendo
+processos legais, regulatórios e operacionais, buscando melhoria de eficiência dos processos, o aperfeiçoamento
+continuado e a perpetuidade do negócio.
+Por meio desta política, o Comitê de Riscos deve garantir segurança e transparência na condução e tratamento dos
+riscos, envolvendo todos os stakehonders da Affix ao engajamento de melhores práticas em governança e compromisso
+de aplicação da Política de Gestão de Riscos definida.
+ 3. Abrangência
+ A presente política deve abranger todas as áreas, processos e sistemas da Affix, bem como todos os Gestores,
+ Colaboradores e Prestadores de Serviços
+ 4. Divulgação
+ O Programa de Gestão de Riscos e Compliance deve ser divulgado através de todos os meios e âmbitos disponíveis,
+ principalmente em sua página na Intranet, priorizando os meios de comunicação internos com forte disseminação aos
+ Colaboradores Affix e demais stakeholders.
+ 5. Atualização
+ A Política de Gerenciamento de Riscos deve ser revisada anualmente e sempre que necessário.
+ As propostas de alteração da política de riscos são de competência do Comitê de Gestão de Riscos e Compliance e serão
+ encaminhadas para aprovação da Administração.
+ 6. Princípios
+ A Affix, possui em sua estrutura uma área de Governança, Gestão de Riscos e Controles Internos (GRC), estabelecida
+ A área de GRC é responsável por diagnosticar, analisar, avaliar, tratar e monitorar os riscos, além de estabelecer fluxos
+ e processo.
+ O Programa de Gestão de Riscos e Compliance, tem o papel de cobrar da área de GRC os planos de ações e aplicação
+ efetiva das ações relativas a riscos, emitir recomendações e deliberar sobre a exposição deles
+ A atuação do Comitê sempre será com o apoio toda a empresa, com o objetivo de prevenir riscos, apoiar e fornecer
+ insumos ou subsídios às áreas, de forma que elas possam aprimorar seus processos e atuação.
+ 7. Gestão de Riscos Corporativos
+ A Affix está direcionada às boas práticas de gestão de riscos, seguindo a Norma ISO 31000, principalmente
+ nos seguintes itens:
+ 7.1 Estabelecimento do Contexto
+ Etapa em que são realizados no planejamento estratégico a partir da análise da Ferramenta SWOT, onde ela é utilizada
+ para fazer análise de cenário e para estabelecer o contexto externo, considerando as oportunidades como risco
+ positivo e as ameaças como risco negativo e o contexto interno, considerando os pontos fortes como riscos positivos e
+ pontos fracos como risco negativo; e na interação dos processos organizacionais identificados no mapeamento.
+ 7.2 Contexto e Critérios
+ Entendimento da empresa, seu contexto e os critérios que utilizará para avaliar os riscos: Impactos e
+ probabilidade de ocorrência.
+ 7.3 Identificação dos Riscos
+ Periodicidade de acesso às áreas varia conforme o grau da atividade e se torna chave para o processo de
+ mapeamento (identificação e atualização dos riscos);
+ Trata-se do processo de levantamento e definição do conjunto de eventos, externos e/ou internos, que podem
+ impactar os objetivos da Affix, inclusive aqueles relacionados aos ativos intangíveis (risco de imagem). Este
+ processo deve ser continuamente aprimorado, buscando identificar novos riscos;
+ Ferramenta para identificar os riscos (Excel). A identificação dos riscos é realizada com base nas atividades
+ relacionadas ao processo avaliado, identificando as possíveis falhas que podem ocorrer na execução das
+ tarefas relacionadas ao processo crítico e/ou atividade crítica que estiver sendo analisada, denominado “RED
+ FLAGS”, com os riscos devidamente numerados e registrados no caderno de risco da área mapeada;
+ A análise dos processos deve sempre ser executada por pessoa que é responsável do processo, pois o líder de
+ cada equipe deve manter os registros atualizados e descrições de suas atividades validada por auditoria
+ interna, onde no processo de mapeamento deverá se considerar:
+ Relatos ou manifestos de clientes que estejam relacionados à conformidade dos processos;
+ Não conformidades identificadas no processo (considerando também auditoria interna e/ou auditoria
+ externa);
+ Descumprimento dos requisitos da cadeia cliente e fornecedor, para cada produto que seja produzido nesta
+ etapa do processo/atividade;
+ Descumprimento de procedimentos estabelecidos em atos normativos expedidos pela Política de Controles
+ Internos da Affix.
+ Para o processo de checagem da eficiência da identificação dos riscos se deve adotar o seguinte fluxo:
+ Este método tem por objetivos:
+ • Registrar o processo já existente e implantado, possibilitando visão ampla das atividades;
+ • Identificar, analisar, avaliar e classificar os riscos corporativos;
+ • Definir ações mitigadoras aos riscos em conjunto com os respectivos líderes e gerentes;
+ • Monitorar a efetividade e os resultados dos planos de ações implementados;
+ • Revisar os riscos anualmente, visando melhoria contínua;
+ • Possibilitar o gerenciamento dos riscos sob diversas óticas como custos, exposição, exposição ao risco
+ etc.;
+ • Cronograma de atuação de ser realizado anualmente.
+ 7.4 Análise de Riscos
+A análise de riscos é a verificação da natureza do risco em relação à sua Orientação, Origem e Tipo, fornecendo
+informações para embasar a avaliação, assim como, para as resoluções referentes à reposta e tratamento dos riscos.
+Quanto à Orientação, os riscos podem ser classificados como:
+ • Negativos: causando impactos prejudiciais aos objetivos traçados;
+ • Positivos: oportunidades que podem alavancar ou influenciar positivamente nos objetivos.
+Quanto ao Tipo, os riscos podem ser classificados como:
+ RISCO DESCRIÇÃO
+ Risco associado a política econômico-financeira da Affix. Indica o potencial de perda financeira e
+ Financeiro
+ incerteza sobre um negócio.
+ Situação econômica adversa que contraria tanto as expectativas da sociedade no momento
+ Subscrição presente, quanto às incertezas existentes na estimação das provisões técnicas. (Precificação,
+ Desenho Produto, Comportamento do Cliente).
+ Incertezas relacionadas à probabilidade da contraparte de uma operação ou de um emissor de
+ Crédito
+ dívida, não honrar, total ou parcialmente, seus compromissos financeiros.
+ Possibilidade de ocorrência de perdas resultantes de falha, deficiência ou inadequação de
+ Operacional processos internos, pessoas, sistemas ou de eventos externos, vazamento de informações
+ sigilosas e protegidas.
+ Relacionado aos retornos esperados de seus ativos e passivos, em decorrência de variações em
+ Mercado fatores como taxas de juros, taxas de câmbio, índices de inflação, preços de imóveis e cotações
+ de ações.
+ Práticas associadas a condutas inadequadas que ferem a ética e a integridade, bem como,
+ Compliance corrupção, suborno, lavagem de dinheiro, pagamentos de facilitação, ações anticoncorrenciais
+ tanto no âmbito público como no privado.
+ Processos judiciais contrários, disputas judiciais, eventos indenizáveis. Demandas de
+ Legal / Regulatório
+ Notificações, processos sancionadores junto à ANS, recebimento de multas.
+ Possibilidade de perdas frente aos objetivos estratégicos da Affix, sua missão, visão e valores,
+ Estratégico
+ bem como os riscos relacionados a imagem e reputação da empresa.
+ 7.5 Avaliação de Riscos
+A Avaliação de Riscos, consiste em identificar e mensurar o efeito potencial de um risco para a organização.
+Os riscos são analisados, considerando a sua probabilidade e o impacto como base para determinar o modo pelo qual
+deverão ser administrados. O propósito da Avaliação de Riscos é apoiar decisões. A Avaliação de Riscos envolve a
+comparação dos resultados da análise de riscos com os critérios de risco estabelecidos para determinar onde é necessária
+ação adicional.
+A Avaliação de Riscos é realizada a partir de duas perspectivas:
+Probabilidade x impacto.
+A probabilidade representa a possibilidade de que um determinado risco ocorrerá e o impacto representa o seu
+efeito, caso aconteça.
+A escala utilizada considera a quantidade de vezes que o risco possa se materializar e/ou o percentual de
+ocorrências que possa acontecer em relação ao total das atividades ao qual a Affix está exposta.
+ ESCALA DE PROBABILIDADE
+ Probabilidade de % de
+Nível Classe Descrição
+ Ocorrência Ocorrências
+ Muito Evento Extraordinário / Risco nunca foi materializado ou foi
+ 1 1 Até 10%
+ Baixa materializado nos últimos 12 meses
+ Entre 11 e
+ 2 Baixa Risco foi materializado nos últimos 12 meses Até 2
+ 30%
+ Entre 31 e
+ 3 Média Risco materializado nos últimos 12 meses Até 5
+ 50%
+ Entre 51 e
+ 4 Alta Risco foi materializado nos últimos 12 meses Até 10
+ 89%
+ Muito
+ 5 Risco foi materializado nos últimos 6 meses Acima de 10 Acima de 90%
+ Alta
+Os impactos, representam o valor da perda provável (financeira ou não) de sua materialização. A tabela abaixo será
+utilizada para determinar a escala, considerando quais são as dimensões (custo, prazo, escopo, qualidade, perda) do
+objetivo do processo ao qual se está exposto ao risco.
+ IMPACTO
+ Interferência nos
+ % de
+ Nível Tipo/Perda Perda Financeira Procedimentos e nos Quebra
+ Ocorrências
+ Processos
+ Sem Perda
+ 1 Muito Baixa Insignificante - Até 10%
+ Financeira
+ Pouca-Parada nos
+ Até R$
+ 2 Baixa processos e na operação - Entre 11 e 30%
+ 100.000,00
+ até 60 minutos
+ Relevante-Parada
+ Entre
+ operacional, sistêmica e
+ 3 Médio R$100.000,00 e - Entre 31 e 50%
+ processos de até 1/2
+ R$ 500.000,00
+ período
+ Muito Relevante-Parada Descumprimento as
+ Entre Prejudicial a
+ processo, operações e normas da ANS e
+ 4 Alta R$500.000,00 e Imagem da Affix e
+ sistêmica entre 1/2 Legislação
+ R$1000.000,00 Operação
+ período e 1 dia Brasileira
+ Descumprimento as
+ Prejudicial a
+ Acima de Grave-Parada total, normas da ANS e
+ 5 Muito Alta Imagem da Affix e
+ R$1000.000,00 acima de 1 dia Legislação
+ Operação
+ Brasileira
+O risco será avaliado considerando sua relação entre probabilidade x impacto, utilizando-se como base a “Matriz de
+Classificação do Risco”, e assim, obtém-se a definição do nível do risco. 4  7.6 Avaliação de Riscos
+• Etapa que define qual será a estratégia a ser adotada em relação aos riscos identificados,
+ considerando as seguintes ações, de acordo com o grau de exposição a riscos definido pela Diretoria
+ Executiva e Aprovados pelo Comitê, nesta política. Com exceção das oportunidades, o tratamento aos
+ demais riscos identificados, será a análise crítica do nível do risco;
+• Validação dos planos de ação e protocolos estabelecidos pela primeira linha de defesa, de acordo com
+ a eficácia e diminuição dos impactos e consequências caso o risco venha se materializar;
+• Identificação e decisão acerca de possíveis investimentos a serem realizados para o tratamento dos
+ riscos.
+ APETITE AOS RISCOS
+ Apetite ao
+ Nível Tipo de Perda Medidas Resposta
+ Risco
+ Monitoramento anual pelo gerente da
+ área, com apoio da equipe de
+ Controles Internos. Realização de
+ 1 Muito Baixa Aceitável Prevenir/Aceitar
+ análise crítica e avaliação da
+ classificação do nível do risco
+ (criticidade).
+ Monitoramento semestral pelo
+ encarregado da área, com apoio da
+ equipe de Controles Internos.
+ 2 Baixa Aceitável Prevenir/Acompanhar/Aceitar
+ Realização de análise crítica e
+ avaliação da classificação do nível do
+ risco (criticidade).
+ Monitoramento mensal pelo líder da
+ equipe e/ou gerente da área, com
+ apoio da equipe de Controles Internos.
+ 3 Médio Aceitável Prevenir/Acompanhar/Aceitar
+ Realizar análise crítica anual e
+ avaliação da classificação do nível do
+ risco (criticidade).
+ Monitoramento on-line pelo líder da
+ equipe e/ou gerente da área, com
+ apoio da equipe de Controles Internos.
+ O líder da equipe, que possui um risco
+ 4 Alta Inaceitável com nível alto, é o responsável por Eliminar
+ elaborar e executar um plano de ação,
+ adotar medida imediata e controles,
+ para solução do problema/eliminação
+ do risco.
+ Monitoramento on-line e pela
+ auditoria interna e Comitê de Riscos e
+ pelo líder da equipe e/ou gerente da
+ área, com apoio da equipe de
+ Controles Internos. O líder da equipe,
+ 5 Muito Alta Inaceitável Eliminar
+ que possui um risco com nível alto, é o
+ responsável por elaborar e executar
+ um plano de ação, adotar medida
+ imediata e controles, para solução do
+ problema/eliminação do risco.
+ 7.7 Monitoramento e Controle dos Riscos
+O objetivo do Monitoramento de Riscos é verificar a eficácia, a adequação e a implementação das ações planejadas pelos
+responsáveis para reduzir impactos e probabilidade dos riscos identificados, além de obter informações que proporcionem
+melhorias no processo de gerenciamento de riscos. Deve ser realizado, de acordo com a exposição ao risco.
+O monitoramento dos riscos corporativo, buscam assegurar um fluxo de informações relevantes relacionadas a riscos nos
+diversos níveis hierárquicos da Affix (financeiro, subscrição, crédito, operacional, mercado, compliance, legal/regulatório
+e estratégico), contemplando os processos de identificação, análise, avaliação e tratamento de riscos. Os riscos que não
+são mais considerados como riscos, deverão deixar de serem monitorados.
+Os riscos são mapeados e tratados, bem como de acordo com o cronograma de exposição a riscos, a Affix conta
+com a Consultoria externa Ernest Young (Big Four).
+ 7.8 Registro de Riscos
+O Registro ou Caderno de Riscos é uma compilação em formato de tabela mantida na área com uma listagem de
+todos os riscos mapeados na equipe.
+Quando se fala em riscos, é preciso construir uma visualização sucinta, que permita ao gestor conhecer as
+ameaças, sem perder tempo com detalhes, que sequer tem alta probabilidade ou impacto.
+Deve reportar riscos para esse nível hierárquico: Mostrar a lista de riscos ordenada pela maior exposição
+(probabilidade vezes impacto).
+A equipe de GRC fará a cada trimestre a apresentação e reporte das ações de gerenciamento ao Comitê de Gestão de
+Riscos e Compliance
+ESCALAS DE PROBABILIDADE
+NÍVEL DE PROBABILIDADE PROBABILIDADE
+Muito alto (5 pontos) Acima 90% de chances de ocorrência do evento de risco
+Alto (4 pontos) De 50,1% a 90% de chances de ocorrência do evento de risco
+Médio (3 pontos) De 30,1% a 50% de chances de ocorrência do evento de risco
+Baixo (2 pontos) De 5,1% a 30% de chances de ocorrência do evento de risco
+Muito baixo (1 ponto) Até 5% de chances de ocorrência do evento de risco
+ • O cenário de evolução da maturidade de riscos ocorridas na matriz de riscos no último ano. Tais
+ mudanças podem ser ocasionadas por novos riscos mapeados pela área, pela eliminação ou
+ agrupamento de riscos, e por mudanças na classificação dos riscos, devido à implantação de ações de
+ resposta;
+ • Os resultados aferidos pela equipe de GRC, em relação à efetividade das ações de mitigação
+ planejadas e executadas, em resposta aos riscos altos da Affix;
+ • As recomendações de mudanças e melhorias nos planos de ação, assim como uma descrição das áreas
+ que não apresentarem planos de respostas aos riscos altos identificados.
+ 8. Risco de Subscrição
+ O Risco de Subscrição é oriundo de uma situação econômica adversa, que contraria as expectativas da Affix,
+ quanto às incertezas existentes na estimação das provisões técnicas. Envolve também, a probabilidade dos
+ eventos a serem pagos pela administradora, em um período futuro, serem maiores que o montante de
+ contraprestações a ser recebido.
+ Para uma adequada gestão do risco de subscrição, a Affix possuí os seguintes riscos de subscrição, sendo
+ monitorados por meio de auditoria internas:
+ I. Equipe Estratégia de Mercado:
+ Dois riscos da atividade de análise de mercado são de subscrição:
+ • Não realizar a análise de mercado;
+ • Realizar análise de mercado de forma incorreta.
+ Três riscos da atividade de elaborar produto são de subscrição:
+ • Executar o produto de forma incoerente com o mercado;
+ • Não desenvolver produtos adequados ao mercado;
+ • O mercado não aderir o produto.
+ Dois riscos da atividade de precificar soluções são de subscrição:
+ • Não considerar tabela de comercialização precificada;
+ • Não reajustar tabelas comerciais e Produtos Acessórios;
+ • Cadastrar erroneamente as tabelas.
+ II. Riscos da atividade de estratégia de mercado é de subscrição
+ • Falta de criatividade e empenho para desenvolvimento de novos produtos;
+ • Ausência de pesquisa e captura de novos nichos de mercado;
+ • Equipe comercial focada no mercado incorreto.
+ Exceções
+Para os casos de exceção ao cumprimento das regras previstas nesta Política, o solicitante deverá apresentar pedido de
+exceção à Administração da empresa Controlada com as razões que o fundamentam, sendo que a aprovação do pedido
+deverá ser feita para a Diretoria e Presidência da empresa.
+ 9. Elementos Centrais da Governança Corporativa na Affix
+ • Presidência
+ • Diretoria Financeira
+ • GRC
+ • Recursos Humanos
+ • Auditoria Externa
+ • Consultoria Jurídica
+ 10. Disposições Finais
+ O presente documento deve ser considerado em conjunto com outras políticas, normas, manuais, procedimentos e
+ regimentos internos aplicáveis e relevantes, adotados pela Affix.
+ Esta política poderá ser desdobrada em outros documentos normativos específicos, sempre alinhados aos princípios e
+ diretrizes aqui estabelecidas.
+ As exceções, eventuais violações e casos omissos à Política de Gerenciamento de riscos devem ser previamente
+ submetidos a apreciação do Comitê, que emitirá um parecer sobre cada situação.

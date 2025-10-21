@@ -1,0 +1,308 @@
+ANS - nº 34.818-0
+Humana
+ ANS - nº 41.742-4
+Affix
+ MANUAL DO CORRETOR
+ HUMANA SAÚDE SUL
+ RIO GRANDE DO SUL - TABELA ABERTA
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO HUMANA SAÚDE SUL
+ Administradora de benefícios/contratante: Affix Administradora de Benefícios.
+ Plano com segmentação: ambulatorial + hospitalar com ou sem obstetrícia + plano odontológico.
+ Todas as coberturas da lei nº 9.656/98.
+ TABELA
+ LINHA IDEAL
+ PRODUTO CP IDEAL RS COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.391/23-7 497.392/23-5
+ 0 a 18 anos R$ 167,45 R$ 208,22
+ 19 a 23 anos R$ 177,25 R$ 220,48
+ 24 a 28 anos R$ 194,54 R$ 242,09
+ 29 a 33 anos R$ 219,29 R$ 273,03
+ 34 a 38 anos R$ 251,53 R$ 313,32
+ 39 a 43 anos R$ 313,32 R$ 390,58
+ 44 a 48 anos R$ 402,91 R$ 502,55
+ 49 a 53 anos R$ 538,46 R$ 671,99
+ 54 a 58 anos R$ 725,41 R$ 905,68
+ 59 anos ou + R$ 977,80 R$ 1.221,16
+ PRODUTO CP IDEAL RS COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.391/23-7 497.392/23-5
+ 0 a 18 anos R$ 187,01 R$ 232,69
+ 19 a 23 anos R$ 198,00 R$ 246,41
+ 24 a 28 anos R$ 217,37 R$ 270,63
+ 29 a 33 anos R$ 245,09 R$ 305,27
+ 34 a 38 anos R$ 281,19 R$ 350,41
+ 39 a 43 anos R$ 350,41 R$ 436,93
+ 44 a 48 anos R$ 450,74 R$ 562,34
+ 49 a 53 anos R$ 602,57 R$ 752,13
+ 54 a 58 anos R$ 811,94 R$ 1.013,85
+ 59 anos ou + R$ 1.094,61 R$ 1.367,18
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA SUPERIOR
+ PRODUTO CP SUPERIOR RS SEM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.402/23-6 497.384/23-4
+ 0 a 18 anos R$ 200,63 R$ 249,71
+ 19 a 23 anos R$ 212,43 R$ 264,45
+ 24 a 28 anos R$ 233,24 R$ 290,46
+ 29 a 33 anos R$ 263,02 R$ 327,69
+ 34 a 38 anos R$ 301,82 R$ 376,20
+ 39 a 43 anos R$ 376,20 R$ 469,16
+ 44 a 48 anos R$ 484,00 R$ 603,91
+ 49 a 53 anos R$ 647,13 R$ 807,83
+ 54 a 58 anos R$ 872,11 R$ 1.089,05
+ 59 anos ou + R$ 1.175,83 R$ 1.468,71
+ PRODUTO CP SUPERIOR RS SEM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.402/23-6 497.384/23-4
+ 0 a 18 anos R$ 224,19 R$ 279,15
+ 19 a 23 anos R$ 237,40 R$ 295,67
+ 24 a 28 anos R$ 260,70 R$ 324,80
+ 29 a 33 anos R$ 294,06 R$ 366,49
+ 34 a 38 anos R$ 337,52 R$ 420,82
+ 39 a 43 anos R$ 420,82 R$ 524,94
+ 44 a 48 anos R$ 541,56 R$ 675,86
+ 49 a 53 anos R$ 724,27 R$ 904,25
+ 54 a 58 anos R$ 976,24 R$ 1.219,22
+ 59 anos ou + R$ 1.316,41 R$ 1.644,44
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA SUPERIOR
+ PRODUTO CP SUPERIOR RS COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.402/23-6 497.384/23-4
+ 0 a 18 anos R$ 262,99 R$ 327,65
+ 19 a 23 anos R$ 278,52 R$ 347,08
+ 24 a 28 anos R$ 305,95 R$ 381,36
+ 29 a 33 anos R$ 345,19 R$ 430,40
+ 34 a 38 anos R$ 396,32 R$ 494,31
+ 39 a 43 anos R$ 494,31 R$ 616,81
+ 44 a 48 anos R$ 636,35 R$ 794,37
+ 49 a 53 anos R$ 851,31 R$ 1.063,05
+ 54 a 58 anos R$ 1.147,75 R$ 1.433,61
+ 59 anos ou + R$ 1.547,95 R$ 1.933,87
+ PRODUTO CP SUPERIOR RS COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 497.402/23-6 497.384/23-4
+ 0 a 18 anos R$ 235,27 R$ 293,00
+ 19 a 23 anos R$ 249,15 R$ 310,35
+ 24 a 28 anos R$ 273,63 R$ 340,95
+ 29 a 33 anos R$ 308,67 R$ 384,76
+ 34 a 38 anos R$ 354,32 R$ 441,81
+ 39 a 43 anos R$ 441,81 R$ 551,19
+ 44 a 48 anos R$ 568,64 R$ 709,72
+ 49 a 53 anos R$ 760,57 R$ 949,62
+ 54 a 58 anos R$ 1.025,25 R$ 1.280,48
+ 59 anos ou + R$ 1.382,57 R$ 1.727,13
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA PREMIUM NACIONAL
+ PRODUTO CP PREMIUM NACIONAL LPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.026/23-7 495.024/23-1
+ 0 a 18 anos R$ 354,32 R$ 396,32
+ 19 a 23 anos R$ 447,77 R$ 500,98
+ 24 a 28 anos R$ 484,84 R$ 542,49
+ 29 a 33 anos R$ 520,44 R$ 582,37
+ 34 a 38 anos R$ 537,62 R$ 601,62
+ 39 a 43 anos R$ 628,29 R$ 703,16
+ 44 a 48 anos R$ 898,03 R$ 1.005,27
+ 49 a 53 anos R$ 1.229,23 R$ 1.376,22
+ 54 a 58 anos R$ 1.461,23 R$ 1.636,05
+ 59 anos ou + R$ 2.099,64 R$ 2.351,07
+ PRODUTO CP PREMIUM NACIONAL LPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.026/23-7 495.024/23-1
+ 0 a 18 anos R$ 396,32 R$ 443,35
+ 19 a 23 anos R$ 500,98 R$ 560,58
+ 24 a 28 anos R$ 542,49 R$ 607,07
+ 29 a 33 anos R$ 582,37 R$ 651,74
+ 34 a 38 anos R$ 601,62 R$ 673,30
+ 39 a 43 anos R$ 703,16 R$ 787,02
+ 44 a 48 anos R$ 1.005,27 R$ 1.125,38
+ 49 a 53 anos R$ 1.376,22 R$ 1.540,85
+ 54 a 58 anos R$ 1.636,05 R$ 1.831,86
+ 59 anos ou + R$ 2.351,07 R$ 2.632,69
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA DE COPARTICIPAÇÃO
+ LINHAS IDEAL E SUPERIOR
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva R$ 45,00 R$ 45,00
+Consultas em P.S. / P.A. R$ 45,00 R$ 45,00
+Exames/procedimentos simples 30% com limitador de R$ 25,00 ISENTO
+Exames/procedimentos especiais 30% com limitador de R$ 150,00 ISENTO
+Terapias grupo 1 30% com limitador de R$ 50,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 40% com limitador de R$ 150,00 40% com limitador de R$ 150,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ LINHA PREMIUM NACIONAL
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva R$ 60,00 R$ 60,00
+Consultas em P.S. / P.A. R$ 60,00 R$ 60,00
+Exames/procedimentos simples 30% com limitador de R$ 25,00 ISENTO
+Exames/procedimentos especiais 30% com limitador de R$ 150,00 ISENTO
+Terapias grupo 1 30% com limitador de R$ 50,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 40% com limitador de R$ 150,00 40% com limitador de R$ 150,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ QUEM PODE ADERIR
+ASCOSERVI - ASSOCIAÇÃO PROFISSIONAL DO COMÉRCIO E INDÚSTRIA
+Pessoas físicas, que exerçam as proﬁssões abaixo relacionadas: Administradores, Arquitetos, Assistentes Sociais,
+Advogados, Atuários, Biomédicos, Biólogos, Contabilista, Corretores de Seguro, Corretores de Imóveis, Dentistas,
+Economistas, Enfermeiros, Engenheiros, Estatísticos, Farmacêuticos, Filósofos, Físicos, Fisioterapeutas, Geólogos,
+Jornalistas, Médicos, Músicos, Pedagogos, Professores, Psicólogos, Publicitários, Químicos, Representantes Comerciais,
+Sociólogos, Técnicos Contábeis, Técnicos em Enfermagem, Técnicos em Laboratório, Técnicos em Radiologia, Técnicos
+em Telecomunicações, Técnicos em Segurança Do Trabalho, Técnicos Agrícolas, Teólogos, Veterinários, Zootecnistas,
+Proﬁssionais de Informáticas, Comércio Exterior, Gastronomia, História, Hotelaria, Letras, Matemática, Turismo,
+Proﬁssionais de Teatro, Rádio e Televisão.
+- Ficha associativa comprovando vínculo regular com a entidade + cópia do diploma ou certiﬁcado de conclusão de curso
+ou registro no Conselho de Classe ou comprovante de contribuição sindical da categoria + holerite ou CTPS.
+Taxa: R$ 10,00 por mês.
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR
+- Proposta de Adesão da Affix + Ficha Associativa.
+- Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Certidão de Nascimento válida para titular com até 13 anos.
+- Cópia do comprovante de residência atual (últimos 90 dias), sendo em nome do titular ou familiar com comprovação de
+vínculo.
+DEPENDENTES
+Cônjuge
+- Cópia de Certidão de Casamento + Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Companheiro(a)
+- Declaração de união estável de próprio punho, contendo o número do RG e o número do CPF do(a) companheiro(a),
+endereço, tempo de convívio, número do RG e assinatura de 2 testemunhas, firma reconhecida do titular e do(a)
+companheiro(a).
+- Cópia do RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Filho(a), naturais ou adotados(as), enteado(a), netos(as) ou sobrinhos(as) até 58 anos
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Documento que comprove vínculo de parentesco com o titular.
+Filho(a) ou enteado(a) inválido(a) de qualquer idade
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” expedida por órgão social.
+Menor sob guarda ou tutela do beneficiário titular
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” definitiva expedida por órgão oficial.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO
+CARTÃO NACIONAL DE SAÚDE (CNS).
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados, a fim de comprovar as informações prestadas na Proposta.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de
+Normas Regulamentadoras da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- A solicitação de alteração do plano poderá ser realizada a qualquer momento, sendo que o
+beneﬁciário deverá cumprir carências para a nova categoria.
+- Reajuste anual: MARÇO 2026.
+- Cópias dos documentos anexados a proposta de adesão, deverão estar legíveis.
+- A venda será considerada administrativa para beneﬁciários a partir de 59 anos.
+- Taxa de Angariação: a Afﬁx não interfere no valor da taxa de angariação acordada entre o corretor e
+o beneﬁciário, podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ou igual ao
+valor da mensalidade, bem como que esta taxa não se confunde com a mensalidade e o início de
+vigência do plano. Oriente adequadamente seu beneﬁciário.
+ ÁREA DE ABRANGÊNCIA
+IDEAL – Antônio Prado, Bento Gonçalves, Bom Princípio, Cambará do Sul, Canela, Carlos
+Barbosa, Caxias do Sul, Farroupilha, Feliz, Flores da Cunha, Garibaldi, Gramado, Nova
+Petrópolis, São Marcos, São Sebastião do Caí e Vacaria.
+SUPERIOR RS – Antônio Prado, Bento Gonçalves, Bom Princípio, Cachoeirinha, Cambará do
+Sul, Canela, Canoas, Carlos Barbosa, Caxias do Sul, Esteio, Farroupilha, Feliz, Flores da Cunha,
+Garibaldi, Gramado, Gravataí, Guaíba, Lajeado, Nova Petrópolis, Novo Hamburgo, Porto Alegre,
+São Leopoldo, São Marcos, São Sebastião do Caí, Sapucaia do Sul, Vacaria e Viamão.
+PREMIUM NACIONAL – Todo o território brasileiro.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01
+ Dia 10 Todo dia 10
+ Dia 20 Todo dia 20
+ CARÊNCIAS CONTRATUAIS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PLANO DE SAÚDE
+ CARÊNCIAS
+GRUPO
+ PRC
+ PROCEDIMENTOS COBERTURA MÁXIMAS - 1001*
+ CONTRATO
+ 1 Consulta Eletiva Consultas médicas e não médicas em consultórios. 180 dias Isento
+ Consultas de urgência/emergência em hospitais ou pronto
+ 2 Urgência e Emergência socorro incluindo os acidentes pessoais. 24 horas Isento
+ 3 Exames / Procedimentos Simples Exames de análises clínicas comuns de sangue (hemograma, 180 dias Isento
+ sódio, potássio etc.); exames comuns de urina.
+ Endoscopia Digestiva Alta, Ressonância Magnética, PET CT,
+ Cintilograﬁa, Ecodoppler, Ecocardiograma, punções guiadas
+ 4 Exames e Procedimentos Especiais por agulha para retirada de corpo estranho, Gastrostomia 180 dias Isento
+ Endoscópica, Ecoendoscopia ou Ultrassonograﬁa
+ Endoscópica.
+ Fisioterapias e outras terapias em pacientes com
+ 5 Terapias GRUPO 1 necessidades de reabilitações especiﬁcas: cardíacas, 180 dias 90 dias
+ queimados, pós AVC, neuropatas, amputados.
+ Quimioterapias, Radioterapias, Hemodiálises, Diálises,
+ 6 Terapias GRUPO 2 Hemoterapias. 180 dias 180 dias
+ Fisioterapias Gerais e inespecíﬁcas como Psicoterapias,
+ 7 Terapias GRUPO 3 Fonoaudiologias, Nutrição e, também, os Métodos Especiais. 180 dias 180 dias
+ 8 Procedimentos Internação 1 Internações gerais. 180 dias 30 dias
+ Transplantes, Cirurgia Bariátrica, Internações Psiquiátricas,
+ 9 Procedimentos Internação 2 Cirurgias com utilização de Órteses e ou Próteses ligadas ao 180 dias 180 dias
+ ato cirúrgico.
+ 10 Procedimentos Internação 3 Parto a termo. 300 dias 300 dias
+ATENÇÃO: as doenças ou lesões preexistentes permanecerão com o prazo de 24 (vinte e quatro) meses de aplicação da CPT (Cobertura Parcial Temporária) inalterado.
+PRC válido para procedimentos a serem realizados na Rede de Prestadores vinculada ao plano contratado.
+PRC 1001*: destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão sem histórico de plano de saúde anterior nesta operadora ou em
+outra, ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses. Esse PRC é
+destinado a Campanha para novos beneﬁciários.
+DOCUMENTAÇÃO DO BENEFICIÁRIO OBRIGATÓRIA PARA REDUÇÃO DE CARÊNCIA: carta de permanência emitida pela operadora/seguradora/administradora de
+origem nos últimos 60 (sessenta) dias ou últimos três boletos pagos + carteirinha do beneﬁciário.
+ ODONTO ESSENCIAL S ESSENCIAL M/CA
+ COBERTURA CARÊNCIA CONTRATUAL
+ Casos de urgência e emergência. 24 horas
+ Demais casos 180 dias

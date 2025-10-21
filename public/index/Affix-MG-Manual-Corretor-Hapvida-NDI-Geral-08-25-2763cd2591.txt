@@ -1,0 +1,278 @@
+ANS - nº 34.852-0 ANS - nº 41.742-4
+ MANUAL DO CORRETOR
+ NDI - MINAS GERAIS
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO HAPVIDA NDI
+ Administradora de benefícios/contratante: Afﬁx Administradora de Benefícios.
+ Plano com segmentação: ambulatorial + hospitalar com obstetrícia, com coparticipação.
+ Todas as coberturas da lei nº 9.656/98.
+ TABELAS
+ TABELA - ABRANGÊNCIA: GRUPO DE MUNICÍPIOS - PRODUTOS: REDE PRÓPRIA
+ PERSONAL PERSONAL PERSONAL PERSONAL PERSONAL PERSONAL
+ PRODUTO 200 BH 200 BH 200 OESTE MG 200 OESTE MG 200 UP 200 UP
+ CA CP ENF CA CP APTO CA CP ENF CA CP APTO CA CP ENF CA CP APTO
+ SEGMENTAÇÃO Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento Enfermaria Apartamento
+ CÓDIGO ANS 490.232/21-7 490.231/21-9 490.236/21-0 490.235/21-1 490.200/21-9 490.201/21-7
+ 0 a 18 anos R$ 162,22 R$ 194,68 R$ 162,22 R$ 194,68 R$ 170,76 R$ 204,90
+ 19 a 23 anos R$ 218,96 R$ 262,77 R$ 218,96 R$ 262,77 R$ 230,48 R$ 276,58
+ 24 a 28 anos R$ 258,77 R$ 310,54 R$ 258,77 R$ 310,54 R$ 272,40 R$ 326,85
+ 29 a 33 anos R$ 270,35 R$ 324,46 R$ 270,35 R$ 324,46 R$ 284,60 R$ 341,49
+ 34 a 38 anos R$ 279,40 R$ 335,29 R$ 279,40 R$ 335,29 R$ 294,11 R$ 352,89
+ 39 a 43 anos R$ 307,34 R$ 368,83 R$ 307,34 R$ 368,83 R$ 323,51 R$ 388,18
+ 44 a 48 anos R$ 399,54 R$ 479,49 R$ 399,54 R$ 479,49 R$ 420,56 R$ 504,64
+ 49 a 53 anos R$ 519,42 R$ 623,32 R$ 519,42 R$ 623,32 R$ 546,73 R$ 656,04
+ 54 a 58 anos R$ 675,23 R$ 810,32 R$ 675,23 R$ 810,32 R$ 710,77 R$ 852,87
+ 59 anos ou + R$ 973,23 R$ 1.167,89 R$ 973,23 R$ 1.167,89 R$ 1.024,42 R$ 1.229,23
+ TABELA - ABRANGÊNCIA: GRUPO DE MUNICÍPIOS - PRODUTOS: REDE PRÓPRIA + REDE CREDENCIADA
+ ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 300 ADAPT 500 ADAPT 500
+ PRODUTO RM BH RM BH OESTE MG OESTE MG SUL MG SUL MG TRIÂNGULO TRIÂNGULO RM BH RM BH
+ CA CP ENF CA CP APTO CA CP ENF CA CP APTO CA CP ENF CA CP APTO CA CP ENF CA CP APTO CA CP ENF CA CP APTO
+SEGMENTAÇÃO Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios Grupo Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento Enfermaria Apartamento Enfermaria Apartamento Enfermaria Apartamento
+ CÓDIGO ANS 490.216/21-5 490.215/21-7 490.213/21-1 490.212/21-2 490.220/21-3 490.219.21-0 490.682/21-9 490.675/21-6 490.228/21-9 490.227/21-1
+ 0 a 18 anos R$ 202,18 R$ 242,60 R$ 202,18 R$ 242,60 R$ 202,18 R$ 242,60 R$ 206,66 R$ 247,98 R$ 307,98 R$ 369,55
+ 19 a 23 anos R$ 272,89 R$ 327,45 R$ 272,89 R$ 327,45 R$ 272,89 R$ 327,45 R$ 278,95 R$ 334,72 R$ 415,69 R$ 498,81
+ 24 a 28 anos R$ 322,50 R$ 386,99 R$ 322,50 R$ 386,99 R$ 322,50 R$ 386,99 R$ 329,68 R$ 395,58 R$ 491,26 R$ 589,51
+ 29 a 33 anos R$ 336,95 R$ 404,32 R$ 336,95 R$ 404,32 R$ 336,95 R$ 404,32 R$ 344,45 R$ 413,30 R$ 513,27 R$ 615,93
+ 34 a 38 anos R$ 348,20 R$ 417,81 R$ 348,20 R$ 417,81 R$ 348,20 R$ 417,81 R$ 355,94 R$ 427,11 R$ 530,41 R$ 636,50
+ 39 a 43 anos R$ 383,03 R$ 459,59 R$ 383,03 R$ 459,59 R$ 383,03 R$ 459,59 R$ 391,55 R$ 469,82 R$ 583,46 R$ 700,16
+ 44 a 48 anos R$ 497,93 R$ 597,47 R$ 497,93 R$ 597,47 R$ 497,93 R$ 597,47 R$ 508,99 R$ 610,77 R$ 758,48 R$ 910,20
+ 49 a 53 anos R$ 647,33 R$ 776,71 R$ 647,33 R$ 776,71 R$ 647,33 R$ 776,71 R$ 661,70 R$ 794,00 R$ 986,04 R$ 1.183,26
+ 54 a 58 anos R$ 841,53 R$ 1.009,72 R$ 841,53 R$ 1.009,72 R$ 841,53 R$ 1.009,72 R$ 860,23 R$ 1.032,19 R$ 1.281,87 R$ 1.538,24
+ 59 anos ou + R$ 1.212,91 R$ 1.455,31 R$ 1.212,91 R$ 1.455,31 R$ 1.212,91 R$ 1.455,31 R$ 1.239,84 R$ 1.487,70 R$ 1.847,56 R$ 2.217,08
+ TABELA
+ SEM DESCONTO.
+ *
+ APLICAR CONDIÇÃO
+ ATÉ AS VIGÊNCIAS
+ DE SETEMBRO.
+ TABELA - ABRANGÊNCIA: ESTADUAL
+ PRODUTOS: REDE PRÓPRIA + REDE CREDENCIADA
+ ADAPT 300 ADAPT 300 ADAPT 500 ADAPT 500 PROGRESS 550
+ PRODUTO CA CP CA CP CA CP CA CP CA CP
+ ENF APTO ENF APTO APTO
+SEGMENTAÇÃO Amb + Hosp COM Obsterícia Amb + Hosp COM Obsterícia Amb + Hosp C/Obs
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento Apartamento
+ CÓDIGO ANS 490.234/21-3 490.209/21-2 490.224/21-6 490.223/21-8 490.207/21-6
+ 0 a 18 anos R$ 235,85 R$ 283,02 R$ 323,36 R$ 388,02 R$ 437,56
+ 19 a 23 anos R$ 318,34 R$ 382,02 R$ 436,48 R$ 523,75 R$ 590,60
+ 24 a 28 anos R$ 376,21 R$ 451,45 R$ 515,82 R$ 618,98 R$ 697,97
+ 29 a 33 anos R$ 393,07 R$ 471,68 R$ 538,92 R$ 646,69 R$ 729,23
+ 34 a 38 anos R$ 406,18 R$ 487,44 R$ 556,92 R$ 668,31 R$ 753,59
+ 39 a 43 anos R$ 446,81 R$ 536,20 R$ 612,62 R$ 735,14 R$ 828,95
+ 44 a 48 anos R$ 580,85 R$ 697,04 R$ 796,40 R$ 955,68 R$ 1.077,64
+ 49 a 53 anos R$ 755,11 R$ 906,17 R$ 1.035,30 R$ 1.242,39 R$ 1.400,93
+ 54 a 58 anos R$ 981,62 R$ 1.178,03 R$ 1.345,91 R$ 1.615,11 R$ 1.821,21
+ 59 anos ou + R$ 1.414,80 R$ 1.697,86 R$ 1.939,85 R$ 2.327,86 R$ 2.624,91
+ TABELA
+ SEM DESCONTO.
+ *
+ APLICAR CONDIÇÃO
+ ATÉ AS VIGÊNCIAS
+ DE SETEMBRO.
+ TABELA DE COPARTICIPAÇÃO
+ ADAPT 500 E
+ PROCEDIMENTOS PERSONAL 200 ADAPT 300 PROGRESS 550
+Consulta eletiva - Rede própria. R$ 44,05 R$ 24,47 R$ 28,55
+Consulta eletiva. R$ 44,05 R$ 48,95 R$ 57,10
+Consulta PS - Rede própria. R$ 73,42 R$ 40,79 R$ 40,79
+Consulta PS. R$ 73,42 R$ 81,58 R$ 81,58
+Exames, procedimentos e terapias simples - Rede própria. 15% limitado a R$ 16,71 15% limitado a R$ 33,41 30% limitado a R$ 33,41
+Exames, procedimentos e terapias simples. 30% limitado a R$ 16,71 30% limitado a R$ 33,41 30% limitado a R$ 50,12
+Exames, procedimentos e terapias especiais - Rede própria. 15% limitado a R$ 33,41 15% limitado a R$ 100,24 30% limitado a R$ 100,24
+Exames, procedimentos e terapias especiais. 30% limitado a R$ 33,41 30% limitado a R$ 100,24 30% limitado a R$ 133,66
+Internações - Rede própria ou referência. R$ 130,52 R$ 163,15 R$ 203,94
+Internações - Rede credenciada R$ 130,52 R$ 326,30 R$ 407,88
+ Isenção: quimioterapia, radioterapia, hemodiálise e transfusão.
+ QUEM PODE ADERIR
+UNIPRO - ASSOCIAÇÃO BRASILEIRA DE DESENVOLVIMENTO SOCIAL DOS PROFISSIONAIS LIBERAIS
+Profissionais Liberais como: Administrador, Advogado, Arquiteto, Assistente Social, Contabilista, Biólogo, Biomédico,
+Dentista, Economista, Educação Física, Enfermeiro, Engenheiro, Farmacêutico, Fisioterapeuta, Médico, Nutricionista,
+Psicólogo e Veterinário.
+- Comprovação de elegibilidade: Cópia do diploma (frente e verso) ou cópia do Registro de Inscrição no Conselho de Classe
+de sua respectiva categoria profissional + declaração de filiação à UNIPRO, devidamente assinada e datada, ou cópia do
+cartão de associado.
+Taxa: R$ 5,00 por mês.
+ABAC – ASSOCIAÇÃO BRASILEIRA DE APOIO AO COMÉRCIO
+Profissionais do comércio – Empregados e empregadores.
+- Comprovação de elegibilidade:
+Empregados do comércio: Cópia do contracheque atual ou Carteira profissional ou Contrato de trabalho comprovando
+vínculo com empresas do comércio + Cópia do cartão de associado ou Ficha associativa devidamente assinada.
+Empregadores do comércio: Cópia do contrato social da empresa do comércio comprovando vínculo societário do
+empresário do comércio ou Firma Individual da área do comércio (MEI, com no mínimo 6 meses de abertura, ou
+Requerimento de Empresário, com nº do CNPJ) + Cópia do cartão de associado ou Ficha associativa devidamente assinada.
+Taxa: R$ 5,00 por mês.
+ASCOSERVI - ASSOCIAÇÃO PROFISSIONAL DO COMÉRCIO E INDÚSTRIA
+Profissionais Liberais como: Administrador, Arquiteto, Assistente Social, Atuário, Advogado, Biomédico, Biólogo,
+Contabilista, Corretor de Seguros de imóveis, Odontólogo, Economista, Enfermeiro, Engenheiro, Farmacêutico,
+Fisioterapeuta, Jornalismo, Médico, Professor, Psicólogo, Publicidade, Químico, Técnico Contabilista, Técnico de
+Enfermagem, Radiologia, Veterinário, Ciências da Computação, Análise de Sistemas, Tecnologia da Informação, Comércio
+Exterior, Gastrônomo, Matemático e Turismo.
+- Comprovação de elegibilidade: Ficha de filiação à entidade e Cópia do diploma ou Certificado de conclusão de curso ou
+Registro no conselho de classe ou Comprovante de contribuição sindical da categoria.
+Taxa: R$ 10,00 por mês.
+ANSP - ASSOCIAÇÃO NACIONAL DOS SERVIDORES PÚBLICOS
+Servidores Públicos, Municipais e Estaduais
+- A comprovação para o Servidor Público Municipal será: Ficha de filiação à entidade; Em caso estatutário: nomeação e
+holerite; Se celetista: carteira de trabalho e holerite.
+Taxa: R$ 3,50 por mês.
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR
+- Proposta de Adesão da Affix + Ficha Associativa
+- Cópia RG e CPF
+- Cópia do Cartão Nacional de Saúde
+- Cópia da Certidão de Nascimento válida para titular com até 13 anos
+- Cópia do comprovante de residência atual (últimos 90 dias)
+DEPENDENTES
+Cônjuge
+- Cópia de Certidão de Casamento + Cópia RG e CPF
+- Cópia do Cartão Nacional de Saúde
+Companheiro(a)
+- Declaração de união estável de próprio punho, contendo número do RG e do CPF do companheiro(a) e do titular, endereço,
+tempo de convívio, assinatura de 02 (duas) testemunhas com reconhecimento de firma do titular e do(a) companheiro(a),
+ou escritura pública de união estável
+- Cópia do RG e CPF
+- Cópia do Cartão Nacional de Saúde
+Filhos(as), naturais ou adotivos, ou enteados(as), desde que solteiros(as), com até 40 anos de idade incompletos (39 anos,
+11 meses e 29 dias)
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários
+- Cópia do Cartão Nacional de Saúde
+Filho(a) inválido(a) de qualquer idade
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários
+- Cópia do Cartão Nacional de Saúde
+- Cópia da autenticada do atestado de invalidez emitido pelo INSS
+Menor sob Guarda ou Tutela do beneficiário titular até 21 anos incompletos
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários
+- Cópia do Cartão Nacional de Saúde
+- Cópia da Tutela ou do “Termo de Guarda” expedida por órgão oficial
+Mãe, pai, irmão(ã), tio(a), de todas as idades, e sobrinho(a) com até 39 anos, 11 meses e 29 dias.
+- Cópia da Certidão de Nascimento. Obrigatória para comprovação de vínculo no caso de tio(a) e sobrinho(a).
+- RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO CPF E
+CÓPIA DO CARTÃO NACIONAL DE SAÚDE (CNS).
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados afim de comprovar as informações prestadas na Proposta.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- O dia de vencimento do valor mensal do benefício (inclusive do primeiro mês) corresponde ao dia do início da vigência do
+benefício, tal como estabelecido na Proposta do beneficiário titular ao contrato coletivo.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de Normas Regulamentadoras
+da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- Mês do reajuste anual: OUTUBRO 2025.
+- Cópias dos documentos anexados à proposta de adesão deverão estar legíveis.
+- A solicitação de transferência do plano poderá ser realizada sempre no mês de OUTUBRO, de acordo com o cronograma de
+movimentação, mediante prévia autorização da operadora e desde que respeitadas as demais regras vigentes neste benefício.
+A alteração do plano somente ocorrerá quando solicitada pelo beneficiário titular e acarretará a transferência de todos os seus
+beneficiários dependentes inscritos no benefício anteriormente contratado. A transferência para planos com categoria de rede
+e acomodação superiores a contratada acarretará 180 (cento e oitenta) dias de carência a cumprir.
+- Serão considerados dependentes consanguíneos dos Beneficiários Titulares: Mãe e pai, irmão(ã), tio(a), de todas as idades,
+e sobrinho(a) com até 39 anos, 11 meses e 29 dias.
+- Taxa de Angariação: a Affix não interfere no valor da taxa de angariação acordada entre o corretor e o beneficiário, podendo
+esta taxa ser livremente negociada, desde que: o valor seja inferior ao valor da mensalidade, bem como que esta taxa não se
+confunde com a mensalidade e o início de vigência do plano. Oriente adequadamente seu beneficiário.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01 de cada mês
+ Dia 10 Todo dia 10 de cada mês
+ Dia 20 Todo dia 20 de cada mês
+ ÁREA DE COMERCIALIZAÇÃO
+PERSONAL 200 BH - Belo Horizonte, Betim, Brumadinho, Confins, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mario Campos, Mateus Leme, Nova
+Lima, Pedro Leopoldo, Raposos, Ribeirão das Neves, Rio Acima, Sabará, São Joaquim de Bicas, São Jose da Lapa, Santa Luzia, Sarzedo e Vespasiano.
+PERSONAL 200 OESTE MG - Araújos, Bom Despacho, Carmo da Mata, Carmo do Cajuru, Divinópolis, Igaratinga, Nova Serrana, Pará de Minas. Perdigão, Pitangui, São
+Gonçalo do Pará e São Sebastião do Oeste.
+PERSONAL 200 UP - Araújos, Belo Horizonte, Betim, Bom Despacho, Brumadinho, Carmo da Mata, Carmo do Cajuru, Confins, Contagem, Divinópolis, Esmeraldas,
+Ibirité, Igarapé, Igaratinga, Juatuba, Lagoa Santa, Mario Campos, Mateus Leme, Nova Lima, Nova Serrana, Pará de Minas, Pedro Leopoldo, Perdigão, Pitangui, Raposos,
+Ribeirão das Neves, Rio Acima, Sabará, São Gonçalo do Pará, São Joaquim de Bicas, São Jose da Lapa, São Sebastião do Oeste, Santa Luzia, Sarzedo e Vespasiano.
+ADAPT 300 RM BH - Baldim, Belo Horizonte, Betim, Brumadinho, Caeté, Capim Branco, Confins, Contagem, Esmeraldas, Florestal, Ibirité, Igarapé, Jaboticatubas,
+Lagoa Santa, Juatuba, Mario Campos, Mateus Leme, Matozinhos, Nova Lima, Nova União, Pedro Leopoldo, Prudente de Moraes, Raposos, Ribeirão das Neves, Rio
+Acima, Rio Manso, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Taquaraçu de Minas e Vespasiano.
+ADAPT 300 OESTE MG - Araújos, Bom Despacho, Carmo da Mata, Carmo do Cajuru, Cláudio, Divinópolis, Formiga, Igaratinga, Itapecerica, Itaúna, Lagoa da Prata, Nova
+Serrana, Oliveira, Pará de Minas, Perdigão, Pitangui, Santo Antônio do Monte, São Gonçalo do Pará e São Sebastião do Oeste.
+ADAPT 300 SUL MG - Alfenas, Alterosa, Andradas, Areado, Bandeira do Sul, Boa Esperança, Bom Repouso, Borda da Mata, Botelhos, Cabo Verde, Cachoeira de Minas,
+Caldas, Cambuí, Campanha, Campestre, Campo do Meio, Campo Gerais, Careaçu, Carmo da Cachoeira, Conceição dos Ouros, Congonhal, Consolação, Córrego do Bom
+Jesus, Divisa Nova, Elói Mendes, Espirito Santo do Dourado, Estiva, Fama, Extrema, Heliodora, Ipuiuna, Machado, Monsenhor Paulo, Monte Belo, Ouro Fino, Paraguaçu,
+Paraisópolis, Poço Fundo, Poços de Caldas, Pouso Alegre, Santa Rita de Caldas, Santa Rita do Sapucaí, São Gonçalo do Sapucaí, São Sebastião Bela Vista, São João
+da Mata, Serrania, Silvianópolis, Três Corações, Três Pontas e Varginha.
+ADAPT 300 TRIÂNGULO MG - Araxá, Araguari, Campos Altos, Frutal, Ituiutaba, Monte Carmelo, Prata, Patos de Minas, Patrocínio, Tupiciguara, Uberaba e Uberlândia.
+ADAPT 500 RM BH - Baldim, Belo Horizonte, Betim, Brumadinho, Caeté, Capim Branco, Confins, Contagem, Esmeraldas, Florestal, Ibirité, Igarapé, Jaboticatubas,
+Lagoa Santa, Juatuba, Mario Campos, Mateus Leme, Matozinhos, Nova Lima, Nova União, Pedro Leopoldo, Prudente de Moraes, Raposos, Ribeirão das Neves, Rio
+Acima, Rio Manso, Sabará, Santa Luzia, São Joaquim de Bicas, São Jose da Lapa, Sarzedo, Sete Lagoas, Taquaraçu de Minas e Vespasiano.
+ADAPT 300 | ADAPT 500 | PROGRESS 550 - Todas as cidades do ADAPT 300 REGIONAIS.
+ ÁREA DE ABRANGÊNCIA
+PERSONAL 200 BH - Personal 200 BH: Belo Horizonte, Betim, Brumadinho, Cofins, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mário Campos,
+Mateus Leme, Nova Lima, Pedro Leopoldo, Raposos, Ribeirão das Neves, Rio Acima, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo e
+Vespasiano.
+PERSONAL 200 OESTE - Araújos, Bom Despacho, Carmo da Mata, Carmo do Cajuru, Divinópolis, Igaratinga, Nova Serrana, Pará de Minas, Perdigão, Pitangui, São
+Gonçalo do Pará e São Sebastião do Oeste.
+PERSONAL 200 UP - Alfenas, Andradas, Araújos, Areado, Bandeira do Sul, Belo Horizonte, Betim, Bom Despacho, Botelhos, Brumadinho, Cabo Verde, Caldas,
+Campanha, Campestre, Campos Gerais, Carmo da Cachoeira, Carmo da Mata, Carmo do Cajuru, Confins, Contagem, Divinópolis, Divisa Nova, Elói Mendes, Esmeraldas,
+Fama, Ibirité, Igarapé, Igaratinga, Ipuiúna, Juatuba, Lagoa Santa, Machado, Mário Campos, Mateus Leme, Monsenhor Paulo, Nova Lima, Nova Serrana, Pará de Minas,
+Paraguaçu, Pedro Leopoldo, Perdigão, Pitangui, Poços de Caldas, Raposos, Ribeirão das Neves, Rio Acima, Sabará, Santa Luzia, Santa Rita de Caldas, Sarzedo, São
+Gonçalo do Pará, São Joaquim de Bicas, São José da Lapa, São Sebastião do Oeste, Serrania, Três Corações, Três Pontas, Varginha e Vespasiano.
+ADAPT 300 RM BH - Baldim, Belo Horizonte, Betim, Brumadinho, Caeté, Capim Branco, Confins, Contagem, Esmeraldas, Florestal, Ibirité, Igarapé, Jaboticatubas,
+Juatuba, Lagoa Santa, Mário Campos, Mateus Leme, Matozinhos, Nova Lima, Nova União, Pedro Leopoldo, Prudente de Morais, Raposos, Ribeirão das Neves, Rio
+Acima, Rio Manso, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Taquaraçu de Minas e Vespasiano.
+ADAPT 300 OESTE MG - Araújos, Bom Despacho, Carmo da Mata, Carmo do Cajuru, Cláudio, Divinópolis, Formiga, Igaratinga, Itaúna, Lagoa da Prata, Nova Serrana,
+Oliveira, Pará de Minas, Perdigão, Pitangui, Santo Antônio do Monte, São Gonçalo do Pará e São Sebastião do Oeste.
+ADAPT 300 SUL MG - Alfenas, Andradas, Areado, Bandeira do Sul, Boa Esperança, Bom Repouso, Borda da Mata, Botelhos, Cachoeira de Minas, Caldas, Cambuí,
+Campanha, Campestre, Campos Gerais, Careaçu, Carmo da Cachoeira, Conceição dos Ouros, Congonhal, Consolação, Córrego do Bom Jesus, Divisa Nova, Elói
+Mendes, Espírito Santo do Dourado, Estiva, Extrema, Fama, Heliodora, Ipuiúna, Machado, Monsenhor Paulo, Monte Belo, Ouro Fino, Paraguaçu, Paraisópolis, Poço
+Fundo, Poços de Caldas, Pouso Alegre, Santa Rita de Caldas, Santa Rita do Sapucaí, São Gonçalo do Sapucaí, São João da Mata, São Sebastião da Bela Vista, Serrania,
+Silvianópolis, Três Corações, Três Pontas e Varginha.
+ADAPT 300 TRIÂNGULO - Araguari, Araxá, Campos Altos, Frutal, Ituiutaba, Monte Carmelo, Patos de Minas, Patrocínio, Prata, Tupaciguara, Uberaba e Uberlândia.
+ADAPT 500 RM BH - Baldim, Belo Horizonte, Betim, Brumadinho, Caeté, Capim Branco, Confins, Contagem, Esmeraldas, Florestal, Ibirité, Igarapé, Jaboticatubas,
+Juatuba, Lagoa Santa, Mário Campos, Mateus Leme, Matozinhos, Nova Lima, Nova União, Pedro Leopoldo, Prudente de Morais, Raposos, Ribeirão das Neves, Rio
+Acima, Rio Manso, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Taquaraçu de Minas e Vespasiano.
+ADAPT 300 | ADAPT 500 | PROGRESS 550 - Todo o estado de Minas Gerais.
+ CARÊNCIAS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ CARÊNCIAS PLANO DE SAÚDE
+ CARÊNCIA CARÊNCIA
+ COBERTURA CONTRATUAL PROMOCIONAL
+ Atendimentos decorrentes de acidentes pessoais, ocorridos comprovadamente a
+ partir da vigência do Contrato, sendo que as demais condições de atendimento para
+ urgência/emergência estão detalhadas na cláusula 5.1, em conformidade com a 24 horas 24 horas
+ CONSU Nº 13/98.
+ Cobertura de consultas médicas e exames laboratoriais simples (exceto
+ Imunológicos, Hormonais e de Alta Complexidade (PAC – Procedimentos de Alta
+ Complexidade, na deﬁnição estabelecida no Rol de Procedimentos e Eventos em 30 dias 24 horas
+ Saúde, da ANS)), Raio-X simples (Radiograﬁa não contrastada) e Eletrocardiograma
+ (ECG)
+ Cobertura dos seguintes procedimentos, desde que não sejam de Alta Complexidade
+ (PAC – Procedimentos de Alta Complexidade, na deﬁnição estabelecida no Rol de
+ Procedimentos e Eventos em Saúde, da ANS): Exames Cardiológicos simples: Teste
+ Ergométrico, Holter, Ecocardiograma Convencional; Exames Otorrinolaringológicos 90 dias 90 dias
+ simples: Audiometrias e Impedanciometrias, Pesquisa de Potencial Evocado (BERA);
+ Exames de Raio-X Contrastado; Exames de Ultrassonograﬁa (exceto endoscópicos);
+ Mamograﬁa Convencional e Densitometria Óssea.
+ Cobertura dos seguintes procedimentos, desde que não estejam relacionados à(s)
+ patologia(s) para a(s) qual(is) o beneﬁciário cumpre Cobertura Parcial Temporária CPT: Cirurgias ambulatoriais; Internação Hospitalar, clinica, cirúrgica ou obstétrica;
+ Internações em leitos de alta complexidade; Tomograﬁa Computadorizada, 180 dias 180 dias
+ Ressonância Magnética, Endoscopias, Colonoscopia, Procedimentos de Medicina
+ Nuclear, Angiograﬁas, Procedimentos que necessitam de Hemodinâmica (como
+ Cateterismo Cardiológico), Radioterapia e Quimioterapia; Todos os procedimentos
+ não mencionados nos itens anteriores.
+ Consultas, Sessões e Terapias Simples, Especiais, Isoladas e Multidisciplinares,
+ inclusive, com métodos especíﬁcos – ABA, BOBATH e outras (como psicoterapia, 180 dias 180 dias
+ fonoaudiologia, nutricionista, ﬁsioterapia, e terapia ocupacional). Todos os
+ procedimentos não mencionados nos itens anteriores.
+ Cobertura de parto a termo. 300 dias 300 dias
+ *Exceto para os planos com segmentação assistencial "Ambulatorial + Hospitalar SEM Obstetrícia".
+Cobertura Parcial Temporária (CPT): 24 meses
+Havendo a informação de doença(s) ou lesão(ões) preexistente(s) por parte do proponente titular e/ou de seu(s) dependente(s), poderá ser aplicada
+pela Operadora a Cobertura Parcial Temporária (CPT), a qual admite, por um período ininterrupto de até 24 (vinte e quatro) meses, contados a partir da
+data de início de vigência do benefício a suspensão da cobertura de Procedimentos de Alta Complexidade (PAC), leitos de alta tecnologia e
+procedimentos cirúrgicos, desde que relacionados exclusivamente às doenças ou lesões preexistentes declaradas pelo beneficiário ou seu
+representante legal. A Cobertura Parcial Temporária (CPT) não se confunde com carência contratual.
+CARÊNCIAS CONTRATUAIS - Para beneficiários com idade acima de 59 anos, 11 meses e 29 dias.
+CARÊNCIAS PROMOCIONAIS - Para beneficiários sem plano anterior.

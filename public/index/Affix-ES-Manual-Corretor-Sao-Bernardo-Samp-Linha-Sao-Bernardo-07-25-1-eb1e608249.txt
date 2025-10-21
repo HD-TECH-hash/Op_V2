@@ -1,0 +1,503 @@
+ANS - nº 36.376-6
+São Bernardo Saúde
+ ANS - nº 41.742-4
+ 15
+ 15
+Affix
+ 15%%
+ %
+ % DESCONTO
+ NAS 3 PRIMEIRAS
+ MENSALIDADES*
+ MANUAL DO CORRETOR
+ SÃO BERNARDO SAMP SAÚDE
+ LINHA SÃO BERNARDO
+CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO SÃO BERNARDO SAMP - LINHA SÃO BERNARDO.
+Administradora de benefícios/contratante: Afﬁx Administradora de Benefícios.
+Plano com segmentação: Ambulatorial + hospitalar com obstetrícia com coparticipação e plano odontológico.
+Todas as coberturas da lei nº 9.656/98.
+ GRUPO 1 - TABELA ABERTA
+ LINHA SBS PREMIUM
+ PRODUTO SBS PREMIUM SBS PREMIUM
+ ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 498.174/24-0 498.167/24-7
+ 0 a 18 anos R$ 215,68 R$ 280,17
+ 19 a 23 anos R$ 247,35 R$ 321,50
+ 24 a 28 anos R$ 283,64 R$ 368,89
+ 29 a 33 anos R$ 325,50 R$ 423,53
+ 34 a 38 anos R$ 373,64 R$ 486,39
+ 39 a 43 anos R$ 432,70 R$ 563,48
+ 44 a 48 anos R$ 522,60 R$ 680,84
+ 49 a 53 anos R$ 678,01 R$ 883,73
+ 54 a 58 anos R$ 913,71 R$ 1.191,44
+ 59 anos ou + R$ 1.268,29 R$ 1.654,31
+ LINHA SBS WAY
+ SBS WAY SBS WAY SBS WAY SBS WAY
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 498.164/24-2 498.173/24-1 498.164/24-2 498.173/24-1
+ 0 a 18 anos R$ 222,72 R$ 289,36 R$ 229,18 R$ 295,82
+ 19 a 23 anos R$ 255,43 R$ 332,07 R$ 261,90 R$ 338,54
+ 24 a 28 anos R$ 292,95 R$ 381,03 R$ 299,42 R$ 387,50
+ 29 a 33 anos R$ 336,20 R$ 437,52 R$ 342,66 R$ 443,98
+ 34 a 38 anos R$ 385,94 R$ 502,45 R$ 392,41 R$ 508,91
+ 39 a 43 anos R$ 446,96 R$ 582,11 R$ 453,43 R$ 588,58
+ 44 a 48 anos R$ 539,87 R$ 703,39 R$ 546,34 R$ 709,86
+ 49 a 53 anos R$ 700,45 R$ 913,05 R$ 706,92 R$ 919,52
+ 54 a 58 anos R$ 944,01 R$ 1.231,01 R$ 950,48 R$ 1.237,48
+ 59 anos ou + R$ 1.310,40 R$ 1.709,33 R$ 1.316,87 R$ 1.715,80
+ LINHA SBS AMPLO
+ SBS AMPLO SBS AMPLO SBS AMPLO SBS AMPLO
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 496.537/23-0 496.536/23-1 496.537/23-0 496.536/23-1
+ 0 a 18 anos R$ 236,81 R$ 307,74 R$ 243,27 R$ 314,20
+ 19 a 23 anos R$ 271,64 R$ 353,22 R$ 278,11 R$ 359,69
+ 24 a 28 anos R$ 311,58 R$ 405,34 R$ 318,05 R$ 411,81
+ 29 a 33 anos R$ 357,62 R$ 465,46 R$ 364,09 R$ 471,93
+ 34 a 38 anos R$ 410,57 R$ 534,59 R$ 417,04 R$ 541,06
+ 39 a 43 anos R$ 475,54 R$ 619,40 R$ 482,01 R$ 625,87
+ 44 a 48 anos R$ 574,44 R$ 748,51 R$ 580,91 R$ 754,98
+ 49 a 53 anos R$ 745,39 R$ 971,69 R$ 751,86 R$ 978,16
+ 54 a 58 anos R$ 1.004,68 R$ 1.310,19 R$ 1.011,15 R$ 1.316,66
+ 59 anos ou + R$ 1.394,75 R$ 1.819,38 R$ 1.401,22 R$ 1.825,85
+ LINHA SBS AMPLO REEMBOLSO
+ SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO
+ PRODUTO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 499.860/24-0 499.861/24-8 499.860/24-0 499.861/24-8
+ 0 a 18 anos R$ 272,47 R$ 354,29 R$ 278,94 R$ 360,76
+ 19 a 23 anos R$ 312,65 R$ 406,77 R$ 319,12 R$ 413,23
+ 24 a 28 anos R$ 358,71 R$ 466,88 R$ 365,17 R$ 473,35
+ 29 a 33 anos R$ 411,82 R$ 536,24 R$ 418,29 R$ 542,70
+ 34 a 38 anos R$ 472,91 R$ 615,99 R$ 479,38 R$ 622,46
+ 39 a 43 anos R$ 547,87 R$ 713,80 R$ 554,33 R$ 720,27
+ 44 a 48 anos R$ 661,95 R$ 862,76 R$ 668,42 R$ 869,22
+ 49 a 53 anos R$ 859,16 R$ 1.120,21 R$ 865,63 R$ 1.126,68
+ 54 a 58 anos R$ 1.158,27 R$ 1.510,69 R$ 1.164,73 R$ 1.517,15
+ 59 anos ou + R$ 1.608,21 R$ 2.098,07 R$ 1.614,68 R$ 2.104,54
+LINHA SBS AMPLO
+ BASE PARA CÁLCULO DO
+ REEMBOLSO CONSULTAS REEMBOLSO URGÊNCIA / BASE PARA CÁLCULO DO LIMITES E REGRAS
+ REEMBOLSO
+ REEMBOLSO URGÊNCIA E
+ MÉDICAS FORA DA REDE EMERGÊNCIA FORA DA REDE REEMBOLSO ELETIVA
+ EMERGÊNCIA
+ Tabela de preços praticada pela Valor até o efetivamente pago.
+ Tabela de de Referência do
+ Sim Sim sua operadora e sua rede Não inferior ao valor da rede.
+ produto.
+ credenciada. Deduz coparticipação, se houver.
+ LINHA SBS NACIONAL
+ SBS NACIONAL SBS NACIONAL
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 498.170/24-7 498.172/24-3
+ 0 a 18 anos R$ 307,22 R$ 399,66
+ 19 a 23 anos R$ 352,61 R$ 458,93
+ 24 a 28 anos R$ 404,66 R$ 526,86
+ 29 a 33 anos R$ 464,67 R$ 605,20
+ 34 a 38 anos R$ 533,67 R$ 695,29
+ 39 a 43 anos R$ 618,34 R$ 805,81
+ 44 a 48 anos R$ 747,23 R$ 974,06
+ 49 a 53 anos R$ 970,04 R$ 1.264,92
+ 54 a 58 anos R$ 1.307,94 R$ 1.706,04
+ 59 anos ou + R$ 1.816,25 R$ 2.369,61
+ * INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO ESSENCIAL M/CA - 493.390/22-7
+ ** INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO PLENO CA - 497.641/23-0
+ GRUPO 2 - TABELA FECHADA
+ LINHA SBS PREMIUM
+ SBS PREMIUM SBS PREMIUM SBS PREMIUM SBS PREMIUM
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 498.174/24-0 498.167/24-7 498.174/24-0 498.167/24-7
+ 0 a 18 anos R$ 239,13 R$ 310,79 R$ 245,60 R$ 317,26
+ 19 a 23 anos R$ 274,32 R$ 356,71 R$ 280,79 R$ 363,18
+ 24 a 28 anos R$ 314,64 R$ 409,38 R$ 321,11 R$ 415,85
+ 29 a 33 anos R$ 361,16 R$ 470,09 R$ 367,63 R$ 476,56
+ 34 a 38 anos R$ 414,64 R$ 539,92 R$ 421,11 R$ 546,39
+ 39 a 43 anos R$ 480,27 R$ 625,58 R$ 486,74 R$ 632,04
+ 44 a 48 anos R$ 580,16 R$ 755,98 R$ 586,62 R$ 762,45
+ 49 a 53 anos R$ 752,83 R$ 981,41 R$ 759,30 R$ 987,88
+ 54 a 58 anos R$ 1.014,73 R$ 1.323,31 R$ 1.021,20 R$ 1.329,78
+ 59 anos ou + R$ 1.408,71 R$ 1.837,61 R$ 1.415,17 R$ 1.844,08
+ LINHA SBS WAY
+ SBS WAY SBS WAY SBS WAY SBS WAY
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 498.164/24-2 498.173/24-1 498.164/24-2 498.173/24-1
+ 0 a 18 anos R$ 246,96 R$ 321,00 R$ 253,43 R$ 327,46
+ 19 a 23 anos R$ 283,31 R$ 368,46 R$ 289,78 R$ 374,93
+ 24 a 28 anos R$ 324,99 R$ 422,86 R$ 331,46 R$ 429,33
+ 29 a 33 anos R$ 373,05 R$ 485,61 R$ 379,52 R$ 492,08
+ 34 a 38 anos R$ 428,31 R$ 557,76 R$ 434,77 R$ 564,23
+ 39 a 43 anos R$ 496,11 R$ 646,27 R$ 502,57 R$ 652,74
+ 44 a 48 anos R$ 599,34 R$ 781,03 R$ 605,81 R$ 787,50
+ 49 a 53 anos R$ 777,77 R$ 1.013,98 R$ 784,24 R$ 1.020,45
+ 54 a 58 anos R$ 1.048,40 R$ 1.367,28 R$ 1.054,86 R$ 1.373,75
+ 59 anos ou + R$ 1.584,85 R$ 1.898,75 R$ 1.591,32 R$ 1.905,21
+ LINHA SBS AMPLO
+ SBS AMPLO SBS AMPLO SBS AMPLO SBS AMPLO
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 496.537/23-0 496.536/23-1 496.537/23-0 496.536/23-1
+ 0 a 18 anos R$ 262,60 R$ 341,42 R$ 269,07 R$ 347,89
+ 19 a 23 anos R$ 301,31 R$ 391,95 R$ 307,77 R$ 398,42
+ 24 a 28 anos R$ 345,68 R$ 449,87 R$ 352,15 R$ 456,34
+ 29 a 33 anos R$ 396,84 R$ 516,66 R$ 403,31 R$ 523,13
+ 34 a 38 anos R$ 455,69 R$ 593,48 R$ 462,16 R$ 599,95
+ 39 a 43 anos R$ 527,87 R$ 687,71 R$ 534,33 R$ 694,18
+ 44 a 48 anos R$ 637,76 R$ 831,18 R$ 644,23 R$ 837,65
+ 49 a 53 anos R$ 827,71 R$ 1.079,16 R$ 834,18 R$ 1.085,63
+ 54 a 58 anos R$ 1.115,81 R$ 1.455,27 R$ 1.122,28 R$ 1.461,73
+ 59 anos ou + R$ 1.549,21 R$ 2.021,02 R$ 1.555,68 R$ 2.027,49
+ LINHA SBS AMPLO REEMBOLSO
+ SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO
+ PRODUTO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 499.860/24-0 499.861/24-8 499.860/24-0 499.861/24-8
+ 0 a 18 anos R$ 302,24 R$ 393,16 R$ 308,71 R$ 399,62
+ 19 a 23 anos R$ 346,88 R$ 451,45 R$ 353,35 R$ 457,92
+ 24 a 28 anos R$ 398,06 R$ 518,25 R$ 404,53 R$ 524,72
+ 29 a 33 anos R$ 457,08 R$ 595,30 R$ 463,54 R$ 601,77
+ 34 a 38 anos R$ 524,95 R$ 683,92 R$ 531,42 R$ 690,39
+ 39 a 43 anos R$ 608,23 R$ 792,61 R$ 614,70 R$ 799,08
+ 44 a 48 anos R$ 734,99 R$ 958,11 R$ 741,46 R$ 964,58
+ 49 a 53 anos R$ 954,11 R$ 1.244,17 R$ 960,58 R$ 1.250,63
+ 54 a 58 anos R$ 1.286,46 R$ 1.678,03 R$ 1.292,92 R$ 1.684,50
+ 59 anos ou + R$ 1.786,39 R$ 2.330,69 R$ 1.792,86 R$ 2.337,15
+LINHA SBS AMPLO
+ BASE PARA CÁLCULO DO
+ REEMBOLSO CONSULTAS REEMBOLSO URGÊNCIA / BASE PARA CÁLCULO DO LIMITES E REGRAS
+ REEMBOLSO
+ REEMBOLSO URGÊNCIA E
+ MÉDICAS FORA DA REDE EMERGÊNCIA FORA DA REDE REEMBOLSO ELETIVA
+ EMERGÊNCIA
+ Tabela de preços praticada pela Valor até o efetivamente pago.
+ Tabela de de Referência do
+ Sim Sim sua operadora e sua rede Não inferior ao valor da rede.
+ produto.
+ credenciada. Deduz coparticipação, se houver.
+ LINHA SBS NACIONAL
+ SBS NACIONAL SBS NACIONAL
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 498.170/24-7 498.172/24-3
+ 0 a 18 anos R$ 340,84 R$ 443,57
+ 19 a 23 anos R$ 391,28 R$ 509,42
+ 24 a 28 anos R$ 449,11 R$ 584,89
+ 29 a 33 anos R$ 515,78 R$ 671,94
+ 34 a 38 anos R$ 592,47 R$ 772,03
+ 39 a 43 anos R$ 686,55 R$ 894,83
+ 44 a 48 anos R$ 829,75 R$ 1.081,79
+ 49 a 53 anos R$ 1.077,31 R$ 1.404,95
+ 54 a 58 anos R$ 1.452,76 R$ 1.895,10
+ 59 anos ou + R$ 2.017,55 R$ 2.632,39
+ * INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO ESSENCIAL M/CA - 493.390/22-7
+ ** INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO PLENO CA - 497.641/23-0
+ GRUPO 3 - TABELA ESTUDANTIL
+ LINHA SBS PREMIUM
+ PRODUTO SBS PREMIUM SBS PREMIUM
+ ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 498.174/24-0 498.167/24-7
+ 0 a 18 anos R$ 262,59 R$ 341,41
+ 19 a 23 anos R$ 301,29 R$ 391,93
+ 24 a 28 anos R$ 345,65 R$ 449,86
+ 29 a 33 anos R$ 396,82 R$ 516,64
+ 34 a 38 anos R$ 455,65 R$ 593,45
+ 39 a 43 anos R$ 527,84 R$ 687,67
+ 44 a 48 anos R$ 637,71 R$ 831,11
+ 49 a 53 anos R$ 827,66 R$ 1.079,09
+ 54 a 58 anos R$ 1.115,74 R$ 1.455,17
+ 59 anos ou + R$ 1.549,12 R$ 2.020,91
+ LINHA SBS WAY
+ SBS WAY SBS WAY SBS WAY SBS WAY
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 498.164/24-2 498.173/24-1 498.164/24-2 498.173/24-1
+ 0 a 18 anos R$ 271,19 R$ 352,64 R$ 277,66 R$ 359,11
+ 19 a 23 anos R$ 311,18 R$ 404,85 R$ 317,65 R$ 411,32
+ 24 a 28 anos R$ 357,02 R$ 464,70 R$ 363,49 R$ 471,16
+ 29 a 33 anos R$ 409,90 R$ 533,73 R$ 416,36 R$ 540,19
+ 34 a 38 anos R$ 470,69 R$ 613,08 R$ 477,15 R$ 619,55
+ 39 a 43 anos R$ 545,27 R$ 710,45 R$ 551,73 R$ 716,92
+ 44 a 48 anos R$ 658,82 R$ 858,68 R$ 665,29 R$ 865,15
+ 49 a 53 anos R$ 855,10 R$ 1.114,93 R$ 861,57 R$ 1.121,40
+ 54 a 58 anos R$ 1.152,77 R$ 1.503,54 R$ 1.159,24 R$ 1.510,01
+ 59 anos ou + R$ 1.600,58 R$ 2.088,16 R$ 1.607,05 R$ 2.094,63
+ LINHA SBS AMPLO
+ SBS AMPLO SBS AMPLO SBS AMPLO SBS AMPLO
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 496.537/23-0 496.536/23-1 496.537/23-0 496.536/23-1
+ 0 a 18 anos R$ 288,41 R$ 375,11 R$ 294,88 R$ 381,58
+ 19 a 23 anos R$ 330,98 R$ 430,70 R$ 337,45 R$ 437,17
+ 24 a 28 anos R$ 379,79 R$ 494,41 R$ 386,26 R$ 500,88
+ 29 a 33 anos R$ 436,08 R$ 567,88 R$ 442,55 R$ 574,35
+ 34 a 38 anos R$ 500,80 R$ 652,38 R$ 507,27 R$ 658,85
+ 39 a 43 anos R$ 580,19 R$ 756,03 R$ 586,66 R$ 762,50
+ 44 a 48 anos R$ 701,07 R$ 913,83 R$ 707,54 R$ 920,30
+ 49 a 53 anos R$ 910,03 R$ 1.186,61 R$ 916,49 R$ 1.193,08
+ 54 a 58 anos R$ 1.226,93 R$ 1.600,34 R$ 1.233,40 R$ 1.606,80
+ 59 anos ou + R$ 1.703,67 R$ 2.222,68 R$ 1.710,14 R$ 2.229,15
+ LINHA SBS AMPLO REEMBOLSO
+ SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO SBS AMPLO ADESÃO
+ PRODUTO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO REEMBOLSO ESPECIAL REEMBOLSO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Estadual Estadual Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Pleno** Médica + Odonto Pleno**
+ CÓDIGO ANS 499.860/24-0 499.861/24-8 499.860/24-0 499.861/24-8
+ 0 a 18 anos R$ 332,01 R$ 432,02 R$ 338,47 R$ 438,49
+ 19 a 23 anos R$ 381,11 R$ 496,13 R$ 387,58 R$ 502,60
+ 24 a 28 anos R$ 437,41 R$ 569,62 R$ 443,88 R$ 576,09
+ 29 a 33 anos R$ 502,33 R$ 654,37 R$ 508,80 R$ 660,84
+ 34 a 38 anos R$ 577,00 R$ 751,85 R$ 583,47 R$ 758,32
+ 39 a 43 anos R$ 668,59 R$ 871,42 R$ 675,06 R$ 877,89
+ 44 a 48 anos R$ 808,03 R$ 1.053,47 R$ 814,50 R$ 1.059,94
+ 49 a 53 anos R$ 1.049,07 R$ 1.368,12 R$ 1.055,54 R$ 1.374,59
+ 54 a 58 anos R$ 1.414,64 R$ 1.845,38 R$ 1.421,11 R$ 1.851,85
+ 59 anos ou + R$ 1.964,58 R$ 2.563,30 R$ 1.971,05 R$ 2.569,77
+LINHA SBS AMPLO
+ BASE PARA CÁLCULO DO
+ REEMBOLSO CONSULTAS REEMBOLSO URGÊNCIA / BASE PARA CÁLCULO DO LIMITES E REGRAS
+ REEMBOLSO
+ REEMBOLSO URGÊNCIA E
+ MÉDICAS FORA DA REDE EMERGÊNCIA FORA DA REDE REEMBOLSO ELETIVA
+ EMERGÊNCIA
+ Tabela de preços praticada pela Valor até o efetivamente pago.
+ Tabela de de Referência do
+ Sim Sim sua operadora e sua rede Não inferior ao valor da rede.
+ produto.
+ credenciada. Deduz coparticipação, se houver.
+ LINHA SBS NACIONAL
+ SBS NACIONAL SBS NACIONAL
+ PRODUTO ADESÃO ESPECIAL ADESÃO EXECUTIVO
+ COPARTICIPAÇÃO
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 498.170/24-7 498.172/24-3
+ 0 a 18 anos R$ 374,48 R$ 487,46
+ 19 a 23 anos R$ 429,96 R$ 559,90
+ 24 a 28 anos R$ 493,57 R$ 642,91
+ 29 a 33 anos R$ 566,91 R$ 738,67
+ 34 a 38 anos R$ 651,25 R$ 848,78
+ 39 a 43 anos R$ 754,73 R$ 983,86
+ 44 a 48 anos R$ 912,26 R$ 1.189,51
+ 49 a 53 anos R$ 1.184,58 R$ 1.544,99
+ 54 a 58 anos R$ 1.597,58 R$ 2.084,14
+ 59 anos ou + R$ 2.218,85 R$ 2.895,17
+ * INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO ESSENCIAL M/CA - 493.390/22-7
+ ** INCLUSO PLANO ODONTOLÓGICO ODONTO SÃO BERNARDO SAMP – LINHA SÃO BERNARDO PLENO CA - 497.641/23-0
+ TABELA DE COPARTICIPAÇÃO
+PROCEDIMENTOS LINHA SBS - REGIONAIS PRODUTOS AMPLO COM LINHA SBS - NACIONAL
+ REEMBOLSO
+Consulta Eletiva R$ 25,00 30% 30% com limitador de R$ 60,00
+Consulta em hospital (Pronto Socorro) R$ 35,00 30% 30% com limitador de R$ 80,00
+Exames procedimentos simples 30% com limitador de R$ 40,00 30% com limitador de R$ 40,00 30% com limitador de R$ 100,00
+Exames procedimentos simples 30% com limitador de R$ 100,00 30% com limitador de R$ 100,00 30% com limitador de R$ 150,00
+Terapias (Grupo 1) 30% com limitador de R$ 50,00 30% com limitador de R$ 50,00 30% com limitador de R$ 120,00
+Terapias (Grupo 2) ISENTO ISENTO ISENTO
+Terapias (Grupo 3) 40% com limitador de R$ 150,00 30% com limitador de R$ 150,00 40% com limitador de R$ 200,00
+Internação ISENTO ISENTO ISENTO
+ QUEM PODE ADERIR
+GRUPO 1 - TABELA ABERTA
+ANSP- ASSOCIAÇÃO NACIONAL DOS SERVIDORES PÚBLICOS
+Funcionários públicos, ativos, vinculados aos poderes Federal, Estadual e Municipal.
+Elegebilidade: ficha associativa comprovando vínculo regular com a entidade + Funcionários Públicos: nomeação no Diário
+Oficial. Funcionários CLT: cópia do holerite e cópia da CPTS.
+Taxa: R$ 10,00 por mês.
+UNIPRO - ASSOCIAÇÃO BRASILEIRA DE DESENVOLVIMENTO SOCIAL DOS PROFISSIONAIS LIBERAIS
+Pessoas físicas, profissionais liberais que exerçam as profissões abaixo relacionadas: Veterinário, Administrador,
+Advogado, Nutricionista, Dentista, Enfermeiro, Arquiteto, Psicólogo, Fisioterapeuta, Médico, Biólogo, Biomédico,
+Contabilista, Economista, Educador Físico, Engenheiro, Farmacêutico e Assistente Social.
+Taxa: R$ 5,00 por mês.
+GRUPO 2 - TABELA FECHADA
+ASCOSERVI - ASSOCIAÇÃO PROFISSIONAL DO COMÉRCIO E INDÚSTRIA
+Pessoas físicas, que exerçam as profissões abaixo relacionadas: Administradores, Arquitetos, Assistentes Sociais,
+Advogados, Atuários, Biomédicos, Biólogos, Contabilista, Corretores de Seguro, Corretores de Imóveis, Dentistas,
+Economistas, Enfermeiros, Engenheiros, Estatísticos, Farmacêuticos, Filósofos, Físicos, Fisioterapeutas, Geólogos,
+Jornalistas, Médicos, Músicos, Pedagogos, Professores, Psicólogos, Publicitários, Químicos, Representantes Comerciais,
+Sociólogos, Técnicos Contábeis, Técnicos em Enfermagem, Técnicos em Laboratório, Técnicos em Radiologia, Técnicos
+em Telecomunicações, Técnicos em Segurança do Trabalho, Técnicos Agrícolas, Teólogos, Veterinários, Zootecnistas,
+Profissionais de Informática, Comércio Exterior, Gastronomia, História, Hotelaria, Letras, Matemática, Turismo,
+Profissionais de Teatro, Rádio e Televisão.
+Elegibilidade: ficha associativa comprovando vínculo regular com a entidade + cópia do diploma ou certificado de
+conclusão de curso ou Registro no Conselho de Classe ou comprovante de contribuição sindical da categoria + holerite ou
+CTPS.
+Taxa: R$ 10,00 por mês.
+GRUPO 3 - TABELA ESTUDANTIL
+FNEL – FEDERAÇÃO NACIONAL DOS ESTUDANTES LIVRES
+Estudantes em geral (a partir de 8 anos).
+Estudantes maiores de 18 anos poderão incluir somente filhos(as) até 58 anos e cônjuges.
+- Comprovação de Elegibilidade: Declaração escolar atualizada (dos últimos 90 dias) + Declaração de filiação devidamente
+assinada e datada ou cópia do Cartão de associado.
+Taxa: R$ 10,00 por mês.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- O dia de vencimento do valor mensal do benefício (inclusive do primeiro mês) corresponde ao dia do início da vigência
+do benefício, tal como estabelecido na Proposta do beneﬁciário titular ao contrato coletivo.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de Normas
+Regulamentadoras da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- Mês do reajuste anual: OUTUBRO 2025.
+- Serão aceitos ex-beneﬁciários São Bernardo Samp cancelados e adimplentes, desde que não sejam cancelados pela
+RN 561, sejam de contratos: Pessoa Física ou Pessoa Jurídica e que tenham até 30 dias de cancelamento. Não haverá
+aproveitamento de carência para ex-beneﬁciários São Bernardo e Samp oriundos dos Contratos Coletivos por Adesão.
+- Será considerado REPIQUE todo beneﬁciário SÃO BERNADO SAMP que cancele e retorne para a base da operadora no
+prazo de 90 dias.
+- Todas as adesões deverão ser acompanhadas de comprovação do vínculo com a entidade.
+- DOWNGRADE: Será submetido à análise administrativa de custo e benefício pelo time de relacionamento (pós vendas);
+- UPGRADE: o beneﬁciário cumpra as carências exigidas para A NOVA REDE E OU NOVO APOSENTO (6 meses).
+- A solicitação de alteração do plano poderá ser realizada em qualquer momento, sendo que o beneﬁciário deverá cumprir
+carências para a nova categoria.
+- A venda será considerada administrativa para beneﬁciários a partir de 59 anos.
+- Taxa de Angariação: a Afﬁx não interfere no valor da taxa de angariação acordada entre o corretor e o beneﬁciário,
+podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ao valor da mensalidade, bem como que esta
+taxa não se confunde com a mensalidade e o início de vigência do plano. Oriente adequadamente seu beneﬁciário.
+ ÁREA DE ABRANGÊNCIA
+SBS PREMIUM: Ecoporanga (ES), Montanha (ES), Pedro Canário (ES), João Neiva (ES), Santa Teresa
+(ES), Colatina (ES), Barra de São Francisco (ES), Aracruz (ES), Linhares (ES), São Gabriel da Palha
+(ES), Boa Esperança (ES), São Mateus (ES).
+SBS WAY: todo estado do Espírito Santo.
+SBS AMPLO: todo estado do Espírito Santo.
+SBS NACIONAL: todo território nacional.
+SBS AMPLO COM REEMBOLSO: Todo o estado do Espírito Santo.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01
+ Dia 10 Todo dia 10
+ Dia 20 Todo dia 20
+ CARÊNCIAS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PLANO DE SAÚDE
+ CARÊNCIAS
+ PROCEDIMENTOS PRC
+ MÁXIMAS
+ 1002*
+ (CONTRATO)
+Consulta Eletiva (Consultas Médicas e não Médicas em Consultórios). 180 dias ZERO
+Urgência e Emergência (Consultas de Urgência/Emergência em Hospitais ou Pronto Socorro incluindo os acidentes pessoais). 24 horas ZERO
+Exames / Procedimentos Simples (Exames de Análises Clínicas comuns de Sangue (hemograma, Sódio, Potássio, etc); Exames 180 dias ZERO
+comuns de Urina).
+Exames e Procedimentos Especiais (Endoscopia Digestiva Alta; Ressonância Magnética; PET CT; Cintilograﬁa; EcoDoppler;
+Ecocardiograma; Punções guiadas por agulha para retirada de corpo estranho; Gastrostomia Endoscopica; Ecoendoscopia ou 180 dias ZERO
+Ultrassonograﬁa Endoscópica).
+Terapias GRUPO 1 (Fisioterapias e outras terapias em pacientes com necessidades de reabilitações especiﬁcas: cardíacas,
+queimados, pós AVC, neuropatas, amputados). 180 dias 90 dias
+Terapias GRUPO 2 (Quimioterapias; Radioterapias; Hemodiálises; Diálises; Hemoterapias). 180 dias 180 dias
+Terapias GRUPO 3 (Fisioterapias Gerais e inespecíﬁcas como Psicoterapias, Fonoaudiologias, Nutrição e também os Métodos 180 dias 180 dias
+Especiais).
+Procedimentos Internação 1 (Internações Gerais). 180 dias 30 dias
+Procedimentos Internação 2 (Transplantes; Cirurgia Bariátrica; Internações Psiquiátricas; Cirurgias com utilização de Órteses e ou
+Próteses ligadas ao ato cirúrgico). 180 dias 180 dias
+Procedimentos Internação 3 (Parto a termo). 300 dias 300 dias
+As doenças ou lesões preexistentes permanecerão com o prazo de 24 (vinte e quatro) meses de aplicação da CPT (Cobertura Parcial Temporária) inalterado.
+Carência: é o período ininterrupto, contado a partir da data de início de vigência do contrato do plano privado de assistência à saúde, durante o qual o contratante
+paga as mensalidades, mas ainda não tem acesso a determinadas coberturas previstas no contrato, conforme previsto no inciso V do artigo 12 da Lei nº 9656, de
+1998.
+REGRAS PARA APROVEITAMENTO DA CARÊNCIA:
+CARÊNCIA CONTRATUAL: para os beneficiários (titulares e dependentes) que não se enquadram na PRC acima ou possuam 59 anos ou mais.
+PRC 1002*: destinado aos beneficiários a serem incluídos em planos coletivos por adesão sem histórico de plano de saúde anterior nesta operadora ou em outra,
+ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses.
+ISENÇÃO DE COPARTICIPAÇÃO:
+• Consultas eletivas, Consultas em P.A./P.S. e exames simples na rede própria* por 06 meses, para o plano Ambulatorial, Vital e Ideal.
+• Consultas eletivas, Consultas em P.A./P. S, e exames simples na rede própria* durante a vigência do contrato, para os planos Essencial Sul, Superior, Way, Amplo,
+Amplo Reembolso, Premium (Primevo) e Nacional. E Premium (Primevo).
+ *Conforme a disponibilidade de cada localidade.
+TELEMEDICINA: isenção de coparticipação em consultas de Telemedicina durante os 6 primeiros meses de contrato.
+ RESUMO DA REDE HOSPITALAR MÉDICA CREDENCIADA*
+ SBS
+ SBS SBS SBS
+ PRESTADOR CIDADE PREMIUM
+ WAY AMPLO NACIONAL
+ (PRIMEVO)
+ Conferência de São Vicente de Paulo Afonso Cláudio   
+ Movimento de Educação Promocional do ES Anchieta   
+ Fundação Hospital Maternidade São Camilo Aracruz    
+ Casa de Saúde Santa Mônica B. de São Francisco   
+ Associação Hospitalar Rural de Boa Esperança Boa Esperança    
+ Hospital Evangélico Cachoeiro de Itapemirim C. de Itapemirim    
+ Hospital Infantil Francisco de Assis C. de Itapemirim   
+Santa Casa de Misericórdia Cachoeiro de Itapemirim C. de Itapemirim   
+ Hospital e Maternidade São Francisco de Assis Cariacica   
+ Meridional Cariacica Cariacica  
+ São Bernardo Apart Hospital Colatina   
+ Hospital São José Colatina 
+Fun. Hosp. e de Assist. Social de Domingos Martins Domingos Martins   
+Fundação Médico Assistencial de Trabalhador Rural Ecoporanga   
+ Santa Casa de Misericórdia de Guaçuí Guaçuí
+ Hospital São Pedro Guarapari    
+Fundação Médico Assistencial do Trabalhador Rural Itarana   
+ Hospital São Braz Itarana 
+Associação de Beneficência e Cultura de João Neiva João Neiva   
+ Fund. Beneficente Rio Doce (Somente PS Obstétrico) Linhares    
+ Linhares Medical Center Linhares    
+ Hospital Apóstolo Pedro Mimoso do Sul    
+ Sociedade Beneficente e Cultural de Montanha Montanha   
+ Santa Casa de Misericórdia Jesus Maria José Muniz Freire 
+ Sociedade Beneficente São Camilo Nova Venécia   
+ Hospital São Marcos Nova Venécia 
+ Associação Beneficente São Pedro Pedro Canário   
+ Fundação Hospitalar Beneficente Concórdia Sta. M. de Jetibá   
+ Associação Congregação de Santa Catarina Santa Teresa   
+ Casa de Nossa Senhora Aparecida São Mateus   
+ Hospital Meridional São Mateus São Mateus  
+ Vitória Apart Hospital Serra   
+ Hospital Metropolitano Serra   
+Associação Social Filantrópica Hospital Padre Máximo V. N. do Imigrante   
+Associação Evangélica Beneficente Espírito Santense Vila Velha   
+ Hospital Santa Mônica Vila Velha   
+ Centro Médico Hospitalar de Vila Velha Vila Velha   
+ Hospital Praia da Costa Ltda Vila Velha   
+ Associação dos Funcionários Públicos do ES Vitória   
+ Hospital Santa Rita de Cássia Vitória   
+Irmandade da Santa Casa de Misericórdia de Vitória Vitória   
+ Maternidade Santa Paula Vitória   
+ Maternidade Santa Úrsula (Somente PS Obstétrico) Vitória   
+ Clínica de Acidentados de Vitória Vitória   
+ *Rede credenciada sujeita a alterações pela operadora, sem aviso prévio. Consulte as atualizações da rede no site: www.saobernardosamp.com.br

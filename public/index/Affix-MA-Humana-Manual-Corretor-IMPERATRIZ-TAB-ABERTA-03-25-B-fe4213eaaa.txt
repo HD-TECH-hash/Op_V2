@@ -1,0 +1,292 @@
+ANS - nº 35.751-1
+Humana
+ ANS - nº 41.742-4
+Affix
+ MANUAL DO CORRETOR
+ HUMANA SAÚDE
+ IMPERATRIZ - MA
+ VÁLIDO A PARTIR DE 01/02/2025
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO HUMANA SAÚDE
+ Administradora de benefícios/contratante: Afﬁx Administradora de Benefícios.
+ Plano com segmentação: Ambulatorial + hospitalar com obstetrícia com coparticipação.
+ Todas as coberturas da lei nº 9.656/98.
+ TABELA PLANO VITAL
+ PRODUTO CP VITAL IMPERATRIZ COM OBS COPART CA
+SEGMENTAÇÃO Ambulatorial + Hospitalar + Obstetrícia
+COPARTICIPAÇÃO Total Total Básica Básica
+ ACOMODAÇÃO Enfermaria Enfermaria Enfermaria Enfermaria
+ CÓDIGO ANS 494.238/22-8 494.238/22-8 494.238/22-8 494.238/22-8
+ VALOR Combo Saúde + Odonto Somente Saúde Combo Saúde + Odonto Somente Saúde
+ 0 a 18 anos R$ 246,90 R$ 253,31 R$ 295,50 R$ 301,91
+ 19 a 23 anos R$ 288,21 R$ 296,37 R$ 345,09 R$ 353,23
+ 24 a 28 anos R$ 336,55 R$ 346,75 R$ 403,08 R$ 413,29
+ 29 a 33 anos R$ 379,63 R$ 391,66 R$ 454,77 R$ 466,81
+ 34 a 38 anos R$ 434,50 R$ 448,85 R$ 520,61 R$ 534,96
+ 39 a 43 anos R$ 516,48 R$ 534,30 R$ 618,99 R$ 636,82
+ 44 a 48 anos R$ 629,25 R$ 651,84 R$ 754,32 R$ 776,92
+ 49 a 53 anos R$ 785,59 R$ 814,81 R$ 941,94 R$ 971,15
+ 54 a 58 anos R$ 1.031,29 R$ 1.070,90 R$ 1.236,76 R$ 1.276,39
+ 59 anos ou + R$ 1.457,15 R$ 1.514,79 R$ 1.747,80 R$ 1.805,44
+ TABELA PLANO PREMIUM II PLUS
+ COPARTICIPAÇÃO TOTAL
+ PRODUTO CP PREMIUM II PLUS COM OBS COPART CA
+SEGMENTAÇÃO Ambulatorial + Hospitalar + Obstetrícia
+COPARTICIPAÇÃO Total Total Total Total
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ CÓDIGO ANS 492.876/22-8 492.875/22-0 492.876/22-8 492.875/22-0
+ VALOR Combo Saúde + Odonto Combo Saúde + Odonto Somente Saúde Somente Saúde
+ 0 a 18 anos R$ 329,19 R$ 357,07 R$ 335,60 R$ 363,47
+ 19 a 23 anos R$ 384,51 R$ 417,11 R$ 392,66 R$ 425,26
+ 24 a 28 anos R$ 449,19 R$ 487,35 R$ 459,40 R$ 497,56
+ 29 a 33 anos R$ 506,88 R$ 549,96 R$ 518,90 R$ 561,99
+ 34 a 38 anos R$ 580,31 R$ 629,69 R$ 594,67 R$ 644,05
+ 39 a 43 anos R$ 690,06 R$ 748,84 R$ 707,88 R$ 766,67
+ 44 a 48 anos R$ 841,02 R$ 912,74 R$ 863,62 R$ 935,33
+ 49 a 53 anos R$ 1.050,31 R$ 1.139,95 R$ 1.079,53 R$ 1.169,17
+ 54 a 58 anos R$ 1.379,20 R$ 1.497,03 R$ 1.418,81 R$ 1.536,64
+ 59 anos ou + R$ 1.949,28 R$ 2.115,92 R$ 2.006,91 R$ 2.173,57
+ TABELA PLANO PREMIUM II PLUS
+ COPARTICIPAÇÃO BÁSICA
+ PRODUTO CP PREMIUM II PLUS COM OBS COPART CA
+SEGMENTAÇÃO Ambulatorial + Hospitalar + Obstetrícia
+COPARTICIPAÇÃO Básica Básica Básica Básica
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ CÓDIGO ANS 492.876/22-8 492.875/22-0 492.876/22-8 492.875/22-0
+ VALOR Combo Saúde + Odonto Combo Saúde + Odonto Somente Saúde Somente Saúde
+ 0 a 18 anos R$ 394,25 R$ 427,70 R$ 400,67 R$ 434,11
+ 19 a 23 anos R$ 460,63 R$ 499,75 R$ 468,77 R$ 507,91
+ 24 a 28 anos R$ 538,26 R$ 584,04 R$ 548,47 R$ 594,25
+ 29 a 33 anos R$ 607,47 R$ 659,18 R$ 619,51 R$ 671,21
+ 34 a 38 anos R$ 695,61 R$ 754,85 R$ 709,94 R$ 769,20
+ 39 a 43 anos R$ 827,30 R$ 897,83 R$ 845,12 R$ 915,66
+ 44 a 48 anos R$ 1.008,45 R$ 1.094,51 R$ 1.031,04 R$ 1.117,11
+ 49 a 53 anos R$ 1.259,59 R$ 1.367,17 R$ 1.288,81 R$ 1.396,39
+ 54 a 58 anos R$ 1.654,26 R$ 1.795,65 R$ 1.693,88 R$ 1.835,26
+ 59 anos ou + R$ 2.338,36 R$ 2.538,34 R$ 2.395,99 R$ 2.595,99
+ TABELA DE COPARTICIPAÇÃO
+ COPARTICIPAÇÃO TOTAL
+ PROCEDIMENTOS VITAL PREMIUM II PLUS
+Consulta eletiva R$ 24,84 R$ 24,84
+Consulta em hospital (pronto socorro) R$ 37,26 R$ 49,68
+Exames / procedimentos simples 25% com limitador de R$ 31,05 30% com limitador de R$ 31,06
+Exames / procedimentos especiais 25% com limitador de R$ 99,36 30% com limitador de R$ 99,37
+Terapias (Grupo 1) 25% com limitador de R$ 37,26 30% com limitador de R$ 37,27
+Terapias (Grupo 2) Isento Isento
+Terapias (Grupo 3) 30% com limitador de R$ 186,30 30% com limitador de R$ 186,30
+Internação R$ 124,20 R$ 124,20
+ COPARTICIPAÇÃO BÁSICA
+ PROCEDIMENTOS VITAL PREMIUM II PLUS
+Consulta eletiva Isento Isento
+Consulta em hospital (pronto socorro) Isento Isento
+Exames / procedimentos simples Isento Isento
+Exames / procedimentos especiais Isento Isento
+Terapias (Grupo 1) Isento Isento
+Terapias (Grupo 2) Isento Isento
+Terapias (Grupo 3) 30% com limitador de R$ 186,30 30% com limitador de R$ 186,30
+Internação Isento Isento
+ PLANO ODONTOLÓGICO
+ PRODUTO HUMANA ODONTO - NE ESSENCIAL M/CE
+ CÓDIGO ANS 493.408/22-3
+ COBERTURA Urgência e Emergência
+ ÁREA DE ABRANGÊNCIA Grupo de Estados (MA, PB, PI E RN)
+ÁREA DE COMERCIALIZAÇÃO MA
+ REDE CREDENCIADA Consultar no Site ou Aplicativo
+ CARÊNCIAS PLANO ODONTOLÓGICO
+ NE ESSENCIAL M/CE
+ COBERTURA ODONTOLÓGICA CARÊNCIA CONTRATUAL
+ Urgência e Emergência 24 horas
+ QUEM PODE ADERIR
+FNEL - FEDERAÇÃO NACIONAL DOS ESTUDANTES LIVRES
+Estudantes em geral (a partir de 10 anos).
+Elegibilidade: declaração escolar atualizada + declaração de ﬁliação devidamente assinada e datada ou cópia do cartão de
+associado.
+Taxa: R$ 10,00 por mês.
+ASCOSERVI - ASSOCIAÇÃO PROFISSIONAL DO COMÉRCIO E INDÚSTRIA
+Funcionários do comércio e indústria.
+Ficha associativa devidamente assinada.
+Taxa: R$ 10,00 por mês.
+UNIPRO - ASSOCIAÇÃO BRASILEIRA DE DESENVOLVIMENTO SOCIAL DOS PROFISSIONAIS LIBERAIS
+Proﬁssionais liberais.
+Cópia do diploma (frente e verso) ou cópia do Registro de Inscrição no Conselho de Classe de sua respectiva categoria
+proﬁssional + declaração de ﬁliação à UNIPRO, devidamente assinada e datada, ou cópia do cartão de associado.
+Taxa: R$ 5,00 por mês.
+ANSP – ASSOCIAÇÃO NACIONAL DOS SERVIDORES PÚBLICOS
+Servidores Públicos Municipais, Estaduais e Federais.
+Elegibilidade: cópia do contracheque atual + declaração de ﬁliação devidamente assinada e datada ou cópia do cartão de
+associado.
+Taxa: R$ 10,00 por mês.
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR
+- Proposta de Adesão da Affix + Ficha Associativa.
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todas as idades.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia do comprovante de residência atual (últimos 90 dias).
+DEPENDENTES
+Cônjuge
+- Cópia de Certidão de Casamento (ou certidão de nascimento de filhos em comum).
+- Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Companheiro(a)
+- Declaração de união estável de próprio punho, contendo o número do RG e o número do CPF do(a) companheiro(a),
+endereço, tempo de convívio, número do RG.
+- Cópia do RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Filho(a) ou enteado(a)
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Em caso de enteado(a), enviar Certidão de Casamento do titular.
+Filho(a) inválido(a) de qualquer idade
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da autenticada do atestado de invalidez emitido pelo INSS.
+Sobrinho
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos os beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Documento que comprove vínculo com o titular.
+Neto
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos os beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Certidão de Nascimento para comprovar parentesco.
+Irmão
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos os beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Certidão de Nascimento válida para titular com até 15 anos.
+Menor sob guarda ou tutela do beneficiário titular
+- Cópia da Certidão de Nascimento (aceita até os 15 anos) ou RG (obrigatório a partir de 16 anos).
+- CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” definitiva expedida por órgão oficial.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO
+CARTÃO NACIONAL DE SAÚDE (CNS) E CÓPIA DO CPF.
+- Na FNEL, se o titular for menor, poderá incluir: pais.
+- Titulares (estudantes até 17 anos) poderão possuir avó / avô como responsável financeiro, desde que seja apresentada
+a certidão de nascimento para comprovação de vínculo
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados, a fim de comprovar as informações prestadas na Proposta.
+ ÁREA DE ABRANGÊNCIA
+VITAL (Municipal): Imperatriz.
+PREMIUM II PLUS (Grupo de Municípios): Açailândia, Alcântara, Balsas, Governador
+Edison Lobão, Imperatriz, João Lisboa, Paço do Lumiar, Raposa, Riachão, São José de
+Ribamar, São Luís, São Raimundo das Mangabeiras e Senador La Rocque.
+ ÁREA DE COMERCIALIZAÇÃO
+ Imperatriz
+ REAJUSTE
+ Mês reajuste anual: FEVEREIRO 2026.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01 de cada mês
+ Dia 10 Todo dia 10 de cada mês
+ Dia 20 Todo dia 20 de cada mês
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de Normas Regulamentadoras
+da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- A venda será administrativa para segurados a partir de 58 anos, 11 meses e 29 dias.
+- Cópias dos documentos anexados a proposta de adesão, deverão estar legíveis.
+- A solicitação de transferência poderá ser realizada a qualquer período de acordo com o cronograma de movimentação,
+mediante prévia autorização da operadora e desde que respeitadas as demais regras vigentes neste benefício. A alteração
+do plano somente ocorrerá quando solicitada pelo beneficiário titular e acarretará a transferência de todos os seus
+beneficiários dependentes inscritos no benefício anteriormente contratado. A transferência para planos com categoria de
+rede e acomodação superiores a contratada acarretará 180 (cento e oitenta) dias de carência a cumprir.
+- A tabela de preços contempla o valor do benefício opcional odontológico cujo valor mensal estará discriminado na
+proposta de adesão. Plano odontológico disponível na contratação dos planos com segmentação Ambulatorial + Hospitalar
+com obstetrícia: Humana Odonto NE Essencial M/CE (493.408/22-3) - R$ 3,70 - Cobertura somente Urgência/Emergência
+e Prevenção (cobertura detalhada no contrato). Valores mensais expressos em Reais (R$), per capita.
+- TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano
+odontológico. Havendo contratação de apenas um dos planos ou posterior cancelamento de qualquer um deles - médico ou
+odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL.
+- Taxa de Angariação: a Affix não interfere no valor da taxa de angariação acordada entre o corretor e o beneficiário,
+podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ou diverso ao valor da mensalidade, bem como
+que esta taxa não se confunde com a mensalidade e o início de vigência do plano. Oriente adequadamente seu beneficiário.
+ CARÊNCIAS CONTRATUAIS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PRC ADESÃO
+ CARÊNCIAS
+ MÁXIMAS - PRC PRC PRC PRC
+GRUPO GRUPO DE BENEFÍCIOS 1.0 M 3.0 M 6.0 M 12.0 M
+ CONTRATO
+ CONSULTA ELETIVA
+ 1 180 dias Isento Isento Isento Isento
+ Consultas médicas e não médicas em consultórios.
+ URGÊNCIA E EMERGÊNCIA
+ 2 Consultas de urgência/emergência em hospitais ou pronto socorros, 24 horas 24 horas 24 horas Isento Isento
+ incluindo os acidentes pessoais.
+ EXAMES / PROCEDIMENTOS SIMPLES
+ 3 Exames de análises clínicas comuns de sangue (hemograma, sódio, 180 dias Isento Isento Isento Isento
+ potássio etc.); Exames comuns de urina.
+ EXAMES E PROCEDIMENTOS ESPECIAIS
+ Endoscopia digestiva alta; ressonância magnética; PET CT;
+ 4 cintilograﬁa; ecodoppler; ecocardiograma; punções guiadas por 180 dias 180 dias 120 dias 60 dias Isento
+ agulha para retirada de corpo estranho; gastrostomia endoscópica;
+ ecoendoscopia ou ultrassonograﬁa Endoscópica.
+ TERAPIAS GRUPO 1
+ Fisioterapias e outras terapias em pacientes com necessidades de
+ 5 reabilitações especiﬁcas: cardíacas, queimados, pós AVC, neuropatas, 180 dias 180 dias 180 dias 180 dias 90 dias
+ amputados.
+ TERAPIAS GRUPO 2
+ 6 Quimioterapias; radioterapias; hemodiálises; diálises; hemoterapias. 180 dias 180 dias 180 dias 180 dias 180 dias
+ TERAPIAS GRUPO 3
+ 7 Fisioterapias gerais e inespecíﬁcas como psicoterapias, 180 dias 180 dias 180 dias 180 dias 180 dias
+ fonoaudiologias, nutrição e, também, os métodos especiais.
+ PROCEDIMENTOS INTERNAÇÃO 1
+ 8 Internações Gerais. 180 dias 180 dias 180 dias 120 dias 30 dias
+ PROCEDIMENTOS INTERNAÇÃO 2
+ 9 Transplantes; cirurgia bariátrica; internações psiquiátricas; cirurgias 180 dias 180 dias 180 dias 180 dias 180 dias
+ com utilização de órteses e ou próteses ligadas ao ato cirúrgico.
+ PROCEDIMENTOS INTERNAÇÃO 3
+ 10 Parto a termo. 300 dias 300 dias 300 dias 300 dias 300 dias
+ 11 DOENÇAS OU LESÕES PREEXISTENTES - CPT 24 meses 24 meses 24 meses 24 meses 24 meses
+REGRAS PARA APROVEITAMENTO DA CARÊNCIA
+PRC 1.0 M - Destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão, sem histórico de plano de saúde anterior nesta operadora ou
+em outra, ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses.
+PRC 3.0 M - Destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão, com histórico de permanência entre 3 (três) e 6 (seis) meses em
+plano de saúde de qualquer tipo de contratação, necessariamente na segmentação assistencial Ambulatorial + Hospital com ou sem Obstetrícia, rescindido
+a no máximo 60 (sessenta) dias.
+PRC 6.0 M - Destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão, com histórico de permanência entre 6 (seis) e 11 (onze) meses
+em plano de saúde de qualquer tipo de contratação, necessariamente na segmentação assistencial Ambulatorial + Hospital com ou sem Obstetrícia,
+rescindido a no máximo 60 (sessenta) dias.
+PRC 12.0 M - Destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão, com histórico de permanência mínima de 12 (doze) meses em
+plano de saúde, em plano de saúde de qualquer tipo de contratação, necessariamente na segmentação assistencial Ambulatorial + Hospital com ou sem
+Obstetrícia, rescindido a no máximo 60 (sessenta) dias.
+ CARÊNCIAS CONTRATUAIS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+DOCUMENTAÇÃO OBRIGATÓRIA
+1. Anexar últimos 2 boletos devidamente quitados (sendo o último até 60 dias da vigência) e cópia do cartão de identiﬁcação ou declaração de tempo de
+permanência da operadora anterior com informações completas (atualizada e original);
+2. Este aditivo valerá para aproveitamento de carência de qualquer operadora regulamentada pela ANS;
+3. Não serão aceitos comprovantes de planos anteriores na modalidade “Ambulatorial”, “Pós-Pagamento” ou “Custo Operacional”;
+4. A opção de plano com acomodação superior (apartamento) contabilizará carência de 180 (cento e oitenta) dias para utilização do benefício, a partir da
+vigência do contrato;
+5. A contabilização do tempo de permanência para redução de carências entre operadoras será para beneﬁciários oriundos das operadoras: AMIL,
+BRADESCO, SULAMÉRICA E UNIMED, com no máximo 30 dias de cancelamento entre as duas operadoras. Somente serão aceitos aproveitamento de
+carências até 58 anos e 11 meses.
+6. Na entrada do contrato, se faltar documentação de comprovação para redução de carência, o contrato será cadastrado com o PRC mais fechado sem
+possibilidade de alterações.
+ RESUMO DA REDE DE ATENDIMENTO
+ PRESTADOR VITAL PREMIUM II PLUS
+ANGIOIMP  
+CABRAL  
+CENTROCOR 
+CLÍNICA AME  
+CLÍNICA MAE  
+CLÍNICA RICARDO XAVIER  
+CLINIFERT  
+DIAGCENTRO 
+DERMCARE 
+HOSPITAL SÃO RAFAEL  
+INSTITUTO DE OLHOS EDILTON  
+LABORATÓRIO CEDRO 
+NEURO E PELE 
+ONCORADIUM  
+UROIMP  
+W NUCLEAR  
+*Rede credenciada sujeita a alterações pela operadora, sem aviso prévio. Consulte as atualizações da rede no site: www.humanasaude.com.br/ma/

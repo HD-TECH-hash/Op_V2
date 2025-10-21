@@ -1,0 +1,360 @@
+ANS - nº 34.818-0
+Humana
+ ANS - nº 41.742-4
+Affix
+ MANUAL DO CORRETOR
+ HUMANA SAÚDE SUL
+ MARINGÁ - TABELA ESTUDANTIL
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO HUMANA SAÚDE SUL
+ Administradora de benefícios/contratante: Affix Administradora de Benefícios.
+ Plano com segmentação: ambulatorial ou ambulatorial + hospitalar com obstetrícia + plano odontológico.
+ Todas as coberturas da lei nº 9.656/98.
+ TABELA
+ LINHA AMBULATORIAL
+ PRODUTO CP AMBULATORIAL
+ MARINGÁ QC CA
+ COPARTICIPAÇÃO Completa
+ ABRANGÊNCIA Municipal
+ ACOMODAÇÃO Ambulatorial
+ TABELA Médica + Odonto Essencial*
+ CÓDIGO ANS 495.034/23-8
+ 0 a 18 anos R$ 89,55
+ 19 a 23 anos R$ 112,30
+ 24 a 28 anos R$ 121,32
+ 29 a 33 anos R$ 130,00
+ 34 a 38 anos R$ 134,18
+ 39 a 43 anos R$ 156,25
+ 44 a 48 anos R$ 221,93
+ 49 a 53 anos R$ 302,57
+ 54 a 58 anos R$ 359,06
+ 59 anos ou + R$ 514,52
+ PRODUTO CP AMBULATORIAL
+ MARINGÁ QC CA
+ COPARTICIPAÇÃO Básica
+ ABRANGÊNCIA Municipal
+ ACOMODAÇÃO Ambulatorial
+ TABELA Médica + Odonto Essencial*
+ CÓDIGO ANS 495.034/23-8
+ 0 a 18 anos R$ 99,78
+ 19 a 23 anos R$ 125,26
+ 24 a 28 anos R$ 135,37
+ 29 a 33 anos R$ 145,07
+ 34 a 38 anos R$ 149,77
+ 39 a 43 anos R$ 174,49
+ 44 a 48 anos R$ 248,04
+ 49 a 53 anos R$ 338,37
+ 54 a 58 anos R$ 401,63
+ 59 anos ou + R$ 575,73
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA VITAL
+ PRODUTO CP VITAL MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Básica
+ ABRANGÊNCIA Municipal Municipal
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.042/23-9 495.045/23-3
+ 0 a 18 anos R$ 129,55 R$ 144,57
+ 19 a 23 anos R$ 162,99 R$ 182,02
+ 24 a 28 anos R$ 176,25 R$ 196,88
+ 29 a 33 anos R$ 188,98 R$ 211,15
+ 34 a 38 anos R$ 195,13 R$ 218,03
+ 39 a 43 anos R$ 227,57 R$ 254,36
+ 44 a 48 anos R$ 324,08 R$ 362,45
+ 49 a 53 anos R$ 442,57 R$ 495,17
+ 54 a 58 anos R$ 525,58 R$ 588,14
+ 59 anos ou + R$ 753,99 R$ 843,95
+ PRODUTO CP VITAL MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Municipal Municipal
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.042/23-9 495.045/23-3
+ 0 a 18 anos R$ 144,57 R$ 161,40
+ 19 a 23 anos R$ 182,02 R$ 203,34
+ 24 a 28 anos R$ 196,88 R$ 219,99
+ 29 a 33 anos R$ 211,15 R$ 235,97
+ 34 a 38 anos R$ 218,03 R$ 243,68
+ 39 a 43 anos R$ 254,36 R$ 284,36
+ 44 a 48 anos R$ 362,45 R$ 405,42
+ 49 a 53 anos R$ 495,17 R$ 554,07
+ 54 a 58 anos R$ 588,14 R$ 658,19
+ 59 anos ou + R$ 843,95 R$ 944,71
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA IDEAL
+ PRODUTO CP IDEAL MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.048/23-8 495.051/23-8
+ 0 a 18 anos R$ 160,48 R$ 179,21
+ 19 a 23 anos R$ 202,17 R$ 225,91
+ 24 a 28 anos R$ 218,70 R$ 244,43
+ 29 a 33 anos R$ 234,59 R$ 262,23
+ 34 a 38 anos R$ 242,27 R$ 270,81
+ 39 a 43 anos R$ 282,70 R$ 316,12
+ 44 a 48 anos R$ 403,05 R$ 450,90
+ 49 a 53 anos R$ 550,82 R$ 616,40
+ 54 a 58 anos R$ 654,33 R$ 732,33
+ 59 anos ou + R$ 939,15 R$ 1.051,34
+ PRODUTO CP IDEAL MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.048/23-8 495.051/23-8
+ 0 a 18 anos R$ 179,21 R$ 200,20
+ 19 a 23 anos R$ 225,91 R$ 252,50
+ 24 a 28 anos R$ 244,43 R$ 273,25
+ 29 a 33 anos R$ 262,23 R$ 293,18
+ 34 a 38 anos R$ 270,81 R$ 302,80
+ 39 a 43 anos R$ 316,12 R$ 353,53
+ 44 a 48 anos R$ 450,90 R$ 504,49
+ 49 a 53 anos R$ 616,40 R$ 689,85
+ 54 a 58 anos R$ 732,33 R$ 819,69
+ 59 anos ou + R$ 1.051,34 R$ 1.176,97
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA SUPERIOR
+ PRODUTO CP SUPERIOR MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.037/23-2 495.033/23-0
+ 0 a 18 anos R$ 178,05 R$ 198,89
+ 19 a 23 anos R$ 224,42 R$ 250,84
+ 24 a 28 anos R$ 242,83 R$ 271,45
+ 29 a 33 anos R$ 260,49 R$ 291,24
+ 34 a 38 anos R$ 269,02 R$ 300,80
+ 39 a 43 anos R$ 314,02 R$ 351,20
+ 44 a 48 anos R$ 447,91 R$ 501,16
+ 49 a 53 anos R$ 612,29 R$ 685,27
+ 54 a 58 anos R$ 727,43 R$ 814,24
+ 59 anos ou + R$ 1.044,30 R$ 1.169,15
+ PRODUTO CP SUPERIOR MARINGÁ COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.037/23-2 495.033/23-0
+ 0 a 18 anos R$ 198,89 R$ 222,23
+ 19 a 23 anos R$ 250,84 R$ 280,41
+ 24 a 28 anos R$ 271,45 R$ 303,49
+ 29 a 33 anos R$ 291,24 R$ 325,66
+ 34 a 38 anos R$ 300,80 R$ 336,36
+ 39 a 43 anos R$ 351,20 R$ 392,80
+ 44 a 48 anos R$ 501,16 R$ 560,74
+ 49 a 53 anos R$ 685,27 R$ 766,95
+ 54 a 58 anos R$ 814,24 R$ 911,40
+ 59 anos ou + R$ 1.169,15 R$ 1.308,88
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA PREMIUM NACIONAL
+ PRODUTO CP PREMIUM NACIONAL LPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.026/23-7 495.024/23-1
+ 0 a 18 anos R$ 371,82 R$ 415,91
+ 19 a 23 anos R$ 469,94 R$ 525,81
+ 24 a 28 anos R$ 508,85 R$ 569,41
+ 29 a 33 anos R$ 546,24 R$ 611,28
+ 34 a 38 anos R$ 564,28 R$ 631,50
+ 39 a 43 anos R$ 659,49 R$ 738,10
+ 44 a 48 anos R$ 942,72 R$ 1.055,32
+ 49 a 53 anos R$ 1.290,47 R$ 1.444,81
+ 54 a 58 anos R$ 1.534,08 R$ 1.717,64
+ 59 anos ou + R$ 2.204,41 R$ 2.468,42
+ PRODUTO CP PREMIUM NACIONAL LPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.026/23-7 495.024/23-1
+ 0 a 18 anos R$ 415,91 R$ 465,29
+ 19 a 23 anos R$ 525,81 R$ 588,39
+ 24 a 28 anos R$ 569,40 R$ 637,22
+ 29 a 33 anos R$ 611,28 R$ 684,11
+ 34 a 38 anos R$ 631,49 R$ 706,75
+ 39 a 43 anos R$ 738,10 R$ 826,15
+ 44 a 48 anos R$ 1.055,32 R$ 1.181,43
+ 49 a 53 anos R$ 1.444,82 R$ 1.617,66
+ 54 a 58 anos R$ 1.717,65 R$ 1.923,23
+ 59 anos ou + R$ 2.468,42 R$ 2.764,10
+ PLANO ODONTOLÓGICO HUMANA ODONTO S ESSENCIAL M/CA - CÓDIGO ANS: 493.510/22-1
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. HUMANA ODONTO S ESSENCIAL Reg ANS: 493.510/22-1 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA DE COPARTICIPAÇÃO
+ LINHAS AMBULATORIAL E VITAL
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva 30% 30%
+Consultas em P.S. / P.A. 30% 30%
+Exames/procedimentos simples 25% com limitador de R$ 25,00 ISENTO
+Exames/procedimentos especiais 25% com limitador de R$ 70,00 ISENTO
+Terapias grupo 1 25% com limitador de R$ 50,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 30% com limitador de R$ 150,00 30% com limitador de R$ 150,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ LINHAS IDEAL, SUPERIOR E PREMIUM NACIONAL
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva 40% 40%
+Consultas em P.S. / P.A. 40% 40%
+Exames/procedimentos simples 30% com limitador de R$ 25,00 ISENTO
+Exames/procedimentos especiais 30% com limitador de R$ 70,00 ISENTO
+Terapias grupo 1 30% com limitador de R$ 50,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 40% com limitador de R$ 150,00 40% com limitador de R$ 150,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ QUEM PODE ADERIR
+FNEL - FEDERAÇÃO NACIONAL DOS ESTUDANTES LIVRES
+Pessoas naturais (físicas) a partir de 8 anos completos que mantenham o vínculo profissional, classista ou setorial com
+a entidade, quais sejam, os estudantes.
+- Ficha associativa comprovando vínculo regular com a entidade + todo documento comprobatório da matrícula do
+estudante (as instituições necessitam ser reconhecidas pelo MEC).
+Instituição de Ensino Público ou Particular: declaração (eletrônica ou em timbrado com CNPJ - devidamente
+comprovada) da instituição de ensino, contendo: nome completo do estudante, curso, período, telefone e assinatura ou
+cópia da Carteirinha de Estudante (Universitário Ano Letivo);
+Para a Particular: os documentos acima podem ser substituídos pela última mensalidade quitada.
+A DECLARAÇÃO ESCOLAR DATADA COM ATÉ 30 DIAS.
+Taxa: R$ 10,00 por mês.
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR
+- Proposta de Adesão da Affix + Ficha Associativa.
+- Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Certidão de Nascimento válida para titular com até 13 anos.
+- Cópia do comprovante de residência atual (últimos 90 dias), podendo ser em nome de terceiros.
+DEPENDENTES
+Cônjuge
+- Cópia de Certidão de Casamento + Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Companheiro(a)
+- Declaração de união estável de próprio punho, contendo o número do RG e o número do CPF do(a) companheiro(a),
+endereço, tempo de convívio, número do RG e assinatura de 2 testemunhas, firma reconhecida do titular e do(a)
+companheiro(a).
+- Cópia do RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Filho(a), naturais ou adotados(as), enteado(a), netos(as) ou sobrinhos(as) até 58 anos
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Documento que comprove vínculo de parentesco com o titular.
+Filho(a) ou enteado(a) inválido(a) de qualquer idade
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” expedida por órgão social.
+Menor sob guarda ou tutela do beneficiário titular
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” definitiva expedida por órgão oficial.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO
+CARTÃO NACIONAL DE SAÚDE (CNS).
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados, a fim de comprovar as informações prestadas na Proposta.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de
+Normas Regulamentadoras da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- A solicitação de alteração do plano poderá ser realizada sempre no mês de reajuste do contrato:
+MARÇO, sendo que o beneﬁciário deverá cumprir carências para a nova categoria.
+- Reajuste anual: MARÇO 2026.
+- Cópias dos documentos anexados a proposta de adesão, deverão estar legíveis.
+- A venda será considerada administrativa para beneﬁciários a partir de 59 anos.
+- Taxa de Angariação: a Afﬁx não interfere no valor da taxa de angariação acordada entre o corretor e
+o beneﬁciário, podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ou igual ao
+valor da mensalidade, bem como que esta taxa não se confunde com a mensalidade e o início de
+vigência do plano. Oriente adequadamente seu beneﬁciário.
+ ÁREA DE ABRANGÊNCIA
+AMBULATORIAL / VITAL – Maringá
+IDEAL / SUPERIOR – Campo Mourão, Cianorte, Colorado, Mandaguaçu, Mandaguari, Marialva,
+Maringá, Nova Esperança, Paiçandu, Paranavaí e Sarandi.
+PREMIUM NACIONAL – Todo o território brasileiro.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01
+ Dia 10 Todo dia 10
+ Dia 20 Todo dia 20
+ CARÊNCIAS CONTRATUAIS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PLANO DE SAÚDE
+ CARÊNCIAS
+GRUPO
+ PRC
+ PROCEDIMENTOS COBERTURA MÁXIMAS - 1001*
+ CONTRATO
+ 1 Consulta Eletiva Consultas médicas e não médicas em consultórios. 180 dias Isento
+ Consultas de urgência/emergência em hospitais ou pronto
+ 2 Urgência e Emergência socorro incluindo os acidentes pessoais. 24 horas Isento
+ 3 Exames / Procedimentos Simples Exames de análises clínicas comuns de sangue (hemograma, 180 dias Isento
+ sódio, potássio etc.); exames comuns de urina.
+ Endoscopia Digestiva Alta, Ressonância Magnética, PET CT,
+ Cintilograﬁa, Ecodoppler, Ecocardiograma, punções guiadas
+ 4 Exames e Procedimentos Especiais por agulha para retirada de corpo estranho, Gastrostomia 180 dias Isento
+ Endoscópica, Ecoendoscopia ou Ultrassonograﬁa
+ Endoscópica.
+ Fisioterapias e outras terapias em pacientes com
+ 5 Terapias GRUPO 1 necessidades de reabilitações especiﬁcas: cardíacas, 180 dias 90 dias
+ queimados, pós AVC, neuropatas, amputados.
+ Quimioterapias, Radioterapias, Hemodiálises, Diálises,
+ 6 Terapias GRUPO 2 Hemoterapias. 180 dias 180 dias
+ Fisioterapias Gerais e inespecíﬁcas como Psicoterapias,
+ 7 Terapias GRUPO 3 Fonoaudiologias, Nutrição e, também, os Métodos Especiais. 180 dias 180 dias
+ 8 Procedimentos Internação 1 Internações gerais. 180 dias 30 dias
+ Transplantes, Cirurgia Bariátrica, Internações Psiquiátricas,
+ 9 Procedimentos Internação 2 Cirurgias com utilização de Órteses e ou Próteses ligadas ao 180 dias 180 dias
+ ato cirúrgico.
+ 10 Procedimentos Internação 3 Parto a termo. 300 dias 300 dias
+ATENÇÃO: as doenças ou lesões preexistentes permanecerão com o prazo de 24 (vinte e quatro) meses de aplicação da CPT (Cobertura Parcial Temporária) inalterado.
+PRC válido para procedimentos a serem realizados na Rede de Prestadores vinculada ao plano contratado.
+PRC 1001*: destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão sem histórico de plano de saúde anterior nesta operadora ou em
+outra, ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses. Esse PRC é
+destinado a Campanha para novos beneﬁciários.
+ISENÇÃO DE COPARTICIPAÇÃO:
+ISENÇÃO DE COBRANÇA DE COPARTICIPAÇÃO DURANTE OS 6 (SEIS) PRIMEIROS MESES NA HUMANA CLÍNICA.
+- Maringá: consultas eletivas e exames simples na rede própria, por 6 meses, para os planos Ambulatorial, Vital e Ideal.
+- Consultas eletivas e exames simples na rede própria, durante a vigência do contrato, para os planos Superior e Premium Nacional.
+VÁLIDO SOMENTE PARA NOVOS BENEFICIÁRIOS. ESTE ADITIVO É VÁLIDO POR TEMPO DETERMINADO, CONSULTE CONDIÇÕES.
+DOCUMENTAÇÃO DO BENEFICIÁRIO OBRIGATÓRIA PARA REDUÇÃO DE CARÊNCIA: carta de permanência emitida pela operadora/seguradora/administradora de
+origem nos últimos 60 (sessenta) dias ou últimos três boletos pagos + carteirinha do beneﬁciário.
+*Condição válida para vendas realizadas nas vigências 01/04/2025 até 30/06/2025.
+ ODONTO ESSENCIAL S ESSENCIAL M/CA
+ COBERTURA CARÊNCIA CONTRATUAL
+ Casos de urgência e emergência. 24 horas
+ Demais casos 180 dias
+ RESUMO DA REDE HOSPITALAR MÉDICA CREDENCIADA*
+ HOSPITAIS CIDADES
+ HOSPITAL SANTA CASA DE MISERICÓRDIA CAMPO MOURÃO
+ INSTITUTO BOM JESUS CIANORTE
+ REDE DE ASSISTÊNCIA À SAÚDE METROPOLITANA SARANDI
+ CENTRO DE SAÚDE CRISTO REDENTOR MANDAGUARI
+ IRMANDADE DA SANTA CASA DE LONDRINA LONDRINA
+ HOSPITAL ARAUCÁRIA LONDRINA
+ HOSPITAL DO CORAÇÃO DE LONDRINA LONDRINA
+ CENTRO MÉDICO MARINGÁ MARINGÁ
+ HOSPITAL BOM SAMARITANO DE MARINGÁ MARINGÁ
+*Rede credenciada sujeita a alterações pela operadora, sem aviso prévio. Consulte as atualizações da rede no site: www.humanasaude.com.br/sul/

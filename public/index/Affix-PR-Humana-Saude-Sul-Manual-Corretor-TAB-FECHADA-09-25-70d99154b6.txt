@@ -1,0 +1,379 @@
+Affix Humana Saúde Sul
+ ANS - nº 41.742-4 ANS - nº 34.818-0
+TABELA FECHADA
+ HUMANA SAÚDE SUL
+ MANUAL DO CORRETOR
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO HUMANA SAÚDE SUL
+ Administradora de benefícios/contratante: Affix Administradora de Benefícios.
+ Plano com segmentação: ambulatorial ou ambulatorial + hospitalar com obstetrícia + plano odontológico.
+ Todas as coberturas da lei nº 9.656/98.
+ TABELA
+ LINHA AMBULATORIAL
+ PRODUTO CP AMBULATORIAL
+ MCR QC CA
+ COPARTICIPAÇÃO Completa
+ ABRANGÊNCIA Grupo de Municípios
+ ACOMODAÇÃO Ambulatorial
+ TABELA Médica + Odonto Essencial*
+ CÓDIGO ANS 495.076/23-3
+ 0 a 18 anos R$ 88,90
+ 19 a 23 anos R$ 111,36
+ 24 a 28 anos R$ 120,27
+ 29 a 33 anos R$ 128,82
+ 34 a 38 anos R$ 132,95
+ 39 a 43 anos R$ 154,73
+ 44 a 48 anos R$ 219,53
+ 49 a 53 anos R$ 299,12
+ 54 a 58 anos R$ 354,86
+ 59 anos ou + R$ 508,25
+ PRODUTO CP AMBULATORIAL
+ MCR QC CA
+ COPARTICIPAÇÃO Básica
+ ABRANGÊNCIA Grupo de Municípios
+ ACOMODAÇÃO Ambulatorial
+ TABELA Médica + Odonto Essencial*
+ CÓDIGO ANS 495.076/23-3
+ 0 a 18 anos R$ 98,99
+ 19 a 23 anos R$ 124,15
+ 24 a 28 anos R$ 134,11
+ 29 a 33 anos R$ 143,70
+ 34 a 38 anos R$ 148,32
+ 39 a 43 anos R$ 172,72
+ 44 a 48 anos R$ 245,31
+ 49 a 53 anos R$ 334,43
+ 54 a 58 anos R$ 396,87
+ 59 anos ou + R$ 568,66
+ PLANO ODONTOLÓGICO SEMPRE VIDA ODONTO ESSENCIAL - CÓDIGO ANS: 493.453/22-9
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. SEMPRE VIDA ODONTO ESSENCIAL
+- Reg ANS: 493.453/22-9 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA VITAL
+ PRODUTO CP VITAL MCR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.079/23-8 495.072/23-1
+ 0 a 18 anos R$ 119,68 R$ 134,03
+ 19 a 23 anos R$ 150,36 R$ 168,54
+ 24 a 28 anos R$ 162,52 R$ 182,23
+ 29 a 33 anos R$ 174,22 R$ 195,37
+ 34 a 38 anos R$ 179,85 R$ 201,71
+ 39 a 43 anos R$ 209,61 R$ 235,19
+ 44 a 48 anos R$ 298,14 R$ 334,78
+ 49 a 53 anos R$ 406,85 R$ 457,07
+ 54 a 58 anos R$ 483,00 R$ 542,74
+ 59 anos ou + R$ 692,54 R$ 778,45
+ PRODUTO CP VITAL MCR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.079/23-8 495.072/23-1
+ 0 a 18 anos R$ 133,47 R$ 149,55
+ 19 a 23 anos R$ 167,82 R$ 188,18
+ 24 a 28 anos R$ 181,45 R$ 203,52
+ 29 a 33 anos R$ 194,54 R$ 218,24
+ 34 a 38 anos R$ 200,85 R$ 225,35
+ 39 a 43 anos R$ 234,19 R$ 262,84
+ 44 a 48 anos R$ 333,35 R$ 374,38
+ 49 a 53 anos R$ 455,11 R$ 511,35
+ 54 a 58 anos R$ 540,39 R$ 607,29
+ 59 anos ou + R$ 775,07 R$ 871,29
+ PLANO ODONTOLÓGICO SEMPRE VIDA ODONTO ESSENCIAL - CÓDIGO ANS: 493.453/22-9
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. SEMPRE VIDA ODONTO ESSENCIAL
+- Reg ANS: 493.453/22-9 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA IDEAL
+ PRODUTO CP IDEAL MCR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.069/23-1 495.057/23-7
+ 0 a 18 anos R$ 135,05 R$ 151,25
+ 19 a 23 anos R$ 169,81 R$ 190,35
+ 24 a 28 anos R$ 183,61 R$ 205,85
+ 29 a 33 anos R$ 196,86 R$ 220,76
+ 34 a 38 anos R$ 203,25 R$ 227,94
+ 39 a 43 anos R$ 236,99 R$ 265,88
+ 44 a 48 anos R$ 337,36 R$ 378,74
+ 49 a 53 anos R$ 460,60 R$ 517,31
+ 54 a 58 anos R$ 546,93 R$ 614,38
+ 59 anos ou + R$ 784,50 R$ 881,49
+ PRODUTO CP IDEAL MCR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.069/23-1 495.057/23-7
+ 0 a 18 anos R$ 150,67 R$ 168,82
+ 19 a 23 anos R$ 189,61 R$ 212,60
+ 24 a 28 anos R$ 205,07 R$ 229,98
+ 29 a 33 anos R$ 219,91 R$ 246,66
+ 34 a 38 anos R$ 227,07 R$ 254,72
+ 39 a 43 anos R$ 264,85 R$ 297,21
+ 44 a 48 anos R$ 377,27 R$ 423,60
+ 49 a 53 anos R$ 515,30 R$ 578,81
+ 54 a 58 anos R$ 611,99 R$ 687,52
+ 59 anos ou + R$ 878,06 R$ 986,69
+ PLANO ODONTOLÓGICO SEMPRE VIDA ODONTO ESSENCIAL - CÓDIGO ANS: 493.453/22-9
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. SEMPRE VIDA ODONTO ESSENCIAL
+- Reg ANS: 493.453/22-9 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA SUPERIOR OESTE
+ PRODUTO CP SUPERIOR OESTE PR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.064/23-0 495.062/23-3
+ 0 a 18 anos R$ 177,06 R$ 198,16
+ 19 a 23 anos R$ 223,04 R$ 249,78
+ 24 a 28 anos R$ 241,28 R$ 270,26
+ 29 a 33 anos R$ 258,81 R$ 289,93
+ 34 a 38 anos R$ 267,26 R$ 299,42
+ 39 a 43 anos R$ 311,88 R$ 349,50
+ 44 a 48 anos R$ 444,64 R$ 498,53
+ 49 a 53 anos R$ 607,62 R$ 681,49
+ 54 a 58 anos R$ 721,80 R$ 809,65
+ 59 anos ou + R$ 1.035,99 R$ 1.162,34
+ PRODUTO CP SUPERIOR OESTE PR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.064/23-0 495.062/23-3
+ 0 a 18 anos R$ 197,72 R$ 221,36
+ 19 a 23 anos R$ 249,22 R$ 279,18
+ 24 a 28 anos R$ 269,66 R$ 302,11
+ 29 a 33 anos R$ 289,29 R$ 324,15
+ 34 a 38 anos R$ 298,76 R$ 334,78
+ 39 a 43 anos R$ 348,73 R$ 390,87
+ 44 a 48 anos R$ 497,41 R$ 557,76
+ 49 a 53 anos R$ 679,96 R$ 762,69
+ 54 a 58 anos R$ 807,84 R$ 906,23
+ 59 anos ou + R$ 1.159,73 R$ 1.301,24
+ PLANO ODONTOLÓGICO SEMPRE VIDA ODONTO ESSENCIAL - CÓDIGO ANS: 493.453/22-9
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. SEMPRE VIDA ODONTO ESSENCIAL
+- Reg ANS: 493.453/22-9 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA
+ LINHA PREMIUM NACIONAL
+ PRODUTO CP PREMIUM NACIONAL OPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Completa Completa
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.060/23-7 495.058/23-5
+ 0 a 18 anos R$ 316,47 R$ 354,45
+ 19 a 23 anos R$ 399,69 R$ 447,80
+ 24 a 28 anos R$ 432,70 R$ 484,84
+ 29 a 33 anos R$ 464,40 R$ 520,41
+ 34 a 38 anos R$ 479,70 R$ 537,58
+ 39 a 43 anos R$ 560,44 R$ 628,15
+ 44 a 48 anos R$ 800,64 R$ 897,62
+ 49 a 53 anos R$ 1.095,57 R$ 1.228,50
+ 54 a 58 anos R$ 1.302,17 R$ 1.460,27
+ 59 anos ou + R$ 1.870,67 R$ 2.098,04
+ PRODUTO CP PREMIUM NACIONAL OPR COM OBSTETRÍCIA
+ COPARTICIPAÇÃO Básica Básica
+ ABRANGÊNCIA Nacional Nacional
+ ACOMODAÇÃO Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 495.060/23-7 495.058/23-5
+ 0 a 18 anos R$ 353,87 R$ 396,41
+ 19 a 23 anos R$ 447,07 R$ 500,96
+ 24 a 28 anos R$ 484,05 R$ 542,45
+ 29 a 33 anos R$ 519,56 R$ 582,28
+ 34 a 38 anos R$ 536,69 R$ 601,51
+ 39 a 43 anos R$ 627,12 R$ 702,95
+ 44 a 48 anos R$ 896,14 R$ 1.004,76
+ 49 a 53 anos R$ 1.226,48 R$ 1.375,34
+ 54 a 58 anos R$ 1.457,85 R$ 1.634,91
+ 59 anos ou + R$ 2.094,57 R$ 2.349,23
+ PLANO ODONTOLÓGICO SEMPRE VIDA ODONTO ESSENCIAL - CÓDIGO ANS: 493.453/22-9
+* A tabela de preços contempla o valor do benefício opcional odontológico, cujo valor mensal deverá estar discriminado na proposta de adesão. SEMPRE VIDA ODONTO ESSENCIAL
+- Reg ANS: 493.453/22-9 - R$ 4,33 - Somente Urgência/Emergência (cobertura detalhada no contrato do produto).
+** A TABELA COM VALOR PROMOCIONAL será válida somente na contratação COMBO de um plano médico e plano odontológico. Havendo contratação de apenas um dos planos
+ou posterior cancelamento de qualquer um deles - médico ou odontológico - OS PREÇOS VÁLIDOS SERÃO OS DA TABELA VALOR ORIGINAL, acima exposto.
+ TABELA DE COPARTICIPAÇÃO
+ LINHAS AMBULATORIAL E VITAL
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva 30% 30%
+Consultas em P.S. / P.A. 30% 30%
+Exames/procedimentos simples 30% com limitador de R$ 195,00 ISENTO
+Exames/procedimentos especiais 30% com limitador de R$ 195,00 ISENTO
+Terapias grupo 1 30% com limitador de R$ 195,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 30% com limitador de R$ 195,00 30% com limitador de R$ 195,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ IDEAL, SUPERIOR OESTE E PREMIUM NACIONAL
+ COPARTICIPAÇÃO COPARTICIPAÇÃO
+ PROCEDIMENTOS COMPLETA BÁSICA
+Consulta eletiva 40% 40%
+Consultas em P.S. / P.A. 40% 40%
+Exames/procedimentos simples 40% com limitador de R$ 195,00 ISENTO
+Exames/procedimentos especiais 40% com limitador de R$ 195,00 ISENTO
+Terapias grupo 1 40% com limitador de R$ 195,00 ISENTO
+Terapias grupo 2 ISENTO ISENTO
+Terapias grupo 3 40% com limitador de R$ 195,00 40% com limitador de R$ 195,00
+Internação ISENTO ISENTO
+ Os valores/limitadores de coparticipação serão reajustados anualmente, na mesma ocasião da aplicação de reajuste anual.
+ O limitador do grupo é por procedimento.
+ QUEM PODE ADERIR
+UNIPRO – ASSOCIAÇÃO BRASILEIRA DE DESENVOLVIMENTO SOCIAL DOS PROFISSIONAIS LIBERAIS
+Pessoas físicas, proﬁssionais liberais que exerçam as proﬁssões relacionadas: Veterinário; Administrador; Advogado;
+Nutricionista; Dentista; Enfermeiro; Arquiteto; Psicólogo; Fisioterapeuta; Médico; Biólogo; Biomédico; Contabilista;
+Economista; Educador Físico; Engenheiro; Farmacêutico; Assistente Social.
+- Ficha associativa comprovando vínculo regular com a entidade + Cópia do diploma (frente e verso) OU certiﬁcado de
+conclusão de curso OU registro no conselho de classe OU comprovante de contribuição sindical da categoria.
+Taxa: R$ 5,00 por mês.
+ANSP – ASSOCIAÇÃO NACIONAL DOS SERVIDORES PÚBLICOS
+Funcionários públicos, ativos, vinculados aos poderes Federal, Estadual e Municipal.
+- Ficha associativa comprovando vínculo regular com a entidade + Caso estatutário: nomeação e holerite OU Caso
+celetista: carteira de trabalho e holerite.
+Taxa: R$ 10,00 por mês
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR
+- Proposta de Adesão da Affix + Ficha Associativa.
+- Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Certidão de Nascimento válida para titular com até 13 anos.
+- Cópia do comprovante de residência atual (últimos 90 dias), podendo ser em nome de terceiros.
+DEPENDENTES
+Cônjuge
+- Cópia de Certidão de Casamento + Cópia RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Companheiro(a)
+- Declaração de união estável de próprio punho, contendo o número do RG e o número do CPF do(a) companheiro(a),
+endereço, tempo de convívio, número do RG e assinatura de 2 testemunhas, firma reconhecida do titular e do(a)
+companheiro(a).
+- Cópia do RG e CPF.
+- Cópia do Cartão Nacional de Saúde.
+Filho(a), naturais ou adotados(as), enteado(a), netos(as) ou sobrinhos(as) até 58 anos
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Documento que comprove vínculo de parentesco com o titular.
+Filho(a) ou enteado(a) inválido(a) de qualquer idade
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” expedida por órgão social.
+Menor sob guarda ou tutela do beneficiário titular
+- Cópia da Certidão de Nascimento + RG e CPF obrigatório para todos beneficiários.
+- Cópia do Cartão Nacional de Saúde.
+- Cópia da Tutela ou do “Termo de Guarda” definitiva expedida por órgão oficial.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO
+CARTÃO NACIONAL DE SAÚDE (CNS).
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados, a fim de comprovar as informações prestadas na Proposta.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de
+Normas Regulamentadoras da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- A solicitação de alteração do plano poderá ser realizada a qualquer momento, sendo que o
+beneﬁciário deverá cumprir carências para a nova categoria.
+- Reajuste anual: MARÇO 2026.
+- Cópias dos documentos anexados a proposta de adesão, deverão estar legíveis.
+- A venda será considerada administrativa para beneﬁciários a partir de 59 anos.
+- Taxa de Angariação: a Afﬁx não interfere no valor da taxa de angariação acordada entre o corretor e
+o beneﬁciário, podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ou igual ao
+valor da mensalidade, bem como que esta taxa não se confunde com a mensalidade e o início de
+vigência do plano. Oriente adequadamente seu beneﬁciário.
+ ÁREA DE ABRANGÊNCIA
+AMBULATORIAL / VITAL – Marechal Cândido Rondon e Toledo.
+IDEAL - Entre Rios do Oeste, Guaíra, Marechal Cândido Rondon, Maripá, Nova Santa Rosa, Pato
+Bragado, Quatro Pontes, Santa Helena, Terra Roxa e Toledo.
+SUPERIOR OESTE – Cascavel, Entre Rios do Oeste, Guaíra, Marechal Cândido Rondon, Maripá,
+Nova Santa Rosa, Pato Bragado, Quatro Pontes, Santa Helena, Terra Roxa e Toledo.
+PREMIUM NACIONAL - Todo o território brasileiro.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01
+ Dia 10 Todo dia 10
+ Dia 20 Todo dia 20
+ CARÊNCIAS CONTRATUAIS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PLANO DE SAÚDE
+ CARÊNCIAS
+GRUPO
+ PRC
+ PROCEDIMENTOS COBERTURA MÁXIMAS - 1001*
+ CONTRATO
+ 1 Consulta Eletiva Consultas médicas e não médicas em consultórios. 180 dias Isento
+ Consultas de urgência/emergência em hospitais ou pronto
+ 2 Urgência e Emergência socorro incluindo os acidentes pessoais. 24 horas Isento
+ 3 Exames / Procedimentos Simples Exames de análises clínicas comuns de sangue (hemograma, 180 dias Isento
+ sódio, potássio etc.); exames comuns de urina.
+ Endoscopia Digestiva Alta, Ressonância Magnética, PET CT,
+ Cintilograﬁa, Ecodoppler, Ecocardiograma, punções guiadas
+ 4 Exames e Procedimentos Especiais por agulha para retirada de corpo estranho, Gastrostomia 180 dias Isento
+ Endoscópica, Ecoendoscopia ou Ultrassonograﬁa
+ Endoscópica.
+ Fisioterapias e outras terapias em pacientes com
+ 5 Terapias GRUPO 1 necessidades de reabilitações especiﬁcas: cardíacas, 180 dias 90 dias
+ queimados, pós AVC, neuropatas, amputados.
+ Quimioterapias, Radioterapias, Hemodiálises, Diálises,
+ 6 Terapias GRUPO 2 Hemoterapias. 180 dias 180 dias
+ Fisioterapias Gerais e inespecíﬁcas como Psicoterapias,
+ 7 Terapias GRUPO 3 Fonoaudiologias, Nutrição e, também, os Métodos Especiais. 180 dias 180 dias
+ 8 Procedimentos Internação 1 Internações gerais. 180 dias 30 dias
+ Transplantes, Cirurgia Bariátrica, Internações Psiquiátricas,
+ 9 Procedimentos Internação 2 Cirurgias com utilização de Órteses e ou Próteses ligadas ao 180 dias 180 dias
+ ato cirúrgico.
+ 10 Procedimentos Internação 3 Parto a termo. 300 dias 300 dias
+CARÊNCIA: é o período ininterrupto, contado a partir da data de início de vigência do contrato do plano privado de assistência à saúde, durante o qual o contratante paga
+as mensalidades, mas ainda não tem acesso a determinadas coberturas previstas no contrato, conforme previsto no inciso V do artigo 12 da Lei nº 9656, de 1998.
+ATENÇÃO: as doenças ou lesões preexistentes permanecerão com o prazo de 24 (vinte e quatro) meses de aplicação da CPT (Cobertura Parcial Temporária) inalterado.
+PRC válido para procedimentos a serem realizados na Rede de Prestadores vinculada ao plano contratado.
+PRC 1001*: destinado aos beneﬁciários, a serem incluídos em planos coletivos por adesão sem histórico de plano de saúde anterior nesta operadora ou em
+outra, ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses. Esse PRC é
+destinado a Campanha para novos beneﬁciários.
+DOCUMENTAÇÃO DO BENEFICIÁRIO OBRIGATÓRIA PARA REDUÇÃO DE CARÊNCIA: carta de permanência emitida pela operadora/seguradora/administradora de
+origem nos últimos 60 (sessenta) dias ou últimos três boletos pagos + carteirinha do beneﬁciário.
+A promoção é válida para vendas realizadas dentro do período entre 01/01/2025 e 31/01/2025.
+ SEMPRE VIDA ODONTO ESSENCIAL
+ COBERTURA CARÊNCIA CONTRATUAL
+ Casos de urgência e emergência. 24 horas
+ Demais casos 180 dias
+ RESUMO DA REDE HOSPITALAR MÉDICA CREDENCIADA*
+ AMBULATORIAL E VITAL - PRESTADORES CIDADES
+ Hospital Rondon Marechal Cândido Rondon
+ Humana Clinic Toledo
+ IDEAL - PRESTADORES CIDADES
+ Hospital Rondon Marechal Cândido Rondon
+ Humana Clinic Toledo
+ HOESP Toledo
+ Hospital Doutor Campgnolo (Eletivo) Toledo
+ Policlínica Santa Helena Santa Helena
+ Associação Assistencial Guaíra
+ Associação Hospitalar Bom Pastor Nova Santa Rosa
+ Hospital Beneﬁcente Moacir Micheletto Assis Chateaubriand
+ SUPERIOR OESTE - PRESTADORES CIDADES
+ Hospital Rondon Marechal Cândido Rondon
+ Humana Clinic Toledo
+ HOESP Toledo
+ Hospital Doutor Campgnolo (Eletivo) Toledo
+ Policlínica Santa Helena Santa Helena
+ Associação Assistencial Guaíra
+ Associação Hospitalar Bom Pastor Nova Santa Rosa
+ Hospital Beneﬁcente Moacir Micheletto Assis Chateaubriand
+ Hospital São Lucas Cascavel
+ Hospital Kids São Lucas Cascavel
+ Hospital Policlínica Cascavel
+ Centro de Saúde Paranemed Cascavel
+ Centro Médico Hospitalar Gênesis (Eletivo) Cascavel
+*Rede credenciada sujeita a alterações pela operadora, sem aviso prévio. Consulte as atualizações da rede no site: www.humanasaude.com.br/sul/

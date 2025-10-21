@@ -1,0 +1,335 @@
+15
+ 15
+ 15%%
+ %
+ % DESCONTO
+ NAS 3 PRIMEIRAS
+ ANS - nº 36.376-6
+ MENSALIDADES*
+São Bernardo
+ MANUAL DO CORRETOR
+ ANS - nº 34.203-3
+Samp
+ SÃO BERNARDO SAMP SAÚDE
+ ANS - nº 41.742-4
+ LINHA SAMP
+Affix
+ CONTRATO DE PLANO DE SAÚDE COLETIVO POR ADESÃO SÃO BERNARDO SAMP
+ Administradora de benefícios/contratante: Afﬁx Administradora de Benefícios.
+ Plano com segmentação: Ambulatorial + hospitalar com obstetrícia com coparticipação e plano odontológico.
+ Todas as coberturas da lei nº 9.656/98.
+ GRUPO 1 - TABELA ABERTA
+ PRODUTO VITAL COM COPART ESSENCIAL SUL COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 486.295/20-3 486.294/20-5 483.489/19-5 483.484/19-4
+ 0 a 18 anos R$ 208,63 R$ 270,97 R$ 215,68 R$ 280,17
+ 19 a 23 anos R$ 239,25 R$ 310,93 R$ 247,35 R$ 321,49
+ 24 a 28 anos R$ 274,33 R$ 356,73 R$ 283,64 R$ 368,87
+ 29 a 33 anos R$ 314,80 R$ 409,56 R$ 325,49 R$ 423,52
+ 34 a 38 anos R$ 361,33 R$ 470,31 R$ 373,64 R$ 486,36
+ 39 a 43 anos R$ 418,42 R$ 544,84 R$ 432,69 R$ 563,47
+ 44 a 48 anos R$ 505,32 R$ 658,28 R$ 522,59 R$ 680,83
+ 49 a 53 anos R$ 655,55 R$ 854,40 R$ 678,01 R$ 883,71
+ 54 a 58 anos R$ 883,39 R$ 1.151,84 R$ 913,71 R$ 1.191,41
+ 59 anos ou + R$ 1.226,13 R$ 1.599,26 R$ 1.268,28 R$ 1.654,27
+ PRODUTO IDEAL COM COPART IDEAL ES COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 483.490/19-9 483.491/19-7 485.388/20-1 485.387/20-3
+ 0 a 18 anos R$ 224,13 R$ 291,19 R$ 229,75 R$ 298,55
+ 19 a 23 anos R$ 257,05 R$ 334,19 R$ 263,53 R$ 342,64
+ 24 a 28 anos R$ 294,81 R$ 383,48 R$ 302,25 R$ 393,20
+ 29 a 33 anos R$ 338,34 R$ 440,31 R$ 346,90 R$ 451,47
+ 34 a 38 anos R$ 388,41 R$ 505,67 R$ 398,25 R$ 518,51
+ 39 a 43 anos R$ 449,82 R$ 585,85 R$ 461,25 R$ 600,75
+ 44 a 48 anos R$ 543,32 R$ 707,90 R$ 557,14 R$ 725,94
+ 49 a 53 anos R$ 704,94 R$ 918,91 R$ 722,92 R$ 942,35
+ 54 a 58 anos R$ 950,09 R$ 1.238,94 R$ 974,35 R$ 1.270,60
+ 59 anos ou + R$ 1.318,84 R$ 1.720,34 R$ 1.345,20 R$ 1.764,33
+ INCLUSO PLANO ODONTOLÓGICO ODONTO SAMP ESSENCIAL M/CA - 493.390/22-7
+ GRUPO 2 - TABELA FECHADA
+ PRODUTO VITAL COM COPART ESSENCIAL SUL COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 486.295/20-3 486.294/20-5 483.489/19-5 483.484/19-4
+ 0 a 18 anos R$ 231,31 R$ 300,57 R$ 239,13 R$ 310,79
+ 19 a 23 anos R$ 265,32 R$ 344,97 R$ 274,32 R$ 356,71
+ 24 a 28 anos R$ 304,31 R$ 395,86 R$ 314,64 R$ 409,35
+ 29 a 33 anos R$ 349,26 R$ 454,55 R$ 361,15 R$ 470,06
+ 34 a 38 anos R$ 400,97 R$ 522,06 R$ 414,64 R$ 539,90
+ 39 a 43 anos R$ 464,40 R$ 604,86 R$ 480,26 R$ 625,56
+ 44 a 48 anos R$ 560,96 R$ 730,92 R$ 580,16 R$ 755,96
+ 49 a 53 anos R$ 727,88 R$ 948,82 R$ 752,83 R$ 981,40
+ 54 a 58 anos R$ 981,03 R$ 1.279,31 R$ 1.014,73 R$ 1.323,27
+ 59 anos ou + R$ 1.361,86 R$ 1.776,46 R$ 1.408,68 R$ 1.837,57
+ PRODUTO IDEAL COM COPART IDEAL ES COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 483.490/19-9 483.491/19-7 485.388/20-1 485.387/20-3
+ 0 a 18 anos R$ 248,53 R$ 323,04 R$ 254,79 R$ 331,22
+ 19 a 23 anos R$ 285,11 R$ 370,82 R$ 292,30 R$ 380,21
+ 24 a 28 anos R$ 327,06 R$ 425,58 R$ 335,32 R$ 436,38
+ 29 a 33 anos R$ 375,42 R$ 488,72 R$ 384,93 R$ 501,14
+ 34 a 38 anos R$ 431,05 R$ 561,35 R$ 441,99 R$ 575,61
+ 39 a 43 anos R$ 499,29 R$ 650,43 R$ 511,99 R$ 666,99
+ 44 a 48 anos R$ 603,18 R$ 786,05 R$ 618,54 R$ 806,09
+ 49 a 53 anos R$ 782,77 R$ 1.020,50 R$ 802,73 R$ 1.046,56
+ 54 a 58 anos R$ 1.055,15 R$ 1.376,09 R$ 1.082,10 R$ 1.411,27
+ 59 anos ou + R$ 1.464,86 R$ 1.910,97 R$ 1.494,15 R$ 1.959,86
+ INCLUSO PLANO ODONTOLÓGICO ODONTO SAMP ESSENCIAL M/CA - 493.390/22-7
+ GRUPO 3 - TABELA ESTUDANTIL
+ PRODUTO VITAL COM COPART ESSENCIAL SUL COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Grupo de Municípios Grupo de Municípios
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 486.295/20-3 486.294/20-5 483.489/19-5 483.484/19-4
+ 0 a 18 anos R$ 253,98 R$ 330,17 R$ 262,59 R$ 341,41
+ 19 a 23 anos R$ 291,40 R$ 379,00 R$ 301,29 R$ 391,93
+ 24 a 28 anos R$ 334,28 R$ 434,99 R$ 345,65 R$ 449,83
+ 29 a 33 anos R$ 383,74 R$ 499,55 R$ 396,80 R$ 516,62
+ 34 a 38 anos R$ 440,61 R$ 573,80 R$ 455,65 R$ 593,43
+ 39 a 43 anos R$ 510,39 R$ 664,89 R$ 527,83 R$ 687,66
+ 44 a 48 anos R$ 616,60 R$ 803,56 R$ 637,71 R$ 831,10
+ 49 a 53 anos R$ 800,22 R$ 1.043,25 R$ 827,66 R$ 1.079,08
+ 54 a 58 anos R$ 1.078,69 R$ 1.406,79 R$ 1.115,74 R$ 1.455,15
+ 59 anos ou + R$ 1.497,58 R$ 1.953,65 R$ 1.549,09 R$ 2.020,88
+ PRODUTO IDEAL COM COPART IDEAL ES COM COPART
+COPARTICIPAÇÃO
+ ABRANGÊNCIA Grupo de Municípios Grupo de Municípios Estadual Estadual
+ ACOMODAÇÃO Enfermaria Apartamento Enfermaria Apartamento
+ TABELA Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial* Médica + Odonto Essencial*
+ CÓDIGO ANS 483.490/19-9 483.491/19-7 485.388/20-1 485.387/20-3
+ 0 a 18 anos R$ 272,91 R$ 354,89 R$ 279,81 R$ 363,88
+ 19 a 23 anos R$ 313,16 R$ 407,44 R$ 321,09 R$ 417,76
+ 24 a 28 anos R$ 359,30 R$ 467,67 R$ 368,40 R$ 479,55
+ 29 a 33 anos R$ 412,51 R$ 537,14 R$ 422,96 R$ 550,79
+ 34 a 38 anos R$ 473,70 R$ 617,02 R$ 485,73 R$ 632,73
+ 39 a 43 anos R$ 548,77 R$ 715,02 R$ 562,73 R$ 733,23
+ 44 a 48 anos R$ 663,04 R$ 864,20 R$ 679,94 R$ 886,25
+ 49 a 53 anos R$ 860,58 R$ 1.122,10 R$ 882,55 R$ 1.150,76
+ 54 a 58 anos R$ 1.160,21 R$ 1.513,25 R$ 1.189,84 R$ 1.551,93
+ 59 anos ou + R$ 1.610,89 R$ 2.101,62 R$ 1.643,12 R$ 2.155,38
+ INCLUSO PLANO ODONTOLÓGICO ODONTO SAMP ESSENCIAL M/CA - 493.390/22-7
+ TABELA DE COPARTICIPAÇÃO
+ PROCEDIMENTOS COPARTICIPAÇÃO
+Consulta Eletiva R$ 20,00
+Consulta em hospital (Pronto Socorro) R$ 25,00
+Exames procedimentos simples 30% com limitador de R$ 40,00
+Exames procedimentos simples 30% com limitador de R$ 100,00
+Terapias (Grupo 1) 30% com limitador de R$ 50,00
+Terapias (Grupo 2) ISENTO
+Terapias (Grupo 3) 30% com limitador de R$ 150,00
+Internação ISENTO
+ QUEM PODE ADERIR
+GRUPO 1 - TABELA ABERTA
+ANSP- ASSOCIAÇÃO NACIONAL DOS SERVIDORES PÚBLICOS
+Funcionários públicos, ativos, vinculados aos poderes Federal, Estadual e Municipal.
+Elegebilidade: ficha associativa comprovando vínculo regular com a entidade + Funcionários Públicos: nomeação no Diário
+Oficial. Funcionários CLT: cópia do holerite e cópia da CPTS.
+Taxa: R$ 10,00 por mês.
+UNIPRO - ASSOCIAÇÃO BRASILEIRA DE DESENVOLVIMENTO SOCIAL DOS PROFISSIONAIS LIBERAIS
+Pessoas físicas, profissionais liberais que exerçam as profissões abaixo relacionadas: Veterinário, Administrador,
+Advogado, Nutricionista, Dentista, Enfermeiro, Arquiteto, Psicólogo, Fisioterapeuta, Médico, Biólogo, Biomédico,
+Contabilista, Economista, Educador Físico, Engenheiro, Farmacêutico e Assistente Social.
+Taxa: R$ 5,00 por mês.
+GRUPO 2 - TABELA FECHADA
+ASCOSERVI - ASSOCIAÇÃO PROFISSIONAL DO COMÉRCIO E INDÚSTRIA
+Pessoas físicas, que exerçam as profissões abaixo relacionadas: Administradores, Arquitetos, Assistentes Sociais,
+Advogados, Atuários, Biomédicos, Biólogos, Contabilista, Corretores de Seguro, Corretores de Imóveis, Dentistas,
+Economistas, Enfermeiros, Engenheiros, Estatísticos, Farmacêuticos, Filósofos, Físicos, Fisioterapeutas, Geólogos,
+Jornalistas, Médicos, Músicos, Pedagogos, Professores, Psicólogos, Publicitários, Químicos, Representantes Comerciais,
+Sociólogos, Técnicos Contábeis, Técnicos em Enfermagem, Técnicos em Laboratório, Técnicos em Radiologia, Técnicos
+em Telecomunicações, Técnicos em Segurança do Trabalho, Técnicos Agrícolas, Teólogos, Veterinários, Zootecnistas,
+Profissionais de Informática, Comércio Exterior, Gastronomia, História, Hotelaria, Letras, Matemática, Turismo,
+Profissionais de Teatro, Rádio e Televisão.
+Elegibilidade: ficha associativa comprovando vínculo regular com a entidade + cópia do diploma ou certificado de
+conclusão de curso ou Registro no Conselho de Classe ou comprovante de contribuição sindical da categoria + holerite ou
+CTPS.
+Taxa: R$ 10,00 por mês.
+GRUPO 3 - TABELA ESTUDANTIL
+FNEL – FEDERAÇÃO NACIONAL DOS ESTUDANTES LIVRES
+Estudantes em geral (a partir de 8 anos).
+Estudantes maiores de 18 anos poderão incluir somente filhos(as) até 58 anos e cônjuges.
+- Comprovação de Elegibilidade: Declaração escolar atualizada (dos últimos 90 dias) + Declaração de filiação devidamente
+assinada e datada ou cópia do Cartão de associado.
+Taxa: R$ 10,00 por mês.
+ DOCUMENTAÇÃO NECESSÁRIA
+TITULAR (ASSOCIADOS ÀS ENTIDADES)
+- Comprovante de filiação à entidade + cópia da Certidão de Nascimento ou RG (obrigatório a partir de 18 anos), CPF,
+Comprovante de residência no nome do titular ou com vínculo de parentesco e Cartão do SUS.
+DEPENDENTES
+Cônjuge
+- Cópia da Certidão de Casamento, RG (obrigatório a partir de 18 anos), CPF e Cartão do SUS.
+Companheiro(a)
+- Cópia da Declaração de União Estável (com fima reconhecida do casal e duas testemunhas), RG (obrigatório a partir de 18
+anos), CPF e Cartão do SUS.
+Filhos, enteados e tutelados até 58 anos
+- Cópia da Certidão de Nascimento ou RG (obrigatório a partir de 18 anos), CPF e Cartão do SUS, se adotivo, necessária cópia
+do documento de adoção. CPF obrigatório para dependentes.
+AGREGADOS
+Netos e sobrinhos até 58 anos
+- Cópia da Certidão de Nascimento ou RG (obrigatório a partir de 18 anos), CPF e Cartão do SUS, CPF obrigatório para
+dependentes, documento de vínculo com o titular do plano ou cônjuge.
+ATENÇÃO: TODOS OS PROPONENTES TITULARES E/OU SEU(S) DEPENDENTE(S) DEVERÃO APRESENTAR CÓPIA DO
+CARTÃO NACIONAL DE SAÚDE (CNS).
+A Administradora de Benefícios/Contratante poderá requisitar a qualquer momento outros documentos aqui não
+especificados, a fim de comprovar as informações prestadas na Proposta.
+ INFORMAÇÕES IMPORTANTES
+- Os preços e a rede médica credenciada estão sujeitos a alterações por parte da operadora.
+- O dia de vencimento do valor mensal do benefício (inclusive do primeiro mês) corresponde ao dia do início da
+vigência do benefício, tal como estabelecido na Proposta do beneficiário titular ao contrato coletivo.
+- Proposta sujeita a análise técnica.
+- Este material contém informações resumidas prevalecendo as condições do contrato de adesão.
+- Material de uso interno destinado exclusivamente aos consultores.
+- Contém linguagem técnica e informações resumidas, sujeitas a alterações por força de Lei e de Normas
+Regulamentadoras da ANS, bem como as regras contratuais estabelecidas com a Operadora.
+- Mês do reajuste anual: OUTUBRO 2025.
+- Serão aceitos ex-beneficiários São Bernardo Samp cancelados e adimplentes, desde que não sejam cancelados
+pela RN 561, sejam de contratos: Pessoa Física ou Pessoa Jurídica e que tenham até 30 dias de cancelamento. Não
+haverá aproveitamento de carência para ex-beneficiários São Bernardo e Samp oriundos dos Contratos Coletivos
+por Adesão.
+- Será considerado REPIQUE todo beneficiário SÃO BERNADO SAMP que cancele e retorne para a base da operadora
+no prazo de 90 dias.
+- Em caso de titulares menores, os responsáveis pela assinatura da proposta devem ser, obrigatoriamente: pai, mãe,
+tio, tia, avô, avó ou o responsável legal com documento oficial comprobatório do vínculo.
+- DOWNGRADE: será submetido à análise administrativa de custo e benefício pelo time de relacionamento (pós
+vendas).
+- UPGRADE: o beneficiário cumpra as carências exigidas para A NOVA REDE E OU NOVO APOSENTO (6 meses).
+- A venda será considerada administrativa para beneficiários a partir de 59 anos.
+- Taxa de Angariação: a Affix não interfere no valor da taxa de angariação acordada entre o corretor e o beneficiário,
+podendo esta taxa ser livremente negociada, desde que: o valor seja inferior ao valor da mensalidade, bem como que
+esta taxa não se confunde com a mensalidade e o início de vigência do plano. Oriente adequadamente seu
+beneficiário.
+ ÁREA DE COMERCIALIZAÇÃO
+VITAL: Cariacica, Serra, Vilha Velha e Vitória.
+ESSENCIAL SUL: Afonso Cláudio, Alegre, Alfredo Chaves, Apiacá, Atilio Vivacqua, Brejetuba, Cachoeiro de
+Itapemirim, Castelo, Conceição do Castelo, Domingos Martins, Guaçuí, Ibatiba, Ibitirama, Iconha, Itapemirim,
+Itarana, Iúna, Jerônimo Monteiro, Laranja da Terra, Marataízes, Marechal Floriano, Mimoso do Sul, Muniz Freire,
+Muqui, Piúma, Presidente Kennedy, Rio Novo do Sul, Santa Maria de Jetibá, São José do Calçado, Vargem Alta e
+Venda Nova do Imigrante.
+IDEAL: Aracruz, Cariacica, Serra, Vilha Velha e Vitória.
+IDEAL ES: Espírito Santo.
+ VIGÊNCIA
+ VIGÊNCIA VENCIMENTO
+ Dia 01 Todo dia 01
+ Dia 10 Todo dia 10
+ Dia 20 Todo dia 20
+ CARÊNCIAS
+ CONTADAS A PARTIR DO INÍCIO DA VIGÊNCIA DO BENEFÍCIO
+ PLANO DE SAÚDE
+ CARÊNCIAS
+ PROCEDIMENTOS PRC
+ MÁXIMAS
+ 1002*
+ (CONTRATO)
+Consulta Eletiva (Consultas Médicas e não Médicas em Consultórios). 180 dias ZERO
+Urgência e Emergência (Consultas de Urgência/Emergência em Hospitais ou Pronto Socorro incluindo os acidentes pessoais). 24 horas ZERO
+Exames / Procedimentos Simples (Exames de Análises Clínicas comuns de Sangue (hemograma, Sódio, Potássio, etc); Exames 180 dias ZERO
+comuns de Urina).
+Exames e Procedimentos Especiais (Endoscopia Digestiva Alta; Ressonância Magnética; PET CT; Cintilograﬁa; EcoDoppler;
+Ecocardiograma; Punções guiadas por agulha para retirada de corpo estranho; Gastrostomia Endoscopica; Ecoendoscopia ou 180 dias ZERO
+Ultrassonograﬁa Endoscópica).
+Terapias GRUPO 1 (Fisioterapias e outras terapias em pacientes com necessidades de reabilitações especiﬁcas: cardíacas,
+queimados, pós AVC, neuropatas, amputados). 180 dias 90 dias
+Terapias GRUPO 2 (Quimioterapias; Radioterapias; Hemodiálises; Diálises; Hemoterapias). 180 dias 180 dias
+Terapias GRUPO 3 (Fisioterapias Gerais e inespecíﬁcas como Psicoterapias, Fonoaudiologias, Nutrição e também os Métodos 180 dias 180 dias
+Especiais).
+Procedimentos Internação 1 (Internações Gerais). 180 dias 30 dias
+Procedimentos Internação 2 (Transplantes; Cirurgia Bariátrica; Internações Psiquiátricas; Cirurgias com utilização de Órteses e ou
+Próteses ligadas ao ato cirúrgico). 180 dias 180 dias
+Procedimentos Internação 3 (Parto a termo). 300 dias 300 dias
+As doenças ou lesões preexistentes permanecerão com o prazo de 24 (vinte e quatro) meses de aplicação da CPT (Cobertura Parcial Temporária) inalterado.
+Carência: é o período ininterrupto, contado a partir da data de início de vigência do contrato do plano privado de assistência à saúde, durante o qual o contratante
+paga as mensalidades, mas ainda não tem acesso a determinadas coberturas previstas no contrato, conforme previsto no inciso V do artigo 12 da Lei nº 9656, de
+1998.
+REGRAS PARA APROVEITAMENTO DA CARÊNCIA:
+CARÊNCIA CONTRATUAL: para os beneficiários (titulares e dependentes) que não se enquadram na PRC acima ou possuam 59 anos ou mais.
+PRC 1002*: destinado aos beneficiários a serem incluídos em planos coletivos por adesão sem histórico de plano de saúde anterior nesta operadora ou em outra,
+ou com histórico de contratação de plano anterior nesta operadora ou em outra operadora, com permanência inferior a 03 (três) meses.
+ISENÇÃO DE COPARTICIPAÇÃO:
+• Consultas eletivas, Consultas em P.A./P.S. e exames simples na rede própria* por 06 meses, para o plano Ambulatorial, Vital e Ideal.
+• Consultas eletivas, Consultas em P.A./P. S, e exames simples na rede própria* durante a vigência do contrato, para os planos Essencial Sul, Superior, Way, Amplo,
+Amplo Reembolso, Premium (Primevo) e Nacional. E Premium (Primevo).
+ *Conforme a disponibilidade de cada localidade.
+TELEMEDICINA: isenção de coparticipação em consultas de Telemedicina durante os 6 primeiros meses de contrato.
+ RESUMO DA REDE HOSPITALAR MÉDICA CREDENCIADA
+ CIDADES HOSPITAIS VITAL IDEAL ESSENCIAL IDEAL ES
+ SUL
+AFONSO CLÁUDIO SÃO VICENTE DE PAULO ✔ ✔
+ALEGRE CASA DE CARIDADE SÃO JOSÉ ✔ ✔
+ANCHIETA MOVIMENTO DE EDUCAÇÃO PROMOCIONAL DO ES ✔ ✔
+ARACRUZ HOSPITAL MATERNIDADE SÃO CAMILO ✔ ✔
+BOA ESPERANÇA ASSOCIAÇÃO HOSPITALAR RURAL DE BOA ESPERANÇA ✔
+CACHOEIRO DE ITAPEMIRIM HOSPITAL EVANGÉLICO CACHOEIRO DE ITAPEMIRIM ✔ ✔
+CACHOEIRO DE ITAPEMIRIM HOSPITAL INFANTIL FRANCISCO DE ASSIS ✔ ✔
+CACHOEIRO DE ITAPEMIRIM SANTA CASA DE MISERICÓRDIA CACHOEIRO DE ITAPEMIRIM ✔ ✔
+CARIACICA HOSPITAL SÃO FRANCISCO DE ASSIS ✔
+CARIACICA HOSPITAL MERIDIONAL CARIACICA
+COLATINA SÃO BERNARDO APART HOSPITAL ✔
+COLATINA CASA DE SAÚDE SANTA MARIA ✔
+COLATINA HOSPITAL SÃO JOSÉ ✔
+DOMINGOS MARTINS FUNDAÇÃO HOSPITALAR DE DOMINGOS MARTINS ✔ ✔
+GUAÇUÍ SANTA CASA DE MISERICÓRDIA DE GUAÇUÍ ✔ ✔
+GUARAPARI HOSPITAL SÃO PEDRO ✔ ✔
+ITAPEMIRIM HOSPITAL EVANGÉLICO DE CACHOEIRO DE ITAPEMIRIM ✔ ✔
+ITARANA HOSPITAL SÃO BRAZ ✔
+JOÃO NEIVA HOSPITAL SAGRADO CORAÇÃO DE MARIA ✔
+LINHARES HOSPITAL RIO DOCE ✔
+LINHARES LINHARES MEDICAL CENTER ✔
+MIMOSO DO SUL HOSPITAL APOSTOLO PEDRO ✔ ✔
+MONTANHA HOSPITAL NOSSA SENHORA APARECIDA ✔
+MUNIZ FREIRE SANTA CASA DE MISERICÓRDIA JESUS MARIA JOSÉ ✔ ✔
+NOVA VENÉCIA HOSPITAL SÃO MARCOS ✔
+PEDRO CANÁRIO HOSPITAL MENINO JESUS ✔
+SANTA MARIA DE JETIBÁ HOSPITAL EVANGÉLICO DE SANTA MARIA DE JETIBÁ ✔
+SANTA TERESA HOSPITAL MADRE REGINA PROTMANN ✔
+SÃO MATEUS HOSPITAL E MATERNIDADE SÃO MATEUS ✔
+SERRA HOSPITAL MERIDIONAL SERRA
+SERRA VITÓRIA APART HOSPITAL ✔ ✔ ✔
+V. N. DO IMIGRANTE HOSPITAL PADRE MÁXIMO ✔ ✔ ✔
+VILA VELHA CENTRO MÉDICO HOSPITALAR DE VILA VELHA
+VILA VELHA MERIDIONAL PRAIA DA COSTA
+VILA VELHA HOSPITAL SÃO LUIZ
+VILA VELHA HOSPITAL EVANGÉLICO ✔ ✔
+VILA VELHA HOSPITAL SANTA MÔNICA ✔ ✔ ✔
+VITÓRIA ASSOCIAÇÃO DOS FUNCIONÁRIOS PÚBLICOS DO ES ✔ ✔
+VITÓRIA HOSPITAL MATA DA PRAIA (HOSPITAL DOS OLHOS) ✔
+VITÓRIA HOSPITAL MERIDIONAL VITÓRIA ✔
+VITÓRIA HOSPITAL SANTA RITA
+VITÓRIA SANTA CASA DE MISERICÓRDIA DE VITÓRIA ✔ ✔
+VITÓRIA HOSPITAL SANTA PAULA ✔ ✔
+ RESUMO DA REDE HOSPITALAR MÉDICA CREDENCIADA
+POLICLÍNICA E PRONTO ATENDIMENTO (EXCLUSIVO PARA BENEFICIÁRIOS SÃO BERNARDO SAMP).
+CLÍNICAS SAMP (CONSULTAS MÉDICAS)
+VITÓRIA - Rua Constante Sodré, 178 - Santa Lúcia (em frente ao Centro de Convenções).
+CACHOEIRO DE ITAPEMIRIM - Av. Francisco Lacerda de Aguiar, 381 - Amarelo.
+CARIACICA - Avenida Edgar Gonçalves, Qd. 05 - Alto Dona Augusta (atrás do Carone).
+VILA VELHA - Rua Henrique Laranja, s/n - Centro (próximo ao Shopping da Terra, em frente a Secretaria de Saúde).
+SERRA - Primeira Avenida, 233, 3º andar, Shopping Laranjeiras.
+ESPAÇO MULHER VITÓRIA APART (PRONTO ATENDIMENTO E CONSULTAS MÉDICAS)
+Pronto Atendimento Ginecológico e Obstétrico (todos os dias, inclusive sábados, domingos e feriados, das 7h às 22h).
+VITÓRIA - Av. Leitão da Silva, 981 - Gurigica.
+CLÍNICA DE ESPECIALIDADES
+VITÓRIA - Av. Leitão da Silva, 981 - Gurigica.
+SAMP PRONTO (PRONTO ATENDIMENTO)
+Pronto Atendimento Clínico Adulto e Pediátrico (atendimento após o horário de funcionamento dos PAs, buscar pelo Pronto Socorro do Vitória Apart
+Hospital ou da rede hospitalar de cobertura do seu plano).
+Todos os dias da semana, das 7h às 22h, com atendimento nas especialidades de clínica médica, pediatria e ortopedia.
+CARIACICA - Av. Expedito Garcia, 350 - Campo Grande.
+VITÓRIA - Av. Leitão da Silva, 981 – Gurigica.
+Todos os dias da semana, das 7h às 19h, com atendimento nas especialidades de clínica médica, pediatria e ortopedia.
+SERRA - Av. Eudes Scherrer de Souza, 608 - Civit II.
+VILA VELHA - Av. Jerônimo Monteiro, 1702 - Centro (ao lado do Shopping da Terra).
+PLANOS VITAL, IDEAL E ESSENCIAL
+Atendimento nos hospitais credenciados da Grande Vitória (todos os dias, inclusive sábados, domingos e feriados, das 22h às 7h).
+ Rede credenciada sujeita a alterações pela operadora, sem aviso prévio. Consulte a rede completa no site: www.saobernardosamp.com.br
