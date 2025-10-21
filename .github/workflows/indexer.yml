@@ -7,7 +7,7 @@ on:
       - "scripts/**"
       - ".github/workflows/indexer.yml"
   schedule:
-    - cron: "0 */6 * * *"   # a cada 6h
+    - cron: "0 */6 * * *"     # a cada 6h
   workflow_dispatch:
 
 permissions:
@@ -15,34 +15,35 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Poppler (pdftotext)
+      - name: Install Poppler (pdftotext)
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Install deps
-        run: npm ci || npm i
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm i; fi
 
       - name: Build index (txt + manifest.json)
         run: npm run build:index
 
-      - name: Commit updated public/**
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public
-          git diff --quiet --cached || git commit -m "chore(index): update public index"
-          git push
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact (public/)
         uses: actions/upload-pages-artifact@v3
@@ -51,9 +52,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-
-        on:
-  schedule: [{cron: "0 3 * * *"}]
-  workflow_dispatch:
-  push:
-    paths: ["data/**","scripts/**",".github/workflows/indexer.yml"]
