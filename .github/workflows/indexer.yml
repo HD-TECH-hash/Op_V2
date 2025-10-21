@@ -51,3 +51,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
+        on:
+  schedule: [{cron: "0 3 * * *"}]
+  workflow_dispatch:
+  push:
+    paths: ["data/**","scripts/**",".github/workflows/indexer.yml"]
