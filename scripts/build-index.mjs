@@ -1,61 +1,82 @@
-// scripts/build-index.mjs
-import {promises as fs} from 'fs';
-import path from 'path';
-import {execFile} from 'child_process';
-import {createHash} from 'crypto';
-import fetch from 'node-fetch';
+import {promises as fs} from "fs";
+import fse from "fs-extra";
+import path from "path";
+import {fileURLToPath} from "url";
+import {execFile} from "child_process";
+import {createHash} from "crypto";
+import globby from "globby";
 
-const CSV = 'data/urls.csv';           // header: name,url
-const OUT_DIR = 'public/index';
-const MANIFEST = 'public/manifest.json';
-const ALLOWED = [/^https:\/\/(www\.)?affix\.com\.br\//i, /^https:\/\/(www\.)?alter\.com\.br\//i];
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "..");
+const DATA_DIRS = ["data/affix/raw", "data/alter/raw"];   // ajuste se precisar
+const OUT_DIR = path.join(ROOT, "public");
+const OUT_INDEX_DIR = path.join(OUT_DIR, "index");
+const MANIFEST = path.join(OUT_DIR, "manifest.json");
 
-function sha(s){ return createHash('sha1').update(s).digest('hex').slice(0,16); }
-function clean(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
-
-async function pdftotext(pdfBytes){
-  await fs.mkdir('.tmp', {recursive:true});
-  const pdf = path.join('.tmp', `${Date.now()}_${Math.random().toString(36).slice(2)}.pdf`);
-  const txt = pdf.replace(/\.pdf$/i,'.txt');
-  await fs.writeFile(pdf, pdfBytes);
-  await new Promise((res,rej)=>execFile('pdftotext',['-layout','-enc','UTF-8',pdf,txt],e=>e?rej(e):res()));
-  const out = await fs.readFile(txt,'utf8').catch(()=> '');
-  await fs.rm(pdf,{force:true}); await fs.rm(txt,{force:true});
-  return out;
+function sha(s){ return createHash("md5").update(s).digest("hex").slice(0,10); }
+function clean(t){
+  return String(t||"")
+    .replace(/\u00AD/g,"")
+    .replace(/-\s*\n/g," ")
+    .replace(/\r/g,"")
+    .replace(/\n{2,}/g,"\n")
+    .replace(/[ \t]{2,}/g," ")
+    .trim();
+}
+function pdftotext(file){
+  return new Promise((res,rej)=>{
+    execFile("pdftotext", ["-layout","-enc","UTF-8","-q", file, "-"], {maxBuffer: 80*1024*1024},
+      (err, stdout, stderr)=> err ? rej(err) : res(stdout.toString("utf8")));
+  });
 }
 
 async function run(){
-  await fs.mkdir(OUT_DIR,{recursive:true});
-  const raw = await fs.readFile(CSV,'utf8');
-  const lines = raw.split(/\r?\n/).filter(Boolean).slice(1);
+  await fse.ensureDir(OUT_INDEX_DIR);
+  await fse.ensureFile(path.join(OUT_DIR, ".nojekyll"));
+
+  // lista todos os PDFs
+  const patterns = DATA_DIRS
+    .map(d => path.join(ROOT, d, "**/*.pdf"));
+  const files = await globby(patterns, {onlyFiles:true, expandDirectories:false});
+  if(!files.length) throw new Error("Nenhum PDF encontrado em data/**/raw/");
 
   const items = [];
-  for(const line of lines){
-    const [name,url] = line.split(',').map(s=>s?.trim());
-    if(!name || !url) continue;
-    if(!ALLOWED.some(rx=>rx.test(url))) continue;
+  for(const abs of files){
+    const rel = path.relative(ROOT, abs).replace(/\\/g,"/");
+    const base = path.basename(abs, ".pdf");
+    const id = `${base}-${sha(rel)}`;                 // estável e único
+    const outTxt = path.join(OUT_INDEX_DIR, `${id}.txt`);
 
-    const id = sha(url);
-    const txtPath = `${OUT_DIR}/${id}.txt`;
-
-    let txt = '';
+    let text = "";
     try{
-      const r = await fetch(url);
-      if(r.ok){
-        const buf = Buffer.from(await r.arrayBuffer());
-        txt = await pdftotext(buf);
-      }
-    }catch(_){}
+      text = await pdftotext(abs);
+      if(!text || text.trim().length < 40) throw new Error("texto curto");
+    }catch(_){
+      // fallback: só marca vazio, mas mantém entrada
+      text = "";
+    }
+    await fs.writeFile(outTxt, clean(text), "utf8");
 
-    if(!txt){ console.warn('falha:', url); continue; }
-
-    txt = clean(txt).replace(/\u00AD/g,'').replace(/-\s*\n/g,'').replace(/\s{2,}/g,' ').trim();
-    await fs.writeFile(txtPath, txt, 'utf8');
-    items.push({ id, name, url, path:`index/${id}.txt`, txt:`index/${id}.txt` });
-    process.stdout.write('.');
+    const st = await fs.stat(abs);
+    items.push({
+      id,
+      name: path.basename(abs),
+      relpath: rel,
+      bytes: st.size,
+      mtime: st.mtime.toISOString(),
+      txt: `index/${id}.txt`
+    });
+    process.stdout.write(`indexed: ${rel} -> ${id}.txt\n`);
   }
 
-  await fs.writeFile(MANIFEST, JSON.stringify({generatedAt:new Date().toISOString(), items}, null, 2));
-  console.log(`\nok: ${items.length} itens`);
+  // manifesta
+  await fs.writeFile(MANIFEST, JSON.stringify({
+    generatedAt: new Date().toISOString(),
+    count: items.length,
+    items
+  }, null, 2), "utf8");
+
+  console.log(`OK: ${items.length} PDFs indexados.`);
 }
+
 run().catch(e=>{ console.error(e); process.exit(1); });
