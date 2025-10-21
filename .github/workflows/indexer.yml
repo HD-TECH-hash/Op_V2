@@ -1,4 +1,4 @@
-name: Index PDFs (Affix/Alter) + Deploy
+ name: Index PDFs (Affix/Alter) + Deploy
 
 on:
   push:
