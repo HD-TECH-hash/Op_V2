@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-22T18:30:14.247Z",
+  "generatedAt": "2025-10-23T01:26:13.980Z",
   "count": 206,
   "items": [
     {
@@ -7,7 +7,7 @@
       "name": "003-Relatorio-de-auditoria-ANSAffix-AdmDFs-2.pdf",
       "relpath": "data/affix/raw/003-Relatorio-de-auditoria-ANSAffix-AdmDFs-2.pdf",
       "bytes": 4236243,
-      "mtime": "2025-10-22T18:29:26.430Z",
+      "mtime": "2025-10-23T01:25:25.164Z",
       "txt": "index/003-Relatorio-de-auditoria-ANSAffix-AdmDFs-2-17d56e2df9.txt"
     },
     {
@@ -15,7 +15,7 @@
       "name": "Affix-AL-Hapvida-BOMBEIROS-Manual-05-25.pdf",
       "relpath": "data/affix/raw/Affix-AL-Hapvida-BOMBEIROS-Manual-05-25.pdf",
       "bytes": 2365029,
-      "mtime": "2025-10-22T18:29:26.448Z",
+      "mtime": "2025-10-23T01:25:25.181Z",
       "txt": "index/Affix-AL-Hapvida-BOMBEIROS-Manual-05-25-a4d72d9385.txt"
     },
     {
@@ -23,7 +23,7 @@
       "name": "Affix-AL-Hapvida-PM-ALAGOAS-Manual-05-25.pdf",
       "relpath": "data/affix/raw/Affix-AL-Hapvida-PM-ALAGOAS-Manual-05-25.pdf",
       "bytes": 1752018,
-      "mtime": "2025-10-22T18:29:26.456Z",
+      "mtime": "2025-10-23T01:25:25.188Z",
       "txt": "index/Affix-AL-Hapvida-PM-ALAGOAS-Manual-05-25-8b0aa0c2ca.txt"
     },
     {
@@ -31,7 +31,7 @@
       "name": "Affix-AL-Hapvida-PREF-MACEIO-Manual-05-25.pdf",
       "relpath": "data/affix/raw/Affix-AL-Hapvida-PREF-MACEIO-Manual-05-25.pdf",
       "bytes": 2023526,
-      "mtime": "2025-10-22T18:29:26.461Z",
+      "mtime": "2025-10-23T01:25:25.192Z",
       "txt": "index/Affix-AL-Hapvida-PREF-MACEIO-Manual-05-25-37d31b86fb.txt"
     },
     {
@@ -39,7 +39,7 @@
       "name": "Affix-AL-Hapvida-PREF-RIO-LARGO-Manual-03-25.pdf",
       "relpath": "data/affix/raw/Affix-AL-Hapvida-PREF-RIO-LARGO-Manual-03-25.pdf",
       "bytes": 1986873,
-      "mtime": "2025-10-22T18:29:26.473Z",
+      "mtime": "2025-10-23T01:25:25.203Z",
       "txt": "index/Affix-AL-Hapvida-PREF-RIO-LARGO-Manual-03-25-7041d63800.txt"
     },
     {
@@ -47,7 +47,7 @@
       "name": "Affix-AM-Hapvida-BOMBEIROS-Manual-08-25.pdf",
       "relpath": "data/affix/raw/Affix-AM-Hapvida-BOMBEIROS-Manual-08-25.pdf",
       "bytes": 1842083,
-      "mtime": "2025-10-22T18:29:26.483Z",
+      "mtime": "2025-10-23T01:25:25.213Z",
       "txt": "index/Affix-AM-Hapvida-BOMBEIROS-Manual-08-25-2b99192773.txt"
     },
     {
@@ -55,7 +55,7 @@
       "name": "Affix-AM-Hapvida-IFAM-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-AM-Hapvida-IFAM-Manual-06-25.pdf",
       "bytes": 1973011,
-      "mtime": "2025-10-22T18:29:26.492Z",
+      "mtime": "2025-10-23T01:25:25.222Z",
       "txt": "index/Affix-AM-Hapvida-IFAM-Manual-06-25-21b58b5892.txt"
     },
     {
@@ -63,7 +63,7 @@
       "name": "Affix-AM-Hapvida-PM-AMAZONAS-Manual-01-24.pdf",
       "relpath": "data/affix/raw/Affix-AM-Hapvida-PM-AMAZONAS-Manual-01-24.pdf",
       "bytes": 2170749,
-      "mtime": "2025-10-22T18:29:26.509Z",
+      "mtime": "2025-10-23T01:25:25.238Z",
       "txt": "index/Affix-AM-Hapvida-PM-AMAZONAS-Manual-01-24-cd51d3c38f.txt"
     },
     {
@@ -71,7 +71,7 @@
       "name": "Affix-BA-Dias-DAvila-Hapvida-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-BA-Dias-DAvila-Hapvida-Manual-01-25.pdf",
       "bytes": 2410348,
-      "mtime": "2025-10-22T18:29:26.522Z",
+      "mtime": "2025-10-23T01:25:25.250Z",
       "txt": "index/Affix-BA-Dias-DAvila-Hapvida-Manual-01-25-057cfa5174.txt"
     },
     {
@@ -79,7 +79,7 @@
       "name": "Affix-BA-Hapvida-NDI-SIMOES-FILHO-Manual-08-24-1.pdf",
       "relpath": "data/affix/raw/Affix-BA-Hapvida-NDI-SIMOES-FILHO-Manual-08-24-1.pdf",
       "bytes": 2410061,
-      "mtime": "2025-10-22T18:29:26.525Z",
+      "mtime": "2025-10-23T01:25:25.253Z",
       "txt": "index/Affix-BA-Hapvida-NDI-SIMOES-FILHO-Manual-08-24-1-d20f5e02c8.txt"
     },
     {
@@ -87,7 +87,7 @@
       "name": "Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
       "relpath": "data/affix/raw/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24.pdf",
       "bytes": 1513142,
-      "mtime": "2025-10-22T18:29:26.530Z",
+      "mtime": "2025-10-23T01:25:25.257Z",
       "txt": "index/Affix-BA-Manual-Vendas-Plano-Brasil-Saude-02-24-7ccd6b069e.txt"
     },
     {
@@ -95,7 +95,7 @@
       "name": "Affix-BA-Manual-Vendas-Unimed-Sudoeste-05-25.pdf",
       "relpath": "data/affix/raw/Affix-BA-Manual-Vendas-Unimed-Sudoeste-05-25.pdf",
       "bytes": 2223015,
-      "mtime": "2025-10-22T18:29:26.532Z",
+      "mtime": "2025-10-23T01:25:25.258Z",
       "txt": "index/Affix-BA-Manual-Vendas-Unimed-Sudoeste-05-25-f440505274.txt"
     },
     {
@@ -103,7 +103,7 @@
       "name": "Affix-BA-Manual-Vendas-Unimed-Sudoeste-Pref.-Aiquara-08-24.pdf",
       "relpath": "data/affix/raw/Affix-BA-Manual-Vendas-Unimed-Sudoeste-Pref.-Aiquara-08-24.pdf",
       "bytes": 2421248,
-      "mtime": "2025-10-22T18:29:26.540Z",
+      "mtime": "2025-10-23T01:25:25.265Z",
       "txt": "index/Affix-BA-Manual-Vendas-Unimed-Sudoeste-Pref.-Aiquara-08-24-6044def250.txt"
     },
     {
@@ -111,7 +111,7 @@
       "name": "Affix-BA-Messias-Hapvida-Manual-12-23-1.pdf",
       "relpath": "data/affix/raw/Affix-BA-Messias-Hapvida-Manual-12-23-1.pdf",
       "bytes": 2353378,
-      "mtime": "2025-10-22T18:29:26.547Z",
+      "mtime": "2025-10-23T01:25:25.271Z",
       "txt": "index/Affix-BA-Messias-Hapvida-Manual-12-23-1-912d56c71d.txt"
     },
     {
@@ -119,7 +119,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ABME-11-24.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ABME-11-24.pdf",
       "bytes": 1325445,
-      "mtime": "2025-10-22T18:29:26.553Z",
+      "mtime": "2025-10-23T01:25:25.277Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ABME-11-24-ef6390e269.txt"
     },
     {
@@ -127,7 +127,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASPESCBA-01-25.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASPESCBA-01-25.pdf",
       "bytes": 1273440,
-      "mtime": "2025-10-22T18:29:26.558Z",
+      "mtime": "2025-10-23T01:25:25.282Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASPESCBA-01-25-b1763e1638.txt"
     },
     {
@@ -135,7 +135,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASSERP-08-25-1.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASSERP-08-25-1.pdf",
       "bytes": 1565223,
-      "mtime": "2025-10-22T18:29:26.564Z",
+      "mtime": "2025-10-23T01:25:25.288Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-ASSERP-08-25-1-565ffe14ca.txt"
     },
     {
@@ -143,7 +143,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Backoffice-Manual-Pref-Pocoes-08-25.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-Pref-Pocoes-08-25.pdf",
       "bytes": 1257327,
-      "mtime": "2025-10-22T18:29:26.570Z",
+      "mtime": "2025-10-23T01:25:25.293Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Backoffice-Manual-Pref-Pocoes-08-25-7a216880e6.txt"
     },
     {
@@ -151,7 +151,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Tremedal-12-24.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Tremedal-12-24.pdf",
       "bytes": 2412983,
-      "mtime": "2025-10-22T18:29:26.578Z",
+      "mtime": "2025-10-23T01:25:25.300Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Tremedal-12-24-879039105b.txt"
     },
     {
@@ -159,7 +159,7 @@
       "name": "Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Vitoria-da-Conquista-08-25-1.pdf",
       "relpath": "data/affix/raw/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Vitoria-da-Conquista-08-25-1.pdf",
       "bytes": 1766581,
-      "mtime": "2025-10-22T18:29:26.582Z",
+      "mtime": "2025-10-23T01:25:25.304Z",
       "txt": "index/Affix-BA-Unimed-Sudoeste-Manual-Vendas-Pref.-Vitoria-da-Conquista-08-25-1-51e8563c7c.txt"
     },
     {
@@ -167,7 +167,7 @@
       "name": "Affix-Benef-C3-ADcios-Notas-Explicativas-2019-final.pdf",
       "relpath": "data/affix/raw/Affix-Benef-C3-ADcios-Notas-Explicativas-2019-final.pdf",
       "bytes": 639284,
-      "mtime": "2025-10-22T18:29:26.584Z",
+      "mtime": "2025-10-23T01:25:25.306Z",
       "txt": "index/Affix-Benef-C3-ADcios-Notas-Explicativas-2019-final-cbc4cec2e3.txt"
     },
     {
@@ -175,7 +175,7 @@
       "name": "Affix-CE-Hapvida-AQUIRAZ-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-AQUIRAZ-Manual-08-24.pdf",
       "bytes": 2411151,
-      "mtime": "2025-10-22T18:29:26.589Z",
+      "mtime": "2025-10-23T01:25:25.311Z",
       "txt": "index/Affix-CE-Hapvida-AQUIRAZ-Manual-08-24-f8ed457a38.txt"
     },
     {
@@ -183,7 +183,7 @@
       "name": "Affix-CE-Hapvida-BEBERIBE-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-BEBERIBE-Manual-01-25.pdf",
       "bytes": 2410810,
-      "mtime": "2025-10-22T18:29:26.592Z",
+      "mtime": "2025-10-23T01:25:25.314Z",
       "txt": "index/Affix-CE-Hapvida-BEBERIBE-Manual-01-25-dbd42fe220.txt"
     },
     {
@@ -191,7 +191,7 @@
       "name": "Affix-CE-Hapvida-CAUCAIA-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-CAUCAIA-Manual-06-25.pdf",
       "bytes": 1972078,
-      "mtime": "2025-10-22T18:29:26.602Z",
+      "mtime": "2025-10-23T01:25:25.321Z",
       "txt": "index/Affix-CE-Hapvida-CAUCAIA-Manual-06-25-ed3bb9c105.txt"
     },
     {
@@ -199,7 +199,7 @@
       "name": "Affix-CE-Hapvida-CHOROZINHO-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-CHOROZINHO-Manual-01-25.pdf",
       "bytes": 2411271,
-      "mtime": "2025-10-22T18:29:26.607Z",
+      "mtime": "2025-10-23T01:25:25.323Z",
       "txt": "index/Affix-CE-Hapvida-CHOROZINHO-Manual-01-25-1819a6816d.txt"
     },
     {
@@ -207,7 +207,7 @@
       "name": "Affix-CE-Hapvida-ITAITINGA-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-ITAITINGA-Manual-01-25.pdf",
       "bytes": 2411033,
-      "mtime": "2025-10-22T18:29:26.610Z",
+      "mtime": "2025-10-23T01:25:25.325Z",
       "txt": "index/Affix-CE-Hapvida-ITAITINGA-Manual-01-25-07d73309ee.txt"
     },
     {
@@ -215,7 +215,7 @@
       "name": "Affix-CE-Hapvida-Juazeiro-do-Norte-Manual-12-24.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-Juazeiro-do-Norte-Manual-12-24.pdf",
       "bytes": 2406163,
-      "mtime": "2025-10-22T18:29:26.616Z",
+      "mtime": "2025-10-23T01:25:25.332Z",
       "txt": "index/Affix-CE-Hapvida-Juazeiro-do-Norte-Manual-12-24-fb4b28a572.txt"
     },
     {
@@ -223,7 +223,7 @@
       "name": "Affix-CE-Hapvida-MARACANAU-Manual-09-24.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-MARACANAU-Manual-09-24.pdf",
       "bytes": 1323600,
-      "mtime": "2025-10-22T18:29:26.619Z",
+      "mtime": "2025-10-23T01:25:25.334Z",
       "txt": "index/Affix-CE-Hapvida-MARACANAU-Manual-09-24-a56362e7b3.txt"
     },
     {
@@ -231,7 +231,7 @@
       "name": "Affix-CE-Hapvida-PACAJUS-Manual-02-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-PACAJUS-Manual-02-25.pdf",
       "bytes": 2411417,
-      "mtime": "2025-10-22T18:29:26.622Z",
+      "mtime": "2025-10-23T01:25:25.336Z",
       "txt": "index/Affix-CE-Hapvida-PACAJUS-Manual-02-25-8cbf891b30.txt"
     },
     {
@@ -239,7 +239,7 @@
       "name": "Affix-CE-Hapvida-PACATUBA-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-PACATUBA-Manual-01-25.pdf",
       "bytes": 2410907,
-      "mtime": "2025-10-22T18:29:26.625Z",
+      "mtime": "2025-10-23T01:25:25.338Z",
       "txt": "index/Affix-CE-Hapvida-PACATUBA-Manual-01-25-52138569f2.txt"
     },
     {
@@ -247,7 +247,7 @@
       "name": "Affix-CE-Hapvida-PARACURU-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-PARACURU-Manual-01-25.pdf",
       "bytes": 2410959,
-      "mtime": "2025-10-22T18:29:26.628Z",
+      "mtime": "2025-10-23T01:25:25.340Z",
       "txt": "index/Affix-CE-Hapvida-PARACURU-Manual-01-25-c62532db80.txt"
     },
     {
@@ -255,7 +255,7 @@
       "name": "Affix-CE-Hapvida-REDENCAO-Manual-01-25.pdf",
       "relpath": "data/affix/raw/Affix-CE-Hapvida-REDENCAO-Manual-01-25.pdf",
       "bytes": 2412576,
-      "mtime": "2025-10-22T18:29:26.630Z",
+      "mtime": "2025-10-23T01:25:25.342Z",
       "txt": "index/Affix-CE-Hapvida-REDENCAO-Manual-01-25-9e5ea0317a.txt"
     },
     {
@@ -263,7 +263,7 @@
       "name": "Affix-Codigo-de-Etica-e-Conduta_jun23.pdf",
       "relpath": "data/affix/raw/Affix-Codigo-de-Etica-e-Conduta_jun23.pdf",
       "bytes": 5702463,
-      "mtime": "2025-10-22T18:29:26.656Z",
+      "mtime": "2025-10-23T01:25:25.368Z",
       "txt": "index/Affix-Codigo-de-Etica-e-Conduta_jun23-a5900eab1e.txt"
     },
     {
@@ -271,7 +271,7 @@
       "name": "Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf",
       "relpath": "data/affix/raw/Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1.pdf",
       "bytes": 1952808,
-      "mtime": "2025-10-22T18:29:26.662Z",
+      "mtime": "2025-10-23T01:25:25.373Z",
       "txt": "index/Affix-DF-Manual-Corretor-Ideal-Saude-Brasilia-05-24-1-4ca9d65504.txt"
     },
     {
@@ -279,7 +279,7 @@
       "name": "Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Samp-07-25-1.pdf",
       "relpath": "data/affix/raw/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Samp-07-25-1.pdf",
       "bytes": 2864249,
-      "mtime": "2025-10-22T18:29:26.672Z",
+      "mtime": "2025-10-23T01:25:25.382Z",
       "txt": "index/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Samp-07-25-1-dfc5828f86.txt"
     },
     {
@@ -287,7 +287,7 @@
       "name": "Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Sao-Bernardo-07-25-1.pdf",
       "relpath": "data/affix/raw/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Sao-Bernardo-07-25-1.pdf",
       "bytes": 2505920,
-      "mtime": "2025-10-22T18:29:26.687Z",
+      "mtime": "2025-10-23T01:25:25.397Z",
       "txt": "index/Affix-ES-Manual-Corretor-Sao-Bernardo-Samp-Linha-Sao-Bernardo-07-25-1-eb1e608249.txt"
     },
     {
@@ -295,7 +295,7 @@
       "name": "Affix-Hapvida-AD-Manual-ANAPOLIS-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-ANAPOLIS-08-25B.pdf",
       "bytes": 1796619,
-      "mtime": "2025-10-22T18:29:26.704Z",
+      "mtime": "2025-10-23T01:25:25.412Z",
       "txt": "index/Affix-Hapvida-AD-Manual-ANAPOLIS-08-25B-b59e29c26e.txt"
     },
     {
@@ -303,7 +303,7 @@
       "name": "Affix-Hapvida-AD-Manual-ARACAJU-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-ARACAJU-08-25B.pdf",
       "bytes": 1802697,
-      "mtime": "2025-10-22T18:29:26.707Z",
+      "mtime": "2025-10-23T01:25:25.415Z",
       "txt": "index/Affix-Hapvida-AD-Manual-ARACAJU-08-25B-cd1712eece.txt"
     },
     {
@@ -311,7 +311,7 @@
       "name": "Affix-Hapvida-AD-Manual-BELEM-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-BELEM-08-25B.pdf",
       "bytes": 1802913,
-      "mtime": "2025-10-22T18:29:26.711Z",
+      "mtime": "2025-10-23T01:25:25.418Z",
       "txt": "index/Affix-Hapvida-AD-Manual-BELEM-08-25B-571761db3b.txt"
     },
     {
@@ -319,7 +319,7 @@
       "name": "Affix-Hapvida-AD-Manual-BELO-HORIZONTE-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-BELO-HORIZONTE-08-25B.pdf",
       "bytes": 1825471,
-      "mtime": "2025-10-22T18:29:26.714Z",
+      "mtime": "2025-10-23T01:25:25.421Z",
       "txt": "index/Affix-Hapvida-AD-Manual-BELO-HORIZONTE-08-25B-1cad539a7d.txt"
     },
     {
@@ -327,7 +327,7 @@
       "name": "Affix-Hapvida-AD-Manual-BRASILIA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-BRASILIA-08-25B.pdf",
       "bytes": 1782106,
-      "mtime": "2025-10-22T18:29:26.719Z",
+      "mtime": "2025-10-23T01:25:25.425Z",
       "txt": "index/Affix-Hapvida-AD-Manual-BRASILIA-08-25B-860da9cac3.txt"
     },
     {
@@ -335,7 +335,7 @@
       "name": "Affix-Hapvida-AD-Manual-CAMACARI-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-CAMACARI-08-25B.pdf",
       "bytes": 1803554,
-      "mtime": "2025-10-22T18:29:26.723Z",
+      "mtime": "2025-10-23T01:25:25.429Z",
       "txt": "index/Affix-Hapvida-AD-Manual-CAMACARI-08-25B-d9c172fbec.txt"
     },
     {
@@ -343,7 +343,7 @@
       "name": "Affix-Hapvida-AD-Manual-CAMPINA-GRANDE-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-CAMPINA-GRANDE-08-25B.pdf",
       "bytes": 1802370,
-      "mtime": "2025-10-22T18:29:26.726Z",
+      "mtime": "2025-10-23T01:25:25.433Z",
       "txt": "index/Affix-Hapvida-AD-Manual-CAMPINA-GRANDE-08-25B-d8f3a63973.txt"
     },
     {
@@ -351,7 +351,7 @@
       "name": "Affix-Hapvida-AD-Manual-CENTRO-CLI-NICO-GAU-CHO-08-25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-CENTRO-CLI-NICO-GAU-CHO-08-25.pdf",
       "bytes": 1729703,
-      "mtime": "2025-10-22T18:29:26.738Z",
+      "mtime": "2025-10-23T01:25:25.445Z",
       "txt": "index/Affix-Hapvida-AD-Manual-CENTRO-CLI-NICO-GAU-CHO-08-25-d6c8de6ccc.txt"
     },
     {
@@ -359,7 +359,7 @@
       "name": "Affix-Hapvida-AD-Manual-FEIRA-DE-SANTANA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-FEIRA-DE-SANTANA-08-25B.pdf",
       "bytes": 1840578,
-      "mtime": "2025-10-22T18:29:26.741Z",
+      "mtime": "2025-10-23T01:25:25.448Z",
       "txt": "index/Affix-Hapvida-AD-Manual-FEIRA-DE-SANTANA-08-25B-9fefce154c.txt"
     },
     {
@@ -367,7 +367,7 @@
       "name": "Affix-Hapvida-AD-Manual-FORTALEZA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-FORTALEZA-08-25B.pdf",
       "bytes": 1803900,
-      "mtime": "2025-10-22T18:29:26.744Z",
+      "mtime": "2025-10-23T01:25:25.450Z",
       "txt": "index/Affix-Hapvida-AD-Manual-FORTALEZA-08-25B-213c39bc76.txt"
     },
     {
@@ -375,7 +375,7 @@
       "name": "Affix-Hapvida-AD-Manual-GOIANIA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-GOIANIA-08-25B.pdf",
       "bytes": 1796766,
-      "mtime": "2025-10-22T18:29:26.747Z",
+      "mtime": "2025-10-23T01:25:25.453Z",
       "txt": "index/Affix-Hapvida-AD-Manual-GOIANIA-08-25B-dcebded9f7.txt"
     },
     {
@@ -383,7 +383,7 @@
       "name": "Affix-Hapvida-AD-Manual-JOAO-PESSOA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-JOAO-PESSOA-08-25B.pdf",
       "bytes": 1803170,
-      "mtime": "2025-10-22T18:29:26.753Z",
+      "mtime": "2025-10-23T01:25:25.458Z",
       "txt": "index/Affix-Hapvida-AD-Manual-JOAO-PESSOA-08-25B-33cc92583e.txt"
     },
     {
@@ -391,7 +391,7 @@
       "name": "Affix-Hapvida-AD-Manual-JOINVILLE-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-JOINVILLE-08-25B.pdf",
       "bytes": 1803121,
-      "mtime": "2025-10-22T18:29:26.755Z",
+      "mtime": "2025-10-23T01:25:25.460Z",
       "txt": "index/Affix-Hapvida-AD-Manual-JOINVILLE-08-25B-20c9b65874.txt"
     },
     {
@@ -399,7 +399,7 @@
       "name": "Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25B.pdf",
       "bytes": 1840388,
-      "mtime": "2025-10-22T18:29:26.758Z",
+      "mtime": "2025-10-23T01:25:25.462Z",
       "txt": "index/Affix-Hapvida-AD-Manual-JUAZEIRO-DO-NORTE-08-25B-77920f091b.txt"
     },
     {
@@ -407,7 +407,7 @@
       "name": "Affix-Hapvida-AD-Manual-MACEIO-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-MACEIO-08-25B.pdf",
       "bytes": 1803739,
-      "mtime": "2025-10-22T18:29:26.760Z",
+      "mtime": "2025-10-23T01:25:25.463Z",
       "txt": "index/Affix-Hapvida-AD-Manual-MACEIO-08-25B-8d1a7679d0.txt"
     },
     {
@@ -415,7 +415,7 @@
       "name": "Affix-Hapvida-AD-Manual-MANAUS-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-MANAUS-08-25B.pdf",
       "bytes": 1802628,
-      "mtime": "2025-10-22T18:29:26.762Z",
+      "mtime": "2025-10-23T01:25:25.465Z",
       "txt": "index/Affix-Hapvida-AD-Manual-MANAUS-08-25B-05dc3536e9.txt"
     },
     {
@@ -423,7 +423,7 @@
       "name": "Affix-Hapvida-AD-Manual-MOSSORO-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-MOSSORO-08-25B.pdf",
       "bytes": 1803752,
-      "mtime": "2025-10-22T18:29:26.764Z",
+      "mtime": "2025-10-23T01:25:25.466Z",
       "txt": "index/Affix-Hapvida-AD-Manual-MOSSORO-08-25B-af3c07ea56.txt"
     },
     {
@@ -431,7 +431,7 @@
       "name": "Affix-Hapvida-AD-Manual-NATAL-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-NATAL-08-25B.pdf",
       "bytes": 1802355,
-      "mtime": "2025-10-22T18:29:26.766Z",
+      "mtime": "2025-10-23T01:25:25.468Z",
       "txt": "index/Affix-Hapvida-AD-Manual-NATAL-08-25B-34356344bb.txt"
     },
     {
@@ -439,7 +439,7 @@
       "name": "Affix-Hapvida-AD-Manual-PARAUAPEBAS-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-PARAUAPEBAS-08-25B.pdf",
       "bytes": 1803040,
-      "mtime": "2025-10-22T18:29:26.768Z",
+      "mtime": "2025-10-23T01:25:25.470Z",
       "txt": "index/Affix-Hapvida-AD-Manual-PARAUAPEBAS-08-25B-ab69ff6ff3.txt"
     },
     {
@@ -447,7 +447,7 @@
       "name": "Affix-Hapvida-AD-Manual-SALVADOR-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-SALVADOR-08-25B.pdf",
       "bytes": 1826563,
-      "mtime": "2025-10-22T18:29:26.773Z",
+      "mtime": "2025-10-23T01:25:25.474Z",
       "txt": "index/Affix-Hapvida-AD-Manual-SALVADOR-08-25B-37dce0623b.txt"
     },
     {
@@ -455,7 +455,7 @@
       "name": "Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok.pdf",
       "bytes": 2145798,
-      "mtime": "2025-10-22T18:29:26.776Z",
+      "mtime": "2025-10-23T01:25:25.476Z",
       "txt": "index/Affix-Hapvida-AD-Manual-SALVADOR-11-24-ok-5e7de71fae.txt"
     },
     {
@@ -463,7 +463,7 @@
       "name": "Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1.pdf",
       "bytes": 1307514,
-      "mtime": "2025-10-22T18:29:26.779Z",
+      "mtime": "2025-10-23T01:25:25.478Z",
       "txt": "index/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-05-24-1-28ce231ebc.txt"
     },
     {
@@ -471,7 +471,7 @@
       "name": "Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-08-25B.pdf",
       "bytes": 1796601,
-      "mtime": "2025-10-22T18:29:26.780Z",
+      "mtime": "2025-10-23T01:25:25.480Z",
       "txt": "index/Affix-Hapvida-AD-Manual-SAO-JOSE-DOS-CAMPOS-08-25B-b242f9a662.txt"
     },
     {
@@ -479,7 +479,7 @@
       "name": "Affix-Hapvida-AD-Manual-SAO-LUIS-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-SAO-LUIS-08-25B.pdf",
       "bytes": 1803473,
-      "mtime": "2025-10-22T18:29:26.785Z",
+      "mtime": "2025-10-23T01:25:25.484Z",
       "txt": "index/Affix-Hapvida-AD-Manual-SAO-LUIS-08-25B-ab53d02af0.txt"
     },
     {
@@ -487,7 +487,7 @@
       "name": "Affix-Hapvida-AD-Manual-TERESINA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-TERESINA-08-25B.pdf",
       "bytes": 1781001,
-      "mtime": "2025-10-22T18:29:26.788Z",
+      "mtime": "2025-10-23T01:25:25.486Z",
       "txt": "index/Affix-Hapvida-AD-Manual-TERESINA-08-25B-321bffd027.txt"
     },
     {
@@ -495,7 +495,7 @@
       "name": "Affix-Hapvida-AD-Manual-UBERABA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-UBERABA-08-25B.pdf",
       "bytes": 1780826,
-      "mtime": "2025-10-22T18:29:26.793Z",
+      "mtime": "2025-10-23T01:25:25.491Z",
       "txt": "index/Affix-Hapvida-AD-Manual-UBERABA-08-25B-5c246ea6a2.txt"
     },
     {
@@ -503,7 +503,7 @@
       "name": "Affix-Hapvida-AD-Manual-UBERLANDIA-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-AD-Manual-UBERLANDIA-08-25B.pdf",
       "bytes": 1825276,
-      "mtime": "2025-10-22T18:29:26.795Z",
+      "mtime": "2025-10-23T01:25:25.492Z",
       "txt": "index/Affix-Hapvida-AD-Manual-UBERLANDIA-08-25B-4db75fdf29.txt"
     },
     {
@@ -511,7 +511,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-AFPPE-RECIFE-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-AFPPE-RECIFE-DESCONTO-08-25B-1.pdf",
       "bytes": 1845990,
-      "mtime": "2025-10-22T18:29:26.800Z",
+      "mtime": "2025-10-23T01:25:25.496Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-AFPPE-RECIFE-DESCONTO-08-25B-1-f107a840c1.txt"
     },
     {
@@ -519,7 +519,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-ASSBRA-RECIFE-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-ASSBRA-RECIFE-DESCONTO-08-25B-1.pdf",
       "bytes": 1688797,
-      "mtime": "2025-10-22T18:29:26.811Z",
+      "mtime": "2025-10-23T01:25:25.507Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-ASSBRA-RECIFE-DESCONTO-08-25B-1-b14d57820f.txt"
     },
     {
@@ -527,7 +527,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25.pdf",
       "bytes": 2209576,
-      "mtime": "2025-10-22T18:29:26.814Z",
+      "mtime": "2025-10-23T01:25:25.509Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-01-25-a54ea764c3.txt"
     },
     {
@@ -535,7 +535,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-08-25B-1.pdf",
       "bytes": 1721252,
-      "mtime": "2025-10-22T18:29:26.816Z",
+      "mtime": "2025-10-23T01:25:25.510Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-ASSCOMPE-RECIFE-DESCONTO-08-25B-1-4af45dc3ad.txt"
     },
     {
@@ -543,7 +543,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-ENTIDADES-NACIONAIS-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-ENTIDADES-NACIONAIS-DESCONTO-08-25B-1.pdf",
       "bytes": 1753973,
-      "mtime": "2025-10-22T18:29:26.820Z",
+      "mtime": "2025-10-23T01:25:25.514Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-ENTIDADES-NACIONAIS-DESCONTO-08-25B-1-9424bf3521.txt"
     },
     {
@@ -551,7 +551,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-SINDATE-RECIFE-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-SINDATE-RECIFE-DESCONTO-08-25B-1.pdf",
       "bytes": 1780803,
-      "mtime": "2025-10-22T18:29:26.822Z",
+      "mtime": "2025-10-23T01:25:25.515Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-SINDATE-RECIFE-DESCONTO-08-25B-1-ac629ca004.txt"
     },
     {
@@ -559,7 +559,7 @@
       "name": "Affix-Hapvida-Backoffice-Manual-SINPOL-RECIFE-DESCONTO-08-25B-1.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Backoffice-Manual-SINPOL-RECIFE-DESCONTO-08-25B-1.pdf",
       "bytes": 1583139,
-      "mtime": "2025-10-22T18:29:26.824Z",
+      "mtime": "2025-10-23T01:25:25.517Z",
       "txt": "index/Affix-Hapvida-Backoffice-Manual-SINPOL-RECIFE-DESCONTO-08-25B-1-a43b4d5fae.txt"
     },
     {
@@ -567,7 +567,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-ABCFARMA-29.08.25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-ABCFARMA-29.08.25.pdf",
       "bytes": 645329,
-      "mtime": "2025-10-22T18:29:26.826Z",
+      "mtime": "2025-10-23T01:25:25.519Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-ABCFARMA-29.08.25-6e50b24395.txt"
     },
     {
@@ -575,7 +575,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-ACIG-29.08.25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-ACIG-29.08.25.pdf",
       "bytes": 645355,
-      "mtime": "2025-10-22T18:29:26.827Z",
+      "mtime": "2025-10-23T01:25:25.520Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-ACIG-29.08.25-2ce32fbd9e.txt"
     },
     {
@@ -583,7 +583,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-ACIJ-15.08.25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-ACIJ-15.08.25.pdf",
       "bytes": 644278,
-      "mtime": "2025-10-22T18:29:26.829Z",
+      "mtime": "2025-10-23T01:25:25.521Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-ACIJ-15.08.25-10f3fe5726.txt"
     },
     {
@@ -591,7 +591,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-CAESBRA-29.08.25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-CAESBRA-29.08.25.pdf",
       "bytes": 645254,
-      "mtime": "2025-10-22T18:29:26.829Z",
+      "mtime": "2025-10-23T01:25:25.522Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-CAESBRA-29.08.25-46fa6adcf8.txt"
     },
     {
@@ -599,7 +599,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-FECOMERCIO.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-FECOMERCIO.pdf",
       "bytes": 644163,
-      "mtime": "2025-10-22T18:29:26.831Z",
+      "mtime": "2025-10-23T01:25:25.524Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-FECOMERCIO-32b0f70625.txt"
     },
     {
@@ -607,7 +607,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-PME-01.08.2025.pdf",
       "bytes": 721786,
-      "mtime": "2025-10-22T18:29:26.833Z",
+      "mtime": "2025-10-23T01:25:25.526Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-PME-01.08.2025-37ab6121d1.txt"
     },
     {
@@ -615,7 +615,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-SICOMERCIO-29.08.25.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-SICOMERCIO-29.08.25.pdf",
       "bytes": 645499,
-      "mtime": "2025-10-22T18:29:26.834Z",
+      "mtime": "2025-10-23T01:25:25.527Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-SICOMERCIO-29.08.25-99f5a82ed8.txt"
     },
     {
@@ -623,7 +623,7 @@
       "name": "Affix-Hapvida-Termo-Adesao-SINDILOJAS-29.08.2025.pdf",
       "relpath": "data/affix/raw/Affix-Hapvida-Termo-Adesao-SINDILOJAS-29.08.2025.pdf",
       "bytes": 645311,
-      "mtime": "2025-10-22T18:29:26.835Z",
+      "mtime": "2025-10-23T01:25:25.528Z",
       "txt": "index/Affix-Hapvida-Termo-Adesao-SINDILOJAS-29.08.2025-c674c715ab.txt"
     },
     {
@@ -631,7 +631,7 @@
       "name": "Affix-MA-Hapvida-PM-Maranhao-Manual-12-24.pdf",
       "relpath": "data/affix/raw/Affix-MA-Hapvida-PM-Maranhao-Manual-12-24.pdf",
       "bytes": 2279586,
-      "mtime": "2025-10-22T18:29:26.840Z",
+      "mtime": "2025-10-23T01:25:25.533Z",
       "txt": "index/Affix-MA-Hapvida-PM-Maranhao-Manual-12-24-ae7c347231.txt"
     },
     {
@@ -639,7 +639,7 @@
       "name": "Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-ABERTA-03-25-B.pdf",
       "relpath": "data/affix/raw/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-ABERTA-03-25-B.pdf",
       "bytes": 2317625,
-      "mtime": "2025-10-22T18:29:26.848Z",
+      "mtime": "2025-10-23T01:25:25.541Z",
       "txt": "index/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-ABERTA-03-25-B-fe4213eaaa.txt"
     },
     {
@@ -647,7 +647,7 @@
       "name": "Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-FECHADA-03-25-B.pdf",
       "relpath": "data/affix/raw/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-FECHADA-03-25-B.pdf",
       "bytes": 2316176,
-      "mtime": "2025-10-22T18:29:26.860Z",
+      "mtime": "2025-10-23T01:25:25.553Z",
       "txt": "index/Affix-MA-Humana-Manual-Corretor-IMPERATRIZ-TAB-FECHADA-03-25-B-d4ad7421e7.txt"
     },
     {
@@ -655,7 +655,7 @@
       "name": "Affix-MA-Humana-Manual-Corretor-SA-CC-83O-LUIS-01-25.pdf",
       "relpath": "data/affix/raw/Affix-MA-Humana-Manual-Corretor-SA-CC-83O-LUIS-01-25.pdf",
       "bytes": 2091396,
-      "mtime": "2025-10-22T18:29:26.865Z",
+      "mtime": "2025-10-23T01:25:25.558Z",
       "txt": "index/Affix-MA-Humana-Manual-Corretor-SA-CC-83O-LUIS-01-25-589f6c4fc3.txt"
     },
     {
@@ -663,7 +663,7 @@
       "name": "Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-ABERTA-03-25-B.pdf",
       "relpath": "data/affix/raw/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-ABERTA-03-25-B.pdf",
       "bytes": 2286060,
-      "mtime": "2025-10-22T18:29:26.871Z",
+      "mtime": "2025-10-23T01:25:25.564Z",
       "txt": "index/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-ABERTA-03-25-B-54364c3360.txt"
     },
     {
@@ -671,7 +671,7 @@
       "name": "Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-FECHADA-03-25-B.pdf",
       "relpath": "data/affix/raw/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-FECHADA-03-25-B.pdf",
       "bytes": 2287387,
-      "mtime": "2025-10-22T18:29:26.880Z",
+      "mtime": "2025-10-23T01:25:25.573Z",
       "txt": "index/Affix-MA-Humana-Manual-Corretor-SAO-LUIS-TAB-FECHADA-03-25-B-efe7de64ea.txt"
     },
     {
@@ -679,7 +679,7 @@
       "name": "Affix-MA-PME-Unimed-Maranhao-do-Sul-Manual-Corretor-ACII-03-25.pdf",
       "relpath": "data/affix/raw/Affix-MA-PME-Unimed-Maranhao-do-Sul-Manual-Corretor-ACII-03-25.pdf",
       "bytes": 2289540,
-      "mtime": "2025-10-22T18:29:26.887Z",
+      "mtime": "2025-10-23T01:25:25.581Z",
       "txt": "index/Affix-MA-PME-Unimed-Maranhao-do-Sul-Manual-Corretor-ACII-03-25-4476f5a3e3.txt"
     },
     {
@@ -687,7 +687,7 @@
       "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-07-25.pdf",
       "relpath": "data/affix/raw/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-07-25.pdf",
       "bytes": 1986737,
-      "mtime": "2025-10-22T18:29:26.899Z",
+      "mtime": "2025-10-23T01:25:25.592Z",
       "txt": "index/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-07-25-3d24f3a081.txt"
     },
     {
@@ -695,7 +695,7 @@
       "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-CAAMA-07-25.pdf",
       "relpath": "data/affix/raw/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-CAAMA-07-25.pdf",
       "bytes": 1815758,
-      "mtime": "2025-10-22T18:29:26.903Z",
+      "mtime": "2025-10-23T01:25:25.596Z",
       "txt": "index/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-CAAMA-07-25-383de0bd01.txt"
     },
     {
@@ -703,7 +703,7 @@
       "name": "Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-FNEL-ASCOSERVI-07-25.pdf",
       "relpath": "data/affix/raw/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-FNEL-ASCOSERVI-07-25.pdf",
       "bytes": 1714305,
-      "mtime": "2025-10-22T18:29:26.924Z",
+      "mtime": "2025-10-23T01:25:25.618Z",
       "txt": "index/Affix-MA-Unimed-Maranhao-Sul-Manual-Corretor-FNEL-ASCOSERVI-07-25-dbda4d54af.txt"
     },
     {
@@ -711,7 +711,7 @@
       "name": "Affix-MA-Unimed-Maranhao-Sul-Termo-Adesao-ACII-06-21.pdf",
       "relpath": "data/affix/raw/Affix-MA-Unimed-Maranhao-Sul-Termo-Adesao-ACII-06-21.pdf",
       "bytes": 652597,
-      "mtime": "2025-10-22T18:29:26.925Z",
+      "mtime": "2025-10-23T01:25:25.619Z",
       "txt": "index/Affix-MA-Unimed-Maranhao-Sul-Termo-Adesao-ACII-06-21-3ac28c3d23.txt"
     },
     {
@@ -719,7 +719,7 @@
       "name": "Affix-MG-Manual-Corretor-Hapvida-NDI-Estudantes-08-25.pdf",
       "relpath": "data/affix/raw/Affix-MG-Manual-Corretor-Hapvida-NDI-Estudantes-08-25.pdf",
       "bytes": 2303551,
-      "mtime": "2025-10-22T18:29:26.927Z",
+      "mtime": "2025-10-23T01:25:25.621Z",
       "txt": "index/Affix-MG-Manual-Corretor-Hapvida-NDI-Estudantes-08-25-2ed58bb8e1.txt"
     },
     {
@@ -727,7 +727,7 @@
       "name": "Affix-MG-Manual-Corretor-Hapvida-NDI-Geral-08-25.pdf",
       "relpath": "data/affix/raw/Affix-MG-Manual-Corretor-Hapvida-NDI-Geral-08-25.pdf",
       "bytes": 2366060,
-      "mtime": "2025-10-22T18:29:26.929Z",
+      "mtime": "2025-10-23T01:25:25.623Z",
       "txt": "index/Affix-MG-Manual-Corretor-Hapvida-NDI-Geral-08-25-2763cd2591.txt"
     },
     {
@@ -735,7 +735,7 @@
       "name": "Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
       "relpath": "data/affix/raw/Affix-MS-Manual-Vendas-Oeste-Saude-08-25.pdf",
       "bytes": 1847750,
-      "mtime": "2025-10-22T18:29:26.933Z",
+      "mtime": "2025-10-23T01:25:25.626Z",
       "txt": "index/Affix-MS-Manual-Vendas-Oeste-Saude-08-25-0625d7e373.txt"
     },
     {
@@ -743,7 +743,7 @@
       "name": "Affix-PA-Hapvida-NDI-ANANINDEUA-Manual-12-24.pdf",
       "relpath": "data/affix/raw/Affix-PA-Hapvida-NDI-ANANINDEUA-Manual-12-24.pdf",
       "bytes": 2411608,
-      "mtime": "2025-10-22T18:29:26.935Z",
+      "mtime": "2025-10-23T01:25:25.628Z",
       "txt": "index/Affix-PA-Hapvida-NDI-ANANINDEUA-Manual-12-24-638aaffd20.txt"
     },
     {
@@ -751,7 +751,7 @@
       "name": "Affix-PA-Marituba-Hapvida-Manual-03-24.pdf",
       "relpath": "data/affix/raw/Affix-PA-Marituba-Hapvida-Manual-03-24.pdf",
       "bytes": 2232790,
-      "mtime": "2025-10-22T18:29:26.937Z",
+      "mtime": "2025-10-23T01:25:25.630Z",
       "txt": "index/Affix-PA-Marituba-Hapvida-Manual-03-24-f0d29c3b40.txt"
     },
     {
@@ -759,7 +759,7 @@
       "name": "Affix-PB-CONDE-Hapvida-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-PB-CONDE-Hapvida-Manual-08-24.pdf",
       "bytes": 2431692,
-      "mtime": "2025-10-22T18:29:26.939Z",
+      "mtime": "2025-10-23T01:25:25.633Z",
       "txt": "index/Affix-PB-CONDE-Hapvida-Manual-08-24-e60d29dd3d.txt"
     },
     {
@@ -767,7 +767,7 @@
       "name": "Affix-PB-Cabedelo-Hapvida-Manual-11-24.pdf",
       "relpath": "data/affix/raw/Affix-PB-Cabedelo-Hapvida-Manual-11-24.pdf",
       "bytes": 2416377,
-      "mtime": "2025-10-22T18:29:26.941Z",
+      "mtime": "2025-10-23T01:25:25.634Z",
       "txt": "index/Affix-PB-Cabedelo-Hapvida-Manual-11-24-9e7088e703.txt"
     },
     {
@@ -775,7 +775,7 @@
       "name": "Affix-PB-Hapvida-Bombeiros-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-PB-Hapvida-Bombeiros-Manual-08-24.pdf",
       "bytes": 2285058,
-      "mtime": "2025-10-22T18:29:26.946Z",
+      "mtime": "2025-10-23T01:25:25.640Z",
       "txt": "index/Affix-PB-Hapvida-Bombeiros-Manual-08-24-24ea3fb428.txt"
     },
     {
@@ -783,7 +783,7 @@
       "name": "Affix-PB-Hapvida-PREF-JOAO-PESSOA-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-PB-Hapvida-PREF-JOAO-PESSOA-Manual-06-25.pdf",
       "bytes": 2048266,
-      "mtime": "2025-10-22T18:29:26.948Z",
+      "mtime": "2025-10-23T01:25:25.642Z",
       "txt": "index/Affix-PB-Hapvida-PREF-JOAO-PESSOA-Manual-06-25-6021488a49.txt"
     },
     {
@@ -791,7 +791,7 @@
       "name": "Affix-PB-Hapvida-Policia-Civil-PB-Manual-03-25.pdf",
       "relpath": "data/affix/raw/Affix-PB-Hapvida-Policia-Civil-PB-Manual-03-25.pdf",
       "bytes": 1823632,
-      "mtime": "2025-10-22T18:29:26.953Z",
+      "mtime": "2025-10-23T01:25:25.647Z",
       "txt": "index/Affix-PB-Hapvida-Policia-Civil-PB-Manual-03-25-f4d93aa592.txt"
     },
     {
@@ -799,7 +799,7 @@
       "name": "Affix-PB-Sta-Rita-Hapvida-Manual-04-24-1.pdf",
       "relpath": "data/affix/raw/Affix-PB-Sta-Rita-Hapvida-Manual-04-24-1.pdf",
       "bytes": 2237107,
-      "mtime": "2025-10-22T18:29:26.956Z",
+      "mtime": "2025-10-23T01:25:25.649Z",
       "txt": "index/Affix-PB-Sta-Rita-Hapvida-Manual-04-24-1-0631b0b8a4.txt"
     },
     {
@@ -807,7 +807,7 @@
       "name": "Affix-PE-Abreu-e-Lima-Hapvida-Manual-05-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-Abreu-e-Lima-Hapvida-Manual-05-24.pdf",
       "bytes": 2409053,
-      "mtime": "2025-10-22T18:29:26.958Z",
+      "mtime": "2025-10-23T01:25:25.651Z",
       "txt": "index/Affix-PE-Abreu-e-Lima-Hapvida-Manual-05-24-ebced6549d.txt"
     },
     {
@@ -815,7 +815,7 @@
       "name": "Affix-PE-Hapvida-Policia-Militar-PE-Manual-04-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-Hapvida-Policia-Militar-PE-Manual-04-24.pdf",
       "bytes": 2156234,
-      "mtime": "2025-10-22T18:29:26.963Z",
+      "mtime": "2025-10-23T01:25:25.656Z",
       "txt": "index/Affix-PE-Hapvida-Policia-Militar-PE-Manual-04-24-39ddd5458d.txt"
     },
     {
@@ -823,7 +823,7 @@
       "name": "Affix-PE-IGARASSU-Hapvida-Manual-02-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-IGARASSU-Hapvida-Manual-02-24.pdf",
       "bytes": 2230371,
-      "mtime": "2025-10-22T18:29:26.965Z",
+      "mtime": "2025-10-23T01:25:25.658Z",
       "txt": "index/Affix-PE-IGARASSU-Hapvida-Manual-02-24-019dc34c13.txt"
     },
     {
@@ -831,7 +831,7 @@
       "name": "Affix-PE-IPOJUCA-Hapvida-Manual-12-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-IPOJUCA-Hapvida-Manual-12-24.pdf",
       "bytes": 2408938,
-      "mtime": "2025-10-22T18:29:26.966Z",
+      "mtime": "2025-10-23T01:25:25.660Z",
       "txt": "index/Affix-PE-IPOJUCA-Hapvida-Manual-12-24-7980a4c768.txt"
     },
     {
@@ -839,7 +839,7 @@
       "name": "Affix-PE-ITAMARACA-Hapvida-Manual-09-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-ITAMARACA-Hapvida-Manual-09-24.pdf",
       "bytes": 1316371,
-      "mtime": "2025-10-22T18:29:26.970Z",
+      "mtime": "2025-10-23T01:25:25.664Z",
       "txt": "index/Affix-PE-ITAMARACA-Hapvida-Manual-09-24-e8528be4b0.txt"
     },
     {
@@ -847,7 +847,7 @@
       "name": "Affix-PE-JABOATAO-DOS-GUARARAPES-Hapvida-Manual-03-25.pdf",
       "relpath": "data/affix/raw/Affix-PE-JABOATAO-DOS-GUARARAPES-Hapvida-Manual-03-25.pdf",
       "bytes": 1984667,
-      "mtime": "2025-10-22T18:29:26.978Z",
+      "mtime": "2025-10-23T01:25:25.672Z",
       "txt": "index/Affix-PE-JABOATAO-DOS-GUARARAPES-Hapvida-Manual-03-25-9dceb3372f.txt"
     },
     {
@@ -855,7 +855,7 @@
       "name": "Affix-PE-OLINDA-Hapvida-Manual-12-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-OLINDA-Hapvida-Manual-12-24.pdf",
       "bytes": 2409000,
-      "mtime": "2025-10-22T18:29:26.981Z",
+      "mtime": "2025-10-23T01:25:25.675Z",
       "txt": "index/Affix-PE-OLINDA-Hapvida-Manual-12-24-c694f8e09d.txt"
     },
     {
@@ -863,7 +863,7 @@
       "name": "Affix-PE-PAULISTA-Manual-05-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-PAULISTA-Manual-05-24.pdf",
       "bytes": 2409007,
-      "mtime": "2025-10-22T18:29:26.983Z",
+      "mtime": "2025-10-23T01:25:25.677Z",
       "txt": "index/Affix-PE-PAULISTA-Manual-05-24-5a197cbd41.txt"
     },
     {
@@ -871,7 +871,7 @@
       "name": "Affix-PE-POMBOS-Hapvida-Manual-10-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-POMBOS-Hapvida-Manual-10-24.pdf",
       "bytes": 2409270,
-      "mtime": "2025-10-22T18:29:26.986Z",
+      "mtime": "2025-10-23T01:25:25.679Z",
       "txt": "index/Affix-PE-POMBOS-Hapvida-Manual-10-24-393257fdc0.txt"
     },
     {
@@ -879,7 +879,7 @@
       "name": "Affix-PE-RECIFE-Hapvida-Manual-10-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-RECIFE-Hapvida-Manual-10-24.pdf",
       "bytes": 2450493,
-      "mtime": "2025-10-22T18:29:26.988Z",
+      "mtime": "2025-10-23T01:25:25.682Z",
       "txt": "index/Affix-PE-RECIFE-Hapvida-Manual-10-24-0f9756d32d.txt"
     },
     {
@@ -887,7 +887,7 @@
       "name": "Affix-PE-SAO-LOURENCO-DA-MATA-Hapvida-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-PE-SAO-LOURENCO-DA-MATA-Hapvida-Manual-06-25.pdf",
       "bytes": 1976713,
-      "mtime": "2025-10-22T18:29:26.990Z",
+      "mtime": "2025-10-23T01:25:25.684Z",
       "txt": "index/Affix-PE-SAO-LOURENCO-DA-MATA-Hapvida-Manual-06-25-6843082d49.txt"
     },
     {
@@ -895,7 +895,7 @@
       "name": "Affix-PE-VITORIA-DE-SANTO-ANTAO-Hapvida-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-PE-VITORIA-DE-SANTO-ANTAO-Hapvida-Manual-08-24.pdf",
       "bytes": 2412525,
-      "mtime": "2025-10-22T18:29:26.992Z",
+      "mtime": "2025-10-23T01:25:25.685Z",
       "txt": "index/Affix-PE-VITORIA-DE-SANTO-ANTAO-Hapvida-Manual-08-24-d7fe2e0496.txt"
     },
     {
@@ -903,7 +903,7 @@
       "name": "Affix-PME-HAPVIDA-NDI-Regional-Manual-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-PME-HAPVIDA-NDI-Regional-Manual-08-25B.pdf",
       "bytes": 2291249,
-      "mtime": "2025-10-22T18:29:27.002Z",
+      "mtime": "2025-10-23T01:25:25.696Z",
       "txt": "index/Affix-PME-HAPVIDA-NDI-Regional-Manual-08-25B-ffd2b7d092.txt"
     },
     {
@@ -911,7 +911,7 @@
       "name": "Affix-PME-HAPVIDA-NDI-Rio-de-Janeiro-Manual-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-PME-HAPVIDA-NDI-Rio-de-Janeiro-Manual-08-25B.pdf",
       "bytes": 2379302,
-      "mtime": "2025-10-22T18:29:27.004Z",
+      "mtime": "2025-10-23T01:25:25.697Z",
       "txt": "index/Affix-PME-HAPVIDA-NDI-Rio-de-Janeiro-Manual-08-25B-c6e544516d.txt"
     },
     {
@@ -919,7 +919,7 @@
       "name": "Affix-PME-HAPVIDA-NDI-Sao-Paulo-Manual-08-25B.pdf",
       "relpath": "data/affix/raw/Affix-PME-HAPVIDA-NDI-Sao-Paulo-Manual-08-25B.pdf",
       "bytes": 2293955,
-      "mtime": "2025-10-22T18:29:27.008Z",
+      "mtime": "2025-10-23T01:25:25.701Z",
       "txt": "index/Affix-PME-HAPVIDA-NDI-Sao-Paulo-Manual-08-25B-ab586db649.txt"
     },
     {
@@ -927,7 +927,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-ACIG-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-ACIG-DESCONTO-07-25.pdf",
       "bytes": 1786030,
-      "mtime": "2025-10-22T18:29:27.010Z",
+      "mtime": "2025-10-23T01:25:25.704Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-ACIG-DESCONTO-07-25-3427ad1e63.txt"
     },
     {
@@ -935,7 +935,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-ACIJ-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-ACIJ-DESCONTO-07-25.pdf",
       "bytes": 1785513,
-      "mtime": "2025-10-22T18:29:27.013Z",
+      "mtime": "2025-10-23T01:25:25.707Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-ACIJ-DESCONTO-07-25-59ed4c9722.txt"
     },
     {
@@ -943,7 +943,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-ANAPOLIS-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-ANAPOLIS-DESCONTO-07-25.pdf",
       "bytes": 1816634,
-      "mtime": "2025-10-22T18:29:27.016Z",
+      "mtime": "2025-10-23T01:25:25.709Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-ANAPOLIS-DESCONTO-07-25-55633537c5.txt"
     },
     {
@@ -951,7 +951,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-ARACAJU-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-ARACAJU-DESCONTO-07-25.pdf",
       "bytes": 1816093,
-      "mtime": "2025-10-22T18:29:27.021Z",
+      "mtime": "2025-10-23T01:25:25.715Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-ARACAJU-DESCONTO-07-25-1283826a46.txt"
     },
     {
@@ -959,7 +959,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-ASSOC-COMERCIAL-MACEIO-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-ASSOC-COMERCIAL-MACEIO-DESCONTO-07-25.pdf",
       "bytes": 1835651,
-      "mtime": "2025-10-22T18:29:27.025Z",
+      "mtime": "2025-10-23T01:25:25.718Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-ASSOC-COMERCIAL-MACEIO-DESCONTO-07-25-d08ffe58d8.txt"
     },
     {
@@ -967,7 +967,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-BELEM-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-BELEM-DESCONTO-07-25.pdf",
       "bytes": 1817256,
-      "mtime": "2025-10-22T18:29:27.027Z",
+      "mtime": "2025-10-23T01:25:25.720Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-BELEM-DESCONTO-07-25-97f83d8f6b.txt"
     },
     {
@@ -975,7 +975,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-BELO-HORIZONTE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-BELO-HORIZONTE-DESCONTO-07-25.pdf",
       "bytes": 1839002,
-      "mtime": "2025-10-22T18:29:27.029Z",
+      "mtime": "2025-10-23T01:25:25.722Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-BELO-HORIZONTE-DESCONTO-07-25-44702b749b.txt"
     },
     {
@@ -983,7 +983,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-CAMACARI-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-CAMACARI-DESCONTO-07-25.pdf",
       "bytes": 1816487,
-      "mtime": "2025-10-22T18:29:27.031Z",
+      "mtime": "2025-10-23T01:25:25.724Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-CAMACARI-DESCONTO-07-25-ea3083c3c5.txt"
     },
     {
@@ -991,7 +991,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-CAMPINA-GRANDE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-CAMPINA-GRANDE-DESCONTO-07-25.pdf",
       "bytes": 1815956,
-      "mtime": "2025-10-22T18:29:27.033Z",
+      "mtime": "2025-10-23T01:25:25.726Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-CAMPINA-GRANDE-DESCONTO-07-25-2d55402f71.txt"
     },
     {
@@ -999,7 +999,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-BA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-BA-DESCONTO-07-25.pdf",
       "bytes": 1780229,
-      "mtime": "2025-10-22T18:29:27.037Z",
+      "mtime": "2025-10-23T01:25:25.730Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-BA-DESCONTO-07-25-15014bfdb8.txt"
     },
     {
@@ -1007,7 +1007,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-CE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-CE-DESCONTO-07-25.pdf",
       "bytes": 1778899,
-      "mtime": "2025-10-22T18:29:27.039Z",
+      "mtime": "2025-10-23T01:25:25.732Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-CE-DESCONTO-07-25-0e8c4b1a7d.txt"
     },
     {
@@ -1015,7 +1015,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
       "bytes": 1780813,
-      "mtime": "2025-10-22T18:29:27.040Z",
+      "mtime": "2025-10-23T01:25:25.734Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FEIRA-DE-SANTANA-DESCONTO-07-25-d49f51cce9.txt"
     },
     {
@@ -1023,7 +1023,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FOTALEZA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FOTALEZA-DESCONTO-07-25.pdf",
       "bytes": 1805609,
-      "mtime": "2025-10-22T18:29:27.042Z",
+      "mtime": "2025-10-23T01:25:25.735Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-FOTALEZA-DESCONTO-07-25-f34116766d.txt"
     },
     {
@@ -1031,7 +1031,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-JUAZEIRO-DO-NORTE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-JUAZEIRO-DO-NORTE-DESCONTO-07-25.pdf",
       "bytes": 1779939,
-      "mtime": "2025-10-22T18:29:27.044Z",
+      "mtime": "2025-10-23T01:25:25.737Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-JUAZEIRO-DO-NORTE-DESCONTO-07-25-957099f6ca.txt"
     },
     {
@@ -1039,7 +1039,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-DESCONTO-07-25.pdf",
       "bytes": 1748719,
-      "mtime": "2025-10-22T18:29:27.047Z",
+      "mtime": "2025-10-23T01:25:25.740Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-DESCONTO-07-25-be58f5d7ee.txt"
     },
     {
@@ -1047,7 +1047,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-E-BANESE-DESCONTO-07-25-1.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-E-BANESE-DESCONTO-07-25-1.pdf",
       "bytes": 1761665,
-      "mtime": "2025-10-22T18:29:27.053Z",
+      "mtime": "2025-10-23T01:25:25.746Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FECOMERCIO-SE-E-BANESE-DESCONTO-07-25-1-bd0a2e2df8.txt"
     },
     {
@@ -1055,7 +1055,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-FEIRA-DE-SANTANA-DESCONTO-07-25.pdf",
       "bytes": 1817017,
-      "mtime": "2025-10-22T18:29:27.055Z",
+      "mtime": "2025-10-23T01:25:25.748Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-FEIRA-DE-SANTANA-DESCONTO-07-25-baa0a1c072.txt"
     },
     {
@@ -1063,7 +1063,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-GOIANIA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-GOIANIA-DESCONTO-07-25.pdf",
       "bytes": 1816405,
-      "mtime": "2025-10-22T18:29:27.057Z",
+      "mtime": "2025-10-23T01:25:25.750Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-GOIANIA-DESCONTO-07-25-74a5f03065.txt"
     },
     {
@@ -1071,7 +1071,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-JOAO-PESSOA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-JOAO-PESSOA-DESCONTO-07-25.pdf",
       "bytes": 1817387,
-      "mtime": "2025-10-22T18:29:27.059Z",
+      "mtime": "2025-10-23T01:25:25.752Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-JOAO-PESSOA-DESCONTO-07-25-3723c76ec7.txt"
     },
     {
@@ -1079,7 +1079,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-JOINVILLE-DESCONTO-07-25-1.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-JOINVILLE-DESCONTO-07-25-1.pdf",
       "bytes": 1816505,
-      "mtime": "2025-10-22T18:29:27.061Z",
+      "mtime": "2025-10-23T01:25:25.754Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-JOINVILLE-DESCONTO-07-25-1-8e76035972.txt"
     },
     {
@@ -1087,7 +1087,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-JUAZEIRO-DO-NORTE-DESCONTO-07-25-1.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-JUAZEIRO-DO-NORTE-DESCONTO-07-25-1.pdf",
       "bytes": 1817303,
-      "mtime": "2025-10-22T18:29:27.062Z",
+      "mtime": "2025-10-23T01:25:25.755Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-JUAZEIRO-DO-NORTE-DESCONTO-07-25-1-6ca2ff11fd.txt"
     },
     {
@@ -1095,7 +1095,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-LIMEIRA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-LIMEIRA-DESCONTO-07-25.pdf",
       "bytes": 1816249,
-      "mtime": "2025-10-22T18:29:27.065Z",
+      "mtime": "2025-10-23T01:25:25.758Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-LIMEIRA-DESCONTO-07-25-eff7081fd6.txt"
     },
     {
@@ -1103,7 +1103,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-MACEIO-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-MACEIO-DESCONTO-07-25.pdf",
       "bytes": 1817031,
-      "mtime": "2025-10-22T18:29:27.066Z",
+      "mtime": "2025-10-23T01:25:25.759Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-MACEIO-DESCONTO-07-25-b6c0e4bfa4.txt"
     },
     {
@@ -1111,7 +1111,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-MANAUS-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-MANAUS-DESCONTO-07-25.pdf",
       "bytes": 1816790,
-      "mtime": "2025-10-22T18:29:27.068Z",
+      "mtime": "2025-10-23T01:25:25.761Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-MANAUS-DESCONTO-07-25-7781cb873f.txt"
     },
     {
@@ -1119,7 +1119,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-MOSSORO-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-MOSSORO-DESCONTO-07-25.pdf",
       "bytes": 1817163,
-      "mtime": "2025-10-22T18:29:27.069Z",
+      "mtime": "2025-10-23T01:25:25.762Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-MOSSORO-DESCONTO-07-25-c914fcfac6.txt"
     },
     {
@@ -1127,7 +1127,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-NATAL-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-NATAL-DESCONTO-07-25.pdf",
       "bytes": 1816617,
-      "mtime": "2025-10-22T18:29:27.071Z",
+      "mtime": "2025-10-23T01:25:25.764Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-NATAL-DESCONTO-07-25-536a94b660.txt"
     },
     {
@@ -1135,7 +1135,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-PARAUAPEBAS-DESCONTO-07-25-3.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-PARAUAPEBAS-DESCONTO-07-25-3.pdf",
       "bytes": 1816435,
-      "mtime": "2025-10-22T18:29:27.075Z",
+      "mtime": "2025-10-23T01:25:25.768Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-PARAUAPEBAS-DESCONTO-07-25-3-60951f41a4.txt"
     },
     {
@@ -1143,7 +1143,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-RECIFE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-RECIFE-DESCONTO-07-25.pdf",
       "bytes": 1816157,
-      "mtime": "2025-10-22T18:29:27.077Z",
+      "mtime": "2025-10-23T01:25:25.770Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-RECIFE-DESCONTO-07-25-b98422394d.txt"
     },
     {
@@ -1151,7 +1151,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SALVADOR-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SALVADOR-DESCONTO-07-25.pdf",
       "bytes": 1816361,
-      "mtime": "2025-10-22T18:29:27.080Z",
+      "mtime": "2025-10-23T01:25:25.773Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SALVADOR-DESCONTO-07-25-ac1e8c874c.txt"
     },
     {
@@ -1159,7 +1159,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SAO-JOSE-DOS-CAMPOS-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SAO-JOSE-DOS-CAMPOS-DESCONTO-07-25.pdf",
       "bytes": 1817307,
-      "mtime": "2025-10-22T18:29:27.081Z",
+      "mtime": "2025-10-23T01:25:25.776Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SAO-JOSE-DOS-CAMPOS-DESCONTO-07-25-671103fce1.txt"
     },
     {
@@ -1167,7 +1167,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SAO-LUIS-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SAO-LUIS-DESCONTO-07-25.pdf",
       "bytes": 1816834,
-      "mtime": "2025-10-22T18:29:27.083Z",
+      "mtime": "2025-10-23T01:25:25.778Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SAO-LUIS-DESCONTO-07-25-8ebc1703eb.txt"
     },
     {
@@ -1175,7 +1175,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SICOMERCIO-CAMACARI-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SICOMERCIO-CAMACARI-DESCONTO-07-25.pdf",
       "bytes": 1819987,
-      "mtime": "2025-10-22T18:29:27.088Z",
+      "mtime": "2025-10-23T01:25:25.784Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SICOMERCIO-CAMACARI-DESCONTO-07-25-59289bc586.txt"
     },
     {
@@ -1183,7 +1183,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BA-DESCONTO-07-25.pdf",
       "bytes": 1771583,
-      "mtime": "2025-10-22T18:29:27.092Z",
+      "mtime": "2025-10-23T01:25:25.788Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BA-DESCONTO-07-25-866c427066.txt"
     },
     {
@@ -1191,7 +1191,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BELEM-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BELEM-DESCONTO-07-25.pdf",
       "bytes": 1775077,
-      "mtime": "2025-10-22T18:29:27.094Z",
+      "mtime": "2025-10-23T01:25:25.791Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-BELEM-DESCONTO-07-25-99e883b9cf.txt"
     },
     {
@@ -1199,7 +1199,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-SE-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-SE-DESCONTO-07-25.pdf",
       "bytes": 1785087,
-      "mtime": "2025-10-22T18:29:27.095Z",
+      "mtime": "2025-10-23T01:25:25.793Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SINDILOJAS-SE-DESCONTO-07-25-1300478ce7.txt"
     },
     {
@@ -1207,7 +1207,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-SINDIVAREJISTA-DF-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-SINDIVAREJISTA-DF-DESCONTO-07-25.pdf",
       "bytes": 1780239,
-      "mtime": "2025-10-22T18:29:27.098Z",
+      "mtime": "2025-10-23T01:25:25.796Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-SINDIVAREJISTA-DF-DESCONTO-07-25-63482b3434.txt"
     },
     {
@@ -1215,7 +1215,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-UBERABA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-UBERABA-DESCONTO-07-25.pdf",
       "bytes": 1838057,
-      "mtime": "2025-10-22T18:29:27.100Z",
+      "mtime": "2025-10-23T01:25:25.799Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-UBERABA-DESCONTO-07-25-756521fe29.txt"
     },
     {
@@ -1223,7 +1223,7 @@
       "name": "Affix-PME-Hapvida-Manual-Corretor-UBERLANDIA-DESCONTO-07-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Manual-Corretor-UBERLANDIA-DESCONTO-07-25.pdf",
       "bytes": 1839304,
-      "mtime": "2025-10-22T18:29:27.101Z",
+      "mtime": "2025-10-23T01:25:25.802Z",
       "txt": "index/Affix-PME-Hapvida-Manual-Corretor-UBERLANDIA-DESCONTO-07-25-28004eba43.txt"
     },
     {
@@ -1231,7 +1231,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-ABCFARMA-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-ABCFARMA-11-22.pdf",
       "bytes": 839629,
-      "mtime": "2025-10-22T18:29:27.108Z",
+      "mtime": "2025-10-23T01:25:25.810Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-ABCFARMA-11-22-ce2dfc5a24.txt"
     },
     {
@@ -1239,7 +1239,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-ASSOC-COM-MACEIO-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-ASSOC-COM-MACEIO-11-22.pdf",
       "bytes": 854074,
-      "mtime": "2025-10-22T18:29:27.109Z",
+      "mtime": "2025-10-23T01:25:25.812Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-ASSOC-COM-MACEIO-11-22-0219c4a35b.txt"
     },
     {
@@ -1247,7 +1247,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-CAESBRA-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-CAESBRA-11-22.pdf",
       "bytes": 852737,
-      "mtime": "2025-10-22T18:29:27.110Z",
+      "mtime": "2025-10-23T01:25:25.814Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-CAESBRA-11-22-b16ef90bc8.txt"
     },
     {
@@ -1255,7 +1255,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-FECOMERCIO-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-FECOMERCIO-11-22.pdf",
       "bytes": 852842,
-      "mtime": "2025-10-22T18:29:27.111Z",
+      "mtime": "2025-10-23T01:25:25.815Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-FECOMERCIO-11-22-3c97f9a312.txt"
     },
     {
@@ -1263,7 +1263,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-PME-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-PME-11-22.pdf",
       "bytes": 852566,
-      "mtime": "2025-10-22T18:29:27.112Z",
+      "mtime": "2025-10-23T01:25:25.817Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-PME-11-22-a1bcd1ee9c.txt"
     },
     {
@@ -1271,7 +1271,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-SINDILOJAS-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-SINDILOJAS-11-22.pdf",
       "bytes": 852607,
-      "mtime": "2025-10-22T18:29:27.113Z",
+      "mtime": "2025-10-23T01:25:25.818Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-SINDILOJAS-11-22-804fd0415c.txt"
     },
     {
@@ -1279,7 +1279,7 @@
       "name": "Affix-PME-Hapvida-Termo-Adesao-SINDIVAREJISTA-11-22.pdf",
       "relpath": "data/affix/raw/Affix-PME-Hapvida-Termo-Adesao-SINDIVAREJISTA-11-22.pdf",
       "bytes": 845510,
-      "mtime": "2025-10-22T18:29:27.113Z",
+      "mtime": "2025-10-23T01:25:25.819Z",
       "txt": "index/Affix-PME-Hapvida-Termo-Adesao-SINDIVAREJISTA-11-22-ffd551e3b5.txt"
     },
     {
@@ -1287,7 +1287,7 @@
       "name": "Affix-PME-Unimed-Sudoeste-Manual-08-25.pdf",
       "relpath": "data/affix/raw/Affix-PME-Unimed-Sudoeste-Manual-08-25.pdf",
       "bytes": 1695185,
-      "mtime": "2025-10-22T18:29:27.122Z",
+      "mtime": "2025-10-23T01:25:25.828Z",
       "txt": "index/Affix-PME-Unimed-Sudoeste-Manual-08-25-8ceb4ce797.txt"
     },
     {
@@ -1295,7 +1295,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Aberta-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Aberta-09-25.pdf",
       "bytes": 1925019,
-      "mtime": "2025-10-22T18:29:27.131Z",
+      "mtime": "2025-10-23T01:25:25.838Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Aberta-09-25-c7284ea180.txt"
     },
     {
@@ -1303,7 +1303,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Estudantil-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Estudantil-09-25.pdf",
       "bytes": 1894012,
-      "mtime": "2025-10-22T18:29:27.132Z",
+      "mtime": "2025-10-23T01:25:25.840Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Estudantil-09-25-2687ff5815.txt"
     },
     {
@@ -1311,7 +1311,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Fechada-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Fechada-09-25.pdf",
       "bytes": 2340207,
-      "mtime": "2025-10-22T18:29:27.134Z",
+      "mtime": "2025-10-23T01:25:25.843Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Londrina-Tabela-Fechada-09-25-66147674c7.txt"
     },
     {
@@ -1319,7 +1319,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-09-25.pdf",
       "bytes": 1926367,
-      "mtime": "2025-10-22T18:29:27.138Z",
+      "mtime": "2025-10-23T01:25:25.847Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Aberta-09-25-663169dca6.txt"
     },
     {
@@ -1327,7 +1327,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Estudantil-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Estudantil-09-25.pdf",
       "bytes": 1985761,
-      "mtime": "2025-10-22T18:29:27.139Z",
+      "mtime": "2025-10-23T01:25:25.850Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Estudantil-09-25-696a7a10a9.txt"
     },
     {
@@ -1335,7 +1335,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Fechada-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Fechada-09-25.pdf",
       "bytes": 1855071,
-      "mtime": "2025-10-22T18:29:27.143Z",
+      "mtime": "2025-10-23T01:25:25.854Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-Maringa-Tabela-Fechada-09-25-b6c00f3a48.txt"
     },
     {
@@ -1343,7 +1343,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ABERTA-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ABERTA-09-25.pdf",
       "bytes": 1877914,
-      "mtime": "2025-10-22T18:29:27.151Z",
+      "mtime": "2025-10-23T01:25:25.863Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ABERTA-09-25-d1851bcb4e.txt"
     },
     {
@@ -1351,7 +1351,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ESTUDANTIL-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ESTUDANTIL-09-25.pdf",
       "bytes": 1841790,
-      "mtime": "2025-10-22T18:29:27.153Z",
+      "mtime": "2025-10-23T01:25:25.865Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-ESTUDANTIL-09-25-5fa61ad782.txt"
     },
     {
@@ -1359,7 +1359,7 @@
       "name": "Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-FECHADA-09-25.pdf",
       "relpath": "data/affix/raw/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-FECHADA-09-25.pdf",
       "bytes": 1914214,
-      "mtime": "2025-10-22T18:29:27.155Z",
+      "mtime": "2025-10-23T01:25:25.869Z",
       "txt": "index/Affix-PR-Humana-Saude-Sul-Manual-Corretor-TAB-FECHADA-09-25-70d99154b6.txt"
     },
     {
@@ -1367,7 +1367,7 @@
       "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
       "relpath": "data/affix/raw/Affix-RJ-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
       "bytes": 2023593,
-      "mtime": "2025-10-22T18:29:27.171Z",
+      "mtime": "2025-10-23T01:25:25.886Z",
       "txt": "index/Affix-RJ-Hapvida-NDI-Manual-TAB-ABERTA-08-25-111cf90017.txt"
     },
     {
@@ -1375,7 +1375,7 @@
       "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
       "relpath": "data/affix/raw/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
       "bytes": 2430022,
-      "mtime": "2025-10-22T18:29:27.173Z",
+      "mtime": "2025-10-23T01:25:25.889Z",
       "txt": "index/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-08-25-7ad639e068.txt"
     },
     {
@@ -1383,7 +1383,7 @@
       "name": "Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
       "relpath": "data/affix/raw/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
       "bytes": 2078673,
-      "mtime": "2025-10-22T18:29:27.175Z",
+      "mtime": "2025-10-23T01:25:25.891Z",
       "txt": "index/Affix-RJ-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25-520d035f7b.txt"
     },
     {
@@ -1391,7 +1391,7 @@
       "name": "Affix-RJ-Onix-Manual-Vendas-Corretor-05-25.pdf",
       "relpath": "data/affix/raw/Affix-RJ-Onix-Manual-Vendas-Corretor-05-25.pdf",
       "bytes": 2058286,
-      "mtime": "2025-10-22T18:29:27.179Z",
+      "mtime": "2025-10-23T01:25:25.896Z",
       "txt": "index/Affix-RJ-Onix-Manual-Vendas-Corretor-05-25-343e4ebc69.txt"
     },
     {
@@ -1399,7 +1399,7 @@
       "name": "Affix-RJ-Plamer-Manual-Corretor-04-25-B.pdf",
       "relpath": "data/affix/raw/Affix-RJ-Plamer-Manual-Corretor-04-25-B.pdf",
       "bytes": 2193880,
-      "mtime": "2025-10-22T18:29:27.186Z",
+      "mtime": "2025-10-23T01:25:25.903Z",
       "txt": "index/Affix-RJ-Plamer-Manual-Corretor-04-25-B-60d759dc01.txt"
     },
     {
@@ -1407,7 +1407,7 @@
       "name": "Affix-RN-Barauna-Hapvida-Manual-03-24.pdf",
       "relpath": "data/affix/raw/Affix-RN-Barauna-Hapvida-Manual-03-24.pdf",
       "bytes": 2232975,
-      "mtime": "2025-10-22T18:29:27.188Z",
+      "mtime": "2025-10-23T01:25:25.906Z",
       "txt": "index/Affix-RN-Barauna-Hapvida-Manual-03-24-105925b473.txt"
     },
     {
@@ -1415,7 +1415,7 @@
       "name": "Affix-RN-Hapvida-MOSSORO-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-RN-Hapvida-MOSSORO-Manual-08-24.pdf",
       "bytes": 2409200,
-      "mtime": "2025-10-22T18:29:27.190Z",
+      "mtime": "2025-10-23T01:25:25.909Z",
       "txt": "index/Affix-RN-Hapvida-MOSSORO-Manual-08-24-aec9c6df5d.txt"
     },
     {
@@ -1423,7 +1423,7 @@
       "name": "Affix-RN-Hapvida-PM-Manual-11-24.pdf",
       "relpath": "data/affix/raw/Affix-RN-Hapvida-PM-Manual-11-24.pdf",
       "bytes": 1826024,
-      "mtime": "2025-10-22T18:29:27.193Z",
+      "mtime": "2025-10-23T01:25:25.913Z",
       "txt": "index/Affix-RN-Hapvida-PM-Manual-11-24-5de43b091b.txt"
     },
     {
@@ -1431,7 +1431,7 @@
       "name": "Affix-RN-Hapvida-PREF-MACAIBA-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-RN-Hapvida-PREF-MACAIBA-Manual-06-25.pdf",
       "bytes": 1974842,
-      "mtime": "2025-10-22T18:29:27.201Z",
+      "mtime": "2025-10-23T01:25:25.922Z",
       "txt": "index/Affix-RN-Hapvida-PREF-MACAIBA-Manual-06-25-e86cc1fa8b.txt"
     },
     {
@@ -1439,7 +1439,7 @@
       "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-1-08-25-2.pdf",
       "relpath": "data/affix/raw/Affix-RN-Humana-Manual-Corretor-GRUPO-1-08-25-2.pdf",
       "bytes": 2015444,
-      "mtime": "2025-10-22T18:29:27.207Z",
+      "mtime": "2025-10-23T01:25:25.928Z",
       "txt": "index/Affix-RN-Humana-Manual-Corretor-GRUPO-1-08-25-2-686d5d621b.txt"
     },
     {
@@ -1447,7 +1447,7 @@
       "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-2-08-25-2.pdf",
       "relpath": "data/affix/raw/Affix-RN-Humana-Manual-Corretor-GRUPO-2-08-25-2.pdf",
       "bytes": 1914666,
-      "mtime": "2025-10-22T18:29:27.210Z",
+      "mtime": "2025-10-23T01:25:25.931Z",
       "txt": "index/Affix-RN-Humana-Manual-Corretor-GRUPO-2-08-25-2-7dcb594f5e.txt"
     },
     {
@@ -1455,7 +1455,7 @@
       "name": "Affix-RN-Humana-Manual-Corretor-GRUPO-3-08-25-2.pdf",
       "relpath": "data/affix/raw/Affix-RN-Humana-Manual-Corretor-GRUPO-3-08-25-2.pdf",
       "bytes": 1932443,
-      "mtime": "2025-10-22T18:29:27.212Z",
+      "mtime": "2025-10-23T01:25:25.934Z",
       "txt": "index/Affix-RN-Humana-Manual-Corretor-GRUPO-3-08-25-2-9ec314f5e7.txt"
     },
     {
@@ -1463,7 +1463,7 @@
       "name": "Affix-RS-Humana-Saude-Sul-TAB-ABERTA-09-25-1.pdf",
       "relpath": "data/affix/raw/Affix-RS-Humana-Saude-Sul-TAB-ABERTA-09-25-1.pdf",
       "bytes": 2139603,
-      "mtime": "2025-10-22T18:29:27.219Z",
+      "mtime": "2025-10-23T01:25:25.941Z",
       "txt": "index/Affix-RS-Humana-Saude-Sul-TAB-ABERTA-09-25-1-9ca65df20c.txt"
     },
     {
@@ -1471,7 +1471,7 @@
       "name": "Affix-RS-Humana-Saude-Sul-TAB-ESTUDANTIL-09-25-1.pdf",
       "relpath": "data/affix/raw/Affix-RS-Humana-Saude-Sul-TAB-ESTUDANTIL-09-25-1.pdf",
       "bytes": 1845116,
-      "mtime": "2025-10-22T18:29:27.220Z",
+      "mtime": "2025-10-23T01:25:25.943Z",
       "txt": "index/Affix-RS-Humana-Saude-Sul-TAB-ESTUDANTIL-09-25-1-bca9cabd22.txt"
     },
     {
@@ -1479,7 +1479,7 @@
       "name": "Affix-RS-Humana-Saude-Sul-TAB-FECHADA-09-25-1.pdf",
       "relpath": "data/affix/raw/Affix-RS-Humana-Saude-Sul-TAB-FECHADA-09-25-1.pdf",
       "bytes": 1861310,
-      "mtime": "2025-10-22T18:29:27.225Z",
+      "mtime": "2025-10-23T01:25:25.949Z",
       "txt": "index/Affix-RS-Humana-Saude-Sul-TAB-FECHADA-09-25-1-2ef39a61d3.txt"
     },
     {
@@ -1487,7 +1487,7 @@
       "name": "Affix-Relatorio-da-Administracao-2024-1.pdf",
       "relpath": "data/affix/raw/Affix-Relatorio-da-Administracao-2024-1.pdf",
       "bytes": 4216757,
-      "mtime": "2025-10-22T18:29:27.241Z",
+      "mtime": "2025-10-23T01:25:25.966Z",
       "txt": "index/Affix-Relatorio-da-Administracao-2024-1-5acdf9ab4f.txt"
     },
     {
@@ -1495,7 +1495,7 @@
       "name": "Affix-SE-Barra-dos-Coqueiros-Hapvida-Manual-08-24.pdf",
       "relpath": "data/affix/raw/Affix-SE-Barra-dos-Coqueiros-Hapvida-Manual-08-24.pdf",
       "bytes": 2412061,
-      "mtime": "2025-10-22T18:29:27.244Z",
+      "mtime": "2025-10-23T01:25:25.970Z",
       "txt": "index/Affix-SE-Barra-dos-Coqueiros-Hapvida-Manual-08-24-4f4b1e7f60.txt"
     },
     {
@@ -1503,7 +1503,7 @@
       "name": "Affix-SE-Hapvida-GOVERNO-SERGIPE-BANESE-Manual-06-25.pdf",
       "relpath": "data/affix/raw/Affix-SE-Hapvida-GOVERNO-SERGIPE-BANESE-Manual-06-25.pdf",
       "bytes": 1618419,
-      "mtime": "2025-10-22T18:29:27.250Z",
+      "mtime": "2025-10-23T01:25:25.977Z",
       "txt": "index/Affix-SE-Hapvida-GOVERNO-SERGIPE-BANESE-Manual-06-25-997f2765d5.txt"
     },
     {
@@ -1511,7 +1511,7 @@
       "name": "Affix-SE-Hapvida-GOVERNO-SERGIPE-Manual-06-25-1.pdf",
       "relpath": "data/affix/raw/Affix-SE-Hapvida-GOVERNO-SERGIPE-Manual-06-25-1.pdf",
       "bytes": 2036880,
-      "mtime": "2025-10-22T18:29:27.255Z",
+      "mtime": "2025-10-23T01:25:25.982Z",
       "txt": "index/Affix-SE-Hapvida-GOVERNO-SERGIPE-Manual-06-25-1-4a9ae9dacb.txt"
     },
     {
@@ -1519,7 +1519,7 @@
       "name": "Affix-SE-Hapvida-PREF-ARACAJU-Manual-05-25.pdf",
       "relpath": "data/affix/raw/Affix-SE-Hapvida-PREF-ARACAJU-Manual-05-25.pdf",
       "bytes": 2027517,
-      "mtime": "2025-10-22T18:29:27.256Z",
+      "mtime": "2025-10-23T01:25:25.983Z",
       "txt": "index/Affix-SE-Hapvida-PREF-ARACAJU-Manual-05-25-d0deed1997.txt"
     },
     {
@@ -1527,7 +1527,7 @@
       "name": "Affix-SP-Ativia-Manual-Corretor-01-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Ativia-Manual-Corretor-01-25.pdf",
       "bytes": 1152553,
-      "mtime": "2025-10-22T18:29:27.260Z",
+      "mtime": "2025-10-23T01:25:25.988Z",
       "txt": "index/Affix-SP-Ativia-Manual-Corretor-01-25-9ad4a105a4.txt"
     },
     {
@@ -1535,7 +1535,7 @@
       "name": "Affix-SP-Ativia-Senior-Manual-Corretor-11-24-1.pdf",
       "relpath": "data/affix/raw/Affix-SP-Ativia-Senior-Manual-Corretor-11-24-1.pdf",
       "bytes": 640177,
-      "mtime": "2025-10-22T18:29:27.263Z",
+      "mtime": "2025-10-23T01:25:25.990Z",
       "txt": "index/Affix-SP-Ativia-Senior-Manual-Corretor-11-24-1-fae908fe48.txt"
     },
     {
@@ -1543,7 +1543,7 @@
       "name": "Affix-SP-Blue-Med-Manual-Corretor-05-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Blue-Med-Manual-Corretor-05-25.pdf",
       "bytes": 1507976,
-      "mtime": "2025-10-22T18:29:27.269Z",
+      "mtime": "2025-10-23T01:25:25.997Z",
       "txt": "index/Affix-SP-Blue-Med-Manual-Corretor-05-25-58a970bf5b.txt"
     },
     {
@@ -1551,7 +1551,7 @@
       "name": "Affix-SP-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Hapvida-NDI-Manual-TAB-ABERTA-08-25.pdf",
       "bytes": 2151255,
-      "mtime": "2025-10-22T18:29:27.274Z",
+      "mtime": "2025-10-23T01:25:26.003Z",
       "txt": "index/Affix-SP-Hapvida-NDI-Manual-TAB-ABERTA-08-25-edb4589684.txt"
     },
     {
@@ -1559,7 +1559,7 @@
       "name": "Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-08-25.pdf",
       "bytes": 2435881,
-      "mtime": "2025-10-22T18:29:27.282Z",
+      "mtime": "2025-10-23T01:25:26.011Z",
       "txt": "index/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-08-25-bce4677391.txt"
     },
     {
@@ -1567,7 +1567,7 @@
       "name": "Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25.pdf",
       "bytes": 2068656,
-      "mtime": "2025-10-22T18:29:27.287Z",
+      "mtime": "2025-10-23T01:25:26.017Z",
       "txt": "index/Affix-SP-Hapvida-NDI-Manual-TAB-FECHADA-ESTUDANTIL-08-25-d98935861d.txt"
     },
     {
@@ -1575,7 +1575,7 @@
       "name": "Affix-SP-Manual-Corretor-Vera-Cruz-06-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Manual-Corretor-Vera-Cruz-06-25.pdf",
       "bytes": 1663625,
-      "mtime": "2025-10-22T18:29:27.289Z",
+      "mtime": "2025-10-23T01:25:26.019Z",
       "txt": "index/Affix-SP-Manual-Corretor-Vera-Cruz-06-25-ff18900d22.txt"
     },
     {
@@ -1583,7 +1583,7 @@
       "name": "Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf",
       "relpath": "data/affix/raw/Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1.pdf",
       "bytes": 1796840,
-      "mtime": "2025-10-22T18:29:27.295Z",
+      "mtime": "2025-10-23T01:25:26.027Z",
       "txt": "index/Affix-SP-Manual-Vendas-Corretor-Ameplan-10-24-1-856ecf683e.txt"
     },
     {
@@ -1591,7 +1591,7 @@
       "name": "Affix-SP-Manual-Vendas-Unimed-Jundiai-05-25-B.pdf",
       "relpath": "data/affix/raw/Affix-SP-Manual-Vendas-Unimed-Jundiai-05-25-B.pdf",
       "bytes": 2163923,
-      "mtime": "2025-10-22T18:29:27.303Z",
+      "mtime": "2025-10-23T01:25:26.034Z",
       "txt": "index/Affix-SP-Manual-Vendas-Unimed-Jundiai-05-25-B-52b4623106.txt"
     },
     {
@@ -1599,7 +1599,7 @@
       "name": "Affix-SP-Manual-Vendas-Unimed-Jundiai-Pref-Campo-Limpo-12-24.pdf",
       "relpath": "data/affix/raw/Affix-SP-Manual-Vendas-Unimed-Jundiai-Pref-Campo-Limpo-12-24.pdf",
       "bytes": 2184894,
-      "mtime": "2025-10-22T18:29:27.311Z",
+      "mtime": "2025-10-23T01:25:26.043Z",
       "txt": "index/Affix-SP-Manual-Vendas-Unimed-Jundiai-Pref-Campo-Limpo-12-24-b2e41b321e.txt"
     },
     {
@@ -1607,7 +1607,7 @@
       "name": "Affix-SP-S-Cristovao-Manual-Corretor-09-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-S-Cristovao-Manual-Corretor-09-25.pdf",
       "bytes": 1209623,
-      "mtime": "2025-10-22T18:29:27.315Z",
+      "mtime": "2025-10-23T01:25:26.047Z",
       "txt": "index/Affix-SP-S-Cristovao-Manual-Corretor-09-25-98539f1b44.txt"
     },
     {
@@ -1615,7 +1615,7 @@
       "name": "Affix-SP-Santa-Filomena-Manual-Corretor-05-25.pdf",
       "relpath": "data/affix/raw/Affix-SP-Santa-Filomena-Manual-Corretor-05-25.pdf",
       "bytes": 1479580,
-      "mtime": "2025-10-22T18:29:27.321Z",
+      "mtime": "2025-10-23T01:25:26.054Z",
       "txt": "index/Affix-SP-Santa-Filomena-Manual-Corretor-05-25-f0d7ab90e9.txt"
     },
     {
@@ -1623,7 +1623,7 @@
       "name": "Programa_de_Gestao_de_Riscos_e_Compliance_vers.26-04-23.pdf",
       "relpath": "data/affix/raw/Programa_de_Gestao_de_Riscos_e_Compliance_vers.26-04-23.pdf",
       "bytes": 330541,
-      "mtime": "2025-10-22T18:29:27.323Z",
+      "mtime": "2025-10-23T01:25:26.055Z",
       "txt": "index/Programa_de_Gestao_de_Riscos_e_Compliance_vers.26-04-23-39a243292d.txt"
     },
     {
@@ -1631,7 +1631,7 @@
       "name": "Relat-C3-B3rio-da-Administra-C3-A7-C3-A3o-Affix-Benef-C3-ADcios-2018-Final.pdf",
       "relpath": "data/affix/raw/Relat-C3-B3rio-da-Administra-C3-A7-C3-A3o-Affix-Benef-C3-ADcios-2018-Final.pdf",
       "bytes": 473222,
-      "mtime": "2025-10-22T18:29:27.325Z",
+      "mtime": "2025-10-23T01:25:26.057Z",
       "txt": "index/Relat-C3-B3rio-da-Administra-C3-A7-C3-A3o-Affix-Benef-C3-ADcios-2018-Final-e422410f47.txt"
     },
     {
@@ -1639,7 +1639,7 @@
       "name": "demontracoes_financeiras_2020.pdf",
       "relpath": "data/affix/raw/demontracoes_financeiras_2020.pdf",
       "bytes": 1447906,
-      "mtime": "2025-10-22T18:29:27.330Z",
+      "mtime": "2025-10-23T01:25:26.063Z",
       "txt": "index/demontracoes_financeiras_2020-0a74b59a8a.txt"
     },
     {
@@ -1647,7 +1647,7 @@
       "name": "demontracoes_financeiras_2022.pdf",
       "relpath": "data/affix/raw/demontracoes_financeiras_2022.pdf",
       "bytes": 2013880,
-      "mtime": "2025-10-22T18:29:27.338Z",
+      "mtime": "2025-10-23T01:25:26.071Z",
       "txt": "index/demontracoes_financeiras_2022-7eea42901f.txt"
     }
   ]
